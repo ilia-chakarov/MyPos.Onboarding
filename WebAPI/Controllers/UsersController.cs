@@ -3,6 +3,7 @@ using WebAPI.UnitOfWork;
 using WebAPI.DTOs;
 
 using WebAPI.Entities;
+using Microsoft.AspNetCore.Identity;
 
 namespace WebAPI.Controllers
 {
@@ -11,10 +12,12 @@ namespace WebAPI.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IPasswordHasher<User> _passwordHasher;
 
-        public UsersController(IUnitOfWork uow)
+        public UsersController(IUnitOfWork uow, IPasswordHasher<User> passwordHasher)
         {
             _unitOfWork = uow;
+            _passwordHasher = passwordHasher;
         }
 
 
@@ -61,9 +64,9 @@ namespace WebAPI.Controllers
             var user = new User
             {
                 Username = dto.Username,
-                Password = dto.Password,
                 RegistrantId = dto.RegistrantId
             };
+            user.Password = _passwordHasher.HashPassword(user, dto.Password);
 
             await _unitOfWork.UserRepository.AddAsync(user);
             await _unitOfWork.SaveChangesAsync();
@@ -90,7 +93,7 @@ namespace WebAPI.Controllers
                 return BadRequest($"Registrant with ID {dto.RegistrantId} does not exist.");
 
             user.Username = dto.Username;
-            user.Password = dto.Password;
+            user.Password = _passwordHasher.HashPassword(user, dto.Password);
             user.RegistrantId = dto.RegistrantId;
 
             _unitOfWork.UserRepository.Update(user);
