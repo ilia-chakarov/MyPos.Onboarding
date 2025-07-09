@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ilia.chakarov\\Documents\\vs_proj\\MyPos.Onboarding\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\vs_proj\\mypos.onboarding\\webapi\\controllers\\useraccesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\useraccesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\vs_proj\\mypos.onboarding\\webapi\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\vs_proj\\mypos.onboarding\\webapi\\repositories\\useraccesscontrolrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\repositories\\useraccesscontrolrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\vs_proj\\mypos.onboarding\\webapi\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\vs_proj\\mypos.onboarding\\webapi\\repositories\\interfaces\\iuseraccesscontrolrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\repositories\\interfaces\\iuseraccesscontrolrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\vs_proj\\mypos.onboarding\\webapi\\entities\\useraccesscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\entities\\useraccesscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\vs_proj\\mypos.onboarding\\webapi\\dtos\\createuseraccesscontroldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\dtos\\createuseraccesscontroldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IUserAccessControlRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\vs_proj\\MyPos.Onboarding\\WebAPI\\Repositories\\Interfaces\\IUserAccessControlRepository.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Repositories\\Interfaces\\IUserAccessControlRepository.cs",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\vs_proj\\MyPos.Onboarding\\WebAPI\\Repositories\\Interfaces\\IUserAccessControlRepository.cs",
+              "RelativeToolTip": "WebAPI\\Repositories\\Interfaces\\IUserAccessControlRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T07:15:26.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserAccessControlRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\vs_proj\\MyPos.Onboarding\\WebAPI\\Repositories\\UserAccessControlRepository.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Repositories\\UserAccessControlRepository.cs",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\vs_proj\\MyPos.Onboarding\\WebAPI\\Repositories\\UserAccessControlRepository.cs",
+              "RelativeToolTip": "WebAPI\\Repositories\\UserAccessControlRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T07:14:25.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\vs_proj\\MyPos.Onboarding\\WebAPI\\Repositories\\Repository.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Repositories\\Repository.cs",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\vs_proj\\MyPos.Onboarding\\WebAPI\\Repositories\\Repository.cs",
+              "RelativeToolTip": "WebAPI\\Repositories\\Repository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T07:14:21.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserAccessControl.cs",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\vs_proj\\MyPos.Onboarding\\WebAPI\\Entities\\UserAccessControl.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Entities\\UserAccessControl.cs",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\vs_proj\\MyPos.Onboarding\\WebAPI\\Entities\\UserAccessControl.cs",
+              "RelativeToolTip": "WebAPI\\Entities\\UserAccessControl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T07:00:30.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateUserAccessControlDto.cs",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\vs_proj\\MyPos.Onboarding\\WebAPI\\DTOs\\CreateUserAccessControlDto.cs",
+              "RelativeDocumentMoniker": "WebAPI\\DTOs\\CreateUserAccessControlDto.cs",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\vs_proj\\MyPos.Onboarding\\WebAPI\\DTOs\\CreateUserAccessControlDto.cs",
+              "RelativeToolTip": "WebAPI\\DTOs\\CreateUserAccessControlDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T07:03:38.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\vs_proj\\MyPos.Onboarding\\WebAPI\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\AccountsController.cs",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\vs_proj\\MyPos.Onboarding\\WebAPI\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\AccountsController.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAowB0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T07:01:15.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserAccessController.cs",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\vs_proj\\MyPos.Onboarding\\WebAPI\\Controllers\\UserAccessController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\UserAccessController.cs",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\vs_proj\\MyPos.Onboarding\\WebAPI\\Controllers\\UserAccessController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\UserAccessController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAiwF0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T07:00:59.513Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

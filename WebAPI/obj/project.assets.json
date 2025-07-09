@@ -4760,11 +4760,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ilia.chakarov\\source\\repos\\MyPos.Onboarding\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\ilia.chakarov\\Documents\\vs_proj\\MyPos.Onboarding\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "C:\\Users\\ilia.chakarov\\source\\repos\\MyPos.Onboarding\\WebAPI\\WebAPI.csproj",
+      "projectPath": "C:\\Users\\ilia.chakarov\\Documents\\vs_proj\\MyPos.Onboarding\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\ilia.chakarov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ilia.chakarov\\source\\repos\\MyPos.Onboarding\\WebAPI\\obj\\",
+      "outputPath": "C:\\Users\\ilia.chakarov\\Documents\\vs_proj\\MyPos.Onboarding\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
