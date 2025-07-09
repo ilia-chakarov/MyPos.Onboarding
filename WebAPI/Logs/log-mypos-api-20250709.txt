@@ -1,0 +1,23 @@
+[14:19:37 INF] Now listening on: https://localhost:7168
+[14:19:37 INF] Now listening on: http://localhost:5229
+[14:19:37 INF] Application started. Press Ctrl+C to shut down.
+[14:19:37 INF] Hosting environment: Development
+[14:19:37 INF] Content root path: C:\Users\ilia.chakarov\Documents\vs_proj\MyPos.Onboarding\WebAPI
+[14:19:54 INF] Incoming request: POST /api/Auth/login
+[14:19:55 INF] Executed DbCommand (27ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[14:19:55 INF] Request completed: POST /api/Auth/login responded 200 in 946 ms
+[14:20:19 INF] Incoming request: GET /api/Accounts
+[14:20:19 INF] Request completed: GET /api/Accounts responded 401 in 8 ms
+[14:20:26 INF] Incoming request: GET /api/Accounts
+[14:20:26 INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccountName], [a].[Balance], [a].[BalanceInEuro], [a].[Currency], [a].[DateCreated], [a].[IBAN], [a].[LastOperationDT], [a].[WalletId]
+FROM [Accounts] AS [a]
+[14:20:26 INF] Request completed: GET /api/Accounts responded 200 in 91 ms
+[14:21:35 INF] Now listening on: https://localhost:7168
+[14:21:35 INF] Now listening on: http://localhost:5229
+[14:21:35 INF] Application started. Press Ctrl+C to shut down.
+[14:21:35 INF] Hosting environment: Development
+[14:21:35 INF] Content root path: C:\Users\ilia.chakarov\Documents\vs_proj\MyPos.Onboarding\WebAPI
