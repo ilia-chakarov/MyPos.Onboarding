@@ -1,0 +1,23 @@
+[09:21:54 INF] Now listening on: https://localhost:7168
+[09:21:54 INF] Now listening on: http://localhost:5229
+[09:21:54 INF] Application started. Press Ctrl+C to shut down.
+[09:21:54 INF] Hosting environment: Development
+[09:21:54 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[09:22:08 INF] Incoming request: POST /api/Auth/login
+[09:22:09 INF] Executed DbCommand (34ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[09:22:09 INF] Request completed: POST /api/Auth/login responded 200 in 933 ms
+[09:22:23 INF] Incoming request: GET /api/Wallets
+[09:22:23 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+[09:22:23 INF] Request completed: GET /api/Wallets responded 200 in 82 ms
+[09:22:32 INF] Incoming request: GET /api/Wallets
+[09:22:32 INF] Request completed: GET /api/Wallets responded 401 in 5 ms
+[09:26:52 INF] Now listening on: https://localhost:7168
+[09:26:52 INF] Now listening on: http://localhost:5229
+[09:26:52 INF] Application started. Press Ctrl+C to shut down.
+[09:26:52 INF] Hosting environment: Development
+[09:26:52 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
