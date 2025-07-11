@@ -107,7 +107,7 @@ namespace WebAPI
             // Ivo client
             builder.Services.AddHttpClient<IvoApiClient>((sp, cl) =>
             {
-                cl.BaseAddress = new Uri("https://10.80.55.149:7191/");
+                cl.BaseAddress = new Uri("https://10.80.55.56:7191/");
             })
                 .ConfigurePrimaryHttpMessageHandler(() =>
                 {
@@ -118,7 +118,7 @@ namespace WebAPI
                 })
                 .AddTypedClient((httpCl, sp) =>
                 {
-                    var baseUrl = "https://10.80.55.149:7191/";
+                    var baseUrl = "https://10.80.55.56:7191/";
                     return new IvoApiClient(baseUrl, httpCl);
                 });
 

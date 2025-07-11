@@ -18,6 +18,8 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(typeof(WalletDto), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Create([FromBody] CreateWalletDto dto)
         {
             var registrant = await _unitOfWork.RegistrantRepository.GetByIdAsync(dto.RegistrantId);
@@ -50,6 +52,9 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(WalletDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetById(int id)
         {
             var wallet = await _unitOfWork.WalletRepository.GetByIdAsync(id);
@@ -70,6 +75,8 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<WalletDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetAll()
         {
             var wallets = await _unitOfWork.WalletRepository.GetAllAsync();
@@ -88,6 +95,9 @@ namespace WebAPI.Controllers
         }
 
         [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Update(int id, [FromBody] CreateWalletDto dto)
         {
             var wallet = await _unitOfWork.WalletRepository.GetByIdAsync(id);
@@ -109,6 +119,8 @@ namespace WebAPI.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Delete(int id)
         {
             var wallet = await _unitOfWork.WalletRepository.GetByIdAsync(id);
