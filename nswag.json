@@ -1,0 +1,20 @@
+{
+  "runtime": "Net80",
+  "defaultVariables": null,
+  "documentGenerator": {
+    "fromSwagger": {
+      "url": "https://10.80.55.149:7191/swagger/v1/swagger.json"
+    }
+  },
+  "codeGenerators": {
+    "openApiToCSharpClient": {
+      "className": "IvoMyPosApiClient",
+      "namespace": "WebAPI.ExternalApis.Colleagues",
+      "output": "Generated/IvoMyPosApiClient.cs",
+      "generateClientInterfaces": true,
+      "injectHttpClient": true,
+      "useHttpClientCreationMethod": false,
+      "generateBaseUrlProperty": true
+    }
+  }
+}

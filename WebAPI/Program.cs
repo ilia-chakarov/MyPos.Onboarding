@@ -1,3 +1,4 @@
+global using IvoApiClient = ExternalApi.Client;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -11,6 +12,7 @@ using WebAPI.UnitOfWork;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using WebAPI.Middleware;
+using ExternalApi;
 
 namespace WebAPI
 {
@@ -101,6 +103,24 @@ namespace WebAPI
                 .ReadFrom.Services(services)
                 .Enrich.FromLogContext()
                 );
+
+            // Ivo client
+            builder.Services.AddHttpClient<IvoApiClient>((sp, cl) =>
+            {
+                cl.BaseAddress = new Uri("https://10.80.55.149:7191/");
+            })
+                .ConfigurePrimaryHttpMessageHandler(() =>
+                {
+                    return new HttpClientHandler
+                    {
+                        ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+                    };
+                })
+                .AddTypedClient((httpCl, sp) =>
+                {
+                    var baseUrl = "https://10.80.55.149:7191/";
+                    return new IvoApiClient(baseUrl, httpCl);
+                });
 
             var app = builder.Build();
 

@@ -469,3 +469,17 @@ C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\obj
 C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\obj\Debug\net8.0\WebAPI.pdb
 C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\obj\Debug\net8.0\WebAPI.genruntimeconfig.cache
 C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\obj\Debug\net8.0\ref\WebAPI.dll
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\Namotion.Reflection.dll
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\NJsonSchema.dll
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\NJsonSchema.Annotations.dll
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\NJsonSchema.NewtonsoftJson.dll
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\NJsonSchema.Yaml.dll
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\NSwag.Annotations.dll
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\NSwag.AspNetCore.dll
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\NSwag.Core.dll
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\NSwag.Core.Yaml.dll
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\NSwag.Generation.dll
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\NSwag.Generation.AspNetCore.dll
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\YamlDotNet.dll
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\Nswag\nswag.json

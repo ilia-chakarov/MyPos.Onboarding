@@ -17,13 +17,31 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        [ProducesResponseType(typeof(IEnumerable<RegistrantDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<IEnumerable<Registrant>>> GetAll()
         {
             var registrants = await _unitOfWork.RegistrantRepository.GetAllAsync();
-            return Ok(registrants);
+
+            var result = registrants.Select(r => new RegistrantDto
+            {
+                Id = r.Id,
+                DateCreated = r.DateCreated,
+                DisplayName = r.DisplayName,
+                GSM = r.GSM,
+                Country = r.Country,
+                Address = r.Address,
+                IsCompany = r.isCompany,
+               
+            });
+
+            return Ok(result);
         }
 
         [HttpPost]
+        [ProducesResponseType(typeof(Registrant), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Create([FromBody] CreateRegistrantDto dto)
         {
             var registrant = new Registrant
@@ -42,7 +60,10 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        [ProducesResponseType(typeof(Registrant), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<Registrant>> GetById(int id)
         {
             var registrant = await _unitOfWork.RegistrantRepository.GetByIdAsync(id);
 
@@ -53,6 +74,9 @@ namespace WebAPI.Controllers
         }
 
         [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Update(int id, [FromBody] CreateRegistrantDto dto)
         {
             var registrant = await _unitOfWork.RegistrantRepository.GetByIdAsync(id);
@@ -73,6 +97,9 @@ namespace WebAPI.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Delete(int id)
         {
             var registrant = await _unitOfWork.RegistrantRepository.GetByIdAsync(id);

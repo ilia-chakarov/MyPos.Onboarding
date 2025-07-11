@@ -21,3 +21,978 @@ FROM [Wallets] AS [w]
 [09:26:52 INF] Application started. Press Ctrl+C to shut down.
 [09:26:52 INF] Hosting environment: Development
 [09:26:52 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[09:46:35 INF] Now listening on: https://localhost:7168
+[09:46:35 INF] Now listening on: http://localhost:5229
+[09:46:35 INF] Application started. Press Ctrl+C to shut down.
+[09:46:35 INF] Hosting environment: Development
+[09:46:35 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:05:10 INF] Now listening on: https://localhost:7168
+[10:05:10 INF] Now listening on: http://localhost:5229
+[10:05:10 INF] Application started. Press Ctrl+C to shut down.
+[10:05:10 INF] Hosting environment: Development
+[10:05:10 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:06:36 INF] Now listening on: https://localhost:7168
+[10:06:36 INF] Now listening on: http://localhost:5229
+[10:06:36 INF] Application started. Press Ctrl+C to shut down.
+[10:06:36 INF] Hosting environment: Development
+[10:06:36 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:06:52 INF] Now listening on: https://localhost:7168
+[10:06:52 INF] Now listening on: http://localhost:5229
+[10:06:52 INF] Application started. Press Ctrl+C to shut down.
+[10:06:52 INF] Hosting environment: Development
+[10:06:52 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:20:27 INF] Now listening on: https://0.0.0.0:7168
+[10:20:27 INF] Now listening on: http://0.0.0.0:5229
+[10:20:27 INF] Application started. Press Ctrl+C to shut down.
+[10:20:27 INF] Hosting environment: Development
+[10:20:27 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:37:10 INF] Incoming request: POST /api/Users
+[10:37:12 INF] Executed DbCommand (24ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[10:37:12 INF] Request completed: POST /api/Users responded 400 in 1538 ms
+[10:37:18 INF] Incoming request: POST /api/Users
+[10:37:18 INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[10:37:18 INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Password], [RegistrantId], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+[10:37:18 INF] Request completed: POST /api/Users responded 201 in 191 ms
+[10:37:38 INF] Incoming request: POST /api/Auth/login
+[10:37:38 INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[10:37:38 INF] Request completed: POST /api/Auth/login responded 200 in 76 ms
+[10:38:00 INF] Incoming request: GET /api/Wallets
+[10:38:00 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+[10:38:00 INF] Request completed: GET /api/Wallets responded 200 in 42 ms
+[10:40:11 INF] Incoming request: GET /api/Wallets
+[10:40:11 INF] Request completed: GET /api/Wallets responded 401 in 3 ms
+[10:44:02 INF] Incoming request: GET /api/Wallets
+[10:44:02 INF] Request completed: GET /api/Wallets responded 401 in 6 ms
+[10:44:44 INF] Incoming request: POST /api/Auth/login
+[10:44:44 INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[10:44:44 INF] Request completed: POST /api/Auth/login responded 200 in 91 ms
+[10:55:11 INF] Now listening on: https://0.0.0.0:7168
+[10:55:11 INF] Now listening on: http://0.0.0.0:5229
+[10:55:11 INF] Application started. Press Ctrl+C to shut down.
+[10:55:11 INF] Hosting environment: Development
+[10:55:11 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:59:52 INF] Incoming request: GET /favicon.ico
+[10:59:52 INF] Request completed: GET /favicon.ico responded 404 in 35 ms
+[11:04:06 INF] Now listening on: https://0.0.0.0:7168
+[11:04:06 INF] Now listening on: http://0.0.0.0:5229
+[11:04:06 INF] Application started. Press Ctrl+C to shut down.
+[11:04:06 INF] Hosting environment: Development
+[11:04:06 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:21:09 INF] Now listening on: https://0.0.0.0:7168
+[13:21:09 INF] Now listening on: http://0.0.0.0:5229
+[13:21:09 INF] Application started. Press Ctrl+C to shut down.
+[13:21:09 INF] Hosting environment: Development
+[13:21:09 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:32:04 INF] Now listening on: https://0.0.0.0:7168
+[13:32:04 INF] Now listening on: http://0.0.0.0:5229
+[13:32:04 INF] Application started. Press Ctrl+C to shut down.
+[13:32:04 INF] Hosting environment: Development
+[13:32:04 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:33:19 INF] Incoming request: POST /apip/external/IvoUsers/create-user
+[13:33:19 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'System.String' while attempting to activate 'ExternalApi.IvoMyPosClient'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method10(Closure, IServiceProvider, Object[])
+   at Microsoft.Extensions.Http.DefaultTypedHttpClientFactory`1.CreateClient(HttpClient httpClient)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\RequestLoggingMiddleware.cs:line 25
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[13:34:00 INF] Now listening on: https://0.0.0.0:7168
+[13:34:00 INF] Now listening on: http://0.0.0.0:5229
+[13:34:00 INF] Application started. Press Ctrl+C to shut down.
+[13:34:00 INF] Hosting environment: Development
+[13:34:00 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:34:15 INF] Incoming request: POST /apip/external/IvoUsers/create-user
+[13:34:15 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'System.String' while attempting to activate 'ExternalApi.IvoMyPosClient'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method10(Closure, IServiceProvider, Object[])
+   at Microsoft.Extensions.Http.DefaultTypedHttpClientFactory`1.CreateClient(HttpClient httpClient)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\RequestLoggingMiddleware.cs:line 25
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[13:35:25 INF] Now listening on: https://0.0.0.0:7168
+[13:35:25 INF] Now listening on: http://0.0.0.0:5229
+[13:35:25 INF] Application started. Press Ctrl+C to shut down.
+[13:35:25 INF] Hosting environment: Development
+[13:35:25 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:35:38 INF] Incoming request: POST /apip/external/IvoUsers/create-user
+[13:35:38 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'System.String' while attempting to activate 'ExternalApi.IvoMyPosClient'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method10(Closure, IServiceProvider, Object[])
+   at Microsoft.Extensions.Http.DefaultTypedHttpClientFactory`1.CreateClient(HttpClient httpClient)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\RequestLoggingMiddleware.cs:line 25
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[13:38:20 INF] Now listening on: https://0.0.0.0:7168
+[13:38:20 INF] Now listening on: http://0.0.0.0:5229
+[13:38:20 INF] Application started. Press Ctrl+C to shut down.
+[13:38:20 INF] Hosting environment: Development
+[13:38:20 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:44:52 INF] Now listening on: https://0.0.0.0:7168
+[13:44:52 INF] Now listening on: http://0.0.0.0:5229
+[13:44:52 INF] Application started. Press Ctrl+C to shut down.
+[13:44:52 INF] Hosting environment: Development
+[13:44:52 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:46:59 INF] Now listening on: https://0.0.0.0:7168
+[13:46:59 INF] Now listening on: http://0.0.0.0:5229
+[13:46:59 INF] Application started. Press Ctrl+C to shut down.
+[13:46:59 INF] Hosting environment: Development
+[13:46:59 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:51:52 INF] Now listening on: https://0.0.0.0:7168
+[13:51:52 INF] Now listening on: http://0.0.0.0:5229
+[13:51:52 INF] Application started. Press Ctrl+C to shut down.
+[13:51:52 INF] Hosting environment: Development
+[13:51:52 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:52:10 INF] Incoming request: POST /apip/external/IvoUsers/create-user
+[13:52:10 INF] Start processing HTTP request POST https://10.80.55.149:7191/api/Users/register
+[13:52:10 INF] Sending HTTP request POST https://10.80.55.149:7191/api/Users/register
+[13:52:11 INF] Received HTTP response headers after 903.3276ms - 200
+[13:52:11 INF] End processing HTTP request after 907.4601ms - 200
+[13:52:11 INF] Request completed: POST /apip/external/IvoUsers/create-user responded 200 in 1051 ms
+[13:54:39 INF] Incoming request: POST /api/Users
+[13:54:40 INF] Executed DbCommand (38ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[13:54:40 INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Password], [RegistrantId], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+[13:54:40 INF] Request completed: POST /api/Users responded 201 in 1566 ms
+[13:56:31 INF] Now listening on: https://0.0.0.0:7168
+[13:56:31 INF] Now listening on: http://0.0.0.0:5229
+[13:56:31 INF] Application started. Press Ctrl+C to shut down.
+[13:56:31 INF] Hosting environment: Development
+[13:56:31 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:56:40 INF] Incoming request: POST /apip/external/IvoUsers/create-user
+[13:56:40 INF] Request completed: POST /apip/external/IvoUsers/create-user responded 400 in 86 ms
+[13:56:55 INF] Incoming request: POST /apip/external/IvoUsers/create-user
+[13:56:55 INF] Start processing HTTP request POST https://10.80.55.149:7191/api/Users/register
+[13:56:55 INF] Sending HTTP request POST https://10.80.55.149:7191/api/Users/register
+[13:56:56 INF] Received HTTP response headers after 736.4979ms - 200
+[13:56:56 INF] End processing HTTP request after 740.5616ms - 200
+[13:56:56 INF] Request completed: POST /apip/external/IvoUsers/create-user responded 200 in 813 ms
+[13:58:26 INF] Incoming request: POST /api/Users
+[13:58:27 INF] Executed DbCommand (23ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[13:58:27 INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Password], [RegistrantId], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+[13:58:27 INF] Request completed: POST /api/Users responded 201 in 871 ms
+[14:02:09 INF] Incoming request: POST /api/Users
+[14:02:09 INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[14:02:09 INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Password], [RegistrantId], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+[14:02:09 INF] Request completed: POST /api/Users responded 201 in 73 ms
+[14:05:11 INF] Now listening on: https://0.0.0.0:7168
+[14:05:11 INF] Now listening on: http://0.0.0.0:5229
+[14:05:11 INF] Application started. Press Ctrl+C to shut down.
+[14:05:11 INF] Hosting environment: Development
+[14:05:11 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:34:07 INF] Now listening on: https://0.0.0.0:7168
+[14:34:07 INF] Now listening on: http://0.0.0.0:5229
+[14:34:07 INF] Application started. Press Ctrl+C to shut down.
+[14:34:07 INF] Hosting environment: Development
+[14:34:07 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:34:37 INF] Incoming request: POST /apip/external/IvoUsers/create-user
+[14:34:37 INF] Start processing HTTP request POST https://10.80.55.149:7191/api/User/register
+[14:34:37 INF] Sending HTTP request POST https://10.80.55.149:7191/api/User/register
+[14:34:38 INF] Received HTTP response headers after 770.216ms - 200
+[14:34:38 INF] End processing HTTP request after 775.2932ms - 200
+[14:34:38 ERR] An unhandled exception has occurred while executing the request.
+HTTP Response: 
+
+
+
+ExternalApi.ApiException: Could not deserialize the response body stream as System.String.
+
+Status: 200
+Response: 
+
+ ---> Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: S. Path '', line 1, position 1.
+   at Newtonsoft.Json.JsonTextReader.ReadStringValue(ReadType readType)
+   at Newtonsoft.Json.JsonTextReader.ReadAsString()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize[T](JsonReader reader)
+   at ExternalApi.IvoApiClient.ReadObjectResponseAsync[T](HttpResponseMessage response, IReadOnlyDictionary`2 headers, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 2801
+   --- End of inner exception stack trace ---
+   at ExternalApi.IvoApiClient.ReadObjectResponseAsync[T](HttpResponseMessage response, IReadOnlyDictionary`2 headers, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 2808
+   at ExternalApi.IvoApiClient.RegisterAsync(UserFormDTO body, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 1424
+   at WebAPI.Controllers.External.IvoUsersController.CreateUser(UserFormDTO dto) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Controllers\External\IvoUsersController.cs:line 21
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\RequestLoggingMiddleware.cs:line 25
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14:35:41 INF] Now listening on: https://0.0.0.0:7168
+[14:35:42 INF] Now listening on: http://0.0.0.0:5229
+[14:35:42 INF] Application started. Press Ctrl+C to shut down.
+[14:35:42 INF] Hosting environment: Development
+[14:35:42 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:35:57 INF] Incoming request: POST /apip/external/IvoUsers/create-user
+[14:35:57 INF] Start processing HTTP request POST https://10.80.55.149:7191/api/User/register
+[14:35:57 INF] Sending HTTP request POST https://10.80.55.149:7191/api/User/register
+[14:35:57 INF] Received HTTP response headers after 69.0618ms - 200
+[14:35:57 INF] End processing HTTP request after 73.349ms - 200
+[14:35:57 ERR] An unhandled exception has occurred while executing the request.
+HTTP Response: 
+
+
+
+ExternalApi.ApiException: Could not deserialize the response body stream as System.String.
+
+Status: 200
+Response: 
+
+ ---> Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: S. Path '', line 1, position 1.
+   at Newtonsoft.Json.JsonTextReader.ReadStringValue(ReadType readType)
+   at Newtonsoft.Json.JsonTextReader.ReadAsString()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize[T](JsonReader reader)
+   at ExternalApi.IvoApiClient.ReadObjectResponseAsync[T](HttpResponseMessage response, IReadOnlyDictionary`2 headers, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 2801
+   --- End of inner exception stack trace ---
+   at ExternalApi.IvoApiClient.ReadObjectResponseAsync[T](HttpResponseMessage response, IReadOnlyDictionary`2 headers, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 2808
+   at ExternalApi.IvoApiClient.RegisterAsync(UserFormDTO body, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 1424
+   at WebAPI.Controllers.External.IvoUsersController.CreateUser(UserFormDTO dto) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Controllers\External\IvoUsersController.cs:line 21
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\RequestLoggingMiddleware.cs:line 25
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14:38:15 INF] Now listening on: https://0.0.0.0:7168
+[14:38:15 INF] Now listening on: http://0.0.0.0:5229
+[14:38:15 INF] Application started. Press Ctrl+C to shut down.
+[14:38:15 INF] Hosting environment: Development
+[14:38:15 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:38:28 INF] Incoming request: POST /apip/external/IvoUsers/create-user
+[14:38:28 INF] Request completed: POST /apip/external/IvoUsers/create-user responded 400 in 84 ms
+[14:43:44 INF] Now listening on: https://0.0.0.0:7168
+[14:43:44 INF] Now listening on: http://0.0.0.0:5229
+[14:43:44 INF] Application started. Press Ctrl+C to shut down.
+[14:43:44 INF] Hosting environment: Development
+[14:43:44 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:43:45 INF] Incoming request: POST /api/Users
+[14:43:46 INF] Request completed: POST /api/Users responded 400 in 457 ms
+[14:43:51 INF] Incoming request: POST /api/Users
+[14:43:51 INF] Request completed: POST /api/Users responded 400 in 28 ms
+[14:44:45 INF] Incoming request: POST /api/Users
+[14:44:46 INF] Executed DbCommand (25ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[14:44:46 INF] Request completed: POST /api/Users responded 400 in 331 ms
+[14:49:45 INF] Incoming request: POST /api/Users
+[14:49:45 INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[14:49:45 INF] Request completed: POST /api/Users responded 400 in 6 ms
+[14:50:49 INF] Incoming request: POST /api/Users
+[14:50:49 INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[14:50:49 INF] Request completed: POST /api/Users responded 400 in 4 ms
+[14:51:35 INF] Now listening on: https://0.0.0.0:7168
+[14:51:35 INF] Now listening on: http://0.0.0.0:5229
+[14:51:35 INF] Application started. Press Ctrl+C to shut down.
+[14:51:35 INF] Hosting environment: Development
+[14:51:35 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:51:36 ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate Operation for action - WebAPI.Controllers.UsersController.Create (WebAPI). See inner exception
+ ---> Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate schema for type - Microsoft.AspNetCore.Mvc.ProblemDetails. See inner exception
+ ---> System.InvalidOperationException: Can't use schemaId "$ProblemDetails" for type "$Microsoft.AspNetCore.Mvc.ProblemDetails". The same schemaId is already used for type "$ExternalApi.ProblemDetails"
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaRepository.RegisterType(Type type, String schemaId)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateReferencedSchema(DataContract dataContract, SchemaRepository schemaRepository, Func`1 definitionFactory)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateConcreteSchema(DataContract dataContract, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateSchemaForType(Type modelType, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateSchema(Type modelType, SchemaRepository schemaRepository, MemberInfo memberInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateSchema(Type type, SchemaRepository schemaRepository, PropertyInfo propertyInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateSchema(Type type, SchemaRepository schemaRepository, PropertyInfo propertyInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.CreateResponseMediaType(Type modelType, SchemaRepository schemaRespository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.<>c__DisplayClass25_0.<GenerateResponse>b__2(String contentType)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateResponse(ApiDescription apiDescription, SchemaRepository schemaRepository, String statusCode, ApiResponseType apiResponseType)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateResponses(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14:51:40 INF] Incoming request: POST /api/Users
+[14:51:47 INF] Now listening on: https://0.0.0.0:7168
+[14:51:47 INF] Now listening on: http://0.0.0.0:5229
+[14:51:47 INF] Application started. Press Ctrl+C to shut down.
+[14:51:47 INF] Hosting environment: Development
+[14:51:47 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:51:49 ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate Operation for action - WebAPI.Controllers.UsersController.Create (WebAPI). See inner exception
+ ---> Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate schema for type - Microsoft.AspNetCore.Mvc.ProblemDetails. See inner exception
+ ---> System.InvalidOperationException: Can't use schemaId "$ProblemDetails" for type "$Microsoft.AspNetCore.Mvc.ProblemDetails". The same schemaId is already used for type "$ExternalApi.ProblemDetails"
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaRepository.RegisterType(Type type, String schemaId)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateReferencedSchema(DataContract dataContract, SchemaRepository schemaRepository, Func`1 definitionFactory)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateConcreteSchema(DataContract dataContract, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateSchemaForType(Type modelType, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateSchema(Type modelType, SchemaRepository schemaRepository, MemberInfo memberInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateSchema(Type type, SchemaRepository schemaRepository, PropertyInfo propertyInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateSchema(Type type, SchemaRepository schemaRepository, PropertyInfo propertyInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.CreateResponseMediaType(Type modelType, SchemaRepository schemaRespository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.<>c__DisplayClass25_0.<GenerateResponse>b__2(String contentType)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateResponse(ApiDescription apiDescription, SchemaRepository schemaRepository, String statusCode, ApiResponseType apiResponseType)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateResponses(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14:52:11 INF] Now listening on: https://0.0.0.0:7168
+[14:52:11 INF] Now listening on: http://0.0.0.0:5229
+[14:52:11 INF] Application started. Press Ctrl+C to shut down.
+[14:52:11 INF] Hosting environment: Development
+[14:52:11 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:52:12 ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate Operation for action - WebAPI.Controllers.UsersController.Create (WebAPI). See inner exception
+ ---> Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate schema for type - Microsoft.AspNetCore.Mvc.ProblemDetails. See inner exception
+ ---> System.InvalidOperationException: Can't use schemaId "$ProblemDetails" for type "$Microsoft.AspNetCore.Mvc.ProblemDetails". The same schemaId is already used for type "$ExternalApi.ProblemDetails"
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaRepository.RegisterType(Type type, String schemaId)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateReferencedSchema(DataContract dataContract, SchemaRepository schemaRepository, Func`1 definitionFactory)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateConcreteSchema(DataContract dataContract, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateSchemaForType(Type modelType, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SchemaGenerator.GenerateSchema(Type modelType, SchemaRepository schemaRepository, MemberInfo memberInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateSchema(Type type, SchemaRepository schemaRepository, PropertyInfo propertyInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateSchema(Type type, SchemaRepository schemaRepository, PropertyInfo propertyInfo, ParameterInfo parameterInfo, ApiParameterRouteInfo routeInfo)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.CreateResponseMediaType(Type modelType, SchemaRepository schemaRespository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.<>c__DisplayClass25_0.<GenerateResponse>b__2(String contentType)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateResponse(ApiDescription apiDescription, SchemaRepository schemaRepository, String statusCode, ApiResponseType apiResponseType)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateResponses(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[14:53:03 INF] Now listening on: https://0.0.0.0:7168
+[14:53:03 INF] Now listening on: http://0.0.0.0:5229
+[14:53:03 INF] Application started. Press Ctrl+C to shut down.
+[14:53:03 INF] Hosting environment: Development
+[14:53:03 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:53:10 INF] Incoming request: POST /apip/external/IvoUsers/create-user
+[14:53:10 INF] Request completed: POST /apip/external/IvoUsers/create-user responded 400 in 92 ms
+[14:53:16 INF] Incoming request: POST /api/Users
+[14:53:17 INF] Executed DbCommand (32ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[14:53:17 INF] Request completed: POST /api/Users responded 400 in 762 ms
+[14:53:18 INF] Incoming request: POST /apip/external/IvoUsers/create-user
+[14:53:18 INF] Request completed: POST /apip/external/IvoUsers/create-user responded 400 in 4 ms
+[14:53:32 INF] Incoming request: POST /apip/external/IvoUsers/create-user
+[14:53:32 INF] Start processing HTTP request POST https://10.80.55.149:7191/api/User/register
+[14:53:32 INF] Sending HTTP request POST https://10.80.55.149:7191/api/User/register
+[14:53:33 INF] Received HTTP response headers after 739.1944ms - 200
+[14:53:33 INF] End processing HTTP request after 743.5641ms - 200
+[14:53:33 INF] Request completed: POST /apip/external/IvoUsers/create-user responded 500 in 884 ms
+[14:54:14 INF] Incoming request: POST /apip/external/IvoUsers/create-user
+[14:54:14 INF] Start processing HTTP request POST https://10.80.55.149:7191/api/User/register
+[14:54:14 INF] Sending HTTP request POST https://10.80.55.149:7191/api/User/register
+[14:54:15 INF] Received HTTP response headers after 114.8707ms - 200
+[14:54:15 INF] End processing HTTP request after 115.248ms - 200
+[14:54:15 INF] Request completed: POST /apip/external/IvoUsers/create-user responded 500 in 170 ms
+[15:33:51 INF] Incoming request: POST /api/Users
+[15:33:51 INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[15:33:51 INF] Request completed: POST /api/Users responded 400 in 50 ms
+[15:37:10 INF] Now listening on: https://0.0.0.0:7168
+[15:37:10 INF] Now listening on: http://0.0.0.0:5229
+[15:37:10 INF] Application started. Press Ctrl+C to shut down.
+[15:37:10 INF] Hosting environment: Development
+[15:37:10 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[15:42:22 INF] Incoming request: POST /api/Users
+[15:42:23 INF] Executed DbCommand (102ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[15:42:23 INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Password], [RegistrantId], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+[15:42:23 INF] Request completed: POST /api/Users responded 201 in 1821 ms
+[15:42:37 INF] Incoming request: POST /api/Users
+[15:42:37 INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[15:42:37 INF] Request completed: POST /api/Users responded 400 in 53 ms
+[15:42:50 INF] Incoming request: POST /api/Auth/login
+[15:42:50 INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[15:42:50 INF] Request completed: POST /api/Auth/login responded 200 in 136 ms
+[15:44:08 INF] Incoming request: POST /api/Auth/login
+[15:44:08 INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[15:44:08 INF] Request completed: POST /api/Auth/login responded 200 in 40 ms
+[15:44:09 INF] Incoming request: POST /api/Auth/login
+[15:44:09 INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[15:44:09 INF] Request completed: POST /api/Auth/login responded 200 in 40 ms
+[15:44:09 INF] Incoming request: POST /api/Auth/login
+[15:44:09 INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[15:44:09 INF] Request completed: POST /api/Auth/login responded 200 in 40 ms
+[15:44:10 INF] Incoming request: POST /api/Auth/login
+[15:44:10 INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[15:44:10 INF] Request completed: POST /api/Auth/login responded 200 in 42 ms
+[15:44:57 INF] Incoming request: POST /api/Auth/login
+[15:44:57 INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[15:44:57 INF] Request completed: POST /api/Auth/login responded 200 in 38 ms
+[15:45:20 INF] Incoming request: POST /api/Auth/login
+[15:45:20 INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[15:45:20 INF] Request completed: POST /api/Auth/login responded 200 in 38 ms
+[15:45:45 INF] Incoming request: POST /api/Auth/login
+[15:45:45 INF] Executed DbCommand (15ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[15:45:45 INF] Request completed: POST /api/Auth/login responded 200 in 54 ms
+[15:46:45 INF] Now listening on: https://0.0.0.0:7168
+[15:46:45 INF] Now listening on: http://0.0.0.0:5229
+[15:46:45 INF] Application started. Press Ctrl+C to shut down.
+[15:46:45 INF] Hosting environment: Development
+[15:46:45 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[15:48:04 INF] Incoming request: POST /api/Auth/login
+[15:48:05 INF] Executed DbCommand (22ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[15:48:05 INF] Request completed: POST /api/Auth/login responded 200 in 805 ms
+[15:48:27 INF] Incoming request: POST /api/Auth/login
+[15:48:27 INF] Executed DbCommand (4ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[15:48:27 INF] Request completed: POST /api/Auth/login responded 200 in 95 ms
+[15:49:44 INF] Incoming request: POST /api/Auth/login
+[15:49:44 INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[15:49:44 INF] Request completed: POST /api/Auth/login responded 200 in 49 ms
+[15:49:54 INF] Incoming request: POST /api/Auth/login
+[15:49:54 INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[15:49:55 INF] Request completed: POST /api/Auth/login responded 200 in 41 ms
+[15:50:34 INF] Incoming request: POST /api/Auth/login
+[15:50:34 INF] Executed DbCommand (4ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[15:50:34 INF] Request completed: POST /api/Auth/login responded 200 in 43 ms
+[15:52:11 INF] Incoming request: POST /api/Auth/login
+[15:52:11 INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[15:52:11 INF] Request completed: POST /api/Auth/login responded 200 in 40 ms
+[15:53:44 INF] Incoming request: POST /api/Auth/login
+[15:53:44 INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[15:53:44 INF] Request completed: POST /api/Auth/login responded 200 in 40 ms
+[15:55:08 INF] Incoming request: POST /api/Auth/login
+[15:55:08 INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[15:55:08 INF] Request completed: POST /api/Auth/login responded 200 in 39 ms
+[15:57:21 INF] Incoming request: POST /api/Auth/login
+[15:57:21 INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[15:57:21 INF] Request completed: POST /api/Auth/login responded 200 in 40 ms
+[16:04:05 INF] Incoming request: POST /apip/external/IvoUsers/create-user
+[16:04:05 INF] Start processing HTTP request POST https://10.80.55.149:7191/api/User/register
+[16:04:05 INF] Sending HTTP request POST https://10.80.55.149:7191/api/User/register
+[16:04:07 INF] Received HTTP response headers after 1637.6249ms - 200
+[16:04:07 INF] End processing HTTP request after 1641.7082ms - 200
+[16:04:07 INF] Request completed: POST /apip/external/IvoUsers/create-user responded 500 in 1810 ms
+[16:06:58 INF] Now listening on: https://0.0.0.0:7168
+[16:06:58 INF] Now listening on: http://0.0.0.0:5229
+[16:06:58 INF] Application started. Press Ctrl+C to shut down.
+[16:06:58 INF] Hosting environment: Development
+[16:06:58 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:07:12 INF] Incoming request: POST /apip/external/IvoUsers/create-user
+[16:07:12 INF] Start processing HTTP request POST https://10.80.55.149:7191/api/User/register
+[16:07:12 INF] Sending HTTP request POST https://10.80.55.149:7191/api/User/register
+[16:07:12 INF] Received HTTP response headers after 69.397ms - 200
+[16:07:12 INF] End processing HTTP request after 74.3861ms - 200
+[16:07:12 INF] Request completed: POST /apip/external/IvoUsers/create-user responded 200 in 211 ms
+[16:07:28 INF] Incoming request: POST /apip/external/IvoUsers/create-user
+[16:07:28 INF] Request completed: POST /apip/external/IvoUsers/create-user responded 400 in 16 ms
+[16:07:34 INF] Incoming request: POST /apip/external/IvoUsers/create-user
+[16:07:34 INF] Request completed: POST /apip/external/IvoUsers/create-user responded 400 in 3 ms
+[16:13:25 INF] Now listening on: https://0.0.0.0:7168
+[16:13:25 INF] Now listening on: http://0.0.0.0:5229
+[16:13:25 INF] Application started. Press Ctrl+C to shut down.
+[16:13:25 INF] Hosting environment: Development
+[16:13:25 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:13:51 INF] Incoming request: POST /apip/external/IvoUsers/login-user
+[16:13:51 INF] Start processing HTTP request POST https://10.80.55.149:7191/api/User/login
+[16:13:51 INF] Sending HTTP request POST https://10.80.55.149:7191/api/User/login
+[16:13:52 INF] Received HTTP response headers after 1260.2876ms - 400
+[16:13:52 INF] End processing HTTP request after 1265.4414ms - 400
+[16:13:52 INF] Request completed: POST /apip/external/IvoUsers/login-user responded 401 in 1485 ms
+[16:14:10 INF] Incoming request: POST /apip/external/IvoUsers/login-user
+[16:14:10 INF] Start processing HTTP request POST https://10.80.55.149:7191/api/User/login
+[16:14:10 INF] Sending HTTP request POST https://10.80.55.149:7191/api/User/login
+[16:14:10 INF] Received HTTP response headers after 123.702ms - 400
+[16:14:10 INF] End processing HTTP request after 124.2344ms - 400
+[16:14:10 INF] Request completed: POST /apip/external/IvoUsers/login-user responded 401 in 185 ms
+[16:14:22 INF] Incoming request: POST /apip/external/IvoUsers/create-user
+[16:14:22 INF] Start processing HTTP request POST https://10.80.55.149:7191/api/User/register
+[16:14:22 INF] Sending HTTP request POST https://10.80.55.149:7191/api/User/register
+[16:14:22 INF] Received HTTP response headers after 206.7849ms - 200
+[16:14:22 INF] End processing HTTP request after 207.0338ms - 200
+[16:14:22 INF] Request completed: POST /apip/external/IvoUsers/create-user responded 200 in 214 ms
+[16:14:34 INF] Incoming request: POST /apip/external/IvoUsers/login-user
+[16:14:34 INF] Start processing HTTP request POST https://10.80.55.149:7191/api/User/login
+[16:14:34 INF] Sending HTTP request POST https://10.80.55.149:7191/api/User/login
+[16:14:34 INF] Received HTTP response headers after 65.0978ms - 200
+[16:14:34 INF] End processing HTTP request after 65.3133ms - 200
+[16:14:34 INF] Request completed: POST /apip/external/IvoUsers/login-user responded 200 in 75 ms
+[16:15:19 INF] Now listening on: https://0.0.0.0:7168
+[16:15:19 INF] Now listening on: http://0.0.0.0:5229
+[16:15:19 INF] Application started. Press Ctrl+C to shut down.
+[16:15:19 INF] Hosting environment: Development
+[16:15:19 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:15:32 INF] Incoming request: POST /apip/external/IvoUsers/login-user
+[16:15:32 INF] Start processing HTTP request POST https://10.80.55.149:7191/api/User/login
+[16:15:32 INF] Sending HTTP request POST https://10.80.55.149:7191/api/User/login
+[16:15:32 INF] Received HTTP response headers after 57.1945ms - 200
+[16:15:32 INF] End processing HTTP request after 61.4093ms - 200
+[16:15:32 INF] Request completed: POST /apip/external/IvoUsers/login-user responded 200 in 200 ms
+[16:15:37 INF] Incoming request: POST /apip/external/IvoUsers/login-user
+[16:15:37 INF] Start processing HTTP request POST https://10.80.55.149:7191/api/User/login
+[16:15:37 INF] Sending HTTP request POST https://10.80.55.149:7191/api/User/login
+[16:15:37 INF] Received HTTP response headers after 41.3972ms - 400
+[16:15:37 INF] End processing HTTP request after 41.8251ms - 400
+[16:15:37 INF] Request completed: POST /apip/external/IvoUsers/login-user responded 401 in 118 ms
+[16:15:50 INF] Incoming request: POST /apip/external/IvoUsers/login-user
+[16:15:50 INF] Start processing HTTP request POST https://10.80.55.149:7191/api/User/login
+[16:15:50 INF] Sending HTTP request POST https://10.80.55.149:7191/api/User/login
+[16:15:50 INF] Received HTTP response headers after 45.2876ms - 200
+[16:15:50 INF] End processing HTTP request after 45.576ms - 200
+[16:15:50 INF] Request completed: POST /apip/external/IvoUsers/login-user responded 200 in 50 ms
+[16:55:59 INF] Now listening on: https://0.0.0.0:7168
+[16:55:59 INF] Now listening on: http://0.0.0.0:5229
+[16:55:59 INF] Application started. Press Ctrl+C to shut down.
+[16:55:59 INF] Hosting environment: Development
+[16:55:59 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:02:45 INF] Now listening on: https://0.0.0.0:7168
+[17:02:45 INF] Now listening on: http://0.0.0.0:5229
+[17:02:45 INF] Application started. Press Ctrl+C to shut down.
+[17:02:45 INF] Hosting environment: Development
+[17:02:45 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:10:05 INF] Now listening on: https://0.0.0.0:7168
+[17:10:05 INF] Now listening on: http://0.0.0.0:5229
+[17:10:05 INF] Application started. Press Ctrl+C to shut down.
+[17:10:05 INF] Hosting environment: Development
+[17:10:05 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:10:14 INF] Incoming request: GET /api/Registrants
+[17:10:14 INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+[17:10:14 INF] Request completed: GET /api/Registrants responded 200 in 786 ms
+[17:13:25 INF] Now listening on: https://0.0.0.0:7168
+[17:13:25 INF] Now listening on: http://0.0.0.0:5229
+[17:13:25 INF] Application started. Press Ctrl+C to shut down.
+[17:13:25 INF] Hosting environment: Development
+[17:13:25 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:15:20 INF] Incoming request: GET /api/Registrants
+[17:15:20 INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+[17:15:20 INF] Request completed: GET /api/Registrants responded 200 in 737 ms
+[17:16:31 INF] Now listening on: https://0.0.0.0:7168
+[17:16:31 INF] Now listening on: http://0.0.0.0:5229
+[17:16:31 INF] Application started. Press Ctrl+C to shut down.
+[17:16:31 INF] Hosting environment: Development
+[17:16:31 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:16:42 INF] Now listening on: https://0.0.0.0:7168
+[17:16:42 INF] Now listening on: http://0.0.0.0:5229
+[17:16:42 INF] Application started. Press Ctrl+C to shut down.
+[17:16:42 INF] Hosting environment: Development
+[17:16:42 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:17:00 INF] Incoming request: GET /api/Registrants
+[17:17:01 INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+[17:17:01 INF] Request completed: GET /api/Registrants responded 200 in 793 ms
+[17:18:07 INF] Incoming request: GET /api/Registrants/8
+[17:18:07 INF] Executed DbCommand (16ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[17:18:07 INF] Request completed: GET /api/Registrants/8 responded 200 in 118 ms
+[17:21:24 INF] Incoming request: GET /api/Users
+[17:21:25 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+[17:21:25 INF] Request completed: GET /api/Users responded 200 in 35 ms
+[17:23:58 INF] Incoming request: GET /api/Registrants
+[17:23:58 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+[17:23:58 INF] Request completed: GET /api/Registrants responded 200 in 8 ms
+[17:28:57 INF] Now listening on: https://0.0.0.0:7168
+[17:28:57 INF] Now listening on: http://0.0.0.0:5229
+[17:28:57 INF] Application started. Press Ctrl+C to shut down.
+[17:28:57 INF] Hosting environment: Development
+[17:28:57 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:29:03 INF] Incoming request: GET /api/Registrants
+[17:29:03 WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[17:29:03 INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany], [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username], [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Registrants] AS [r]
+LEFT JOIN [Users] AS [u] ON [r].[Id] = [u].[RegistrantId]
+LEFT JOIN [Wallets] AS [w] ON [r].[Id] = [w].[RegistrantId]
+ORDER BY [r].[Id], [u].[Id]
+[17:29:04 ERR] An unhandled exception has occurred while executing the request.
+System.Text.Json.JsonException: A possible object cycle was detected. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32. Consider using ReferenceHandler.Preserve on JsonSerializerOptions to support cycles. Path: $.Users.Registrant.Users.Registrant.Users.Registrant.Users.Registrant.Users.Registrant.Users.Registrant.Users.Registrant.Users.Registrant.Users.Registrant.Users.Registrant.Id.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_SerializerCycleDetected(Int32 maxDepth)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.ListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\RequestLoggingMiddleware.cs:line 25
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[17:30:55 INF] Now listening on: https://0.0.0.0:7168
+[17:30:55 INF] Now listening on: http://0.0.0.0:5229
+[17:30:55 INF] Application started. Press Ctrl+C to shut down.
+[17:30:55 INF] Hosting environment: Development
+[17:30:55 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:31:00 INF] Incoming request: GET /api/Registrants
+[17:31:01 WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[17:31:01 INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany], [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username], [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Registrants] AS [r]
+LEFT JOIN [Users] AS [u] ON [r].[Id] = [u].[RegistrantId]
+LEFT JOIN [Wallets] AS [w] ON [r].[Id] = [w].[RegistrantId]
+ORDER BY [r].[Id], [u].[Id]
+[17:31:01 INF] Request completed: GET /api/Registrants responded 200 in 857 ms
+[17:31:50 INF] Now listening on: https://0.0.0.0:7168
+[17:31:50 INF] Now listening on: http://0.0.0.0:5229
+[17:31:50 INF] Application started. Press Ctrl+C to shut down.
+[17:31:50 INF] Hosting environment: Development
+[17:31:50 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:38:29 INF] Now listening on: https://0.0.0.0:7168
+[17:38:29 INF] Now listening on: http://0.0.0.0:5229
+[17:38:29 INF] Application started. Press Ctrl+C to shut down.
+[17:38:29 INF] Hosting environment: Development
+[17:38:29 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:38:34 INF] Incoming request: GET /api/Registrants
+[17:38:34 WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[17:38:35 INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany], [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username], [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Registrants] AS [r]
+LEFT JOIN [Users] AS [u] ON [r].[Id] = [u].[RegistrantId]
+LEFT JOIN [Wallets] AS [w] ON [r].[Id] = [w].[RegistrantId]
+ORDER BY [r].[Id], [u].[Id]
+[17:38:35 INF] Request completed: GET /api/Registrants responded 200 in 928 ms
+[17:38:54 INF] Now listening on: https://0.0.0.0:7168
+[17:38:54 INF] Now listening on: http://0.0.0.0:5229
+[17:38:54 INF] Application started. Press Ctrl+C to shut down.
+[17:38:54 INF] Hosting environment: Development
+[17:38:54 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:38:59 INF] Incoming request: GET /api/Registrants
+[17:39:00 WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[17:39:00 INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany], [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username], [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Registrants] AS [r]
+LEFT JOIN [Users] AS [u] ON [r].[Id] = [u].[RegistrantId]
+LEFT JOIN [Wallets] AS [w] ON [r].[Id] = [w].[RegistrantId]
+ORDER BY [r].[Id], [u].[Id]
+[17:39:00 INF] Request completed: GET /api/Registrants responded 200 in 874 ms
+[17:43:28 INF] Now listening on: https://0.0.0.0:7168
+[17:43:28 INF] Now listening on: http://0.0.0.0:5229
+[17:43:28 INF] Application started. Press Ctrl+C to shut down.
+[17:43:28 INF] Hosting environment: Development
+[17:43:28 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:43:35 INF] Incoming request: GET /api/Registrants
+[17:43:36 INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+[17:43:36 INF] Request completed: GET /api/Registrants responded 200 in 862 ms
+[17:44:11 INF] Now listening on: https://0.0.0.0:7168
+[17:44:11 INF] Now listening on: http://0.0.0.0:5229
+[17:44:11 INF] Application started. Press Ctrl+C to shut down.
+[17:44:11 INF] Hosting environment: Development
+[17:44:11 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI

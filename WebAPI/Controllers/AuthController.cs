@@ -26,6 +26,8 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("login")]
+        [ProducesResponseType(typeof(object), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Login([FromBody] LoginDto dto)
         {
             var user = await _unitOfWork.UserRepository.GetByUsernameAsync(dto.Username);
