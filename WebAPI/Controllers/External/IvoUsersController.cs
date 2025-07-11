@@ -18,19 +18,29 @@ namespace WebAPI.Controllers.External
 
         [HttpPost("create-user")]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> CreateUser([FromBody] UserFormDTO dto)
         {
             try
             {
-                await _client.Register2Async(dto);
-                return Ok();
-            }catch(ApiException ex)when(ex.StatusCode == 400)
+                var res = await _client.Register2Async(dto);
+                return Ok(res);
+
+            }catch(ApiException e) when (e.StatusCode == 201)
+            {
+                Console.WriteLine(e.Response);
+                return Created();
+            }
+            catch(ApiException ex)when(ex.StatusCode == 400)
             {
                 return BadRequest(ex.Response);
             }catch(ApiException ex)
             {
+                Console.WriteLine($"Status: {ex.StatusCode}");
+                Console.WriteLine($"Raw Response: {ex.Response}");
+
                 return StatusCode(500, new ExternalApi.ProblemDetails
                 {
                     Title = "Ivo API error",

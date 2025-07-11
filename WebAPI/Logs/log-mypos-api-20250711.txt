@@ -813,3 +813,368 @@ LEFT JOIN [Wallets] AS [w] ON [r].[Id] = [w].[RegistrantId]
 LEFT JOIN [Users] AS [u] ON [r].[Id] = [u].[RegistrantId]
 ORDER BY [r].[Id], [w].[Id]
 [13:59:21 INF] Request completed: GET /api/Registrants/registrants/with-realated-data responded 200 in 874 ms
+[14:19:24 INF] Now listening on: https://0.0.0.0:7168
+[14:19:24 INF] Now listening on: http://0.0.0.0:5229
+[14:19:24 INF] Application started. Press Ctrl+C to shut down.
+[14:19:24 INF] Hosting environment: Development
+[14:19:24 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:19:46 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[14:19:46 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:19:46 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:19:48 INF] Received HTTP response headers after 1716.126ms - 201
+[14:19:48 INF] End processing HTTP request after 1720.474ms - 201
+[14:19:48 INF] Request completed: POST /api/external/IvoUsers/create-user responded 200 in 1880 ms
+[14:20:15 INF] Incoming request: POST /api/external/IvoUsers/login-user
+[14:20:15 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[14:20:15 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[14:20:15 INF] Received HTTP response headers after 78.5114ms - 200
+[14:20:15 INF] End processing HTTP request after 78.8603ms - 200
+[14:20:15 INF] Request completed: POST /api/external/IvoUsers/login-user responded 200 in 102 ms
+[14:20:48 INF] Now listening on: https://0.0.0.0:7168
+[14:20:48 INF] Now listening on: http://0.0.0.0:5229
+[14:20:48 INF] Application started. Press Ctrl+C to shut down.
+[14:20:48 INF] Hosting environment: Development
+[14:20:48 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:21:01 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[14:21:01 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:21:01 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:21:01 INF] Received HTTP response headers after 39.1795ms - 201
+[14:21:01 INF] End processing HTTP request after 43.6625ms - 201
+[14:21:01 INF] Request completed: POST /api/external/IvoUsers/create-user responded 200 in 192 ms
+[14:26:44 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[14:26:44 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:26:44 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:26:44 INF] Received HTTP response headers after 74.0631ms - 201
+[14:26:44 INF] End processing HTTP request after 74.4801ms - 201
+[14:26:44 INF] Request completed: POST /api/external/IvoUsers/create-user responded 500 in 167 ms
+[14:27:13 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[14:27:13 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:27:13 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:27:13 INF] Received HTTP response headers after 30.6751ms - 201
+[14:27:13 INF] End processing HTTP request after 31.0197ms - 201
+[14:27:14 INF] Request completed: POST /api/external/IvoUsers/create-user responded 500 in 93 ms
+[14:28:23 INF] Now listening on: https://0.0.0.0:7168
+[14:28:23 INF] Now listening on: http://0.0.0.0:5229
+[14:28:23 INF] Application started. Press Ctrl+C to shut down.
+[14:28:23 INF] Hosting environment: Development
+[14:28:23 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:28:57 INF] Now listening on: https://0.0.0.0:7168
+[14:28:57 INF] Now listening on: http://0.0.0.0:5229
+[14:28:58 INF] Application started. Press Ctrl+C to shut down.
+[14:28:58 INF] Hosting environment: Development
+[14:28:58 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:29:09 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[14:29:09 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:29:09 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:29:10 INF] Received HTTP response headers after 1058.4192ms - 201
+[14:29:10 INF] End processing HTTP request after 1062.6969ms - 201
+[14:29:11 INF] Request completed: POST /api/external/IvoUsers/create-user responded 500 in 1286 ms
+[14:32:32 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[14:32:32 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:32:32 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:32:33 INF] Received HTTP response headers after 37.8387ms - 201
+[14:32:33 INF] End processing HTTP request after 38.2007ms - 201
+[14:32:33 INF] Request completed: POST /api/external/IvoUsers/create-user responded 500 in 103 ms
+[14:33:17 INF] Now listening on: https://0.0.0.0:7168
+[14:33:17 INF] Now listening on: http://0.0.0.0:5229
+[14:33:17 INF] Application started. Press Ctrl+C to shut down.
+[14:33:17 INF] Hosting environment: Development
+[14:33:17 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:33:31 INF] Now listening on: https://0.0.0.0:7168
+[14:33:31 INF] Now listening on: http://0.0.0.0:5229
+[14:33:31 INF] Application started. Press Ctrl+C to shut down.
+[14:33:31 INF] Hosting environment: Development
+[14:33:31 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:33:43 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[14:33:55 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:33:55 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:33:55 INF] Received HTTP response headers after 38.1937ms - 201
+[14:33:55 INF] End processing HTTP request after 42.7901ms - 201
+[14:35:51 INF] Now listening on: https://0.0.0.0:7168
+[14:35:52 INF] Now listening on: http://0.0.0.0:5229
+[14:35:52 INF] Application started. Press Ctrl+C to shut down.
+[14:35:52 INF] Hosting environment: Development
+[14:35:52 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:36:06 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[14:36:06 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:36:06 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:36:07 INF] Received HTTP response headers after 30.1131ms - 201
+[14:36:07 INF] End processing HTTP request after 34.4615ms - 201
+[14:36:07 INF] Request completed: POST /api/external/IvoUsers/create-user responded 500 in 258 ms
+[14:41:44 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[14:41:44 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:41:44 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:41:45 INF] Received HTTP response headers after 1126.5574ms - 201
+[14:41:45 INF] End processing HTTP request after 1127.1027ms - 201
+[14:41:45 INF] Request completed: POST /api/external/IvoUsers/create-user responded 500 in 1201 ms
+[14:42:24 INF] Now listening on: https://0.0.0.0:7168
+[14:42:24 INF] Now listening on: http://0.0.0.0:5229
+[14:42:24 INF] Application started. Press Ctrl+C to shut down.
+[14:42:24 INF] Hosting environment: Development
+[14:42:24 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:42:40 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[14:42:40 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:42:40 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:42:41 INF] Received HTTP response headers after 1139.2303ms - 201
+[14:42:41 INF] End processing HTTP request after 1143.7738ms - 201
+[14:42:41 INF] Request completed: POST /api/external/IvoUsers/create-user responded 500 in 1387 ms
+[14:44:37 INF] Incoming request: POST /api/external/IvoUsers/login-user
+[14:44:37 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[14:44:37 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[14:44:37 INF] Received HTTP response headers after 88.782ms - 200
+[14:44:37 INF] End processing HTTP request after 89.1801ms - 200
+[14:44:37 INF] Request completed: POST /api/external/IvoUsers/login-user responded 200 in 112 ms
+[14:44:50 INF] Incoming request: GET /api/external/IvoRegistrants
+[14:44:50 INF] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant
+[14:44:50 INF] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant
+[14:44:50 INF] Received HTTP response headers after 75.7992ms - 200
+[14:44:50 INF] End processing HTTP request after 76.0967ms - 200
+[14:44:50 INF] Request completed: GET /api/external/IvoRegistrants responded 200 in 129 ms
+[14:44:55 INF] Incoming request: GET /api/external/IvoRegistrants
+[14:44:55 INF] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant
+[14:44:55 INF] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant
+[14:44:55 INF] Received HTTP response headers after 6.5576ms - 401
+[14:44:55 INF] End processing HTTP request after 6.7911ms - 401
+[14:44:55 INF] Request completed: GET /api/external/IvoRegistrants responded 401 in 47 ms
+[14:50:37 INF] Now listening on: https://0.0.0.0:7168
+[14:50:37 INF] Now listening on: http://0.0.0.0:5229
+[14:50:37 INF] Application started. Press Ctrl+C to shut down.
+[14:50:37 INF] Hosting environment: Development
+[14:50:37 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:50:51 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[14:50:51 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:50:51 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:50:51 INF] Received HTTP response headers after 53.295ms - 201
+[14:50:51 INF] End processing HTTP request after 58.0659ms - 201
+[14:50:51 INF] Request completed: POST /api/external/IvoUsers/create-user responded 500 in 286 ms
+[14:53:31 INF] Now listening on: https://0.0.0.0:7168
+[14:53:31 INF] Now listening on: http://0.0.0.0:5229
+[14:53:31 INF] Application started. Press Ctrl+C to shut down.
+[14:53:31 INF] Hosting environment: Development
+[14:53:31 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:53:43 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[14:53:43 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:53:43 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:53:44 INF] Received HTTP response headers after 66.1021ms - 201
+[14:53:44 INF] End processing HTTP request after 71.0352ms - 201
+[14:53:44 INF] Request completed: POST /api/external/IvoUsers/create-user responded 500 in 351 ms
+[14:54:22 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[14:54:22 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:54:22 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:54:22 INF] Received HTTP response headers after 33.834ms - 201
+[14:54:22 INF] End processing HTTP request after 34.1582ms - 201
+[14:54:22 INF] Request completed: POST /api/external/IvoUsers/create-user responded 500 in 100 ms
+[14:55:30 INF] Now listening on: https://0.0.0.0:7168
+[14:55:30 INF] Now listening on: http://0.0.0.0:5229
+[14:55:30 INF] Application started. Press Ctrl+C to shut down.
+[14:55:30 INF] Hosting environment: Development
+[14:55:30 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:55:38 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[14:55:38 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:55:38 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:55:38 INF] Received HTTP response headers after 39.5391ms - 201
+[14:55:38 INF] End processing HTTP request after 46.7793ms - 201
+[14:55:38 INF] Request completed: POST /api/external/IvoUsers/create-user responded 500 in 397 ms
+[14:57:00 INF] Now listening on: https://0.0.0.0:7168
+[14:57:00 INF] Now listening on: http://0.0.0.0:5229
+[14:57:00 INF] Application started. Press Ctrl+C to shut down.
+[14:57:00 INF] Hosting environment: Development
+[14:57:00 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:57:09 INF] Now listening on: https://0.0.0.0:7168
+[14:57:09 INF] Now listening on: http://0.0.0.0:5229
+[14:57:09 INF] Application started. Press Ctrl+C to shut down.
+[14:57:09 INF] Hosting environment: Development
+[14:57:09 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:57:16 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[14:57:16 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:57:16 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:57:16 INF] Received HTTP response headers after 34.5529ms - 201
+[14:57:16 INF] End processing HTTP request after 40.1967ms - 201
+[14:57:16 INF] Request completed: POST /api/external/IvoUsers/create-user responded 204 in 317 ms
+[14:59:19 INF] Now listening on: https://0.0.0.0:7168
+[14:59:19 INF] Now listening on: http://0.0.0.0:5229
+[14:59:19 INF] Application started. Press Ctrl+C to shut down.
+[14:59:19 INF] Hosting environment: Development
+[14:59:19 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:59:26 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[14:59:26 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:59:26 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[14:59:26 INF] Received HTTP response headers after 35.2025ms - 201
+[14:59:26 INF] End processing HTTP request after 40.5892ms - 201
+[14:59:26 INF] Request completed: POST /api/external/IvoUsers/create-user responded 204 in 305 ms
+[15:00:16 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[15:00:16 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[15:00:16 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[15:00:16 INF] Received HTTP response headers after 32.781ms - 201
+[15:00:16 INF] End processing HTTP request after 33.311ms - 201
+[15:00:16 INF] Request completed: POST /api/external/IvoUsers/create-user responded 204 in 93 ms
+[15:00:54 INF] Now listening on: https://0.0.0.0:7168
+[15:00:55 INF] Now listening on: http://0.0.0.0:5229
+[15:00:55 INF] Application started. Press Ctrl+C to shut down.
+[15:00:55 INF] Hosting environment: Development
+[15:00:55 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[15:01:03 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[15:01:03 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[15:01:03 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[15:01:03 INF] Received HTTP response headers after 30.4073ms - 201
+[15:01:03 INF] End processing HTTP request after 35.6578ms - 201
+[15:01:03 INF] Request completed: POST /api/external/IvoUsers/create-user responded 200 in 287 ms
+[15:01:32 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[15:01:32 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[15:01:32 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[15:01:32 INF] Received HTTP response headers after 21.6893ms - 201
+[15:01:32 INF] End processing HTTP request after 25.9502ms - 201
+[15:01:32 INF] Request completed: POST /api/external/IvoUsers/create-user responded 200 in 102 ms
+[15:01:50 INF] Now listening on: https://0.0.0.0:7168
+[15:01:50 INF] Now listening on: http://0.0.0.0:5229
+[15:01:50 INF] Application started. Press Ctrl+C to shut down.
+[15:01:50 INF] Hosting environment: Development
+[15:01:50 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[15:02:39 INF] Now listening on: https://0.0.0.0:7168
+[15:02:39 INF] Now listening on: http://0.0.0.0:5229
+[15:02:39 INF] Application started. Press Ctrl+C to shut down.
+[15:02:39 INF] Hosting environment: Development
+[15:02:39 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[15:02:47 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[15:02:47 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[15:02:47 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[15:02:47 INF] Received HTTP response headers after 34.3655ms - 201
+[15:02:47 INF] End processing HTTP request after 40.098ms - 201
+[15:03:40 INF] Now listening on: https://0.0.0.0:7168
+[15:03:40 INF] Now listening on: http://0.0.0.0:5229
+[15:03:40 INF] Application started. Press Ctrl+C to shut down.
+[15:03:40 INF] Hosting environment: Development
+[15:03:40 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[15:04:19 INF] Now listening on: https://0.0.0.0:7168
+[15:04:19 INF] Now listening on: http://0.0.0.0:5229
+[15:04:19 INF] Application started. Press Ctrl+C to shut down.
+[15:04:19 INF] Hosting environment: Development
+[15:04:19 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[15:04:27 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[15:04:27 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[15:04:27 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[15:04:27 INF] Received HTTP response headers after 37.0244ms - 201
+[15:04:27 INF] End processing HTTP request after 43.7228ms - 201
+[15:04:30 INF] Request completed: POST /api/external/IvoUsers/create-user responded 204 in 2712 ms
+[15:07:56 INF] Now listening on: https://0.0.0.0:7168
+[15:07:56 INF] Now listening on: http://0.0.0.0:5229
+[15:07:56 INF] Application started. Press Ctrl+C to shut down.
+[15:07:56 INF] Hosting environment: Development
+[15:07:56 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[15:08:07 INF] Now listening on: https://0.0.0.0:7168
+[15:08:07 INF] Now listening on: http://0.0.0.0:5229
+[15:08:07 INF] Application started. Press Ctrl+C to shut down.
+[15:08:07 INF] Hosting environment: Development
+[15:08:07 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[15:08:15 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[15:08:15 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[15:08:15 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[15:08:15 INF] Received HTTP response headers after 19.1267ms - 400
+[15:08:15 INF] End processing HTTP request after 23.8649ms - 400
+[15:08:15 INF] Request completed: POST /api/external/IvoUsers/create-user responded 400 in 226 ms
+[15:09:51 INF] Now listening on: https://0.0.0.0:7168
+[15:09:51 INF] Now listening on: http://0.0.0.0:5229
+[15:09:51 INF] Application started. Press Ctrl+C to shut down.
+[15:09:51 INF] Hosting environment: Development
+[15:09:51 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[15:09:58 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[15:09:58 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[15:09:58 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[15:09:59 INF] Received HTTP response headers after 1139.2996ms - 201
+[15:09:59 INF] End processing HTTP request after 1143.8607ms - 201
+[15:09:59 INF] Request completed: POST /api/external/IvoUsers/create-user responded 204 in 1362 ms
+[15:52:28 INF] Now listening on: https://0.0.0.0:7168
+[15:52:28 INF] Now listening on: http://0.0.0.0:5229
+[15:52:28 INF] Application started. Press Ctrl+C to shut down.
+[15:52:28 INF] Hosting environment: Development
+[15:52:28 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[15:52:37 INF] Incoming request: POST /api/external/IvoUsers/login-user
+[15:52:37 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[15:52:37 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[15:52:37 INF] Received HTTP response headers after 94.5193ms - 200
+[15:52:37 INF] End processing HTTP request after 99.863ms - 200
+[15:52:37 INF] Request completed: POST /api/external/IvoUsers/login-user responded 200 in 248 ms
+[15:52:53 INF] Incoming request: GET /api/external/IvoRegistrants
+[15:52:53 INF] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant
+[15:52:53 INF] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant
+[15:52:53 INF] Received HTTP response headers after 63.6492ms - 200
+[15:52:53 INF] End processing HTTP request after 64.0423ms - 200
+[15:52:53 INF] Request completed: GET /api/external/IvoRegistrants responded 200 in 128 ms
+[15:52:57 INF] Incoming request: GET /api/external/IvoRegistrants
+[15:52:57 INF] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant
+[15:52:57 INF] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant
+[15:52:57 INF] Received HTTP response headers after 5.442ms - 401
+[15:52:57 INF] End processing HTTP request after 5.6911ms - 401
+[15:52:57 INF] Request completed: GET /api/external/IvoRegistrants responded 401 in 58 ms
+[15:54:28 INF] Now listening on: https://0.0.0.0:7168
+[15:54:28 INF] Now listening on: http://0.0.0.0:5229
+[15:54:28 INF] Application started. Press Ctrl+C to shut down.
+[15:54:28 INF] Hosting environment: Development
+[15:54:28 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[15:54:36 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[15:54:36 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[15:54:36 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[15:54:37 INF] Received HTTP response headers after 45.669ms - 201
+[15:54:37 INF] End processing HTTP request after 50.0108ms - 201
+[15:54:37 INF] Request completed: POST /api/external/IvoUsers/create-user responded 204 in 269 ms
+[16:01:41 INF] Now listening on: https://0.0.0.0:7168
+[16:01:41 INF] Now listening on: http://0.0.0.0:5229
+[16:01:41 INF] Application started. Press Ctrl+C to shut down.
+[16:01:41 INF] Hosting environment: Development
+[16:01:41 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:01:49 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[16:01:49 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[16:01:49 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[16:01:50 INF] Received HTTP response headers after 1035.0392ms - 201
+[16:01:50 INF] End processing HTTP request after 1039.7227ms - 201
+[16:01:51 INF] Request completed: POST /api/external/IvoUsers/create-user responded 204 in 1265 ms
+[16:03:32 INF] Now listening on: https://0.0.0.0:7168
+[16:03:32 INF] Now listening on: http://0.0.0.0:5229
+[16:03:32 INF] Application started. Press Ctrl+C to shut down.
+[16:03:32 INF] Hosting environment: Development
+[16:03:32 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:03:43 INF] Incoming request: POST /api/external/IvoUsers/create-user
+[16:03:43 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[16:03:43 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[16:03:43 INF] Received HTTP response headers after 67.7064ms - 201
+[16:03:43 INF] End processing HTTP request after 72.3737ms - 201
+[16:03:43 INF] Request completed: POST /api/external/IvoUsers/create-user responded 200 in 213 ms
+[16:04:12 INF] Incoming request: POST /api/external/IvoUsers/login-user
+[16:04:12 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[16:04:12 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[16:04:12 INF] Received HTTP response headers after 52.5091ms - 200
+[16:04:12 INF] End processing HTTP request after 52.941ms - 200
+[16:04:12 INF] Request completed: POST /api/external/IvoUsers/login-user responded 200 in 71 ms
+[16:04:16 INF] Incoming request: GET /api/Registrants/registrants/with-realated-data
+[16:04:17 WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[16:04:17 INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany], [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode], [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Registrants] AS [r]
+LEFT JOIN [Wallets] AS [w] ON [r].[Id] = [w].[RegistrantId]
+LEFT JOIN [Users] AS [u] ON [r].[Id] = [u].[RegistrantId]
+ORDER BY [r].[Id], [w].[Id]
+[16:04:17 INF] Request completed: GET /api/Registrants/registrants/with-realated-data responded 200 in 817 ms
+[16:04:26 INF] Incoming request: GET /api/external/IvoRegistrants
+[16:04:26 INF] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant
+[16:04:26 INF] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant
+[16:04:26 INF] Received HTTP response headers after 8.2283ms - 401
+[16:04:26 INF] End processing HTTP request after 8.7437ms - 401
+[16:04:26 INF] Request completed: GET /api/external/IvoRegistrants responded 401 in 78 ms
+[16:04:40 INF] Incoming request: GET /api/external/IvoRegistrants
+[16:04:40 INF] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant
+[16:04:40 INF] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant
+[16:04:40 INF] Received HTTP response headers after 63.2723ms - 200
+[16:04:40 INF] End processing HTTP request after 63.5142ms - 200
+[16:04:40 INF] Request completed: GET /api/external/IvoRegistrants responded 200 in 107 ms
+[16:05:51 INF] Incoming request: PUT /api/external/IvoRegistrants/d4845db7-2624-4000-9721-362c7ca07719
+[16:05:51 INF] Start processing HTTP request PUT https://10.80.55.56:7191/api/Registrant/d4845db7-2624-4000-9721-362c7ca07719
+[16:05:51 INF] Sending HTTP request PUT https://10.80.55.56:7191/api/Registrant/d4845db7-2624-4000-9721-362c7ca07719
+[16:05:51 INF] Received HTTP response headers after 96.9721ms - 200
+[16:05:51 INF] End processing HTTP request after 97.3508ms - 200
+[16:05:51 INF] Request completed: PUT /api/external/IvoRegistrants/d4845db7-2624-4000-9721-362c7ca07719 responded 200 in 119 ms
+[16:05:58 INF] Incoming request: GET /api/external/IvoRegistrants
+[16:05:58 INF] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant
+[16:05:58 INF] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant
+[16:05:58 INF] Received HTTP response headers after 4.7633ms - 200
+[16:05:58 INF] End processing HTTP request after 4.9524ms - 200
+[16:05:58 INF] Request completed: GET /api/external/IvoRegistrants responded 200 in 5 ms
