@@ -11,5 +11,9 @@ namespace WebAPI.Repositories
         {
         }
 
+        public async Task<IEnumerable<Registrant>> GetAllRegistrantsWithWalletsAndUsersAsync()
+        {
+            return await _context.Registrants.Include(r => r.Wallets).Include(r => r.Users).ToListAsync();
+        }
     }
 }

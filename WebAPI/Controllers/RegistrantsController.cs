@@ -38,6 +38,42 @@ namespace WebAPI.Controllers
             return Ok(result);
         }
 
+        [HttpGet("registrants/with-realated-data")]
+        [ProducesResponseType(typeof(IEnumerable<RegistrantWithAllWalletsAndUsersDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<IEnumerable<RegistrantWithAllWalletsAndUsersDto>>> GetAllWithWalletsAndUsers()
+        {
+            var registrants = await _unitOfWork.RegistrantRepository.GetAllRegistrantsWithWalletsAndUsersAsync();
+
+            var result = registrants.Select(r => new RegistrantWithAllWalletsAndUsersDto
+            {
+                Id = r.Id,
+                DateCreated = r.DateCreated,
+                DisplayName = r.DisplayName,
+                GSM = r.GSM,
+                Country = r.Country,
+                Address = r.Address,
+                IsCompany = r.isCompany,
+                Wallets = r.Wallets.Select(w => new WalletDto
+                {
+                    Id = w.Id,
+                    DateCreated = w.DateCreated,
+                    Status = w.Status,
+                    TarifaCode = w.TarifaCode,
+                    LimitCode = w.LimitCode,
+                    RegistrantId = w.RegistrantId,
+                }).ToList(),
+                Users = r.Users.Select(u => new UserDto
+                {
+                    Id = u.Id,
+                    Username = u.Username,
+                    RegistrantId = u.RegistrantId
+                }).ToList()
+            });
+
+            return Ok(result);
+        }
+
         [HttpPost]
         [ProducesResponseType(typeof(Registrant), StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
