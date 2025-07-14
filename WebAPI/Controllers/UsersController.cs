@@ -12,14 +12,10 @@ namespace WebAPI.Controllers
     [Route("api/[controller]")]
     public class UsersController : ControllerBase
     {
-        private readonly IUnitOfWork _unitOfWork;
-        private readonly IPasswordHasher<User> _passwordHasher;
-        private readonly IUsersService _usersService;
+        private readonly IUserService _usersService;
 
-        public UsersController(IUnitOfWork uow, IPasswordHasher<User> passwordHasher, IUsersService us)
+        public UsersController(IUserService us)
         {
-            _unitOfWork = uow;
-            _passwordHasher = passwordHasher;
             _usersService = us;
         }
 
@@ -27,31 +23,14 @@ namespace WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var users = await _unitOfWork.UserRepository.GetAllAsync();
-
-            var usrDtos = users.Select(u => new UserDto
-            {
-                Id = u.Id,
-                Username = u.Username,
-                RegistrantId = u.RegistrantId,
-            });
-
+            var usrDtos = await _usersService.GetAll();
             return Ok(usrDtos);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var usr = await _unitOfWork.UserRepository.GetByIdAsync(id);
-            if (usr == null)
-                return NotFound();
-
-            var userDto = new UserDto
-            {
-                Id = usr.Id,
-                Username = usr.Username,
-                RegistrantId = usr.RegistrantId,
-            };
+            var userDto = await _usersService.GetById(id);
 
             return Ok(userDto);
         }
@@ -70,33 +49,17 @@ namespace WebAPI.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] CreateUserDto dto)
         {
-            var user = await _unitOfWork.UserRepository.GetByIdAsync(id);
-            if (user == null)
-                return NotFound();
-            var registrant = await _unitOfWork.RegistrantRepository.GetByIdAsync(dto.RegistrantId);
-            if (registrant == null) 
-                return BadRequest($"Registrant with ID {dto.RegistrantId} does not exist.");
+            var usr = await _usersService.UpdateUser(id, dto);
 
-            user.Username = dto.Username;
-            user.Password = _passwordHasher.HashPassword(user, dto.Password);
-            user.RegistrantId = dto.RegistrantId;
-
-            _unitOfWork.UserRepository.Update(user);
-            await _unitOfWork.SaveChangesAsync();
-
-            return NoContent();
+            return Ok(usr);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var user = await _unitOfWork.UserRepository.GetByIdAsync(id);
-            if(user == null) return NotFound();
+           var usr = await _usersService.DeleteUser(id);
 
-            _unitOfWork.UserRepository.Delete(user);
-            await _unitOfWork.SaveChangesAsync();
-
-            return NoContent(); 
+            return Ok(usr);
         }
 
         

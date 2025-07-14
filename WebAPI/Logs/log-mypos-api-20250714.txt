@@ -127,3 +127,90 @@ SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[Di
 FROM [Registrants] AS [r]
 WHERE [r].[Id] = @__p_0
 [14:50:39 INF] Request completed: POST /api/Users responded 404 in 124 ms
+[15:21:57 INF] Now listening on: https://0.0.0.0:7168
+[15:21:57 INF] Now listening on: http://0.0.0.0:5229
+[15:21:57 INF] Application started. Press Ctrl+C to shut down.
+[15:21:57 INF] Hosting environment: Development
+[15:21:57 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[15:24:27 INF] Incoming request: POST /api/Users
+[15:24:28 INF] Executed DbCommand (24ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[15:24:28 INF] Request completed: POST /api/Users responded 404 in 972 ms
+[15:24:59 INF] Incoming request: POST /api/Users
+[15:24:59 INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[15:25:00 INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Password], [RegistrantId], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+[15:25:00 INF] Request completed: POST /api/Users responded 201 in 261 ms
+[15:25:38 INF] Incoming request: POST /api/Users
+[15:25:38 INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[15:25:38 INF] Request completed: POST /api/Users responded 404 in 84 ms
+[15:29:38 INF] Incoming request: GET /api/Wallets
+[15:29:38 INF] Request completed: GET /api/Wallets responded 401 in 11 ms
+[16:48:32 INF] Now listening on: https://0.0.0.0:7168
+[16:48:32 INF] Now listening on: http://0.0.0.0:5229
+[16:48:32 INF] Application started. Press Ctrl+C to shut down.
+[16:48:32 INF] Hosting environment: Development
+[16:48:32 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:48:43 INF] Incoming request: GET /api/Users
+[16:48:44 INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+[16:48:44 INF] Request completed: GET /api/Users responded 200 in 776 ms
+[16:48:54 INF] Incoming request: GET /api/Users/17
+[16:48:55 INF] Executed DbCommand (17ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+[16:48:55 INF] Request completed: GET /api/Users/17 responded 200 in 132 ms
+[16:49:03 INF] Incoming request: PUT /api/Users/17
+[16:49:03 INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+[16:49:03 INF] Executed DbCommand (1ms) [Parameters=[@__dto_RegistrantId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__dto_RegistrantId_0
+[16:49:03 INF] Executed DbCommand (5ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Password] = @p0, [RegistrantId] = @p1, [Username] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;
+[16:49:03 INF] Request completed: PUT /api/Users/17 responded 200 in 161 ms
+[16:49:06 INF] Incoming request: GET /api/Users/17
+[16:49:06 INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+[16:49:06 INF] Request completed: GET /api/Users/17 responded 200 in 4 ms
+[16:49:11 INF] Incoming request: DELETE /api/Users/17
+[16:49:11 INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+[16:49:11 INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Users]
+OUTPUT 1
+WHERE [Id] = @p0;
+[16:49:11 INF] Request completed: DELETE /api/Users/17 responded 200 in 24 ms
+[16:49:17 INF] Incoming request: GET /api/Users/17
+[16:49:17 INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+[16:49:17 INF] Request completed: GET /api/Users/17 responded 404 in 90 ms
