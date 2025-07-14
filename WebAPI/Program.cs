@@ -72,6 +72,7 @@ namespace WebAPI
             builder.Services.AddScoped<IWalletRepository, WalletRepository>();
 
             builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IAccountService, AccountService>();
 
             builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 
