@@ -1,0 +1,106 @@
+[09:32:45 INF] Now listening on: https://0.0.0.0:7168
+[09:32:45 INF] Now listening on: http://0.0.0.0:5229
+[09:32:45 INF] Application started. Press Ctrl+C to shut down.
+[09:32:45 INF] Hosting environment: Development
+[09:32:45 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[09:33:04 INF] Incoming request: POST /api/Auth/login
+[09:33:06 INF] Executed DbCommand (30ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[09:33:06 INF] Request completed: POST /api/Auth/login responded 401 in 2005 ms
+[09:33:17 INF] Incoming request: GET /api/UserAccess
+[09:33:17 INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+[09:33:17 INF] Request completed: GET /api/UserAccess responded 200 in 83 ms
+[09:33:25 INF] Incoming request: GET /api/Users
+[09:33:25 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+[09:33:25 INF] Request completed: GET /api/Users responded 200 in 28 ms
+[09:33:40 INF] Incoming request: POST /api/Auth/login
+[09:33:40 INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[09:33:40 INF] Request completed: POST /api/Auth/login responded 401 in 54 ms
+[09:33:43 INF] Incoming request: POST /api/Auth/login
+[09:33:43 INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[09:33:44 INF] Request completed: POST /api/Auth/login responded 200 in 63 ms
+[09:33:58 INF] Incoming request: GET /api/Registrants
+[09:33:58 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+[09:33:58 INF] Request completed: GET /api/Registrants responded 200 in 52 ms
+[09:34:07 INF] Incoming request: GET /api/Registrants
+[09:34:07 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+[09:34:07 INF] Request completed: GET /api/Registrants responded 200 in 6 ms
+[09:34:10 INF] Incoming request: GET /api/Registrants
+[09:34:10 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+[09:34:10 INF] Request completed: GET /api/Registrants responded 200 in 4 ms
+[09:34:12 INF] Incoming request: GET /api/Registrants
+[09:34:12 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+[09:34:12 INF] Request completed: GET /api/Registrants responded 200 in 5 ms
+[09:34:20 INF] Incoming request: GET /api/Wallets
+[09:34:20 INF] Request completed: GET /api/Wallets responded 401 in 9 ms
+[09:34:48 INF] Incoming request: GET /api/Accounts
+[09:34:48 INF] Request completed: GET /api/Accounts responded 401 in 1 ms
+[09:34:54 INF] Incoming request: GET /api/Accounts
+[09:34:54 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccountName], [a].[Balance], [a].[BalanceInEuro], [a].[Currency], [a].[DateCreated], [a].[IBAN], [a].[LastOperationDT], [a].[WalletId]
+FROM [Accounts] AS [a]
+[09:34:54 INF] Request completed: GET /api/Accounts responded 200 in 24 ms
+[10:19:20 INF] Now listening on: https://0.0.0.0:7168
+[10:19:20 INF] Now listening on: http://0.0.0.0:5229
+[10:19:20 INF] Application started. Press Ctrl+C to shut down.
+[10:19:20 INF] Hosting environment: Development
+[10:19:20 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:19:46 INF] Incoming request: POST /api/external/IvoUsers/login-user
+[10:19:46 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[10:19:46 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[10:19:47 INF] Received HTTP response headers after 947.277ms - 400
+[10:19:47 INF] End processing HTTP request after 952.7331ms - 400
+[10:19:47 INF] Request completed: POST /api/external/IvoUsers/login-user responded 401 in 1177 ms
+[10:19:56 INF] Incoming request: POST /api/external/IvoUsers/login-user
+[10:19:56 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[10:19:56 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[10:19:56 INF] Received HTTP response headers after 40.4899ms - 400
+[10:19:56 INF] End processing HTTP request after 40.7985ms - 400
+[10:19:56 INF] Request completed: POST /api/external/IvoUsers/login-user responded 401 in 94 ms
+[10:20:04 INF] Incoming request: POST /api/external/IvoUsers/login-user
+[10:20:04 INF] Request completed: POST /api/external/IvoUsers/login-user responded 400 in 14 ms
+[10:26:45 INF] Incoming request: POST /api/external/IvoUsers/login-user
+[10:26:45 INF] Request completed: POST /api/external/IvoUsers/login-user responded 400 in 20 ms
+[10:27:07 INF] Incoming request: POST /api/external/IvoUsers/login-user
+[10:27:07 INF] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[10:27:07 INF] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[10:27:07 INF] Received HTTP response headers after 33.2914ms - 200
+[10:27:07 INF] End processing HTTP request after 33.5215ms - 200
+[10:27:07 INF] Request completed: POST /api/external/IvoUsers/login-user responded 200 in 44 ms
+[10:27:19 INF] Incoming request: GET /api/external/IvoRegistrants
+[10:27:19 INF] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant
+[10:27:19 INF] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant
+[10:27:19 INF] Received HTTP response headers after 10.4279ms - 401
+[10:27:19 INF] End processing HTTP request after 10.8097ms - 401
+[10:27:19 INF] Request completed: GET /api/external/IvoRegistrants responded 401 in 50 ms
+[10:27:25 INF] Incoming request: GET /api/external/IvoRegistrants
+[10:27:25 INF] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant
+[10:27:25 INF] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant
+[10:27:25 INF] Received HTTP response headers after 56.3495ms - 200
+[10:27:25 INF] End processing HTTP request after 56.6021ms - 200
+[10:27:25 INF] Request completed: GET /api/external/IvoRegistrants responded 200 in 104 ms
+[10:28:31 INF] Incoming request: GET /api/Users
+[10:28:32 INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+[10:28:32 INF] Request completed: GET /api/Users responded 200 in 1342 ms

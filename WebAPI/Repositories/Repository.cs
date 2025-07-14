@@ -24,5 +24,12 @@ namespace WebAPI.Repositories
         public void Update(T entity) => _dbSet.Update(entity);
 
         public void Delete(T entity) => _dbSet.Remove(entity);
+
+        public IQueryable<T> Query() => _dbSet.AsQueryable();
+
+        public async Task<T?> GetSingleAsync(Func<IQueryable<T>, IQueryable<T>> filter)
+        {
+            return await filter(_dbSet).FirstOrDefaultAsync();
+        }
     }
 }
