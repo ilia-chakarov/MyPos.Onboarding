@@ -138,6 +138,7 @@ namespace WebAPI
             app.UseHttpsRedirection();
 
             app.UseMiddleware<RequestLoggingMiddleware>();
+            app.UseMiddleware<ExceptionHandlingMiddleware>();
 
             app.UseAuthentication();
             app.UseAuthorization();

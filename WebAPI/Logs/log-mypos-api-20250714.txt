@@ -104,3 +104,26 @@ FROM [Accounts] AS [a]
 SELECT [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
 FROM [Users] AS [u]
 [10:28:32 INF] Request completed: GET /api/Users responded 200 in 1342 ms
+[14:49:57 INF] Now listening on: https://0.0.0.0:7168
+[14:49:57 INF] Now listening on: http://0.0.0.0:5229
+[14:49:57 INF] Application started. Press Ctrl+C to shut down.
+[14:49:57 INF] Hosting environment: Development
+[14:49:57 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:50:17 INF] Incoming request: POST /api/Users
+[14:50:18 INF] Executed DbCommand (28ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[14:50:18 INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Password], [RegistrantId], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+[14:50:18 INF] Request completed: POST /api/Users responded 201 in 1074 ms
+[14:50:39 INF] Incoming request: POST /api/Users
+[14:50:39 INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[14:50:39 INF] Request completed: POST /api/Users responded 404 in 124 ms
