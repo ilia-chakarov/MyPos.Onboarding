@@ -13,6 +13,8 @@ using Microsoft.OpenApi.Models;
 using Serilog;
 using WebAPI.Middleware;
 using ExternalApi;
+using WebAPI.Services.Interfaces;
+using WebAPI.Services;
 
 namespace WebAPI
 {
@@ -68,6 +70,8 @@ namespace WebAPI
             builder.Services.AddScoped<IUserAccessControlRepository, UserAccessControlRepository>();
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IWalletRepository, WalletRepository>();
+
+            builder.Services.AddScoped<IUsersService, UserService>();
 
             builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 

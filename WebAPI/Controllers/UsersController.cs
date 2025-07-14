@@ -4,6 +4,7 @@ using WebAPI.DTOs;
 
 using WebAPI.Entities;
 using Microsoft.AspNetCore.Identity;
+using WebAPI.Services.Interfaces;
 
 namespace WebAPI.Controllers
 {
@@ -13,11 +14,13 @@ namespace WebAPI.Controllers
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IPasswordHasher<User> _passwordHasher;
+        private readonly IUsersService _usersService;
 
-        public UsersController(IUnitOfWork uow, IPasswordHasher<User> passwordHasher)
+        public UsersController(IUnitOfWork uow, IPasswordHasher<User> passwordHasher, IUsersService us)
         {
             _unitOfWork = uow;
             _passwordHasher = passwordHasher;
+            _usersService = us;
         }
 
 
@@ -59,30 +62,9 @@ namespace WebAPI.Controllers
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Create([FromBody] CreateUserDto dto)
         {
-            var registrant = await _unitOfWork.RegistrantRepository.GetByIdAsync(dto.RegistrantId);
-            if (registrant == null)
-                return BadRequest($"Registrant with ID {dto.RegistrantId} does not exist.");
+            var userDto = await _usersService.CreateUser(dto);
 
-
-            var user = new User
-            {
-                Username = dto.Username,
-                RegistrantId = dto.RegistrantId
-            };
-            user.Password = _passwordHasher.HashPassword(user, dto.Password);
-
-            await _unitOfWork.UserRepository.AddAsync(user);
-            await _unitOfWork.SaveChangesAsync();
-
-            var userDto = new UserDto
-            {
-                Id = user.Id,
-                Username = user.Username,
-                RegistrantId = user.RegistrantId
-            };
-
-            return CreatedAtAction(nameof(GetById), new { id = user.Id }, userDto);
-
+            return CreatedAtAction(nameof(GetById), new { id = userDto.Id }, userDto);
         }
 
         [HttpPut("{id}")]
