@@ -2,8 +2,8 @@
 
 namespace WebAPI.Repositories.Interfaces
 {
-    public interface IRegistrantRepository : IRepository<Registrant>
+    public interface IRegistrantRepository : IRepository<RegistrantEntity>
     {
-        Task<IEnumerable<Registrant>> GetAllRegistrantsWithWalletsAndUsersAsync();
+        Task<IEnumerable<RegistrantEntity>> GetAllRegistrantsWithWalletsAndUsersAsync();
     }
 }

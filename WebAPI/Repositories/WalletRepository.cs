@@ -4,7 +4,7 @@ using WebAPI.Repositories.Interfaces;
 
 namespace WebAPI.Repositories
 {
-    public class WalletRepository : Repository<Wallet>, IWalletRepository
+    public class WalletRepository : Repository<WalletEntity>, IWalletRepository
     {
         public WalletRepository(AppDbContext context) : base(context)
         {

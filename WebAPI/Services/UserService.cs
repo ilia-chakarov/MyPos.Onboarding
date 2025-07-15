@@ -11,9 +11,9 @@ namespace WebAPI.Services
     public class UserService : IUserService
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IPasswordHasher<User> _passwordHasher;
+        private readonly IPasswordHasher<UserEntity> _passwordHasher;
 
-        public UserService(IUnitOfWork uow, IPasswordHasher<User> passwordHasher)
+        public UserService(IUnitOfWork uow, IPasswordHasher<UserEntity> passwordHasher)
         {
             _unitOfWork = uow;
             _passwordHasher = passwordHasher;
@@ -22,12 +22,12 @@ namespace WebAPI.Services
 
         public async Task<UserDto> CreateUser(CreateUserDto dto)
         {
-            var registrant = await _unitOfWork.GetRepository<Registrant>().GetByIdAsync(dto.RegistrantId);
+            var registrant = await _unitOfWork.GetRepository<RegistrantEntity>().GetByIdAsync(dto.RegistrantId);
 
             if (registrant == null)
                 throw new MyPosApiException($"Registrant with ID {dto.RegistrantId} not found", StatusCodes.Status404NotFound);
 
-            var user = new User
+            var user = new UserEntity
             {
                 Username = dto.Username,
                 RegistrantId = dto.RegistrantId,
@@ -35,7 +35,7 @@ namespace WebAPI.Services
 
             user.Password = _passwordHasher.HashPassword(user, dto.Password);
 
-            await _unitOfWork.GetRepository<User>().AddAsync(user);
+            await _unitOfWork.GetRepository<UserEntity>().AddAsync(user);
             await _unitOfWork.SaveChangesAsync();
 
             var userDto = new UserDto
@@ -48,9 +48,9 @@ namespace WebAPI.Services
             return userDto;
         }
 
-        public async Task<IEnumerable<UserDto>> GetAll(Func<IQueryable<User>, IQueryable<User>>? filter = null)
+        public async Task<IEnumerable<UserDto>> GetAll(Func<IQueryable<UserEntity>, IQueryable<UserEntity>>? filter = null)
         {
-            var query = _unitOfWork.GetRepository<User>().Query();
+            var query = _unitOfWork.GetRepository<UserEntity>().Query();
 
             if(filter != null)
                 query = filter(query);
@@ -66,7 +66,7 @@ namespace WebAPI.Services
 
         public async Task<UserDto> GetById(int id)
         {
-            var usr = await _unitOfWork.GetRepository<User>().GetSingleAsync(query => 
+            var usr = await _unitOfWork.GetRepository<UserEntity>().GetSingleAsync(query => 
                 query.Where(u => u.Id == id));
 
             if (usr == null)
@@ -82,14 +82,14 @@ namespace WebAPI.Services
 
         public async Task<UserDto> UpdateUser(int id, CreateUserDto dto)
         {
-            var user = await _unitOfWork.GetRepository<User>().GetSingleAsync(q =>
+            var user = await _unitOfWork.GetRepository<UserEntity>().GetSingleAsync(q =>
                 q.Where(u => u.Id == id)
             );
 
             if (user == null)
                 throw new MyPosApiException($"User with id {id} found", StatusCodes.Status404NotFound);
 
-            var registrant = await _unitOfWork.GetRepository<Registrant>().GetSingleAsync(q =>
+            var registrant = await _unitOfWork.GetRepository<RegistrantEntity>().GetSingleAsync(q =>
                 q.Where(r => r.Id == dto.RegistrantId)
                 );
 
@@ -100,7 +100,7 @@ namespace WebAPI.Services
             user.Password = _passwordHasher.HashPassword(user, dto.Password);
             user.RegistrantId = dto.RegistrantId;
 
-            _unitOfWork.GetRepository<User>().Update(user);
+            _unitOfWork.GetRepository<UserEntity>().Update(user);
             await _unitOfWork.SaveChangesAsync();
 
             return new UserDto
@@ -112,13 +112,13 @@ namespace WebAPI.Services
         }
         public async Task<UserDto> DeleteUser(int id)
         {
-            var user = await _unitOfWork.GetRepository<User>().GetSingleAsync(q =>
+            var user = await _unitOfWork.GetRepository<UserEntity>().GetSingleAsync(q =>
                 q.Where(u => u.Id == id));
 
             if (user == null)
                 throw new MyPosApiException($"User with id {id} found", StatusCodes.Status404NotFound);
 
-            _unitOfWork.GetRepository<User>().Delete(user);
+            _unitOfWork.GetRepository<UserEntity>().Delete(user);
             await _unitOfWork.SaveChangesAsync();
             return new UserDto
             {

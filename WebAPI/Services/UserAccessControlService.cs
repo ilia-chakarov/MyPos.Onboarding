@@ -17,24 +17,24 @@ namespace WebAPI.Services
         }
         public async Task<CreateUserAccessControlDto> CreateUAC(CreateUserAccessControlDto dto)
         {
-            var user = await _unitOfWork.GetRepository<User>().GetByIdAsync(dto.UserId);
+            var user = await _unitOfWork.GetRepository<UserEntity>().GetByIdAsync(dto.UserId);
             if (user == null) 
                 throw new MyPosApiException($"User with userId {dto.UserId} not found",
                     StatusCodes.Status404NotFound);
 
-            var wallet = await _unitOfWork.GetRepository<Wallet>().GetByIdAsync(dto.WalletId);
+            var wallet = await _unitOfWork.GetRepository<WalletEntity>().GetByIdAsync(dto.WalletId);
             if (wallet == null)
                 throw new MyPosApiException($"Wallet with walletId {dto.WalletId} not found",
                     StatusCodes.Status404NotFound);
 
-            var uac = new UserAccessControl
+            var uac = new UserAccessControlEntity
             {
                 UserId = dto.UserId,
                 WalletId = dto.WalletId,
                 AccessLevel = dto.AccessLevel
             };
 
-            await _unitOfWork.GetRepository<UserAccessControl>().AddAsync(uac);
+            await _unitOfWork.GetRepository<UserAccessControlEntity>().AddAsync(uac);
             await _unitOfWork.SaveChangesAsync();
 
             return new CreateUserAccessControlDto
@@ -49,14 +49,14 @@ namespace WebAPI.Services
 
         public async Task<CreateUserAccessControlDto> DeleteUAC(int userId, int walletId)
         {
-            var uac = await _unitOfWork.GetRepository<UserAccessControl>().GetSingleAsync(query =>
+            var uac = await _unitOfWork.GetRepository<UserAccessControlEntity>().GetSingleAsync(query =>
                 query.Where(uac => uac.UserId == userId && uac.WalletId == walletId));
 
             if (uac == null)
                 throw new MyPosApiException($"User access control with userId {userId} and wallet id {walletId} not found",
                     StatusCodes.Status404NotFound);
 
-            _unitOfWork.GetRepository<UserAccessControl>().Delete(uac);
+            _unitOfWork.GetRepository<UserAccessControlEntity>().Delete(uac);
             await _unitOfWork.SaveChangesAsync();
 
             return new CreateUserAccessControlDto
@@ -72,9 +72,9 @@ namespace WebAPI.Services
             throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<CreateUserAccessControlDto>> GetAll(Func<IQueryable<UserAccessControl>, IQueryable<UserAccessControl>>? filter = null)
+        public async Task<IEnumerable<CreateUserAccessControlDto>> GetAll(Func<IQueryable<UserAccessControlEntity>, IQueryable<UserAccessControlEntity>>? filter = null)
         {
-            var query = _unitOfWork.GetRepository<UserAccessControl>().Query();
+            var query = _unitOfWork.GetRepository<UserAccessControlEntity>().Query();
 
             if(filter != null)
                 query = filter(query);
@@ -90,7 +90,7 @@ namespace WebAPI.Services
 
         public async Task<CreateUserAccessControlDto> GetById(int userId, int walletId)
         {
-            var uac = await _unitOfWork.GetRepository<UserAccessControl>().GetSingleAsync(query =>
+            var uac = await _unitOfWork.GetRepository<UserAccessControlEntity>().GetSingleAsync(query =>
                 query.Where(uac => uac.UserId == userId && uac.WalletId == walletId));
 
             if (uac == null)
@@ -107,7 +107,7 @@ namespace WebAPI.Services
 
         public async Task<CreateUserAccessControlDto> UpdateUAC(int userId, int walletId, CreateUserAccessControlDto dto)
         {
-            var uac = await _unitOfWork.GetRepository<UserAccessControl>().GetSingleAsync(query =>
+            var uac = await _unitOfWork.GetRepository<UserAccessControlEntity>().GetSingleAsync(query =>
                 query.Where(uac => uac.UserId == userId && uac.WalletId == walletId));
 
             if (uac == null)
@@ -118,18 +118,18 @@ namespace WebAPI.Services
             if (userId == dto.UserId && walletId == dto.WalletId)
             {
                 uac.AccessLevel = dto.AccessLevel;
-                _unitOfWork.GetRepository<UserAccessControl>().Update(uac);
+                _unitOfWork.GetRepository<UserAccessControlEntity>().Update(uac);
             }
             else
             {
-                _unitOfWork.GetRepository<UserAccessControl>().Delete(uac);
-                var newUac = new UserAccessControl
+                _unitOfWork.GetRepository<UserAccessControlEntity>().Delete(uac);
+                var newUac = new UserAccessControlEntity
                 {
                     UserId = dto.UserId,
                     WalletId = dto.WalletId,
                     AccessLevel = dto.AccessLevel,
                 };
-                await _unitOfWork.GetRepository<UserAccessControl>().AddAsync(newUac);
+                await _unitOfWork.GetRepository<UserAccessControlEntity>().AddAsync(newUac);
             }
 
             await _unitOfWork.SaveChangesAsync();

@@ -1,6 +1,6 @@
 ﻿namespace WebAPI.Entities
 {
-    public class Account
+    public class AccountEntity
     {
         public int Id { get; set; }
         public DateTime DateCreated { get; set; }
@@ -12,6 +12,6 @@
         public decimal BalanceInEuro { get; set; }
 
         public int WalletId { get; set; }
-        public Wallet Wallet { get; set; } = null!;
+        public WalletEntity Wallet { get; set; } = null!;
     }
 }

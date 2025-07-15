@@ -2,8 +2,8 @@
 
 namespace WebAPI.Repositories.Interfaces
 {
-    public interface IUserAccessControlRepository : IRepository<UserAccessControl>
+    public interface IUserAccessControlRepository : IRepository<UserAccessControlEntity>
     {
-        Task<UserAccessControl?> GetByUserAndWalletAsync(int userId, int walletId);
+        Task<UserAccessControlEntity?> GetByUserAndWalletAsync(int userId, int walletId);
     }
 }

@@ -2,8 +2,8 @@
 
 namespace WebAPI.Repositories.Interfaces
 {
-    public interface IUserRepository : IRepository<User>
+    public interface IUserRepository : IRepository<UserEntity>
     {
-        Task<User?> GetByUsernameAsync(string username);
+        Task<UserEntity?> GetByUsernameAsync(string username);
     }
 }

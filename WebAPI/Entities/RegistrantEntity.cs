@@ -1,6 +1,6 @@
 ﻿namespace WebAPI.Entities
 {
-    public class Registrant
+    public class RegistrantEntity
     {
         public int Id { get; set; }
         public DateTime DateCreated { get; set; }
@@ -10,7 +10,7 @@
         public string Address { get; set; } = null!;
         public bool isCompany { get; set; }
 
-        public ICollection<User> Users { get; set; } = new List<User>();
-        public ICollection<Wallet> Wallets { get; set; } = new List<Wallet>();
+        public ICollection<UserEntity> Users { get; set; } = new List<UserEntity>();
+        public ICollection<WalletEntity> Wallets { get; set; } = new List<WalletEntity>();
     }
 }

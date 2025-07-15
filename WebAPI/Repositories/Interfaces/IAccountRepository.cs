@@ -2,7 +2,7 @@
 
 namespace WebAPI.Repositories.Interfaces
 {
-    public interface IAccountRepository : IRepository<Account>
+    public interface IAccountRepository : IRepository<AccountEntity>
     {
     }
 }

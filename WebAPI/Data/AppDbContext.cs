@@ -7,36 +7,36 @@ namespace WebAPI.Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) {}
 
-        public DbSet<User> Users => Set<User>();
-        public DbSet<Wallet> Wallets => Set<Wallet>();
-        public DbSet<Account> Accounts => Set<Account>();
-        public DbSet<Registrant> Registrants => Set<Registrant>();
-        public DbSet<UserAccessControl> UserAccessControls => Set<UserAccessControl>();
+        public DbSet<UserEntity> Users => Set<UserEntity>();
+        public DbSet<WalletEntity> Wallets => Set<WalletEntity>();
+        public DbSet<AccountEntity> Accounts => Set<AccountEntity>();
+        public DbSet<RegistrantEntity> Registrants => Set<RegistrantEntity>();
+        public DbSet<UserAccessControlEntity> UserAccessControls => Set<UserAccessControlEntity>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<UserAccessControl>()
+            modelBuilder.Entity<UserAccessControlEntity>()
                 .HasKey(uac => new { uac.UserId, uac.WalletId });
 
-            modelBuilder.Entity<UserAccessControl>()
+            modelBuilder.Entity<UserAccessControlEntity>()
                 .HasOne(uac => uac.User)
                 .WithMany(u => u.AccessControls)
                 .HasForeignKey(uac => uac.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<UserAccessControl>()
+            modelBuilder.Entity<UserAccessControlEntity>()
                 .HasOne(uac => uac.Wallet)
                 .WithMany(w => w.AccessControls)
                 .HasForeignKey(uac => uac.WalletId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<Account>()
+            modelBuilder.Entity<AccountEntity>()
                 .Property(a => a.Balance)
                 .HasPrecision(18, 2);
 
-            modelBuilder.Entity<Account>()
+            modelBuilder.Entity<AccountEntity>()
                 .Property(a => a.BalanceInEuro)
                 .HasPrecision(18, 2);
         }

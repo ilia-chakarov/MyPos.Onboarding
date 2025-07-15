@@ -5,7 +5,7 @@ namespace WebAPI.Services.Interfaces
 {
     public interface IWalletService
     {
-        Task<IEnumerable<WalletDto>> GetAll(Func<IQueryable<Wallet>, IQueryable<Wallet>>? filter = null);
+        Task<IEnumerable<WalletDto>> GetAll(Func<IQueryable<WalletEntity>, IQueryable<WalletEntity>>? filter = null);
 
         Task<WalletDto> CreateWallet(CreateWalletDto dto);
 

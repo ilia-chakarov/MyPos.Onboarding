@@ -73,7 +73,7 @@ namespace WebAPI
             builder.Services.AddScoped<IUserAccessControlService, UserAccessControlService>();
             builder.Services.AddScoped<IAuthService, AuthService>();
 
-            builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
+            builder.Services.AddScoped<IPasswordHasher<UserEntity>, PasswordHasher<UserEntity>>();
 
 
             // Load JwtSettings from appsettings.json

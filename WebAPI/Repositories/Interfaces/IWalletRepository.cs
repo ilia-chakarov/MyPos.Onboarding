@@ -2,7 +2,7 @@
 
 namespace WebAPI.Repositories.Interfaces
 {
-    public interface IWalletRepository : IRepository<Wallet>
+    public interface IWalletRepository : IRepository<WalletEntity>
     {
     }
 }

@@ -16,7 +16,7 @@ namespace WebAPI.Services
         }
         public async Task<AccountDto> GetById(int id)
         {
-            var account = await _unitOfWork.GetRepository<Account>().GetSingleAsync(query =>
+            var account = await _unitOfWork.GetRepository<AccountEntity>().GetSingleAsync(query =>
                 query.Where(
                     a => a.Id == id
                     ));
@@ -40,9 +40,9 @@ namespace WebAPI.Services
             return accountDto;
         }
 
-        public async Task<IEnumerable<AccountDto>> GetAll(Func<IQueryable<Account>, IQueryable<Account>>? filter = null)
+        public async Task<IEnumerable<AccountDto>> GetAll(Func<IQueryable<AccountEntity>, IQueryable<AccountEntity>>? filter = null)
         {
-            var query = _unitOfWork.GetRepository<Account>().Query();
+            var query = _unitOfWork.GetRepository<AccountEntity>().Query();
 
             if (filter != null)
                 query = filter(query);
@@ -65,13 +65,13 @@ namespace WebAPI.Services
 
         public async Task<AccountDto> CreateAccount(CreateAccountDto dto)
         {
-            var wallet = await _unitOfWork.GetRepository<Wallet>().GetSingleAsync(query =>
+            var wallet = await _unitOfWork.GetRepository<WalletEntity>().GetSingleAsync(query =>
                 query.Where(w => w.Id == dto.WalletId
             ));
             if (wallet == null)
                 throw new MyPosApiException($"Wallet with id {dto.WalletId} does not exist", StatusCodes.Status404NotFound);
 
-            var account = new Account
+            var account = new AccountEntity
             {
                 DateCreated = DateTime.Now,
                 Currency = dto.Currency,
@@ -83,7 +83,7 @@ namespace WebAPI.Services
                 WalletId = dto.WalletId,
             };
 
-            await _unitOfWork.GetRepository<Account>().AddAsync(account);
+            await _unitOfWork.GetRepository<AccountEntity>().AddAsync(account);
             await _unitOfWork.SaveChangesAsync();
 
             return new AccountDto
@@ -102,7 +102,7 @@ namespace WebAPI.Services
 
         public async Task<AccountDto> DeleteAccount(int id)
         {
-            var account = await _unitOfWork.GetRepository<Account>().GetSingleAsync(query =>
+            var account = await _unitOfWork.GetRepository<AccountEntity>().GetSingleAsync(query =>
                 query.Where(
                     a => a.Id == id
                     ));
@@ -110,7 +110,7 @@ namespace WebAPI.Services
             if (account == null)
                 throw new MyPosApiException($"Account with id {id} not found", StatusCodes.Status404NotFound);
 
-            _unitOfWork.GetRepository<Account>().Delete(account);
+            _unitOfWork.GetRepository<AccountEntity>().Delete(account);
             await _unitOfWork.SaveChangesAsync();
 
             return new AccountDto
@@ -129,7 +129,7 @@ namespace WebAPI.Services
 
         public async Task<AccountDto> UpdateAccount(int id, CreateAccountDto dto)
         {
-            var account = await _unitOfWork.GetRepository<Account>().GetSingleAsync(query =>
+            var account = await _unitOfWork.GetRepository<AccountEntity>().GetSingleAsync(query =>
                 query.Where(
                     a => a.Id == id
                     ));
@@ -138,7 +138,7 @@ namespace WebAPI.Services
                 throw new MyPosApiException($"Account with id {id} not found",
                     StatusCodes.Status404NotFound);
 
-            var wallet = await _unitOfWork.GetRepository<Wallet>().GetSingleAsync(query =>
+            var wallet = await _unitOfWork.GetRepository<WalletEntity>().GetSingleAsync(query =>
                 query.Where(w => w.Id == dto.WalletId
             ));
             if (wallet == null)
@@ -153,7 +153,7 @@ namespace WebAPI.Services
             account.BalanceInEuro = dto.BalanceInEuro;
             account.WalletId = dto.WalletId;
 
-            _unitOfWork.GetRepository<Account>().Update(account);
+            _unitOfWork.GetRepository<AccountEntity>().Update(account);
             await _unitOfWork.SaveChangesAsync();
 
             return new AccountDto

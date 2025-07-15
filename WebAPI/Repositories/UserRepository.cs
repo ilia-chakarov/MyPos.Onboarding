@@ -5,13 +5,13 @@ using WebAPI.Repositories.Interfaces;
 
 namespace WebAPI.Repositories
 {
-    public class UserRepository : Repository<User>, IUserRepository
+    public class UserRepository : Repository<UserEntity>, IUserRepository
     {
         public UserRepository(AppDbContext context) : base(context)
         {
         }
 
-        public Task<User?> GetByUsernameAsync(string username)
+        public Task<UserEntity?> GetByUsernameAsync(string username)
         {
             return _dbSet.FirstOrDefaultAsync(u => u.Username == username);
         }

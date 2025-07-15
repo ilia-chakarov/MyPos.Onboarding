@@ -18,7 +18,7 @@ namespace WebAPI.Services
 
         public async Task<RegistrantDto> CreateRegistrant(CreateRegistrantDto dto)
         {
-            var registrant = new Registrant
+            var registrant = new RegistrantEntity
             {
                 DisplayName = dto.DisplayName,
                 GSM = dto.GSM,
@@ -28,7 +28,7 @@ namespace WebAPI.Services
                 DateCreated = DateTime.Now,
             };
 
-            await _unitOfWork.GetRepository<Registrant>().AddAsync(registrant);
+            await _unitOfWork.GetRepository<RegistrantEntity>().AddAsync(registrant);
             await _unitOfWork.SaveChangesAsync();
 
             return new RegistrantDto { 
@@ -44,12 +44,12 @@ namespace WebAPI.Services
 
         public async Task<RegistrantDto> DeleteRegistrant(int id)
         {
-            var registrant = await _unitOfWork.GetRepository<Registrant>().GetByIdAsync(id);
+            var registrant = await _unitOfWork.GetRepository<RegistrantEntity>().GetByIdAsync(id);
 
             if (registrant == null)
                 throw new MyPosApiException($"Registrant with id {id} not found", StatusCodes.Status404NotFound);
 
-            _unitOfWork.GetRepository<Registrant>().Delete(registrant);
+            _unitOfWork.GetRepository<RegistrantEntity>().Delete(registrant);
             await _unitOfWork.SaveChangesAsync();
 
             return new RegistrantDto
@@ -64,9 +64,9 @@ namespace WebAPI.Services
             };
         }
 
-        public async Task<IEnumerable<RegistrantDto>> GetAll(Func<IQueryable<Registrant>, IQueryable<Registrant>>? filter = null)
+        public async Task<IEnumerable<RegistrantDto>> GetAll(Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>? filter = null)
         {
-            var query = _unitOfWork.GetRepository<Registrant>().Query();
+            var query = _unitOfWork.GetRepository<RegistrantEntity>().Query();
 
             if (filter != null)
                 query = filter(query);
@@ -84,9 +84,9 @@ namespace WebAPI.Services
             }).ToListAsync();
         }
 
-        public async Task<IEnumerable<RegistrantWithAllWalletsAndUsersDto>> GetAllWithWalletsAndUsers(Func<IQueryable<Registrant>, IQueryable<Registrant>>? filter = null)
+        public async Task<IEnumerable<RegistrantWithAllWalletsAndUsersDto>> GetAllWithWalletsAndUsers(Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>? filter = null)
         {
-            var query = _unitOfWork.GetRepository<Registrant>().Query();
+            var query = _unitOfWork.GetRepository<RegistrantEntity>().Query();
 
             if (filter != null)
                 query = filter(query);
@@ -124,7 +124,7 @@ namespace WebAPI.Services
 
         public async Task<RegistrantDto> GetById(int id)
         {
-            var registrant = await _unitOfWork.GetRepository<Registrant>().GetSingleAsync(q =>
+            var registrant = await _unitOfWork.GetRepository<RegistrantEntity>().GetSingleAsync(q =>
              q.Where(u => u.Id == id));
 
             if (registrant == null)
@@ -144,7 +144,7 @@ namespace WebAPI.Services
 
         public async Task<RegistrantDto> UpdateRegistrant(int id, CreateRegistrantDto dto)
         {
-            var registrant = await _unitOfWork.GetRepository<Registrant>().GetByIdAsync(id);
+            var registrant = await _unitOfWork.GetRepository<RegistrantEntity>().GetByIdAsync(id);
 
             if (registrant == null)
                 throw new MyPosApiException($"Registrant with id {id} not found", StatusCodes.Status404NotFound);
@@ -155,7 +155,7 @@ namespace WebAPI.Services
             registrant.Address = dto.Address;
             registrant.isCompany = dto.IsCompany;
 
-            _unitOfWork.GetRepository<Registrant>().Update(registrant);
+            _unitOfWork.GetRepository<RegistrantEntity>().Update(registrant);
             await _unitOfWork.SaveChangesAsync();
 
 

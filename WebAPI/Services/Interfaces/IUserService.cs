@@ -6,7 +6,7 @@ namespace WebAPI.Services.Interfaces
 {
     public interface IUserService
     {
-        Task<IEnumerable<UserDto>> GetAll(Func<IQueryable<User>, IQueryable<User>>? filter = null);
+        Task<IEnumerable<UserDto>> GetAll(Func<IQueryable<UserEntity>, IQueryable<UserEntity>>? filter = null);
 
         Task<UserDto> CreateUser(CreateUserDto dto);
 

@@ -5,7 +5,7 @@ namespace WebAPI.Services.Interfaces
 {
     public interface IRegistrantService
     {
-        Task<IEnumerable<RegistrantDto>> GetAll(Func<IQueryable<Registrant>, IQueryable<Registrant>>? filter = null);
+        Task<IEnumerable<RegistrantDto>> GetAll(Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>? filter = null);
 
         Task<RegistrantDto> CreateRegistrant(CreateRegistrantDto dto);
 
@@ -14,7 +14,7 @@ namespace WebAPI.Services.Interfaces
         Task<RegistrantDto> UpdateRegistrant(int id, CreateRegistrantDto dto);
         Task<RegistrantDto> DeleteRegistrant(int id);
 
-        public Task<IEnumerable<RegistrantWithAllWalletsAndUsersDto>> GetAllWithWalletsAndUsers(Func<IQueryable<Registrant>, IQueryable<Registrant>>? filter = null);
+        public Task<IEnumerable<RegistrantWithAllWalletsAndUsersDto>> GetAllWithWalletsAndUsers(Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>? filter = null);
 
     }
 }

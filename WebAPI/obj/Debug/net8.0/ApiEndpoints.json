@@ -432,7 +432,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "WebAPI.Entities.Registrant",
+        "Type": "WebAPI.Entities.RegistrantEntity",
         "MediaTypes": [
           "text/plain",
           "application/json",

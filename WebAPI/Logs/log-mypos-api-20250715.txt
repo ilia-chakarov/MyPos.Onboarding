@@ -365,3 +365,93 @@ FROM [Wallets] AS [w]
 SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
 FROM [Users] AS [u]
 [11:10:32 INF] Request completed: GET /api/Users responded 200 in 19 ms
+[11:13:26 INF] Now listening on: https://0.0.0.0:7168
+[11:13:26 INF] Now listening on: http://0.0.0.0:5229
+[11:13:26 INF] Application started. Press Ctrl+C to shut down.
+[11:13:26 INF] Hosting environment: Development
+[11:13:26 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[11:13:35 INF] Incoming request: GET /api/Users
+[11:13:35 INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+[11:13:35 INF] Request completed: GET /api/Users responded 200 in 735 ms
+[11:13:42 INF] Incoming request: GET /api/Wallets
+[11:13:42 INF] Request completed: GET /api/Wallets responded 401 in 6 ms
+[11:13:56 INF] Incoming request: POST /api/Auth/login
+[11:13:56 INF] Executed DbCommand (14ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[11:13:56 INF] Request completed: POST /api/Auth/login responded 200 in 190 ms
+[11:14:09 INF] Incoming request: GET /api/Accounts
+[11:14:09 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateCreated], [a].[Currency], [a].[Balance], [a].[IBAN], [a].[AccountName], [a].[LastOperationDT], [a].[BalanceInEuro], [a].[WalletId]
+FROM [Accounts] AS [a]
+[11:14:09 INF] Request completed: GET /api/Accounts responded 200 in 52 ms
+[11:14:14 INF] Incoming request: GET /api/Accounts/2
+[11:14:14 INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccountName], [a].[Balance], [a].[BalanceInEuro], [a].[Currency], [a].[DateCreated], [a].[IBAN], [a].[LastOperationDT], [a].[WalletId]
+FROM [Accounts] AS [a]
+WHERE [a].[Id] = @__id_0
+[11:14:14 INF] Request completed: GET /api/Accounts/2 responded 200 in 32 ms
+[11:15:02 INF] Incoming request: POST /api/Accounts
+[11:15:02 INF] Executed DbCommand (2ms) [Parameters=[@__dto_WalletId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+WHERE [w].[Id] = @__dto_WalletId_0
+[11:15:02 INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Accounts] ([AccountName], [Balance], [BalanceInEuro], [Currency], [DateCreated], [IBAN], [LastOperationDT], [WalletId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+[11:15:02 INF] Request completed: POST /api/Accounts responded 201 in 161 ms
+[11:15:18 INF] Incoming request: GET /api/Accounts
+[11:15:18 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateCreated], [a].[Currency], [a].[Balance], [a].[IBAN], [a].[AccountName], [a].[LastOperationDT], [a].[BalanceInEuro], [a].[WalletId]
+FROM [Accounts] AS [a]
+[11:15:18 INF] Request completed: GET /api/Accounts responded 200 in 7 ms
+[11:15:29 INF] Incoming request: PUT /api/Accounts/4
+[11:15:30 INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccountName], [a].[Balance], [a].[BalanceInEuro], [a].[Currency], [a].[DateCreated], [a].[IBAN], [a].[LastOperationDT], [a].[WalletId]
+FROM [Accounts] AS [a]
+WHERE [a].[Id] = @__id_0
+[11:15:30 INF] Executed DbCommand (1ms) [Parameters=[@__dto_WalletId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+WHERE [w].[Id] = @__dto_WalletId_0
+[11:15:30 INF] Executed DbCommand (2ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Accounts] SET [AccountName] = @p0, [Balance] = @p1, [BalanceInEuro] = @p2, [Currency] = @p3, [DateCreated] = @p4, [IBAN] = @p5, [LastOperationDT] = @p6, [WalletId] = @p7
+OUTPUT 1
+WHERE [Id] = @p8;
+[11:15:30 INF] Request completed: PUT /api/Accounts/4 responded 200 in 29 ms
+[11:15:39 INF] Incoming request: GET /api/Accounts/4
+[11:15:39 INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccountName], [a].[Balance], [a].[BalanceInEuro], [a].[Currency], [a].[DateCreated], [a].[IBAN], [a].[LastOperationDT], [a].[WalletId]
+FROM [Accounts] AS [a]
+WHERE [a].[Id] = @__id_0
+[11:15:39 INF] Request completed: GET /api/Accounts/4 responded 200 in 4 ms
+[11:15:47 INF] Incoming request: DELETE /api/Accounts/4
+[11:15:47 INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccountName], [a].[Balance], [a].[BalanceInEuro], [a].[Currency], [a].[DateCreated], [a].[IBAN], [a].[LastOperationDT], [a].[WalletId]
+FROM [Accounts] AS [a]
+WHERE [a].[Id] = @__id_0
+[11:15:47 INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Accounts]
+OUTPUT 1
+WHERE [Id] = @p0;
+[11:15:47 INF] Request completed: DELETE /api/Accounts/4 responded 200 in 19 ms
+[11:15:52 INF] Incoming request: GET /api/Registrants
+[11:15:52 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+[11:15:52 INF] Request completed: GET /api/Registrants responded 200 in 17 ms
+[11:15:57 INF] Incoming request: GET /api/UserAccess
+[11:15:57 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+[11:15:57 INF] Request completed: GET /api/UserAccess responded 200 in 23 ms

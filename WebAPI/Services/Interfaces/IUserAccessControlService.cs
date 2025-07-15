@@ -5,7 +5,7 @@ namespace WebAPI.Services.Interfaces
 {
     public interface IUserAccessControlService
     {
-        Task<IEnumerable<CreateUserAccessControlDto>> GetAll(Func<IQueryable<UserAccessControl>, IQueryable<UserAccessControl>>? filter = null);
+        Task<IEnumerable<CreateUserAccessControlDto>> GetAll(Func<IQueryable<UserAccessControlEntity>, IQueryable<UserAccessControlEntity>>? filter = null);
 
         Task<CreateUserAccessControlDto> CreateUAC(CreateUserAccessControlDto dto);
 

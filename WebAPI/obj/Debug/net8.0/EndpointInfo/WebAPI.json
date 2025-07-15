@@ -728,17 +728,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Registrant"
+                  "$ref": "#/components/schemas/RegistrantEntity"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Registrant"
+                  "$ref": "#/components/schemas/RegistrantEntity"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Registrant"
+                  "$ref": "#/components/schemas/RegistrantEntity"
                 }
               }
             }
@@ -1737,7 +1737,7 @@
   },
   "components": {
     "schemas": {
-      "Account": {
+      "AccountEntity": {
         "type": "object",
         "properties": {
           "id": {
@@ -1777,7 +1777,7 @@
             "format": "int32"
           },
           "wallet": {
-            "$ref": "#/components/schemas/Wallet"
+            "$ref": "#/components/schemas/WalletEntity"
           }
         },
         "additionalProperties": false
@@ -1936,7 +1936,40 @@
         },
         "additionalProperties": { }
       },
-      "Registrant": {
+      "RegistrantDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dateCreated": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "displayName": {
+            "type": "string",
+            "nullable": true
+          },
+          "gsm": {
+            "type": "string",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "isCompany": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegistrantEntity": {
         "type": "object",
         "properties": {
           "id": {
@@ -1969,49 +2002,16 @@
           "users": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/User"
+              "$ref": "#/components/schemas/UserEntity"
             },
             "nullable": true
           },
           "wallets": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Wallet"
+              "$ref": "#/components/schemas/WalletEntity"
             },
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "RegistrantDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "dateCreated": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "displayName": {
-            "type": "string",
-            "nullable": true
-          },
-          "gsm": {
-            "type": "string",
-            "nullable": true
-          },
-          "country": {
-            "type": "string",
-            "nullable": true
-          },
-          "address": {
-            "type": "string",
-            "nullable": true
-          },
-          "isCompany": {
-            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -2098,39 +2098,7 @@
         },
         "additionalProperties": false
       },
-      "User": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "username": {
-            "type": "string",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "nullable": true
-          },
-          "registrantId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "registrant": {
-            "$ref": "#/components/schemas/Registrant"
-          },
-          "accessControls": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/UserAccessControl"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "UserAccessControl": {
+      "UserAccessControlEntity": {
         "type": "object",
         "properties": {
           "userId": {
@@ -2138,14 +2106,14 @@
             "format": "int32"
           },
           "user": {
-            "$ref": "#/components/schemas/User"
+            "$ref": "#/components/schemas/UserEntity"
           },
           "walletId": {
             "type": "integer",
             "format": "int32"
           },
           "wallet": {
-            "$ref": "#/components/schemas/Wallet"
+            "$ref": "#/components/schemas/WalletEntity"
           },
           "accessLevel": {
             "type": "string",
@@ -2172,6 +2140,38 @@
         },
         "additionalProperties": false
       },
+      "UserEntity": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "registrantId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "registrant": {
+            "$ref": "#/components/schemas/RegistrantEntity"
+          },
+          "accessControls": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserAccessControlEntity"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "UserFormDTO": {
         "required": [
           "password",
@@ -2188,53 +2188,6 @@
             "maxLength": 20,
             "minLength": 6,
             "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Wallet": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "dateCreated": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "status": {
-            "type": "string",
-            "nullable": true
-          },
-          "tarifaCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "limitCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "accessControls": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/UserAccessControl"
-            },
-            "nullable": true
-          },
-          "registrantId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "registrant": {
-            "$ref": "#/components/schemas/Registrant"
-          },
-          "accounts": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Account"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2265,6 +2218,53 @@
           "registrantId": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "WalletEntity": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dateCreated": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "tarifaCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "limitCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "accessControls": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserAccessControlEntity"
+            },
+            "nullable": true
+          },
+          "registrantId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "registrant": {
+            "$ref": "#/components/schemas/RegistrantEntity"
+          },
+          "accounts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AccountEntity"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false

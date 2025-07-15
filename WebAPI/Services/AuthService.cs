@@ -15,10 +15,10 @@ namespace WebAPI.Services
     public class AuthService : IAuthService
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IPasswordHasher<User> _passwordHasher;
+        private readonly IPasswordHasher<UserEntity> _passwordHasher;
         private readonly IConfiguration _configuration;
 
-        public AuthService(IUnitOfWork uow, IPasswordHasher<User> passwordHasher, IConfiguration configuration)
+        public AuthService(IUnitOfWork uow, IPasswordHasher<UserEntity> passwordHasher, IConfiguration configuration)
         {
             _unitOfWork = uow;
             _passwordHasher = passwordHasher;
@@ -26,7 +26,7 @@ namespace WebAPI.Services
         }
         public async Task<string> Login([FromBody] LoginDto dto)
         {
-            var user = await _unitOfWork.GetRepository<User>().GetSingleAsync(query => 
+            var user = await _unitOfWork.GetRepository<UserEntity>().GetSingleAsync(query => 
             query.Where(u => u.Username == dto.Username));
 
             if (user == null)
@@ -39,7 +39,7 @@ namespace WebAPI.Services
             return GenerateJwtToken(user);
         }
 
-        private string GenerateJwtToken(User user)
+        private string GenerateJwtToken(UserEntity user)
         {
             var jwtSettings = _configuration.GetSection("JwtSettings");
 
