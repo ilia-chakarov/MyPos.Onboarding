@@ -604,3 +604,27 @@ SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
 FROM [Users] AS [u]
 WHERE [u].[Username] = @__dto_Username_0
 [14:54:42 INF] Request completed: POST /api/Auth/login responded 401 in 169 ms
+[14:59:57 INF] Now listening on: https://0.0.0.0:7168
+[14:59:57 INF] Now listening on: http://0.0.0.0:5229
+[14:59:57 INF] Application started. Press Ctrl+C to shut down.
+[14:59:57 INF] Hosting environment: Development
+[14:59:57 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[15:00:04 INF] Incoming request: POST /api/Auth/login
+[15:00:05 INF] Executed DbCommand (28ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[15:00:05 INF] Request completed: POST /api/Auth/login responded 401 in 871 ms
+[15:00:13 INF] Incoming request: POST /api/Auth/login
+[15:00:13 INF] Executed DbCommand (3ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[15:00:13 INF] Request completed: POST /api/Auth/login responded 200 in 128 ms
+[15:00:25 INF] Incoming request: GET /api/Accounts
+[15:00:25 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateCreated], [a].[Currency], [a].[Balance], [a].[IBAN], [a].[AccountName], [a].[LastOperationDT], [a].[BalanceInEuro], [a].[WalletId]
+FROM [Accounts] AS [a]
+[15:00:25 INF] Request completed: GET /api/Accounts responded 200 in 61 ms
+[15:00:31 INF] Incoming request: GET /api/Accounts
+[15:00:31 INF] Request completed: GET /api/Accounts responded 401 in 3 ms

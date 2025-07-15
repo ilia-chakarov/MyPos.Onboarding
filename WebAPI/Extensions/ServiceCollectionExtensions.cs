@@ -101,5 +101,13 @@ namespace WebAPI.Extensions
 
             return hostBuilder;
         }
+
+        public static IServiceCollection AddAppSettings(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));
+            services.Configure<IvoApiSettings>(configuration.GetSection("IvoApi"));
+
+            return services;
+        }
     }
 }
