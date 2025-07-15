@@ -587,3 +587,20 @@ SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
 FROM [Users] AS [u]
 WHERE [u].[Username] = @__dto_Username_0
 [14:52:02 INF] Request completed: POST /api/Auth/login responded 401 in 166 ms
+[14:54:24 INF] Now listening on: https://0.0.0.0:7168
+[14:54:24 INF] Now listening on: http://0.0.0.0:5229
+[14:54:24 INF] Application started. Press Ctrl+C to shut down.
+[14:54:24 INF] Hosting environment: Development
+[14:54:24 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:54:34 INF] Incoming request: POST /api/Auth/login
+[14:54:35 INF] Executed DbCommand (28ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[14:54:35 INF] Request completed: POST /api/Auth/login responded 200 in 907 ms
+[14:54:42 INF] Incoming request: POST /api/Auth/login
+[14:54:42 INF] Executed DbCommand (8ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[14:54:42 INF] Request completed: POST /api/Auth/login responded 401 in 169 ms
