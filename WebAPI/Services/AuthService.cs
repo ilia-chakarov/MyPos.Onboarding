@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -7,6 +8,7 @@ using System.Text;
 using WebAPI.DTOs;
 using WebAPI.Entities;
 using WebAPI.Exceptions;
+using WebAPI.Options;
 using WebAPI.Services.Interfaces;
 using WebAPI.UnitOfWork;
 
@@ -17,12 +19,18 @@ namespace WebAPI.Services
         private readonly IUnitOfWork _unitOfWork;
         private readonly IPasswordHasher<UserEntity> _passwordHasher;
         private readonly IConfiguration _configuration;
+        private readonly JwtSettings _jwtSettings;
 
-        public AuthService(IUnitOfWork uow, IPasswordHasher<UserEntity> passwordHasher, IConfiguration configuration)
+        public AuthService(IUnitOfWork uow,
+            IPasswordHasher<UserEntity> passwordHasher,
+            IConfiguration configuration,
+            IOptions<JwtSettings> jwtOptions
+            )
         {
             _unitOfWork = uow;
             _passwordHasher = passwordHasher;
             _configuration = configuration;
+            _jwtSettings = jwtOptions.Value;
         }
         public async Task<string> Login([FromBody] LoginDto dto)
         {
@@ -41,7 +49,7 @@ namespace WebAPI.Services
 
         private string GenerateJwtToken(UserEntity user)
         {
-            var jwtSettings = _configuration.GetSection("JwtSettings");
+            //var jwtSettings = _configuration.GetSection("JwtSettings");
 
             var claims = new[]
             {
@@ -50,14 +58,14 @@ namespace WebAPI.Services
                 new Claim(ClaimTypes.Name, user.Username)
             };
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["SecretKey"]!));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.SecretKey));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            var expires = DateTime.UtcNow.AddMinutes(Convert.ToDouble(jwtSettings["ExpiryMinutes"]!));
+            var expires = DateTime.UtcNow.AddMinutes(Convert.ToDouble(_jwtSettings.ExpiryMinutes));
 
             var token = new JwtSecurityToken(
-                issuer: jwtSettings["Issuer"],
-                audience: jwtSettings["Audience"],
+                issuer: _jwtSettings.Issuer,
+                audience: _jwtSettings.Audience,
                 claims: claims,
                 expires: expires,
                 signingCredentials: creds

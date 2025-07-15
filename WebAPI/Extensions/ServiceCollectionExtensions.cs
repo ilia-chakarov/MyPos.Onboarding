@@ -6,6 +6,8 @@ using WebAPI.Services;
 using WebAPI.Services.Interfaces;
 using WebAPI.UnitOfWork;
 using Serilog;
+using Microsoft.Extensions.Options;
+using WebAPI.Options;
 
 namespace WebAPI.Extensions
 {
@@ -69,7 +71,8 @@ namespace WebAPI.Extensions
         {
             services.AddHttpClient<IvoApiClient>((sp, cl) =>
             {
-                cl.BaseAddress = new Uri("https://10.80.55.56:7191/");
+                var options = sp.GetRequiredService<IOptions<IvoApiSettings>>().Value;
+                cl.BaseAddress = new Uri(options.BaseUrl);
             })
                 .ConfigurePrimaryHttpMessageHandler(() =>
                 {
@@ -80,7 +83,8 @@ namespace WebAPI.Extensions
                 })
                 .AddTypedClient((httpCl, sp) =>
                 {
-                    var baseUrl = "https://10.80.55.56:7191/";
+                    var options = sp.GetRequiredService<IOptions<IvoApiSettings>>().Value;
+                    var baseUrl = options.BaseUrl;
                     return new IvoApiClient(baseUrl, httpCl);
                 });
 
