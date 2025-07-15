@@ -31,6 +31,18 @@ namespace WebAPI.Middleware
                 };
                 await context.Response.WriteAsJsonAsync(problem);
             }
+            catch(UnauthorizedAccessException ex)
+            {
+                context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                context.Response.ContentType = "application/json";
+                var problem = new ProblemDetails
+                {
+                    Title = "Unauthorized",
+                    Status = StatusCodes.Status401Unauthorized,
+                    Detail = ex.Message
+                };
+                await context.Response.WriteAsJsonAsync(problem);
+            }
             catch(Exception ex)
             {
                 _logger.LogError(ex, "Unhandled exception");
