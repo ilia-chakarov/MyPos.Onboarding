@@ -175,3 +175,39 @@ LEFT JOIN [Users] AS [u] ON [r].[Id] = [u].[RegistrantId]
 WHERE [r].[Id] = @__id_Value_0
 ORDER BY [r].[Id], [w].[Id]
 [09:36:28 INF] Request completed: GET /api/Registrants/registrants/with-realated-data responded 200 in 66 ms
+[10:08:25 INF] Now listening on: https://0.0.0.0:7168
+[10:08:25 INF] Now listening on: http://0.0.0.0:5229
+[10:08:25 INF] Application started. Press Ctrl+C to shut down.
+[10:08:25 INF] Hosting environment: Development
+[10:08:25 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:08:31 INF] Incoming request: GET /api/Wallets
+[10:08:31 INF] Request completed: GET /api/Wallets responded 401 in 59 ms
+[10:08:43 INF] Incoming request: POST /api/Auth/login
+[10:08:45 INF] Executed DbCommand (29ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[10:08:45 INF] Request completed: POST /api/Auth/login responded 200 in 1537 ms
+[10:08:56 INF] Incoming request: GET /api/Wallets
+[10:08:56 INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[DateCreated], [w].[Status], [w].[TarifaCode], [w].[LimitCode], [w].[RegistrantId]
+FROM [Wallets] AS [w]
+[10:08:56 INF] Request completed: GET /api/Wallets responded 200 in 79 ms
+[10:09:03 INF] Incoming request: GET /api/Wallets/8
+[10:09:03 INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+WHERE [w].[Id] = @__p_0
+[10:09:03 INF] Request completed: GET /api/Wallets/8 responded 404 in 111 ms
+[10:09:08 INF] Incoming request: GET /api/Wallets/9
+[10:09:08 INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+WHERE [w].[Id] = @__p_0
+[10:09:08 INF] Request completed: GET /api/Wallets/9 responded 404 in 68 ms
+[10:09:13 INF] Incoming request: GET /api/Wallets/3
+[10:09:13 INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+WHERE [w].[Id] = @__p_0
+[10:09:13 INF] Request completed: GET /api/Wallets/3 responded 200 in 13 ms

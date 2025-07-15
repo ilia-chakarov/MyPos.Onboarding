@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using WebAPI.DTOs;
 using WebAPI.Entities;
+using WebAPI.Services.Interfaces;
 using WebAPI.UnitOfWork;
 
 namespace WebAPI.Controllers
@@ -11,10 +12,10 @@ namespace WebAPI.Controllers
     [Route("api/[controller]")]
     public class WalletsController : ControllerBase
     {
-        private readonly IUnitOfWork _unitOfWork;
-        public WalletsController(IUnitOfWork uow)
+        private readonly IWalletService _walletService;
+        public WalletsController(IWalletService ws)
         {
-            _unitOfWork = uow;
+            _walletService = ws;
         }
 
         [HttpPost]
@@ -22,32 +23,9 @@ namespace WebAPI.Controllers
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Create([FromBody] CreateWalletDto dto)
         {
-            var registrant = await _unitOfWork.RegistrantRepository.GetByIdAsync(dto.RegistrantId);
-            if(registrant == null)
-                return BadRequest($"Registrant with ID {dto.RegistrantId} does not exist.");
+            var createdWalletDto = await _walletService.CreateWallet(dto);
 
-            var wallet = new Wallet
-            {
-                DateCreated = DateTime.Now,
-                Status = dto.Status,
-                TarifaCode = dto.TarifaCode,
-                LimitCode = dto.LimitCode,
-                RegistrantId = registrant.Id,
-            };
-
-            await _unitOfWork.WalletRepository.AddAsync(wallet);
-            await _unitOfWork.SaveChangesAsync();
-
-            var walletDto = new WalletDto
-            {
-                Id = wallet.Id,
-                DateCreated = wallet.DateCreated,
-                Status = wallet.Status,
-                TarifaCode = wallet.TarifaCode,
-                LimitCode = wallet.LimitCode,
-                RegistrantId = wallet.RegistrantId
-            };
-            return CreatedAtAction(nameof(GetById), new { id = wallet.Id }, walletDto);
+            return Ok(createdWalletDto);
 
         }
 
@@ -57,19 +35,7 @@ namespace WebAPI.Controllers
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetById(int id)
         {
-            var wallet = await _unitOfWork.WalletRepository.GetByIdAsync(id);
-            if (wallet == null)
-                return NotFound();
-
-            var walletDto = new WalletDto
-            {
-                Id = wallet.Id,
-                DateCreated = wallet.DateCreated,
-                Status = wallet.Status,
-                TarifaCode = wallet.TarifaCode,
-                LimitCode = wallet.LimitCode,
-                RegistrantId = wallet.RegistrantId
-            };
+            var walletDto = await _walletService.GetById(id);
 
             return Ok(walletDto);
         }
@@ -79,17 +45,7 @@ namespace WebAPI.Controllers
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetAll()
         {
-            var wallets = await _unitOfWork.WalletRepository.GetAllAsync();
-
-            var walletDtos = wallets.Select(w => new WalletDto
-            {
-                Id = w.Id,
-                DateCreated = w.DateCreated,
-                Status = w.Status,
-                TarifaCode = w.TarifaCode,
-                LimitCode = w.LimitCode,
-                RegistrantId = w.RegistrantId
-            });
+            var walletDtos = await _walletService.GetAll();
 
             return Ok(walletDtos);
         }
@@ -100,22 +56,9 @@ namespace WebAPI.Controllers
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Update(int id, [FromBody] CreateWalletDto dto)
         {
-            var wallet = await _unitOfWork.WalletRepository.GetByIdAsync(id);
-            if(wallet == null) return NotFound();
+            var updatedWallet = await _walletService.UpdateWallet(id, dto);
 
-            var registrant = await _unitOfWork.RegistrantRepository.GetByIdAsync(dto.RegistrantId);
-
-            if (registrant == null) return BadRequest($"Registrant with id {dto.RegistrantId} does not exist");
-
-            wallet.Status = dto.Status;
-            wallet.TarifaCode = dto.TarifaCode;
-            wallet.LimitCode = dto.LimitCode;
-            wallet.RegistrantId = dto.RegistrantId;
-
-            _unitOfWork.WalletRepository.Update(wallet);
-            await _unitOfWork.SaveChangesAsync();
-
-            return NoContent();
+            return Ok(updatedWallet);
         }
 
         [HttpDelete("{id}")]
@@ -123,13 +66,9 @@ namespace WebAPI.Controllers
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Delete(int id)
         {
-            var wallet = await _unitOfWork.WalletRepository.GetByIdAsync(id);
-            if(wallet == null) return NotFound();
+            var deletedWAllet = await _walletService.DeleteWallet(id);
 
-            _unitOfWork.WalletRepository.Delete(wallet);
-            await _unitOfWork.SaveChangesAsync();
-
-            return NoContent();
+            return Ok(deletedWAllet);
         }
 
     }
