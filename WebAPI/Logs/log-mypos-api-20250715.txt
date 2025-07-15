@@ -470,3 +470,31 @@ FROM [UserAccessControls] AS [u]
 [11:46:47 INF] Application started. Press Ctrl+C to shut down.
 [11:46:47 INF] Hosting environment: Development
 [11:46:47 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:36:46 INF] Now listening on: https://0.0.0.0:7168
+[13:36:46 INF] Now listening on: http://0.0.0.0:5229
+[13:36:46 INF] Application started. Press Ctrl+C to shut down.
+[13:36:46 INF] Hosting environment: Development
+[13:36:46 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:36:52 INF] Incoming request: GET /api/Accounts
+[13:36:52 INF] Request completed: GET /api/Accounts responded 401 in 47 ms
+[13:36:57 INF] Incoming request: GET /api/external/IvoRegistrants
+[13:36:57 INF] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant
+[13:36:57 INF] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant
+[13:36:59 INF] Request completed: GET /api/external/IvoRegistrants responded 400 in 2117 ms
+[13:37:02 INF] Incoming request: GET /api/Registrants
+[13:37:02 INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+[13:37:03 INF] Request completed: GET /api/Registrants responded 200 in 666 ms
+[13:37:10 INF] Incoming request: GET /api/UserAccess
+[13:37:10 INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+[13:37:10 INF] Request completed: GET /api/UserAccess responded 200 in 46 ms
+[13:37:15 INF] Incoming request: GET /api/Users
+[13:37:15 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+[13:37:15 INF] Request completed: GET /api/Users responded 200 in 19 ms
+[13:37:20 INF] Incoming request: GET /api/Wallets
+[13:37:20 INF] Request completed: GET /api/Wallets responded 401 in 1 ms
