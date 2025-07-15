@@ -7,7 +7,7 @@ using System.Text;
 using WebAPI.DTOs;
 using WebAPI.Entities;
 using WebAPI.Exceptions;
-using WebAPI.Repositories.Interfaces;
+using WebAPI.Services.Interfaces;
 using WebAPI.UnitOfWork;
 
 namespace WebAPI.Services

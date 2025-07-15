@@ -2,7 +2,7 @@
 using WebAPI.DTOs;
 using WebAPI.Entities;
 
-namespace WebAPI.Repositories.Interfaces
+namespace WebAPI.Services.Interfaces
 {
     public interface IAuthService
     {

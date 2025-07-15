@@ -7,7 +7,6 @@ using Microsoft.EntityFrameworkCore;
 using WebAPI.Data;
 using WebAPI.Entities;
 using WebAPI.Repositories;
-using WebAPI.Repositories.Interfaces;
 using WebAPI.UnitOfWork;
 using Microsoft.OpenApi.Models;
 using Serilog;
