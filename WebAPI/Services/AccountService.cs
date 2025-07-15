@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using WebAPI.DTOs;
 using WebAPI.Entities;
 using WebAPI.Exceptions;
@@ -10,9 +11,12 @@ namespace WebAPI.Services
     public class AccountService : IAccountService
     {
         private readonly IUnitOfWork _unitOfWork;
-        public AccountService(IUnitOfWork uow)
+        private readonly IMapper _mapper;
+
+        public AccountService(IUnitOfWork uow, IMapper mapper)
         {
             _unitOfWork = uow;
+            _mapper = mapper;
         }
         public async Task<AccountDto> GetById(int id)
         {
@@ -24,20 +28,7 @@ namespace WebAPI.Services
             if (account == null)
                 throw new MyPosApiException($"Account with id {id} not found", StatusCodes.Status404NotFound);
 
-            var accountDto = new AccountDto
-            {
-                Id = account.Id,
-                DateCreated = account.DateCreated,
-                Currency = account.Currency,
-                Balance = account.Balance,
-                IBAN = account.IBAN,
-                AccountName = account.AccountName,
-                LastOperationDT = account.LastOperationDT,
-                BalanceInEuro = account.BalanceInEuro,
-                WalletId = account.WalletId,
-            };
-
-            return accountDto;
+            return _mapper.Map<AccountDto>(account);
         }
 
         public async Task<IEnumerable<AccountDto>> GetAll(Func<IQueryable<AccountEntity>, IQueryable<AccountEntity>>? filter = null)
@@ -47,20 +38,9 @@ namespace WebAPI.Services
             if (filter != null)
                 query = filter(query);
 
-            return await query.Select(x =>
-                new AccountDto
-                {
-                    Id = x.Id,
-                    DateCreated = x.DateCreated,
-                    Currency = x.Currency,
-                    Balance = x.Balance,
-                    IBAN = x.IBAN,
-                    AccountName = x.AccountName,
-                    LastOperationDT = x.LastOperationDT,
-                    BalanceInEuro = x.BalanceInEuro,
-                    WalletId = x.WalletId,
-                }
-                ).ToListAsync();
+            var accounts = await query.ToListAsync();
+
+            return _mapper.Map<List<AccountDto>>(accounts);
         }
 
         public async Task<AccountDto> CreateAccount(CreateAccountDto dto)
@@ -71,33 +51,14 @@ namespace WebAPI.Services
             if (wallet == null)
                 throw new MyPosApiException($"Wallet with id {dto.WalletId} does not exist", StatusCodes.Status404NotFound);
 
-            var account = new AccountEntity
-            {
-                DateCreated = DateTime.Now,
-                Currency = dto.Currency,
-                Balance = dto.Balance,
-                IBAN = dto.IBAN,
-                AccountName = dto.AccountName,
-                LastOperationDT = DateTime.Now,
-                BalanceInEuro = dto.BalanceInEuro,
-                WalletId = dto.WalletId,
-            };
+            var account = _mapper.Map<AccountEntity>(dto);
+            account.DateCreated = DateTime.Now;
+            account.LastOperationDT = DateTime.Now;
 
             await _unitOfWork.GetRepository<AccountEntity>().AddAsync(account);
             await _unitOfWork.SaveChangesAsync();
 
-            return new AccountDto
-                {
-                    Id = account.Id,
-                    DateCreated = account.DateCreated,
-                    Currency = account.Currency,
-                    Balance = account.Balance,
-                    IBAN = account.IBAN,
-                    AccountName = account.AccountName,
-                    LastOperationDT = account.LastOperationDT,
-                    BalanceInEuro = account.BalanceInEuro,
-                    WalletId = account.WalletId,
-                };
+            return _mapper.Map<AccountDto>(account);
         }
 
         public async Task<AccountDto> DeleteAccount(int id)
@@ -113,18 +74,7 @@ namespace WebAPI.Services
             _unitOfWork.GetRepository<AccountEntity>().Delete(account);
             await _unitOfWork.SaveChangesAsync();
 
-            return new AccountDto
-            {
-                Id = account.Id,
-                DateCreated = account.DateCreated,
-                Currency = account.Currency,
-                Balance = account.Balance,
-                IBAN = account.IBAN,
-                AccountName = account.AccountName,
-                LastOperationDT = account.LastOperationDT,
-                BalanceInEuro = account.BalanceInEuro,
-                WalletId = account.WalletId,
-            };
+            return _mapper.Map<AccountDto>(account);
         }
 
         public async Task<AccountDto> UpdateAccount(int id, CreateAccountDto dto)
@@ -145,29 +95,12 @@ namespace WebAPI.Services
                 throw new MyPosApiException($"Wallet with id {dto.WalletId} does not exist",
                     StatusCodes.Status404NotFound);
 
-
-            account.Currency = dto.Currency;
-            account.Balance = dto.Balance;
-            account.IBAN = dto.IBAN;
-            account.AccountName = dto.AccountName;
-            account.BalanceInEuro = dto.BalanceInEuro;
-            account.WalletId = dto.WalletId;
+            _mapper.Map(dto, account);
 
             _unitOfWork.GetRepository<AccountEntity>().Update(account);
             await _unitOfWork.SaveChangesAsync();
 
-            return new AccountDto
-            {
-                Id = account.Id,
-                DateCreated = account.DateCreated,
-                Currency = account.Currency,
-                Balance = account.Balance,
-                IBAN = account.IBAN,
-                AccountName = account.AccountName,
-                LastOperationDT = account.LastOperationDT,
-                BalanceInEuro = account.BalanceInEuro,
-                WalletId = account.WalletId,
-            };
+            return _mapper.Map<AccountDto>(account);
         }
     }
 }

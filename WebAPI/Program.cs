@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using WebAPI.Data;
 using WebAPI.Middleware;
 using WebAPI.Extensions;
-using WebAPI.Options;
+using WebAPI.AutoMapper;
 
 
 namespace WebAPI
@@ -28,6 +28,7 @@ namespace WebAPI
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
                 );
 
+            builder.Services.AddAutoMapper(typeof(AccountProfile).Assembly);
 
             builder.Services.AddApplicationServices();
 
