@@ -73,8 +73,10 @@ namespace WebAPI
 
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IAccountService, AccountService>();
+            builder.Services.AddScoped<IRegistrantService, RegistrantService>();
 
             builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
+
 
             // Load JwtSettings from appsettings.json
             var jwtSettings = builder.Configuration.GetSection("JwtSettings");

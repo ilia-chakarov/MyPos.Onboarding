@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebAPI.DTOs;
 using WebAPI.Entities;
-using WebAPI.UnitOfWork;
+using WebAPI.Services.Interfaces;
 
 namespace WebAPI.Controllers
 {
@@ -9,69 +9,40 @@ namespace WebAPI.Controllers
     [Route("api/[controller]")]
     public class RegistrantsController : ControllerBase
     {
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly IRegistrantService _registrantService;
 
-        public RegistrantsController(IUnitOfWork uow)
+        public RegistrantsController(IRegistrantService rs)
         {
-            _unitOfWork = uow;
+            _registrantService = rs;
         }
 
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<RegistrantDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<IEnumerable<Registrant>>> GetAll()
+        public async Task<ActionResult<IEnumerable<RegistrantDto>>> GetAll()
         {
-            var registrants = await _unitOfWork.RegistrantRepository.GetAllAsync();
-
-            var result = registrants.Select(r => new RegistrantDto
-            {
-                Id = r.Id,
-                DateCreated = r.DateCreated,
-                DisplayName = r.DisplayName,
-                GSM = r.GSM,
-                Country = r.Country,
-                Address = r.Address,
-                IsCompany = r.isCompany,
-               
-            });
+            var result = await _registrantService.GetAll();
 
             return Ok(result);
         }
 
+        /// <summary>
+        /// Returns registrants and their related wallets and users. Optionally filter by ID.
+        /// </summary>
+        /// <param name="id">Optional ID of the registrant to filter by</param>
         [HttpGet("registrants/with-realated-data")]
         [ProducesResponseType(typeof(IEnumerable<RegistrantWithAllWalletsAndUsersDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<IEnumerable<RegistrantWithAllWalletsAndUsersDto>>> GetAllWithWalletsAndUsers()
+        public async Task<ActionResult<IEnumerable<RegistrantWithAllWalletsAndUsersDto>>> GetAllWithWalletsAndUsers([FromQuery]int? id)
         {
-            var registrants = await _unitOfWork.RegistrantRepository.GetAllRegistrantsWithWalletsAndUsersAsync();
-
-            var result = registrants.Select(r => new RegistrantWithAllWalletsAndUsersDto
+            var dtos = await _registrantService.GetAllWithWalletsAndUsers(query =>
             {
-                Id = r.Id,
-                DateCreated = r.DateCreated,
-                DisplayName = r.DisplayName,
-                GSM = r.GSM,
-                Country = r.Country,
-                Address = r.Address,
-                IsCompany = r.isCompany,
-                Wallets = r.Wallets.Select(w => new WalletDto
-                {
-                    Id = w.Id,
-                    DateCreated = w.DateCreated,
-                    Status = w.Status,
-                    TarifaCode = w.TarifaCode,
-                    LimitCode = w.LimitCode,
-                    RegistrantId = w.RegistrantId,
-                }).ToList(),
-                Users = r.Users.Select(u => new UserDto
-                {
-                    Id = u.Id,
-                    Username = u.Username,
-                    RegistrantId = u.RegistrantId
-                }).ToList()
+                if(id.HasValue)
+                    return query.Where(r => r.Id == id.Value);
+                return query;
             });
 
-            return Ok(result);
+            return Ok(dtos);
         }
 
         [HttpPost]
@@ -80,33 +51,20 @@ namespace WebAPI.Controllers
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Create([FromBody] CreateRegistrantDto dto)
         {
-            var registrant = new Registrant
-            {
-                DisplayName = dto.DisplayName,
-                GSM = dto.GSM,
-                Country = dto.Country,
-                Address = dto.Address,
-                isCompany = dto.IsCompany,
-                DateCreated = DateTime.Now,
-            };
+            var registrantDto = await _registrantService.CreateRegistrant(dto);
 
-            await _unitOfWork.RegistrantRepository.AddAsync(registrant);
-            await _unitOfWork.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetById), new { id = registrant.Id }, registrant);
+            return Ok(registrantDto);
         }
 
         [HttpGet("{id}")]
-        [ProducesResponseType(typeof(Registrant), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(RegistrantDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<Registrant>> GetById(int id)
+        public async Task<ActionResult<RegistrantDto>> GetById(int id)
         {
-            var registrant = await _unitOfWork.RegistrantRepository.GetByIdAsync(id);
+            var registrantDto = await _registrantService.GetById(id);
 
-            if (registrant == null)
-                return NotFound();
-
-            return Ok(registrant);
+            return Ok(registrantDto);
         }
 
         [HttpPut("{id}")]
@@ -115,21 +73,8 @@ namespace WebAPI.Controllers
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Update(int id, [FromBody] CreateRegistrantDto dto)
         {
-            var registrant = await _unitOfWork.RegistrantRepository.GetByIdAsync(id);
-
-            if (registrant == null)
-                return NotFound();
-
-            registrant.DisplayName = dto.DisplayName;
-            registrant.GSM = dto.GSM;
-            registrant.Country = dto.Country;
-            registrant.Address = dto.Address;
-            registrant.isCompany = dto.IsCompany;
-
-            _unitOfWork.RegistrantRepository.Update(registrant);
-            await _unitOfWork.SaveChangesAsync();
-
-            return NoContent(); // 204
+           var registrantDto = await _registrantService.UpdateRegistrant(id, dto);
+            return Ok(registrantDto); // 204
         }
 
         [HttpDelete("{id}")]
@@ -138,14 +83,9 @@ namespace WebAPI.Controllers
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Delete(int id)
         {
-            var registrant = await _unitOfWork.RegistrantRepository.GetByIdAsync(id);
+            var regDto = await _registrantService.DeleteRegistrant(id);
 
-            if(registrant == null)
-                return NotFound();
-
-            _unitOfWork.RegistrantRepository.Delete(registrant);
-            await _unitOfWork.SaveChangesAsync();
-            return NoContent();
+            return Ok(regDto);
         }
 
     }

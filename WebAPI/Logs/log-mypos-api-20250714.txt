@@ -214,3 +214,77 @@ SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
 FROM [Users] AS [u]
 WHERE [u].[Id] = @__id_0
 [16:49:17 INF] Request completed: GET /api/Users/17 responded 404 in 90 ms
+[17:32:54 INF] Now listening on: https://0.0.0.0:7168
+[17:32:54 INF] Now listening on: http://0.0.0.0:5229
+[17:32:54 INF] Application started. Press Ctrl+C to shut down.
+[17:32:54 INF] Hosting environment: Development
+[17:32:54 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:33:00 INF] Incoming request: GET /api/Accounts
+[17:33:00 INF] Request completed: GET /api/Accounts responded 401 in 59 ms
+[17:33:07 INF] Incoming request: GET /api/Accounts
+[17:33:07 INF] Request completed: GET /api/Accounts responded 401 in 4 ms
+[17:33:40 INF] Incoming request: POST /api/Auth/login
+[17:33:41 INF] Executed DbCommand (30ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+[17:33:41 INF] Request completed: POST /api/Auth/login responded 200 in 972 ms
+[17:33:49 INF] Incoming request: GET /api/Accounts
+[17:33:49 INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateCreated], [a].[Currency], [a].[Balance], [a].[IBAN], [a].[AccountName], [a].[LastOperationDT], [a].[BalanceInEuro], [a].[WalletId]
+FROM [Accounts] AS [a]
+[17:33:49 INF] Request completed: GET /api/Accounts responded 200 in 87 ms
+[17:33:55 INF] Incoming request: GET /api/Accounts
+[17:33:55 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateCreated], [a].[Currency], [a].[Balance], [a].[IBAN], [a].[AccountName], [a].[LastOperationDT], [a].[BalanceInEuro], [a].[WalletId]
+FROM [Accounts] AS [a]
+[17:33:55 INF] Request completed: GET /api/Accounts responded 200 in 16 ms
+[17:34:48 INF] Incoming request: POST /api/Accounts
+[17:34:48 INF] Executed DbCommand (3ms) [Parameters=[@__dto_WalletId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+WHERE [w].[Id] = @__dto_WalletId_0
+[17:34:48 INF] Executed DbCommand (20ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Accounts] ([AccountName], [Balance], [BalanceInEuro], [Currency], [DateCreated], [IBAN], [LastOperationDT], [WalletId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+[17:34:48 INF] Request completed: POST /api/Accounts responded 201 in 220 ms
+[17:35:08 INF] Incoming request: GET /api/Accounts
+[17:35:08 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateCreated], [a].[Currency], [a].[Balance], [a].[IBAN], [a].[AccountName], [a].[LastOperationDT], [a].[BalanceInEuro], [a].[WalletId]
+FROM [Accounts] AS [a]
+[17:35:08 INF] Request completed: GET /api/Accounts responded 200 in 8 ms
+[17:35:49 INF] Incoming request: PUT /api/Accounts/3
+[17:35:49 INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccountName], [a].[Balance], [a].[BalanceInEuro], [a].[Currency], [a].[DateCreated], [a].[IBAN], [a].[LastOperationDT], [a].[WalletId]
+FROM [Accounts] AS [a]
+WHERE [a].[Id] = @__id_0
+[17:35:49 INF] Executed DbCommand (1ms) [Parameters=[@__dto_WalletId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+WHERE [w].[Id] = @__dto_WalletId_0
+[17:35:49 INF] Executed DbCommand (3ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (DbType = DateTime2), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Accounts] SET [AccountName] = @p0, [Balance] = @p1, [BalanceInEuro] = @p2, [Currency] = @p3, [DateCreated] = @p4, [IBAN] = @p5, [LastOperationDT] = @p6, [WalletId] = @p7
+OUTPUT 1
+WHERE [Id] = @p8;
+[17:35:49 INF] Request completed: PUT /api/Accounts/3 responded 200 in 45 ms
+[17:35:56 INF] Incoming request: PUT /api/Accounts/3
+[17:35:56 INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccountName], [a].[Balance], [a].[BalanceInEuro], [a].[Currency], [a].[DateCreated], [a].[IBAN], [a].[LastOperationDT], [a].[WalletId]
+FROM [Accounts] AS [a]
+WHERE [a].[Id] = @__id_0
+[17:35:56 INF] Executed DbCommand (1ms) [Parameters=[@__dto_WalletId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+WHERE [w].[Id] = @__dto_WalletId_0
+[17:35:56 INF] Request completed: PUT /api/Accounts/3 responded 404 in 214 ms
+[17:36:04 INF] Incoming request: GET /api/Accounts/3
+[17:36:05 INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccountName], [a].[Balance], [a].[BalanceInEuro], [a].[Currency], [a].[DateCreated], [a].[IBAN], [a].[LastOperationDT], [a].[WalletId]
+FROM [Accounts] AS [a]
+WHERE [a].[Id] = @__id_0
+[17:36:05 INF] Request completed: GET /api/Accounts/3 responded 200 in 13 ms

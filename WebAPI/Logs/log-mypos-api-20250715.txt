@@ -1,0 +1,177 @@
+[09:26:54 INF] Now listening on: https://0.0.0.0:7168
+[09:26:54 INF] Now listening on: http://0.0.0.0:5229
+[09:26:54 INF] Application started. Press Ctrl+C to shut down.
+[09:26:54 INF] Hosting environment: Development
+[09:26:54 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[09:27:00 INF] Incoming request: GET /api/Registrants
+[09:27:01 INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+[09:27:01 INF] Request completed: GET /api/Registrants responded 200 in 1607 ms
+[09:27:08 INF] Incoming request: GET /api/Registrants/registrants/with-realated-data
+[09:27:08 WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[09:27:08 INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany], [w].[Id], [w].[DateCreated], [w].[Status], [w].[TarifaCode], [w].[LimitCode], [w].[RegistrantId], [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Registrants] AS [r]
+LEFT JOIN [Wallets] AS [w] ON [r].[Id] = [w].[RegistrantId]
+LEFT JOIN [Users] AS [u] ON [r].[Id] = [u].[RegistrantId]
+ORDER BY [r].[Id], [w].[Id]
+[09:27:08 ERR] Unhandled exception
+System.InvalidOperationException: The type 'System.Threading.ExecutionContext&' of property 'Context' on type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[System.Collections.Generic.IEnumerable`1[WebAPI.DTOs.RegistrantWithAllWalletsAndUsersDto],WebAPI.Services.RegistrantService+<GetAllWithWalletsAndUsers>d__5]' is invalid for serialization or deserialization because it is a pointer type, is a ref struct, or contains generic parameters that have not been replaced by specific types.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_CannotSerializeInvalidType(Type typeToConvert, Type declaringType, MemberInfo memberInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreatePropertyInfo(JsonTypeInfo typeInfo, Type typeToConvert, MemberInfo memberInfo, JsonSerializerOptions options, Boolean shouldCheckForRequiredKeyword, Boolean hasJsonIncludeAttribute)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMembersDeclaredBySuperType(JsonTypeInfo typeInfo, Type currentType, Boolean constructorHasSetsRequiredMembersAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.PopulateProperties(JsonTypeInfo typeInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateTypeInfoCore(Type type, JsonConverter converter, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.GetTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoNoCaching(Type type)
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CreateCacheEntry(Type type, CachingContext context)
+--- End of stack trace from previous location ---
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 21
+[09:27:08 INF] Request completed: GET /api/Registrants/registrants/with-realated-data responded 500 in 129 ms
+[09:28:01 INF] Incoming request: POST /api/Registrants
+[09:28:01 INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Registrants] ([Address], [Country], [DateCreated], [DisplayName], [GSM], [isCompany])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+[09:28:01 INF] Request completed: POST /api/Registrants responded 200 in 148 ms
+[09:28:11 INF] Incoming request: GET /api/Registrants
+[09:28:11 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+[09:28:11 INF] Request completed: GET /api/Registrants responded 200 in 5 ms
+[09:28:28 INF] Incoming request: GET /api/Registrants/9
+[09:28:28 INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:28:28 INF] Request completed: GET /api/Registrants/9 responded 200 in 32 ms
+[09:28:43 INF] Incoming request: PUT /api/Registrants/9
+[09:28:43 INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[09:28:43 ERR] Unhandled exception
+System.InvalidOperationException: The type 'System.Threading.ExecutionContext&' of property 'Context' on type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[WebAPI.DTOs.RegistrantDto,WebAPI.Services.RegistrantService+<UpdateRegistrant>d__7]' is invalid for serialization or deserialization because it is a pointer type, is a ref struct, or contains generic parameters that have not been replaced by specific types.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_CannotSerializeInvalidType(Type typeToConvert, Type declaringType, MemberInfo memberInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreatePropertyInfo(JsonTypeInfo typeInfo, Type typeToConvert, MemberInfo memberInfo, JsonSerializerOptions options, Boolean shouldCheckForRequiredKeyword, Boolean hasJsonIncludeAttribute)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMembersDeclaredBySuperType(JsonTypeInfo typeInfo, Type currentType, Boolean constructorHasSetsRequiredMembersAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.PopulateProperties(JsonTypeInfo typeInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateTypeInfoCore(Type type, JsonConverter converter, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.GetTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoNoCaching(Type type)
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CreateCacheEntry(Type type, CachingContext context)
+--- End of stack trace from previous location ---
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 21
+[09:28:43 INF] Request completed: PUT /api/Registrants/9 responded 500 in 31 ms
+[09:29:18 INF] Now listening on: https://0.0.0.0:7168
+[09:29:18 INF] Now listening on: http://0.0.0.0:5229
+[09:29:18 INF] Application started. Press Ctrl+C to shut down.
+[09:29:18 INF] Hosting environment: Development
+[09:29:18 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[09:29:35 INF] Incoming request: PUT /api/Registrants/9
+[09:29:36 INF] Executed DbCommand (26ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[09:29:36 INF] Executed DbCommand (3ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Registrants] SET [Address] = @p0, [Country] = @p1, [DateCreated] = @p2, [DisplayName] = @p3, [GSM] = @p4, [isCompany] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+[09:29:36 INF] Request completed: PUT /api/Registrants/9 responded 200 in 926 ms
+[09:29:41 INF] Incoming request: GET /api/Registrants/registrants/with-realated-data
+[09:29:41 WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[09:29:41 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany], [w].[Id], [w].[DateCreated], [w].[Status], [w].[TarifaCode], [w].[LimitCode], [w].[RegistrantId], [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Registrants] AS [r]
+LEFT JOIN [Wallets] AS [w] ON [r].[Id] = [w].[RegistrantId]
+LEFT JOIN [Users] AS [u] ON [r].[Id] = [u].[RegistrantId]
+ORDER BY [r].[Id], [w].[Id]
+[09:29:41 INF] Request completed: GET /api/Registrants/registrants/with-realated-data responded 200 in 100 ms
+[09:32:43 INF] Now listening on: https://0.0.0.0:7168
+[09:32:43 INF] Now listening on: http://0.0.0.0:5229
+[09:32:43 INF] Application started. Press Ctrl+C to shut down.
+[09:32:43 INF] Hosting environment: Development
+[09:32:43 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[09:32:48 INF] Incoming request: GET /api/Registrants/registrants/with-realated-data
+[09:32:49 WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[09:32:49 INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany], [w].[Id], [w].[DateCreated], [w].[Status], [w].[TarifaCode], [w].[LimitCode], [w].[RegistrantId], [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Registrants] AS [r]
+LEFT JOIN [Wallets] AS [w] ON [r].[Id] = [w].[RegistrantId]
+LEFT JOIN [Users] AS [u] ON [r].[Id] = [u].[RegistrantId]
+ORDER BY [r].[Id], [w].[Id]
+[09:32:49 INF] Request completed: GET /api/Registrants/registrants/with-realated-data responded 200 in 835 ms
+[09:32:55 INF] Incoming request: GET /api/Registrants/registrants/with-realated-data
+[09:32:55 WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[09:32:55 INF] Executed DbCommand (14ms) [Parameters=[@__id_Value_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany], [w].[Id], [w].[DateCreated], [w].[Status], [w].[TarifaCode], [w].[LimitCode], [w].[RegistrantId], [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Registrants] AS [r]
+LEFT JOIN [Wallets] AS [w] ON [r].[Id] = [w].[RegistrantId]
+LEFT JOIN [Users] AS [u] ON [r].[Id] = [u].[RegistrantId]
+WHERE [r].[Id] = @__id_Value_0
+ORDER BY [r].[Id], [w].[Id]
+[09:32:55 INF] Request completed: GET /api/Registrants/registrants/with-realated-data responded 200 in 69 ms
+[09:33:00 INF] Incoming request: GET /api/Registrants/registrants/with-realated-data
+[09:33:00 INF] Executed DbCommand (2ms) [Parameters=[@__id_Value_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany], [w].[Id], [w].[DateCreated], [w].[Status], [w].[TarifaCode], [w].[LimitCode], [w].[RegistrantId], [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Registrants] AS [r]
+LEFT JOIN [Wallets] AS [w] ON [r].[Id] = [w].[RegistrantId]
+LEFT JOIN [Users] AS [u] ON [r].[Id] = [u].[RegistrantId]
+WHERE [r].[Id] = @__id_Value_0
+ORDER BY [r].[Id], [w].[Id]
+[09:33:00 INF] Request completed: GET /api/Registrants/registrants/with-realated-data responded 200 in 18 ms
+[09:36:07 INF] Now listening on: https://0.0.0.0:7168
+[09:36:07 INF] Now listening on: http://0.0.0.0:5229
+[09:36:07 INF] Application started. Press Ctrl+C to shut down.
+[09:36:07 INF] Hosting environment: Development
+[09:36:07 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[09:36:19 INF] Incoming request: GET /api/Registrants/registrants/with-realated-data
+[09:36:19 WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[09:36:20 INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany], [w].[Id], [w].[DateCreated], [w].[Status], [w].[TarifaCode], [w].[LimitCode], [w].[RegistrantId], [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Registrants] AS [r]
+LEFT JOIN [Wallets] AS [w] ON [r].[Id] = [w].[RegistrantId]
+LEFT JOIN [Users] AS [u] ON [r].[Id] = [u].[RegistrantId]
+ORDER BY [r].[Id], [w].[Id]
+[09:36:20 INF] Request completed: GET /api/Registrants/registrants/with-realated-data responded 200 in 886 ms
+[09:36:27 INF] Incoming request: GET /api/Registrants/registrants/with-realated-data
+[09:36:28 WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[09:36:28 INF] Executed DbCommand (14ms) [Parameters=[@__id_Value_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany], [w].[Id], [w].[DateCreated], [w].[Status], [w].[TarifaCode], [w].[LimitCode], [w].[RegistrantId], [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Registrants] AS [r]
+LEFT JOIN [Wallets] AS [w] ON [r].[Id] = [w].[RegistrantId]
+LEFT JOIN [Users] AS [u] ON [r].[Id] = [u].[RegistrantId]
+WHERE [r].[Id] = @__id_Value_0
+ORDER BY [r].[Id], [w].[Id]
+[09:36:28 INF] Request completed: GET /api/Registrants/registrants/with-realated-data responded 200 in 66 ms
