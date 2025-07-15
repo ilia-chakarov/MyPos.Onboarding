@@ -526,3 +526,36 @@ FROM [UserAccessControls] AS [u]
 [13:46:16 INF] Request completed: GET /api/UserAccess responded 200 in 19 ms
 [13:46:20 INF] Incoming request: GET /api/Wallets
 [13:46:20 INF] Request completed: GET /api/Wallets responded 401 in 3 ms
+[14:09:41 INF] Now listening on: https://0.0.0.0:7168
+[14:09:41 INF] Now listening on: http://0.0.0.0:5229
+[14:09:41 INF] Application started. Press Ctrl+C to shut down.
+[14:09:41 INF] Hosting environment: Development
+[14:09:41 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:09:50 INF] Incoming request: GET /api/Registrants
+[14:09:51 INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+[14:09:51 INF] Request completed: GET /api/Registrants responded 200 in 781 ms
+[14:16:37 INF] Now listening on: https://0.0.0.0:7168
+[14:16:37 INF] Now listening on: http://0.0.0.0:5229
+[14:16:37 INF] Application started. Press Ctrl+C to shut down.
+[14:16:37 INF] Hosting environment: Development
+[14:16:37 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:17:00 INF] Incoming request: GET /api/Registrants
+[14:17:01 INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+[14:17:01 INF] Request completed: GET /api/Registrants responded 200 in 752 ms
+[14:17:27 INF] Incoming request: GET /api/Accounts
+[14:17:27 INF] Request completed: GET /api/Accounts responded 401 in 7 ms
+[14:17:37 INF] Incoming request: POST /api/Auth/login
+[14:17:37 INF] Executed DbCommand (16ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[14:17:37 INF] Request completed: POST /api/Auth/login responded 200 in 197 ms
+[14:17:45 INF] Incoming request: GET /api/Accounts
+[14:17:45 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateCreated], [a].[Currency], [a].[Balance], [a].[IBAN], [a].[AccountName], [a].[LastOperationDT], [a].[BalanceInEuro], [a].[WalletId]
+FROM [Accounts] AS [a]
+[14:17:45 INF] Request completed: GET /api/Accounts responded 200 in 44 ms

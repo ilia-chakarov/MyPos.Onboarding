@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System.Runtime.CompilerServices;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.OpenApi.Models;
 using WebAPI.Entities;
 using WebAPI.Services;
 using WebAPI.Services.Interfaces;
 using WebAPI.UnitOfWork;
+using Serilog;
 
 namespace WebAPI.Extensions
 {
@@ -23,6 +25,77 @@ namespace WebAPI.Extensions
             services.AddScoped<IPasswordHasher<UserEntity>, PasswordHasher<UserEntity>>();
 
             return services;
+        }
+
+        public static IServiceCollection AddSwaggerDocumentation(this IServiceCollection services)
+        {
+            services.AddEndpointsApiExplorer();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "MyPos API", Version = "v1" });
+
+                var jwtSecurityScheme = new OpenApiSecurityScheme
+                {
+                    Scheme = "bearer",
+                    BearerFormat = "JWT",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.Http,
+                    Description = "Enter your JWT token below (without 'Bearer' prefix)",
+
+                    Reference = new OpenApiReference
+                    {
+                        Id = JwtBearerDefaults.AuthenticationScheme,
+                        Type = ReferenceType.SecurityScheme,
+                    }
+                };
+
+                c.AddSecurityDefinition(jwtSecurityScheme.Reference.Id, jwtSecurityScheme);
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        jwtSecurityScheme,
+                        Array.Empty<string>()
+                    }
+                });
+            });
+
+
+            return services;
+        }
+
+        public static IServiceCollection AddExternalHttpClients(this IServiceCollection services)
+        {
+            services.AddHttpClient<IvoApiClient>((sp, cl) =>
+            {
+                cl.BaseAddress = new Uri("https://10.80.55.56:7191/");
+            })
+                .ConfigurePrimaryHttpMessageHandler(() =>
+                {
+                    return new HttpClientHandler
+                    {
+                        ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+                    };
+                })
+                .AddTypedClient((httpCl, sp) =>
+                {
+                    var baseUrl = "https://10.80.55.56:7191/";
+                    return new IvoApiClient(baseUrl, httpCl);
+                });
+
+            return services;
+        }
+
+        public static IHostBuilder ConfigureSerilog(this IHostBuilder hostBuilder)
+        {
+            hostBuilder.UseSerilog((context, services, configuration) => configuration
+                .ReadFrom.Configuration(context.Configuration)
+                .ReadFrom.Services(services)
+                .Enrich.FromLogContext()
+                );
+
+            return hostBuilder;
         }
     }
 }
