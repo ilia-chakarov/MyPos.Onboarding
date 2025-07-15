@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using WebAPI.DTOs;
 using WebAPI.Entities;
 using WebAPI.Exceptions;
@@ -10,10 +11,12 @@ namespace WebAPI.Services
     public class WalletService : IWalletService
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
-        public WalletService(IUnitOfWork uow)
+        public WalletService(IUnitOfWork uow, IMapper mapper)
         {
             _unitOfWork = uow;
+            _mapper = mapper;
         }
 
         public async Task<WalletDto> CreateWallet(CreateWalletDto dto)
@@ -23,28 +26,13 @@ namespace WebAPI.Services
                 throw new MyPosApiException($"Registrant with id {dto.RegistrantId} not found",
                     StatusCodes.Status404NotFound);
 
-
-            var wallet = new WalletEntity
-            {
-                DateCreated = DateTime.Now,
-                Status = dto.Status,
-                TarifaCode = dto.TarifaCode,
-                LimitCode = dto.LimitCode,
-                RegistrantId = registrant.Id,
-            };
+            var wallet = _mapper.Map<WalletEntity>(dto);
+            wallet.DateCreated = DateTime.Now;
 
             await _unitOfWork.GetRepository<WalletEntity>().AddAsync(wallet);
             await _unitOfWork.SaveChangesAsync();
 
-            return new WalletDto
-            {
-                Id = wallet.Id,
-                DateCreated = wallet.DateCreated,
-                Status = wallet.Status,
-                TarifaCode = wallet.TarifaCode,
-                LimitCode = wallet.LimitCode,
-                RegistrantId = wallet.RegistrantId
-            };
+            return _mapper.Map<WalletDto>(wallet);
         }
 
         public async Task<WalletDto> DeleteWallet(int id)
@@ -56,15 +44,7 @@ namespace WebAPI.Services
             _unitOfWork.GetRepository<WalletEntity>().Delete(wallet);
             await _unitOfWork.SaveChangesAsync();
 
-            return new WalletDto
-            {
-                Id = id,
-                DateCreated = wallet.DateCreated,
-                Status = wallet.Status,
-                TarifaCode = wallet.TarifaCode,
-                LimitCode = wallet.LimitCode,
-                RegistrantId = wallet.RegistrantId
-            };
+            return _mapper.Map<WalletDto>(wallet);
         }
 
         public async Task<IEnumerable<WalletDto>> GetAll(Func<IQueryable<WalletEntity>, IQueryable<WalletEntity>>? filter = null)
@@ -75,15 +55,9 @@ namespace WebAPI.Services
                 query = filter(query);
 
 
-            return await query.Select(w => new WalletDto
-            {
-                Id = w.Id,
-                DateCreated = w.DateCreated,
-                Status = w.Status,
-                TarifaCode = w.TarifaCode,
-                LimitCode = w.LimitCode,
-                RegistrantId = w.RegistrantId
-            }).ToListAsync();
+            var wallet = await query.ToListAsync();
+
+            return _mapper.Map<List<WalletDto>>(wallet);
         }
 
         public async Task<WalletDto> GetById(int id)
@@ -92,15 +66,7 @@ namespace WebAPI.Services
             if (wallet == null)
                 throw new MyPosApiException($"Wallet with id {id} not found", StatusCodes.Status404NotFound);
 
-            return new WalletDto
-            {
-                Id = wallet.Id,
-                DateCreated = wallet.DateCreated,
-                Status = wallet.Status,
-                TarifaCode = wallet.TarifaCode,
-                LimitCode = wallet.LimitCode,
-                RegistrantId = wallet.RegistrantId
-            };
+            return _mapper.Map<WalletDto>(wallet);
         }
 
         public async Task<WalletDto> UpdateWallet(int id, CreateWalletDto dto)
@@ -114,23 +80,12 @@ namespace WebAPI.Services
             if (registrant == null) 
                 throw new MyPosApiException($"Registrant with id {dto.RegistrantId} not found", StatusCodes.Status404NotFound);
 
-            wallet.Status = dto.Status;
-            wallet.TarifaCode = dto.TarifaCode;
-            wallet.LimitCode = dto.LimitCode;
-            wallet.RegistrantId = dto.RegistrantId;
+            _mapper.Map(dto, wallet);
 
             _unitOfWork.GetRepository<WalletEntity>().Update(wallet);
             await _unitOfWork.SaveChangesAsync();
 
-            return new WalletDto
-            {
-                Id = id,
-                DateCreated = wallet.DateCreated,
-                Status = wallet.Status,
-                TarifaCode = wallet.TarifaCode,
-                LimitCode = wallet.LimitCode,
-                RegistrantId = wallet.RegistrantId
-            };
+            return _mapper.Map<WalletDto>(wallet);
         }
     }
 }

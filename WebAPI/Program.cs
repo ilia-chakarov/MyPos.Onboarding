@@ -28,7 +28,10 @@ namespace WebAPI
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
                 );
 
+
             builder.Services.AddAutoMapper(typeof(AccountProfile).Assembly);
+            builder.Services.AddAutoMapper(typeof(WalletProfile).Assembly);
+
 
             builder.Services.AddApplicationServices();
 

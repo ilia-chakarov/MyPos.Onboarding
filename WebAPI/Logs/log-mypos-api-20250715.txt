@@ -1215,3 +1215,127 @@ WHERE [a].[Id] = @__id_0
 [17:23:39 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
 [17:23:39 INF] [Machine: MP-DT0KYVBJ] Response body: {"id":2,"dateCreated":"2025-07-09T09:47:52.4600202","currency":"BGN","balance":555.00,"iban":"BGSTSA123456","accountName":"ilia-chakarov","lastOperationDT":"2025-07-09T09:47:52.4602967","balanceInEuro":275.00,"walletId":6}
 [17:23:39 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Accounts/2 responded 200 in 3 ms
+[17:41:49 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:41:49 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:41:49 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:41:49 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:41:49 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:41:58 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:41:58 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:41:58 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Wallets 
+[17:41:58 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:41:58 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:41:58 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:41:58 INF] [Machine: MP-DT0KYVBJ] Response body: 
+[17:41:58 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Wallets responded 401 in 77 ms
+[17:42:11 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:42:11 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:42:11 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[17:42:11 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"57","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:42:11 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "username": "ilia-chakarov",
+  "password": "123123"
+}
+[17:42:12 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (32ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[17:42:12 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:42:12 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNCIsInVuaXF1ZV9uYW1lIjoiaWxpYS1jaGFrYXJvdiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJpbGlhLWNoYWthcm92IiwiZXhwIjoxNzUyNTk0MTMyLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.MOFgoBiAsDsJabFG4x_d8Hds0Wt7bqQP3gwSCSHI7tQ"}
+[17:42:12 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 200 in 914 ms
+[17:42:15 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:42:15 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:42:15 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Registrants 
+[17:42:15 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","traceparent":"00-03437f357c8aa93557977493df9b2e31-d7609a8b0ec46334-00"}
+[17:42:15 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:42:15 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+[17:42:15 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:42:15 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":5,"dateCreated":"2025-07-08T16:23:35.9821979","displayName":"papasmurfie","gsm":"0897614957","country":"Bulgaria","address":"ul. Tsar Asen 74","isCompany":false},{"id":6,"dateCreated":"2025-07-08T16:24:08.82214","displayName":"jacksonville","gsm":"0898555444","country":"USA","address":"I dont know Avenue 123","isCompany":false},{"id":7,"dateCreated":"2025-07-08T16:24:38.7776089","displayName":"lil yachty","gsm":"0897777777","country":"USA","address":"Washington DC","isCompany":false},{"id":8,"dateCreated":"2025-07-08T16:25:28.3671217","displayName":"mMyPos","gsm":"0895789654","country":"Bulgaria","address":"Varna, Idk","isCompany":true},{"id":9,"dateCreated":"2025-07-15T09:28:01.2499504","displayName":"Honestly Healthy","gsm":"0895558749","country":"Bulgaria","address":"Vazrazhdane 6","isCompany":true}]
+[17:42:15 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Registrants responded 200 in 59 ms
+[17:42:29 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:42:29 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:42:29 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Wallets 
+[17:42:29 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNCIsInVuaXF1ZV9uYW1lIjoiaWxpYS1jaGFrYXJvdiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJpbGlhLWNoYWthcm92IiwiZXhwIjoxNzUyNTk0MTMyLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.MOFgoBiAsDsJabFG4x_d8Hds0Wt7bqQP3gwSCSHI7tQ","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:42:29 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:42:29 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+[17:42:29 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:42:29 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":3,"dateCreated":"2025-07-08T16:23:35.9821979","status":"Created","tarifaCode":"123","limitCode":"123","registrantId":8},{"id":4,"dateCreated":"2025-07-08T17:52:51.0161846","status":"Active","tarifaCode":"555","limitCode":"111","registrantId":8},{"id":6,"dateCreated":"2025-07-09T09:21:36.3457505","status":"Active","tarifaCode":"777","limitCode":"111","registrantId":8},{"id":7,"dateCreated":"2025-07-11T10:57:17.7492821","status":"pulen s mangizi (actually nqq nishto)","tarifaCode":"nz brat","limitCode":"bez limiti","registrantId":8}]
+[17:42:29 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Wallets responded 200 in 94 ms
+[17:42:38 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:42:38 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:42:38 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Wallets/3 
+[17:42:38 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNCIsInVuaXF1ZV9uYW1lIjoiaWxpYS1jaGFrYXJvdiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJpbGlhLWNoYWthcm92IiwiZXhwIjoxNzUyNTk0MTMyLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.MOFgoBiAsDsJabFG4x_d8Hds0Wt7bqQP3gwSCSHI7tQ","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:42:38 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:42:38 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+WHERE [w].[Id] = @__p_0
+[17:42:38 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:42:38 INF] [Machine: MP-DT0KYVBJ] Response body: {"id":3,"dateCreated":"2025-07-08T16:23:35.9821979","status":"Created","tarifaCode":"123","limitCode":"123","registrantId":8}
+[17:42:38 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Wallets/3 responded 200 in 30 ms
+[17:42:54 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:42:54 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:42:54 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Registrants 
+[17:42:54 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","traceparent":"00-11c3e1ee3034a7dd2adfda03009dce81-01a109d3983bf46e-00"}
+[17:42:54 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:42:54 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+[17:42:54 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:42:54 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":5,"dateCreated":"2025-07-08T16:23:35.9821979","displayName":"papasmurfie","gsm":"0897614957","country":"Bulgaria","address":"ul. Tsar Asen 74","isCompany":false},{"id":6,"dateCreated":"2025-07-08T16:24:08.82214","displayName":"jacksonville","gsm":"0898555444","country":"USA","address":"I dont know Avenue 123","isCompany":false},{"id":7,"dateCreated":"2025-07-08T16:24:38.7776089","displayName":"lil yachty","gsm":"0897777777","country":"USA","address":"Washington DC","isCompany":false},{"id":8,"dateCreated":"2025-07-08T16:25:28.3671217","displayName":"mMyPos","gsm":"0895789654","country":"Bulgaria","address":"Varna, Idk","isCompany":true},{"id":9,"dateCreated":"2025-07-15T09:28:01.2499504","displayName":"Honestly Healthy","gsm":"0895558749","country":"Bulgaria","address":"Vazrazhdane 6","isCompany":true}]
+[17:42:54 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Registrants responded 200 in 4 ms
+[17:43:02 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:43:02 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:43:02 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[17:43:02 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Content-Type":"application/json","traceparent":"00-dee000600e95143f4dd65a8062f1b020-8abd5ff0d6d52049-00","Content-Length":"2"}
+[17:43:02 INF] [Machine: MP-DT0KYVBJ] Request body: {}
+[17:43:02 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[17:43:02 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:43:02 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Unauthorized","status":401,"detail":"Invalid credentials"}
+[17:43:02 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 401 in 78 ms
+[17:43:08 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:43:08 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:43:08 INF] [Machine: MP-DT0KYVBJ] Incoming request: PUT /api/Wallets/3 
+[17:43:08 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNCIsInVuaXF1ZV9uYW1lIjoiaWxpYS1jaGFrYXJvdiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJpbGlhLWNoYWthcm92IiwiZXhwIjoxNzUyNTk0MTMyLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.MOFgoBiAsDsJabFG4x_d8Hds0Wt7bqQP3gwSCSHI7tQ","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"90","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:43:08 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "status": "Active",
+  "tarifaCode": "123",
+  "limitCode": "123",
+  "registrantId": 8
+}
+[17:43:08 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+WHERE [w].[Id] = @__p_0
+[17:43:08 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__p_0
+[17:43:08 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Wallets] SET [DateCreated] = @p0, [LimitCode] = @p1, [RegistrantId] = @p2, [Status] = @p3, [TarifaCode] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+[17:43:08 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:43:08 INF] [Machine: MP-DT0KYVBJ] Response body: {"id":3,"dateCreated":"2025-07-08T16:23:35.9821979","status":"Active","tarifaCode":"123","limitCode":"123","registrantId":8}
+[17:43:08 INF] [Machine: MP-DT0KYVBJ] Request completed: PUT /api/Wallets/3 responded 200 in 100 ms
+[17:43:15 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:43:15 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:43:15 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Wallets/3 
+[17:43:15 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNCIsInVuaXF1ZV9uYW1lIjoiaWxpYS1jaGFrYXJvdiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJpbGlhLWNoYWthcm92IiwiZXhwIjoxNzUyNTk0MTMyLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.MOFgoBiAsDsJabFG4x_d8Hds0Wt7bqQP3gwSCSHI7tQ","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:43:15 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:43:15 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+WHERE [w].[Id] = @__p_0
+[17:43:15 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:43:15 INF] [Machine: MP-DT0KYVBJ] Response body: {"id":3,"dateCreated":"2025-07-08T16:23:35.9821979","status":"Active","tarifaCode":"123","limitCode":"123","registrantId":8}
+[17:43:15 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Wallets/3 responded 200 in 7 ms
