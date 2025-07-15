@@ -6,14 +6,12 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WebAPI.Data;
 using WebAPI.Entities;
-using WebAPI.Repositories;
 using WebAPI.UnitOfWork;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using WebAPI.Middleware;
-using ExternalApi;
-using WebAPI.Services.Interfaces;
-using WebAPI.Services;
+using WebAPI.Extensions;
+
 
 namespace WebAPI
 {
@@ -63,45 +61,11 @@ namespace WebAPI
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
                 );
 
-            builder.Services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>();
 
-            builder.Services.AddScoped<IUserService, UserService>();
-            builder.Services.AddScoped<IAccountService, AccountService>();
-            builder.Services.AddScoped<IRegistrantService, RegistrantService>();
-            builder.Services.AddScoped<IWalletService, WalletService>();
-            builder.Services.AddScoped<IUserAccessControlService, UserAccessControlService>();
-            builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddApplicationServices();
 
-            builder.Services.AddScoped<IPasswordHasher<UserEntity>, PasswordHasher<UserEntity>>();
-
-
-            // Load JwtSettings from appsettings.json
-            var jwtSettings = builder.Configuration.GetSection("JwtSettings");
-            var secretKey = jwtSettings["SecretKey"];
-
-            builder.Services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-            .AddJwtBearer(options =>
-            {
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuer = true,
-                    ValidIssuer = jwtSettings["Issuer"],
-
-                    ValidateAudience = true,
-                    ValidAudience = jwtSettings["Audience"],
-
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey!)),
-
-                    ValidateLifetime = true,
-                    ClockSkew = TimeSpan.Zero,
-                };
-            });
-
+            builder.Services.AddJwtAuthentication(builder.Configuration);
+           
             builder.Host.UseSerilog((context, services, configuration) => configuration
                 .ReadFrom.Configuration(context.Configuration)
                 .ReadFrom.Services(services)
