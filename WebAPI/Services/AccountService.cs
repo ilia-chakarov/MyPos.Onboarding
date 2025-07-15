@@ -153,7 +153,7 @@ namespace WebAPI.Services
             account.BalanceInEuro = dto.BalanceInEuro;
             account.WalletId = dto.WalletId;
 
-            _unitOfWork.AccountRepository.Update(account);
+            _unitOfWork.GetRepository<Account>().Update(account);
             await _unitOfWork.SaveChangesAsync();
 
             return new AccountDto

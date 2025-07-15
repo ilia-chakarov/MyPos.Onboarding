@@ -34,7 +34,7 @@ namespace WebAPI.Services
                 AccessLevel = dto.AccessLevel
             };
 
-            await _unitOfWork.UserAccessControlRepository.AddAsync(uac);
+            await _unitOfWork.GetRepository<UserAccessControl>().AddAsync(uac);
             await _unitOfWork.SaveChangesAsync();
 
             return new CreateUserAccessControlDto
@@ -56,7 +56,7 @@ namespace WebAPI.Services
                 throw new MyPosApiException($"User access control with userId {userId} and wallet id {walletId} not found",
                     StatusCodes.Status404NotFound);
 
-            _unitOfWork.UserAccessControlRepository.Delete(uac);
+            _unitOfWork.GetRepository<UserAccessControl>().Delete(uac);
             await _unitOfWork.SaveChangesAsync();
 
             return new CreateUserAccessControlDto
@@ -118,18 +118,18 @@ namespace WebAPI.Services
             if (userId == dto.UserId && walletId == dto.WalletId)
             {
                 uac.AccessLevel = dto.AccessLevel;
-                _unitOfWork.UserAccessControlRepository.Update(uac);
+                _unitOfWork.GetRepository<UserAccessControl>().Update(uac);
             }
             else
             {
-                _unitOfWork.UserAccessControlRepository.Delete(uac);
+                _unitOfWork.GetRepository<UserAccessControl>().Delete(uac);
                 var newUac = new UserAccessControl
                 {
                     UserId = dto.UserId,
                     WalletId = dto.WalletId,
                     AccessLevel = dto.AccessLevel,
                 };
-                await _unitOfWork.UserAccessControlRepository.AddAsync(newUac);
+                await _unitOfWork.GetRepository<UserAccessControl>().AddAsync(newUac);
             }
 
             await _unitOfWork.SaveChangesAsync();

@@ -7,11 +7,6 @@ namespace WebAPI.UnitOfWork
     {
         IRepository<T> GetRepository<T>() where T : class;
 
-        IAccountRepository AccountRepository { get; }
-        IRegistrantRepository RegistrantRepository { get; }
-        IUserAccessControlRepository UserAccessControlRepository { get; }
-        IUserRepository UserRepository { get; }
-        IWalletRepository WalletRepository { get; }
 
         Task<int> SaveChangesAsync();
 

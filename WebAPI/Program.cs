@@ -65,11 +65,6 @@ namespace WebAPI
                 );
 
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>();
-            builder.Services.AddScoped<IAccountRepository, AccountRepository>();
-            builder.Services.AddScoped<IRegistrantRepository, RegistrantRepository>();
-            builder.Services.AddScoped<IUserAccessControlRepository, UserAccessControlRepository>();
-            builder.Services.AddScoped<IUserRepository, UserRepository>();
-            builder.Services.AddScoped<IWalletRepository, WalletRepository>();
 
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IAccountService, AccountService>();

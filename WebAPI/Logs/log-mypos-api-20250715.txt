@@ -327,3 +327,41 @@ SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
 FROM [Users] AS [u]
 WHERE [u].[Username] = @__dto_Username_0
 [11:03:41 INF] Request completed: POST /api/Auth/login responded 401 in 992 ms
+[11:09:44 INF] Now listening on: https://0.0.0.0:7168
+[11:09:44 INF] Now listening on: http://0.0.0.0:5229
+[11:09:45 INF] Application started. Press Ctrl+C to shut down.
+[11:09:45 INF] Hosting environment: Development
+[11:09:45 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[11:09:51 INF] Incoming request: GET /api/Accounts
+[11:09:51 INF] Request completed: GET /api/Accounts responded 401 in 61 ms
+[11:10:01 INF] Incoming request: POST /api/Auth/login
+[11:10:02 INF] Executed DbCommand (27ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[11:10:02 INF] Request completed: POST /api/Auth/login responded 200 in 969 ms
+[11:10:10 INF] Incoming request: GET /api/Accounts
+[11:10:10 INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateCreated], [a].[Currency], [a].[Balance], [a].[IBAN], [a].[AccountName], [a].[LastOperationDT], [a].[BalanceInEuro], [a].[WalletId]
+FROM [Accounts] AS [a]
+[11:10:10 INF] Request completed: GET /api/Accounts responded 200 in 84 ms
+[11:10:21 INF] Incoming request: GET /api/Registrants
+[11:10:21 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+[11:10:21 INF] Request completed: GET /api/Registrants responded 200 in 26 ms
+[11:10:26 INF] Incoming request: GET /api/UserAccess
+[11:10:26 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+[11:10:26 INF] Request completed: GET /api/UserAccess responded 200 in 16 ms
+[11:10:29 INF] Incoming request: GET /api/Wallets
+[11:10:29 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[DateCreated], [w].[Status], [w].[TarifaCode], [w].[LimitCode], [w].[RegistrantId]
+FROM [Wallets] AS [w]
+[11:10:29 INF] Request completed: GET /api/Wallets responded 200 in 13 ms
+[11:10:32 INF] Incoming request: GET /api/Users
+[11:10:32 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+[11:10:32 INF] Request completed: GET /api/Users responded 200 in 19 ms

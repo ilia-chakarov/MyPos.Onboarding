@@ -53,7 +53,7 @@ namespace WebAPI.Services
             if (wallet == null) 
                 throw new MyPosApiException($"Wallet with id {id} not found", StatusCodes.Status404NotFound);
 
-            _unitOfWork.WalletRepository.Delete(wallet);
+            _unitOfWork.GetRepository<Wallet>().Delete(wallet);
             await _unitOfWork.SaveChangesAsync();
 
             return new WalletDto
