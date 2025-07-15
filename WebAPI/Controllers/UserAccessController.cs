@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebAPI.DTOs;
 using WebAPI.Entities;
+using WebAPI.Services.Interfaces;
 using WebAPI.UnitOfWork;
 
 namespace WebAPI.Controllers
@@ -9,47 +10,24 @@ namespace WebAPI.Controllers
     [Route("api/[controller]")]
     public class UserAccessController :  ControllerBase
     {
-        private readonly IUnitOfWork _unitOfWork;
-        public UserAccessController(IUnitOfWork uow)
+        private readonly IUserAccessControlService _uacService;
+        public UserAccessController(IUserAccessControlService uacS)
         {
-            _unitOfWork = uow;
+            _uacService = uacS;
         }
 
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateUserAccessControlDto dto)
         {
-            var user = await _unitOfWork.UserRepository.GetByIdAsync(dto.UserId);
-            if(user == null) return BadRequest($"User with id {dto.UserId} does not exist");
+            var createdDto = await _uacService.CreateUAC(dto);
 
-            var wallet = await _unitOfWork.WalletRepository.GetByIdAsync(dto.WalletId);
-            if(wallet == null) return BadRequest($"Wallet with id {dto.WalletId} does not exist");
-
-            var uac = new UserAccessControl
-            {
-                UserId = dto.UserId,
-                WalletId = dto.WalletId,
-                AccessLevel = dto.AccessLevel
-            };
-
-            await _unitOfWork.UserAccessControlRepository.AddAsync(uac);
-            await _unitOfWork.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetById), new { userId = dto.UserId, walletId = dto.WalletId }, dto);
+            return Ok(createdDto);
         }
 
         [HttpGet("{userId}/{walletId}")]
         public async Task<IActionResult> GetById(int userId, int walletId)
         {
-            var uac = await _unitOfWork.UserAccessControlRepository.GetByUserAndWalletAsync(userId, walletId);
-
-            if(uac == null) return NotFound();
-
-            var dto = new CreateUserAccessControlDto
-            {
-                UserId = uac.UserId,
-                WalletId = uac.WalletId,
-                AccessLevel = uac.AccessLevel,
-            };
+            var dto = await _uacService.GetById(userId, walletId);
 
             return Ok(dto);
         }
@@ -57,57 +35,25 @@ namespace WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var UACs = await _unitOfWork.UserAccessControlRepository.GetAllAsync();
+            var uacDtos = await _uacService.GetAll();
 
-            var uacDtos = UACs.Select(x =>
-                new CreateUserAccessControlDto
-                {
-                    UserId = x.UserId,
-                    WalletId = x.WalletId,
-                    AccessLevel = x.AccessLevel,
-                });
             return Ok(uacDtos);
         }
 
         [HttpPut("{userId}/{walletId}")]
         public async Task<IActionResult> Update(int userId, int walletId, [FromBody] CreateUserAccessControlDto dto)
         {
-            var uac = await _unitOfWork.UserAccessControlRepository.GetByUserAndWalletAsync(userId, walletId);
-            if(uac == null) return NotFound();
+            var updatedDto = await _uacService.UpdateUAC(userId, walletId, dto);
 
-
-            if(userId == dto.UserId && walletId == dto.WalletId)
-            {
-                uac.AccessLevel = dto.AccessLevel;
-                _unitOfWork.UserAccessControlRepository.Update(uac);
-            }
-            else
-            {
-                _unitOfWork.UserAccessControlRepository.Delete(uac);
-                var newUac = new UserAccessControl
-                {
-                    UserId = dto.UserId,
-                    WalletId = dto.WalletId,
-                    AccessLevel = dto.AccessLevel,
-                };
-                await _unitOfWork.UserAccessControlRepository.AddAsync(newUac);
-            }
-
-            await _unitOfWork.SaveChangesAsync();
-
-            return NoContent();
+            return Ok(updatedDto);
         }
 
         [HttpDelete("{userId}/{walletId}")]
         public async Task<IActionResult> Delete(int userId, int walletId)
         {
-            var uac = await _unitOfWork.UserAccessControlRepository.GetByUserAndWalletAsync(userId, walletId);
-            if (uac == null) return NotFound();
+            var deletedDto = await _uacService.DeleteUAC(userId, walletId);
 
-            _unitOfWork.UserAccessControlRepository.Delete(uac);
-            await _unitOfWork.SaveChangesAsync();
-
-            return NoContent();
+            return Ok(deletedDto);
         }
     }
 }

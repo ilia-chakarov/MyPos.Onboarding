@@ -211,3 +211,75 @@ SELECT TOP(1) [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], 
 FROM [Wallets] AS [w]
 WHERE [w].[Id] = @__p_0
 [10:09:13 INF] Request completed: GET /api/Wallets/3 responded 200 in 13 ms
+[10:51:04 INF] Now listening on: https://0.0.0.0:7168
+[10:51:04 INF] Now listening on: http://0.0.0.0:5229
+[10:51:04 INF] Application started. Press Ctrl+C to shut down.
+[10:51:04 INF] Hosting environment: Development
+[10:51:04 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:51:11 INF] Incoming request: GET /api/UserAccess
+[10:51:12 INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+[10:51:12 INF] Request completed: GET /api/UserAccess responded 200 in 1554 ms
+[10:51:53 INF] Incoming request: POST /api/UserAccess
+[10:51:53 INF] Executed DbCommand (29ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__p_0
+[10:51:53 INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+WHERE [w].[Id] = @__p_0
+[10:51:54 INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserAccessControls] ([UserId], [WalletId], [AccessLevel])
+VALUES (@p0, @p1, @p2);
+[10:51:54 INF] Request completed: POST /api/UserAccess responded 200 in 416 ms
+[10:51:59 INF] Incoming request: GET /api/UserAccess
+[10:51:59 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+[10:51:59 INF] Request completed: GET /api/UserAccess responded 200 in 43 ms
+[10:52:06 INF] Incoming request: GET /api/UserAccess/14/4
+[10:52:06 INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__walletId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
+[10:52:06 INF] Request completed: GET /api/UserAccess/14/4 responded 200 in 23 ms
+[10:52:18 INF] Incoming request: PUT /api/UserAccess/14/4
+[10:52:18 INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__walletId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
+[10:52:18 INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [UserAccessControls] SET [AccessLevel] = @p0
+OUTPUT 1
+WHERE [UserId] = @p1 AND [WalletId] = @p2;
+[10:52:18 INF] Request completed: PUT /api/UserAccess/14/4 responded 200 in 32 ms
+[10:52:20 INF] Incoming request: GET /api/UserAccess/14/4
+[10:52:20 INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__walletId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
+[10:52:20 INF] Request completed: GET /api/UserAccess/14/4 responded 200 in 4 ms
+[10:52:26 INF] Incoming request: DELETE /api/UserAccess/14/4
+[10:52:26 INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__walletId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
+[10:52:26 INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [UserAccessControls]
+OUTPUT 1
+WHERE [UserId] = @p0 AND [WalletId] = @p1;
+[10:52:26 INF] Request completed: DELETE /api/UserAccess/14/4 responded 200 in 17 ms
+[10:52:29 INF] Incoming request: GET /api/UserAccess/14/4
+[10:52:29 INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__walletId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
+[10:52:29 INF] Request completed: GET /api/UserAccess/14/4 responded 404 in 226 ms
