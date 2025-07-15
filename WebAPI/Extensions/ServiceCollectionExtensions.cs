@@ -97,6 +97,8 @@ namespace WebAPI.Extensions
                 .ReadFrom.Configuration(context.Configuration)
                 .ReadFrom.Services(services)
                 .Enrich.FromLogContext()
+                .Enrich.WithMachineName()
+                .Enrich.WithThreadId()
                 );
 
             return hostBuilder;

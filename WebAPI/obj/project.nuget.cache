@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "na79SHbygz8=",
+  "dgSpecHash": "xImhmbZbdIU=",
   "success": true,
   "projectFilePath": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
@@ -67,6 +67,8 @@
     "C:\\Users\\ilia.chakarov\\.nuget\\packages\\nswag.msbuild\\13.20.0\\nswag.msbuild.13.20.0.nupkg.sha512",
     "C:\\Users\\ilia.chakarov\\.nuget\\packages\\serilog\\4.3.0\\serilog.4.3.0.nupkg.sha512",
     "C:\\Users\\ilia.chakarov\\.nuget\\packages\\serilog.aspnetcore\\8.0.3\\serilog.aspnetcore.8.0.3.nupkg.sha512",
+    "C:\\Users\\ilia.chakarov\\.nuget\\packages\\serilog.enrichers.environment\\3.0.1\\serilog.enrichers.environment.3.0.1.nupkg.sha512",
+    "C:\\Users\\ilia.chakarov\\.nuget\\packages\\serilog.enrichers.thread\\4.0.0\\serilog.enrichers.thread.4.0.0.nupkg.sha512",
     "C:\\Users\\ilia.chakarov\\.nuget\\packages\\serilog.extensions.hosting\\8.0.0\\serilog.extensions.hosting.8.0.0.nupkg.sha512",
     "C:\\Users\\ilia.chakarov\\.nuget\\packages\\serilog.extensions.logging\\8.0.0\\serilog.extensions.logging.8.0.0.nupkg.sha512",
     "C:\\Users\\ilia.chakarov\\.nuget\\packages\\serilog.formatting.compact\\2.0.0\\serilog.formatting.compact.2.0.0.nupkg.sha512",

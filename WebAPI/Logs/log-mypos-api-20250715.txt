@@ -628,3 +628,406 @@ FROM [Accounts] AS [a]
 [15:00:25 INF] Request completed: GET /api/Accounts responded 200 in 61 ms
 [15:00:31 INF] Incoming request: GET /api/Accounts
 [15:00:31 INF] Request completed: GET /api/Accounts responded 401 in 3 ms
+[15:12:28 INF] Now listening on: https://0.0.0.0:7168
+[15:12:28 INF] Now listening on: http://0.0.0.0:5229
+[15:12:28 INF] Application started. Press Ctrl+C to shut down.
+[15:12:28 INF] Hosting environment: Development
+[15:12:28 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[15:12:33 INF] Incoming request: POST /api/Auth/login
+[15:12:34 INF] Executed DbCommand (27ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[15:12:34 INF] Request completed: POST /api/Auth/login responded 401 in 885 ms
+[15:12:38 INF] Incoming request: POST /api/Auth/login
+[15:12:38 INF] Request completed: POST /api/Auth/login responded 400 in 14 ms
+[15:12:55 INF] Incoming request: POST /api/Auth/login
+[15:12:55 INF] Executed DbCommand (6ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[15:12:55 INF] Request completed: POST /api/Auth/login responded 401 in 91 ms
+[15:30:20 INF] Now listening on: https://0.0.0.0:7168
+[15:30:20 INF] Now listening on: http://0.0.0.0:5229
+[15:30:20 INF] Application started. Press Ctrl+C to shut down.
+[15:30:20 INF] Hosting environment: Development
+[15:30:20 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[15:30:35 INF] Incoming request: POST /api/Auth/login
+[15:30:35 INF] Executed DbCommand (27ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[15:30:35 INF] Request completed: POST /api/Auth/login responded 401 in 858 ms
+[15:33:58 INF] Now listening on: https://0.0.0.0:7168
+[15:33:58 INF] Now listening on: http://0.0.0.0:5229
+[15:33:58 INF] Application started. Press Ctrl+C to shut down.
+[15:33:58 INF] Hosting environment: Development
+[15:33:58 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[15:34:03 INF] Incoming request: POST /api/Auth/login
+[15:34:04 INF] Executed DbCommand (25ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[15:34:04 INF] Request completed: POST /api/Auth/login responded 401 in 878 ms
+[15:46:09 INF] Now listening on: https://0.0.0.0:7168
+[15:46:09 INF] Now listening on: http://0.0.0.0:5229
+[15:46:09 INF] Application started. Press Ctrl+C to shut down.
+[15:46:09 INF] Hosting environment: Development
+[15:46:09 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[15:46:14 INF] Incoming request: POST /api/Auth/login 
+[15:46:14 INF] Executed DbCommand (33ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[15:46:15 INF] Request completed: POST /api/Auth/login responded 401 in 958 ms
+[15:49:30 INF] Now listening on: https://0.0.0.0:7168
+[15:49:30 INF] Now listening on: http://0.0.0.0:5229
+[15:49:30 INF] Application started. Press Ctrl+C to shut down.
+[15:49:30 INF] Hosting environment: Development
+[15:49:30 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[15:49:43 INF] Incoming request: POST /api/Auth/login 
+[15:49:44 INF] Executed DbCommand (27ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[15:49:44 INF] Request completed: POST /api/Auth/login responded 200 in 963 ms
+[15:50:13 INF] Incoming request: GET /api/Accounts 
+[15:50:13 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateCreated], [a].[Currency], [a].[Balance], [a].[IBAN], [a].[AccountName], [a].[LastOperationDT], [a].[BalanceInEuro], [a].[WalletId]
+FROM [Accounts] AS [a]
+[15:50:13 INF] Request completed: GET /api/Accounts responded 200 in 87 ms
+[15:52:42 INF] Now listening on: https://0.0.0.0:7168
+[15:52:42 INF] Now listening on: http://0.0.0.0:5229
+[15:52:42 INF] Application started. Press Ctrl+C to shut down.
+[15:52:42 INF] Hosting environment: Development
+[15:52:42 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[15:52:51 INF] Incoming request: POST /api/Auth/login 
+[15:52:51 INF] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[15:52:52 INF] Executed DbCommand (24ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[15:52:52 INF] Request completed: POST /api/Auth/login responded 401 in 866 ms
+[16:14:59 INF] Now listening on: https://0.0.0.0:7168
+[16:14:59 INF] Now listening on: http://0.0.0.0:5229
+[16:14:59 INF] Application started. Press Ctrl+C to shut down.
+[16:14:59 INF] Hosting environment: Development
+[16:14:59 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:15:04 ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Specified method is not supported.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestStream.set_Position(Int64 value)
+   at WebAPI.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\RequestLoggingMiddleware.cs:line 29
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[16:15:14 ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Specified method is not supported.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestStream.set_Position(Int64 value)
+   at WebAPI.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\RequestLoggingMiddleware.cs:line 29
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[16:15:35 INF] Now listening on: https://0.0.0.0:7168
+[16:15:35 INF] Now listening on: http://0.0.0.0:5229
+[16:15:35 INF] Application started. Press Ctrl+C to shut down.
+[16:15:35 INF] Hosting environment: Development
+[16:15:35 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:15:39 INF] Incoming request: POST /api/Auth/login 
+[16:15:39 INF] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[16:15:40 INF] Executed DbCommand (24ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[16:15:40 INF] Request completed: POST /api/Auth/login responded 401 in 894 ms
+[16:16:10 INF] Now listening on: https://0.0.0.0:7168
+[16:16:10 INF] Now listening on: http://0.0.0.0:5229
+[16:16:10 INF] Application started. Press Ctrl+C to shut down.
+[16:16:10 INF] Hosting environment: Development
+[16:16:10 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:16:16 ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Specified method is not supported.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestStream.set_Position(Int64 value)
+   at WebAPI.Middleware.RequestLoggingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\RequestLoggingMiddleware.cs:line 29
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[16:20:37 INF] Now listening on: https://0.0.0.0:7168
+[16:20:37 INF] Now listening on: http://0.0.0.0:5229
+[16:20:37 INF] Application started. Press Ctrl+C to shut down.
+[16:20:37 INF] Hosting environment: Development
+[16:20:37 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:20:43 INF] Incoming request: POST /api/Auth/login 
+[16:20:43 INF] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[16:20:43 INF] Request body: {
+  "username": "string",
+  "password": "string"
+}
+[16:20:44 INF] Executed DbCommand (49ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[16:20:44 INF] Request completed: POST /api/Auth/login responded 401 in 987 ms
+[16:27:37 INF] Now listening on: https://0.0.0.0:7168
+[16:27:37 INF] Now listening on: http://0.0.0.0:5229
+[16:27:37 INF] Application started. Press Ctrl+C to shut down.
+[16:27:37 INF] Hosting environment: Development
+[16:27:37 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:27:43 INF] Incoming request: POST /api/Auth/login 
+[16:27:43 INF] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[16:27:43 INF] Request body: {
+  "username": "string",
+  "password": "string"
+}
+[16:27:44 INF] Executed DbCommand (25ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[16:27:44 INF] Response body: {"title":"Unauthorized","status":401,"detail":"Invalid credentials"}
+[16:27:44 INF] Request completed: POST /api/Auth/login responded 401 in 858 ms
+[16:29:06 INF] Incoming request: GET /api/Accounts 
+[16:29:06 INF] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[16:29:06 INF] Request body: 
+[16:29:06 INF] Response body: 
+[16:29:06 INF] Request completed: GET /api/Accounts responded 401 in 8 ms
+[16:29:24 INF] Incoming request: GET /api/Accounts 
+[16:29:24 INF] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNCIsInVuaXF1ZV9uYW1lIjoiaWxpYS1jaGFrYXJvdiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJpbGlhLWNoYWthcm92IiwiZXhwIjoxNzUyNTg3Mzg0LCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.QUTXwokPAVAESJPciU6IaP9uq_wZz6JCyXE7WuvdrQE","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[16:29:24 INF] Request body: 
+[16:29:24 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateCreated], [a].[Currency], [a].[Balance], [a].[IBAN], [a].[AccountName], [a].[LastOperationDT], [a].[BalanceInEuro], [a].[WalletId]
+FROM [Accounts] AS [a]
+[16:29:24 INF] Response body: [{"id":2,"dateCreated":"2025-07-09T09:47:52.4600202","currency":"BGN","balance":333.00,"iban":"BGSTSA123456","accountName":"ilia-chakarov","lastOperationDT":"2025-07-09T09:47:52.4602967","balanceInEuro":166.50,"walletId":6},{"id":3,"dateCreated":"2025-07-14T17:34:48.6794994","currency":"BGN","balance":1000000.00,"iban":"123123123123","accountName":"MyPos","lastOperationDT":"2025-07-14T17:34:48.6797867","balanceInEuro":500000.00,"walletId":6}]
+[16:29:24 INF] Request completed: GET /api/Accounts responded 200 in 110 ms
+[16:30:55 INF] Now listening on: https://0.0.0.0:7168
+[16:30:55 INF] Now listening on: http://0.0.0.0:5229
+[16:30:55 INF] Application started. Press Ctrl+C to shut down.
+[16:30:55 INF] Hosting environment: Development
+[16:30:55 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:31:05 INF] === HTTP REQUEST ===
+[16:31:05 INF] Incoming request: POST /api/Auth/login 
+[16:31:05 INF] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[16:31:05 INF] Request body: {
+  "username": "string",
+  "password": "string"
+}
+[16:31:06 INF] Executed DbCommand (24ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[16:31:06 INF] === HTTP RESPONSE ===
+[16:31:06 INF] Response body: {"title":"Unauthorized","status":401,"detail":"Invalid credentials"}
+[16:31:06 INF] Request completed: POST /api/Auth/login responded 401 in 850 ms
+[16:31:26 INF] Now listening on: https://0.0.0.0:7168
+[16:31:26 INF] Now listening on: http://0.0.0.0:5229
+[16:31:26 INF] Application started. Press Ctrl+C to shut down.
+[16:31:26 INF] Hosting environment: Development
+[16:31:26 INF] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:31:33 INF] ===============================================================
+[16:31:33 INF] === HTTP REQUEST ===
+[16:31:33 INF] Incoming request: POST /api/Auth/login 
+[16:31:33 INF] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[16:31:33 INF] Request body: {
+  "username": "string",
+  "password": "string"
+}
+[16:31:34 INF] Executed DbCommand (24ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[16:31:34 INF] === HTTP RESPONSE ===
+[16:31:34 INF] Response body: {"title":"Unauthorized","status":401,"detail":"Invalid credentials"}
+[16:31:34 INF] Request completed: POST /api/Auth/login responded 401 in 940 ms
+[16:31:41 INF] ===============================================================
+[16:31:41 INF] === HTTP REQUEST ===
+[16:31:41 INF] Incoming request: POST /api/Auth/login 
+[16:31:41 INF] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[16:31:41 INF] Request body: {
+  "username": "string",
+  "password": "string"
+}
+[16:31:41 INF] Executed DbCommand (7ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[16:31:41 INF] === HTTP RESPONSE ===
+[16:31:41 INF] Response body: {"title":"Unauthorized","status":401,"detail":"Invalid credentials"}
+[16:31:41 INF] Request completed: POST /api/Auth/login responded 401 in 122 ms
+[16:37:53 INF ] Now listening on: https://0.0.0.0:7168
+[16:37:53 INF ] Now listening on: http://0.0.0.0:5229
+[16:37:53 INF ] Application started. Press Ctrl+C to shut down.
+[16:37:53 INF ] Hosting environment: Development
+[16:37:53 INF ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:37:59 INF ] ==============================================================================================================================
+[16:37:59 INF ] === HTTP REQUEST ===
+[16:37:59 INF ] Incoming request: POST /api/Auth/login 
+[16:37:59 INF ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[16:37:59 INF ] Request body: {
+  "username": "string",
+  "password": "string"
+}
+[16:38:00 INF ] Executed DbCommand (30ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[16:38:00 INF ] === HTTP RESPONSE ===
+[16:38:00 INF ] Response body: {"title":"Unauthorized","status":401,"detail":"Invalid credentials"}
+[16:38:00 INF ] Request completed: POST /api/Auth/login responded 401 in 1129 ms
+[16:39:38 INF [] Now listening on: https://0.0.0.0:7168
+[16:39:38 INF [] Now listening on: http://0.0.0.0:5229
+[16:39:38 INF [] Application started. Press Ctrl+C to shut down.
+[16:39:38 INF [] Hosting environment: Development
+[16:39:38 INF [] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:39:44 INF [] ==============================================================================================================================
+[16:39:44 INF [] === HTTP REQUEST ===
+[16:39:44 INF [] Incoming request: POST /api/Auth/login 
+[16:39:44 INF [] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[16:39:44 INF [] Request body: {
+  "username": "string",
+  "password": "string"
+}
+[16:39:44 INF [] Executed DbCommand (24ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[16:39:44 INF [] === HTTP RESPONSE ===
+[16:39:45 INF [] Response body: {"title":"Unauthorized","status":401,"detail":"Invalid credentials"}
+[16:39:45 INF [] Request completed: POST /api/Auth/login responded 401 in 884 ms
+[16:40:21 INF []] Now listening on: https://0.0.0.0:7168
+[16:40:21 INF []] Now listening on: http://0.0.0.0:5229
+[16:40:21 INF []] Application started. Press Ctrl+C to shut down.
+[16:40:21 INF []] Hosting environment: Development
+[16:40:21 INF []] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:40:26 INF []] ==============================================================================================================================
+[16:40:26 INF []] === HTTP REQUEST ===
+[16:40:26 INF []] Incoming request: POST /api/Auth/login 
+[16:40:26 INF []] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[16:40:26 INF []] Request body: {
+  "username": "string",
+  "password": "string"
+}
+[16:40:27 INF []] Executed DbCommand (24ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[16:40:27 INF []] === HTTP RESPONSE ===
+[16:40:27 INF []] Response body: {"title":"Unauthorized","status":401,"detail":"Invalid credentials"}
+[16:40:27 INF []] Request completed: POST /api/Auth/login responded 401 in 880 ms
+[16:40:53 INF] [] Now listening on: https://0.0.0.0:7168
+[16:40:53 INF] [] Now listening on: http://0.0.0.0:5229
+[16:40:53 INF] [] Application started. Press Ctrl+C to shut down.
+[16:40:53 INF] [] Hosting environment: Development
+[16:40:53 INF] [] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:40:59 INF] [] ==============================================================================================================================
+[16:40:59 INF] [] === HTTP REQUEST ===
+[16:40:59 INF] [] Incoming request: POST /api/Auth/login 
+[16:40:59 INF] [] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[16:40:59 INF] [] Request body: {
+  "username": "string",
+  "password": "string"
+}
+[16:41:00 INF] [] Executed DbCommand (25ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[16:41:00 INF] [] === HTTP RESPONSE ===
+[16:41:00 INF] [] Response body: {"title":"Unauthorized","status":401,"detail":"Invalid credentials"}
+[16:41:00 INF] [] Request completed: POST /api/Auth/login responded 401 in 978 ms
+[16:41:49 INF] [] Now listening on: https://0.0.0.0:7168
+[16:41:49 INF] [] Now listening on: http://0.0.0.0:5229
+[16:41:49 INF] [] Application started. Press Ctrl+C to shut down.
+[16:41:49 INF] [] Hosting environment: Development
+[16:41:49 INF] [] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:41:54 INF] [] ==============================================================================================================================
+[16:41:54 INF] [] === HTTP REQUEST ===
+[16:41:54 INF] [] Incoming request: POST /api/Auth/login 
+[16:41:54 INF] [] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[16:41:54 INF] [] Request body: {
+  "username": "string",
+  "password": "string"
+}
+[16:41:55 INF] [] Executed DbCommand (33ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[16:41:55 INF] [] === HTTP RESPONSE ===
+[16:41:55 INF] [] Response body: {"title":"Unauthorized","status":401,"detail":"Invalid credentials"}
+[16:41:55 INF] [] Request completed: POST /api/Auth/login responded 401 in 918 ms
+[16:42:17 INF] [] Now listening on: https://0.0.0.0:7168
+[16:42:17 INF] [] Now listening on: http://0.0.0.0:5229
+[16:42:17 INF] [] Application started. Press Ctrl+C to shut down.
+[16:42:17 INF] [] Hosting environment: Development
+[16:42:17 INF] [] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:42:22 INF] [] ==============================================================================================================================
+[16:42:22 INF] [] === HTTP REQUEST ===
+[16:42:22 INF] [] Incoming request: POST /api/Auth/login 
+[16:42:22 INF] [] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[16:42:22 INF] [] Request body: {
+  "username": "string",
+  "password": "string"
+}
+[16:42:23 INF] [] Executed DbCommand (24ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[16:42:23 INF] [] === HTTP RESPONSE ===
+[16:42:23 INF] [] Response body: {"title":"Unauthorized","status":401,"detail":"Invalid credentials"}
+[16:42:23 INF] [] Request completed: POST /api/Auth/login responded 401 in 857 ms
+[16:46:24 INF] [] Now listening on: https://0.0.0.0:7168
+[16:46:24 INF] [] Now listening on: http://0.0.0.0:5229
+[16:46:24 INF] [] Application started. Press Ctrl+C to shut down.
+[16:46:24 INF] [] Hosting environment: Development
+[16:46:24 INF] [] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:46:28 INF] [] ==============================================================================================================================
+[16:46:28 INF] [] === HTTP REQUEST ===
+[16:46:28 INF] [] Incoming request: POST /api/Auth/login 
+[16:46:28 INF] [] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[16:46:28 INF] [] Request body: {
+  "username": "string",
+  "password": "string"
+}
+[16:46:29 INF] [] Executed DbCommand (31ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[16:46:29 INF] [] === HTTP RESPONSE ===
+[16:46:29 INF] [] Response body: {"title":"Unauthorized","status":401,"detail":"Invalid credentials"}
+[16:46:29 INF] [] Request completed: POST /api/Auth/login responded 401 in 895 ms
+[16:47:28 INF] [MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[16:47:28 INF] [MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[16:47:28 INF] [MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[16:47:28 INF] [MP-DT0KYVBJ] Hosting environment: Development
+[16:47:28 INF] [MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:47:34 INF] [MP-DT0KYVBJ] ==============================================================================================================================
+[16:47:34 INF] [MP-DT0KYVBJ] === HTTP REQUEST ===
+[16:47:34 INF] [MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[16:47:34 INF] [MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[16:47:34 INF] [MP-DT0KYVBJ] Request body: {
+  "username": "string",
+  "password": "string"
+}
+[16:47:35 INF] [MP-DT0KYVBJ] Executed DbCommand (25ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[16:47:35 INF] [MP-DT0KYVBJ] === HTTP RESPONSE ===
+[16:47:35 INF] [MP-DT0KYVBJ] Response body: {"title":"Unauthorized","status":401,"detail":"Invalid credentials"}
+[16:47:35 INF] [MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 401 in 898 ms
+[16:48:24 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[16:48:24 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[16:48:24 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[16:48:24 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[16:48:24 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:48:29 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[16:48:29 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[16:48:29 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[16:48:29 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[16:48:29 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "username": "string",
+  "password": "string"
+}
+[16:48:29 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (29ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[16:48:29 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[16:48:29 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Unauthorized","status":401,"detail":"Invalid credentials"}
+[16:48:29 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 401 in 875 ms

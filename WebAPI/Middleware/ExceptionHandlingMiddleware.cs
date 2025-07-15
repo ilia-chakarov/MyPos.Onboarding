@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebAPI.Exceptions;
+using WebAPI.Extensions;
 
 namespace WebAPI.Middleware
 {
@@ -22,42 +23,20 @@ namespace WebAPI.Middleware
             }
             catch (MyPosApiException ex)
             {
-                context.Response.StatusCode = ex.StatusCode;
-                context.Response.ContentType = "application/json";
-                var problem = new ProblemDetails
-                {
-                    Title = "Request failed",
-                    Status = ex.StatusCode,
-                    Detail = ex.Message
-                };
-                await context.Response.WriteAsJsonAsync(problem);
+                await context.Response.WriteProblemDetailsAsync(ex.StatusCode, "Request failed", ex.Message);
             }
             catch (UnauthorizedAccessException ex)
             {
-                context.Response.StatusCode = StatusCodes.Status401Unauthorized;
-                context.Response.ContentType = "application/json";
-                var problem = new ProblemDetails
-                {
-                    Title = "Unauthorized",
-                    Status = StatusCodes.Status401Unauthorized,
-                    Detail = ex.Message
-                };
-                await context.Response.WriteAsJsonAsync(problem);
+                await context.Response.WriteProblemDetailsAsync(StatusCodes.Status401Unauthorized,
+                    "Unauthorized", ex.Message);
             }
             catch (Exception ex)
             {
+                // Additional LogError for Unhandled exceptions. Other exceptions just use the standart middleware
                 _logger.LogError(ex, "Unhandled exception");
 
-                context.Response.StatusCode = 500;
-                context.Response.ContentType = "application/json";
-
-                var problem = new ProblemDetails
-                {
-                    Title = "Internal Server Error",
-                    Status = 500,
-                    Detail = "An unexpected error occurred"
-                };
-                await context.Response.WriteAsJsonAsync(problem);
+                await context.Response.WriteProblemDetailsAsync(StatusCodes.Status500InternalServerError,
+                    "Internal Server Error", ex.Message);
             }
         }
     }

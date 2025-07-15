@@ -484,3 +484,5 @@ C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin
 C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\YamlDotNet.dll
 C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\Nswag\nswag.json
 C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\Serilog.Enrichers.Environment.dll
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\Serilog.Enrichers.Thread.dll
