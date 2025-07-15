@@ -1,5 +1,8 @@
-﻿namespace WebAPI.Entities
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace WebAPI.Entities
 {
+    [Table("UserAccessControls")]
     public class UserAccessControlEntity
     {
         public int UserId { get; set; }

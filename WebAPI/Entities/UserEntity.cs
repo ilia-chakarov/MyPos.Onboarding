@@ -1,5 +1,8 @@
-﻿namespace WebAPI.Entities
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace WebAPI.Entities
 {
+    [Table("Users")]
     public class UserEntity
     {
         public int Id { get; set; }

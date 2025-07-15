@@ -19,7 +19,8 @@ namespace WebAPI.Middleware
             try
             {
                 await _next(context);
-            }catch(MyPosApiException ex)
+            }
+            catch (MyPosApiException ex)
             {
                 context.Response.StatusCode = ex.StatusCode;
                 context.Response.ContentType = "application/json";
@@ -31,7 +32,7 @@ namespace WebAPI.Middleware
                 };
                 await context.Response.WriteAsJsonAsync(problem);
             }
-            catch(UnauthorizedAccessException ex)
+            catch (UnauthorizedAccessException ex)
             {
                 context.Response.StatusCode = StatusCodes.Status401Unauthorized;
                 context.Response.ContentType = "application/json";
@@ -43,7 +44,7 @@ namespace WebAPI.Middleware
                 };
                 await context.Response.WriteAsJsonAsync(problem);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 _logger.LogError(ex, "Unhandled exception");
 

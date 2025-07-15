@@ -2273,7 +2273,7 @@
     "securitySchemes": {
       "Bearer": {
         "type": "http",
-        "description": "Enter your JWT token below (without 'Bearer' prefix",
+        "description": "Enter your JWT token below (without 'Bearer' prefix)",
         "scheme": "bearer",
         "bearerFormat": "JWT"
       }

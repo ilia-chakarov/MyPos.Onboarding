@@ -40,7 +40,7 @@ namespace WebAPI
                     Name = "Authorization",
                     In = ParameterLocation.Header,
                     Type = SecuritySchemeType.Http,
-                    Description = "Enter your JWT token below (without 'Bearer' prefix",
+                    Description = "Enter your JWT token below (without 'Bearer' prefix)",
 
                     Reference = new OpenApiReference
                     {
