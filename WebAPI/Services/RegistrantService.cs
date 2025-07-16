@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using WebAPI.DTOs;
 using WebAPI.Entities;
 using WebAPI.Exceptions;
@@ -11,35 +12,23 @@ namespace WebAPI.Services
     public class RegistrantService : IRegistrantService
     {
         private readonly IUnitOfWork _unitOfWork;
-        public RegistrantService(IUnitOfWork uow)
+        private readonly IMapper _mapper;
+        public RegistrantService(IUnitOfWork uow, IMapper mapper)
         {
             _unitOfWork = uow;
+            _mapper = mapper;
         }
 
         public async Task<RegistrantDto> CreateRegistrant(CreateRegistrantDto dto)
         {
-            var registrant = new RegistrantEntity
-            {
-                DisplayName = dto.DisplayName,
-                GSM = dto.GSM,
-                Country = dto.Country,
-                Address = dto.Address,
-                isCompany = dto.IsCompany,
-                DateCreated = DateTime.Now,
-            };
+            var registrant = _mapper.Map<RegistrantEntity>(dto);
+
+            registrant.DateCreated = DateTime.Now;
 
             await _unitOfWork.GetRepository<RegistrantEntity>().AddAsync(registrant);
             await _unitOfWork.SaveChangesAsync();
 
-            return new RegistrantDto { 
-                Id = registrant.Id,
-                DateCreated = registrant.DateCreated,
-                DisplayName = registrant.DisplayName,
-                GSM = registrant.GSM,
-                Country = registrant.Country,
-                Address = registrant.Address,
-                IsCompany = registrant.isCompany,
-            } ;
+            return _mapper.Map<RegistrantDto>(registrant);
         }
 
         public async Task<RegistrantDto> DeleteRegistrant(int id)
@@ -52,16 +41,7 @@ namespace WebAPI.Services
             _unitOfWork.GetRepository<RegistrantEntity>().Delete(registrant);
             await _unitOfWork.SaveChangesAsync();
 
-            return new RegistrantDto
-            {
-                Id = registrant.Id,
-                DateCreated = registrant.DateCreated,
-                DisplayName = registrant.DisplayName,
-                GSM = registrant.GSM,
-                Country = registrant.Country,
-                Address = registrant.Address,
-                IsCompany = registrant.isCompany,
-            };
+            return _mapper.Map<RegistrantDto>(registrant);
         }
 
         public async Task<IEnumerable<RegistrantDto>> GetAll(Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>? filter = null)
@@ -71,6 +51,7 @@ namespace WebAPI.Services
             if (filter != null)
                 query = filter(query);
 
+            // Faster with no mapper
             return await query.Select(r => new RegistrantDto
             {
                 Id = r.Id,
@@ -93,6 +74,7 @@ namespace WebAPI.Services
 
             query = query.Include(r => r.Wallets).Include(r => r.Users);
 
+            // Faster with no mapper
             var regDtos = await query.Select(r => new RegistrantWithAllWalletsAndUsersDto
             {
                 Id = r.Id,
@@ -130,16 +112,7 @@ namespace WebAPI.Services
             if (registrant == null)
                 throw new MyPosApiException($"Registrant with id {id} not found", StatusCodes.Status404NotFound);
 
-            return new RegistrantDto
-            {
-                Id = registrant.Id,
-                DateCreated = registrant.DateCreated,
-                DisplayName = registrant.DisplayName,
-                GSM = registrant.GSM,
-                Country = registrant.Country,
-                Address = registrant.Address,
-                IsCompany = registrant.isCompany,
-            };
+            return _mapper.Map<RegistrantDto>(registrant);
         }
 
         public async Task<RegistrantDto> UpdateRegistrant(int id, CreateRegistrantDto dto)
@@ -149,26 +122,13 @@ namespace WebAPI.Services
             if (registrant == null)
                 throw new MyPosApiException($"Registrant with id {id} not found", StatusCodes.Status404NotFound);
 
-            registrant.DisplayName = dto.DisplayName;
-            registrant.GSM = dto.GSM;
-            registrant.Country = dto.Country;
-            registrant.Address = dto.Address;
-            registrant.isCompany = dto.IsCompany;
+            _mapper.Map(dto, registrant);
 
             _unitOfWork.GetRepository<RegistrantEntity>().Update(registrant);
             await _unitOfWork.SaveChangesAsync();
 
 
-            return new RegistrantDto
-            {
-                Id = registrant.Id,
-                DateCreated = registrant.DateCreated,
-                DisplayName = registrant.DisplayName,
-                GSM = registrant.GSM,
-                Country = registrant.Country,
-                Address = registrant.Address,
-                IsCompany = registrant.isCompany,
-            };
+            return _mapper.Map<RegistrantDto>(registrant);
         }
     }
 }
