@@ -36,6 +36,7 @@ namespace WebAPI.Extensions
             {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "MyPos API", Version = "v1" });
 
+                // JWT Bearer setup
                 var jwtSecurityScheme = new OpenApiSecurityScheme
                 {
                     Scheme = "bearer",
@@ -59,6 +60,30 @@ namespace WebAPI.Extensions
                     {
                         jwtSecurityScheme,
                         Array.Empty<string>()
+                    }
+                });
+
+
+                // Basic Auth setup
+                var basicSecurityScheme = new OpenApiSecurityScheme
+                {
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "basic",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Description = "Basic Authentication using username and password",
+
+                    Reference = new OpenApiReference
+                    {
+                        Id = "basic",
+                        Type = ReferenceType.SecurityScheme,
+                    }
+                };
+                c.AddSecurityDefinition(basicSecurityScheme.Reference.Id, basicSecurityScheme);
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        basicSecurityScheme, Array.Empty<string>()
                     }
                 });
             });
