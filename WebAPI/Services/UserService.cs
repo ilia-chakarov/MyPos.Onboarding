@@ -43,9 +43,9 @@ namespace WebAPI.Services
             return userDto;
         }
 
-        public async Task<IEnumerable<UserDto>> GetAll(Func<IQueryable<UserEntity>, IQueryable<UserEntity>>? filter = null)
+        public async Task<IEnumerable<UserDto>> GetAll(int pageNumber, int pageSize, Func<IQueryable<UserEntity>, IQueryable<UserEntity>>? filter = null)
         {
-            var query = _unitOfWork.GetRepository<UserEntity>().Query();
+            var query = _unitOfWork.GetRepository<UserEntity>().Query().Skip((pageNumber - 1) * pageSize).Take(pageSize);
 
             if(filter != null)
                 query = filter(query);

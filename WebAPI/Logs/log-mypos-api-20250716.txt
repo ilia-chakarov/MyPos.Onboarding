@@ -998,3 +998,146 @@ WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
 [10:40:52 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
 [10:40:52 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":404,"detail":"User access control with userId 10 and wallet id 7 not found"}
 [10:40:52 INF] [Machine: MP-DT0KYVBJ] Request completed: PUT /api/UserAccess/10/7 responded 404 in 176 ms
+[10:54:48 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[10:54:48 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[10:54:48 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[10:54:48 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[10:54:48 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:54:57 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:54:57 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:54:57 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Users ?pageNumber=1&pageSize=1
+[10:54:58 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:54:58 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:54:58 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+[10:54:58 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:54:58 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":10,"username":"victor-martinov","registrantId":8},{"id":12,"username":"guest123","registrantId":8},{"id":13,"username":"georgi-marinov","registrantId":8},{"id":14,"username":"ilia-chakarov","registrantId":8},{"id":15,"username":"ivo","registrantId":8},{"id":16,"username":"external-usr","registrantId":8},{"id":18,"username":"external3","registrantId":8},{"id":19,"username":"vakisddot","registrantId":8},{"id":20,"username":"newest-real-usr","registrantId":8},{"id":21,"username":"crash-usr","registrantId":8}]
+[10:54:58 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Users responded 200 in 844 ms
+[10:57:36 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[10:57:36 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[10:57:36 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[10:57:36 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[10:57:36 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:57:42 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:57:42 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:57:42 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Users 
+[10:57:42 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:57:42 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:57:42 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[10:57:42 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[10:57:43 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+WHERE 0 = 1
+[10:57:43 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:57:43 INF] [Machine: MP-DT0KYVBJ] Response body: []
+[10:57:43 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Users responded 200 in 861 ms
+[10:58:02 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[10:58:02 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[10:58:02 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[10:58:02 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[10:58:02 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:58:11 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:58:11 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:58:11 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Users ?pageNumber=1&pageSize=1
+[10:58:11 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:58:11 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:58:11 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[10:58:11 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[10:58:11 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (28ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[10:58:11 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:58:11 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":10,"username":"victor-martinov","registrantId":8}]
+[10:58:11 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Users responded 200 in 819 ms
+[10:58:15 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:58:15 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:58:15 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Users ?pageNumber=1&pageSize=2
+[10:58:15 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:58:15 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:58:15 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[10:58:15 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:58:15 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":10,"username":"victor-martinov","registrantId":8},{"id":12,"username":"guest123","registrantId":8}]
+[10:58:15 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Users responded 200 in 46 ms
+[10:58:17 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:58:17 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:58:17 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Users ?pageNumber=2&pageSize=2
+[10:58:17 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:58:17 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:58:17 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[10:58:17 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[10:58:17 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+[10:58:17 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:58:17 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":13,"username":"georgi-marinov","registrantId":8},{"id":14,"username":"ilia-chakarov","registrantId":8}]
+[10:58:17 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Users responded 200 in 22 ms
+[10:59:48 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[10:59:48 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[10:59:48 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[10:59:48 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[10:59:48 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:59:55 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:59:55 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:59:55 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Users ?pageNumber=1&pageSize=10
+[10:59:55 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:59:55 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:59:55 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[10:59:55 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[10:59:55 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (28ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[10:59:56 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:59:56 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":10,"username":"victor-martinov","registrantId":8},{"id":12,"username":"guest123","registrantId":8},{"id":13,"username":"georgi-marinov","registrantId":8},{"id":14,"username":"ilia-chakarov","registrantId":8},{"id":15,"username":"ivo","registrantId":8},{"id":16,"username":"external-usr","registrantId":8},{"id":18,"username":"external3","registrantId":8},{"id":19,"username":"vakisddot","registrantId":8},{"id":20,"username":"newest-real-usr","registrantId":8},{"id":21,"username":"crash-usr","registrantId":8}]
+[10:59:56 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Users responded 200 in 909 ms
+[11:00:00 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[11:00:00 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[11:00:00 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Users ?pageNumber=0&pageSize=0
+[11:00:00 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[11:00:00 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[11:00:00 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[11:00:00 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[11:00:00 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+WHERE 0 = 1
+[11:00:00 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[11:00:00 INF] [Machine: MP-DT0KYVBJ] Response body: []
+[11:00:00 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Users responded 200 in 55 ms
+[11:00:03 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[11:00:03 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[11:00:03 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Users ?pageNumber=1&pageSize=2
+[11:00:03 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[11:00:03 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[11:00:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[11:00:03 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[11:00:03 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":10,"username":"victor-martinov","registrantId":8},{"id":12,"username":"guest123","registrantId":8}]
+[11:00:03 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Users responded 200 in 18 ms
+[11:00:05 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[11:00:05 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[11:00:05 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Users ?pageNumber=2&pageSize=2
+[11:00:05 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[11:00:05 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[11:00:05 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+[11:00:05 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[11:00:05 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":13,"username":"georgi-marinov","registrantId":8},{"id":14,"username":"ilia-chakarov","registrantId":8}]
+[11:00:05 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Users responded 200 in 7 ms

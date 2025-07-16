@@ -21,9 +21,9 @@ namespace WebAPI.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll(int pageNumber = 1, int pageSize = 10)
         {
-            var usrDtos = await _usersService.GetAll();
+            var usrDtos = await _usersService.GetAll(pageNumber, pageSize);
             return Ok(usrDtos);
         }
 
