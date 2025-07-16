@@ -1702,3 +1702,253 @@ OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
 [13:29:16 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
 [13:29:16 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
 [13:29:16 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:36:39 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[13:36:39 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[13:36:39 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[13:36:39 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[13:36:39 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:39:18 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[13:39:18 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[13:39:18 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[13:39:18 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[13:39:18 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:39:42 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[13:39:42 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[13:39:42 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[13:39:42 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[13:39:42 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:39:54 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:39:54 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:39:54 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/basic-auth-login 
+[13:39:54 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"0","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:39:54 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:39:54 ERR] [Machine: MP-DT0KYVBJ] Unhandled exception
+System.InvalidOperationException: No authentication handler is registered for the scheme 'Basic'. The registered schemes are: Bearer. Did you forget to call AddAuthentication().Add[SomeAuthHandler]("Basic",...)?
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authorization.Policy.PolicyEvaluator.AuthenticateAsync(AuthorizationPolicy policy, HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 21
+[13:39:54 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:39:54 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"No authentication handler is registered for the scheme 'Basic'. The registered schemes are: Bearer. Did you forget to call AddAuthentication().Add[SomeAuthHandler](\"Basic\",...)?"}
+[13:39:54 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/basic-auth-login responded 500 in 94 ms
+[13:40:39 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[13:40:39 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[13:40:39 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[13:40:39 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[13:40:39 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:40:44 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:40:44 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:40:44 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/basic-auth-login 
+[13:40:44 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"0","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:40:44 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:40:45 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:40:45 INF] [Machine: MP-DT0KYVBJ] Response body: Missing or invalid Authorization header.
+[13:40:45 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/basic-auth-login responded 401 in 158 ms
+[13:41:01 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:41:01 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:41:01 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/basic-auth-login 
+[13:41:01 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Basic aWxpYS1jaGFrYXJvdjoxMjMxMjM=","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"0","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:41:01 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:41:01 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (26ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[13:41:01 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:41:01 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNCIsInVuaXF1ZV9uYW1lIjoiaWxpYS1jaGFrYXJvdiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJpbGlhLWNoYWthcm92IiwiZXhwIjoxNzUyNjY2MDYxLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.mIAtrIosWyfAlESxEeA6HAVQwVKmXrE02Y8YpLZiQ_g"}
+[13:41:01 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/basic-auth-login responded 200 in 760 ms
+[13:42:05 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[13:42:05 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[13:42:05 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[13:42:05 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[13:42:05 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:42:10 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:42:10 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:42:10 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/basic-auth-login 
+[13:42:10 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"0","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:42:10 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:42:11 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:42:11 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":401,"detail":"Invalid / Incorrect Basic auth"}
+[13:42:11 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/basic-auth-login responded 401 in 199 ms
+[13:42:22 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:42:22 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:42:22 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/basic-auth-login 
+[13:42:22 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Basic aWxpYS1jaGFrYXJvdjoxMjMxMjM=","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"0","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:42:22 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:42:23 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (25ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[13:42:23 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:42:23 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNCIsInVuaXF1ZV9uYW1lIjoiaWxpYS1jaGFrYXJvdiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJpbGlhLWNoYWthcm92IiwiZXhwIjoxNzUyNjY2MTQzLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0._7S8ky8s1glUCttG23MenT4aJpqNAMbgvsab-7eYSBo"}
+[13:42:23 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/basic-auth-login responded 200 in 776 ms
+[13:42:36 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:42:36 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:42:36 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Accounts ?pageNumber=1&pageSize=10
+[13:42:36 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Basic aWxpYS1jaGFrYXJvdjoxMjMxMjM=","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:42:36 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:42:36 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:42:36 INF] [Machine: MP-DT0KYVBJ] Response body: 
+[13:42:36 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Accounts responded 401 in 9 ms
+[13:42:42 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:42:42 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:42:42 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Accounts ?pageNumber=1&pageSize=10
+[13:42:42 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Basic aWxpYS1jaGFrYXJvdjoxMjMxMjM=","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:42:42 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:42:42 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:42:42 INF] [Machine: MP-DT0KYVBJ] Response body: 
+[13:42:42 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Accounts responded 401 in 1 ms
+[13:42:43 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:42:43 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:42:43 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Accounts ?pageNumber=1&pageSize=10
+[13:42:43 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Basic aWxpYS1jaGFrYXJvdjoxMjMxMjM=","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:42:43 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:42:43 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:42:43 INF] [Machine: MP-DT0KYVBJ] Response body: 
+[13:42:43 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Accounts responded 401 in 1 ms
+[13:42:44 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:42:44 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:42:44 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Accounts ?pageNumber=1&pageSize=10
+[13:42:44 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Basic aWxpYS1jaGFrYXJvdjoxMjMxMjM=","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:42:44 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:42:44 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:42:44 INF] [Machine: MP-DT0KYVBJ] Response body: 
+[13:42:44 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Accounts responded 401 in 0 ms
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Accounts ?pageNumber=1&pageSize=10
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Basic aWxpYS1jaGFrYXJvdjoxMjMxMjM=","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Response body: 
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Accounts responded 401 in 0 ms
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Accounts ?pageNumber=1&pageSize=10
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Basic aWxpYS1jaGFrYXJvdjoxMjMxMjM=","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Response body: 
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Accounts responded 401 in 0 ms
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Accounts ?pageNumber=1&pageSize=10
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Basic aWxpYS1jaGFrYXJvdjoxMjMxMjM=","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Response body: 
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Accounts responded 401 in 0 ms
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Accounts ?pageNumber=1&pageSize=10
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Basic aWxpYS1jaGFrYXJvdjoxMjMxMjM=","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Response body: 
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Accounts responded 401 in 0 ms
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Accounts ?pageNumber=1&pageSize=10
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Basic aWxpYS1jaGFrYXJvdjoxMjMxMjM=","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Response body: 
+[13:42:45 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Accounts responded 401 in 0 ms
+[13:43:01 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:43:01 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:43:01 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Accounts ?pageNumber=1&pageSize=10
+[13:43:01 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Basic aWxpYS1jaGFrYXJvdjoxMjMxMjM=","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:43:01 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:43:01 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:43:01 INF] [Machine: MP-DT0KYVBJ] Response body: 
+[13:43:01 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Accounts responded 401 in 2 ms
+[13:47:35 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[13:47:35 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[13:47:35 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[13:47:35 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[13:47:35 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:47:51 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:47:51 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:47:51 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/basic-auth-login 
+[13:47:51 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Basic aWxpYS1jaGFrYXJvdjoxMjMxMjM=","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"0","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:47:51 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:47:52 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (26ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[13:47:52 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:47:52 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNCIsInVuaXF1ZV9uYW1lIjoiaWxpYS1jaGFrYXJvdiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJpbGlhLWNoYWthcm92IiwiZXhwIjoxNzUyNjY2NDcyLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.AwWaD1U_lrwmXuGC2DpM13zPxLnIw61w7nJ1xdfeAwM"}
+[13:47:52 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/basic-auth-login responded 200 in 938 ms
+[13:48:06 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:48:06 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:48:06 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Accounts ?pageNumber=1&pageSize=10
+[13:48:06 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Basic aWxpYS1jaGFrYXJvdjoxMjMxMjM=","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:48:06 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:48:06 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:48:06 INF] [Machine: MP-DT0KYVBJ] Response body: 
+[13:48:06 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Accounts responded 401 in 6 ms
+[14:01:22 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[14:01:22 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[14:01:22 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[14:01:22 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[14:01:22 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:01:33 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[14:01:33 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[14:01:33 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/basic-auth-login 
+[14:01:33 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Basic aWxpYS1jaGFrYXJvdjoxMjMxMjM=","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"0","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[14:01:33 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[14:01:34 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (28ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[14:01:34 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[14:01:34 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNCIsInVuaXF1ZV9uYW1lIjoiaWxpYS1jaGFrYXJvdiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJpbGlhLWNoYWthcm92IiwiZXhwIjoxNzUyNjY3Mjk0LCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.LLnzdgrNqjOmVPKUbVwpQr3qhQi8fMh5M5w3IRpAxqE"}
+[14:01:34 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/basic-auth-login responded 200 in 922 ms
+[14:01:45 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[14:01:45 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[14:01:45 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Accounts ?pageNumber=1&pageSize=10
+[14:01:45 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Basic aWxpYS1jaGFrYXJvdjoxMjMxMjM=","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[14:01:45 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[14:01:45 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[14:01:45 INF] [Machine: MP-DT0KYVBJ] Response body: 
+[14:01:45 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Accounts responded 401 in 6 ms
+[14:03:30 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[14:03:30 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[14:03:30 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[14:03:30 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[14:03:30 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:03:42 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[14:03:42 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[14:03:42 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/basic-auth-login 
+[14:03:42 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"0","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[14:03:42 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[14:03:43 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[14:03:43 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":401,"detail":"Invalid / Incorrect Basic auth"}
+[14:03:43 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/basic-auth-login responded 401 in 184 ms
+[14:05:14 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[14:05:14 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[14:05:14 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/basic-auth-login 
+[14:05:14 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Basic aWxpYS1jaGFrYXJvdjoxMjMxMjM=","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"0","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[14:05:14 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[14:05:15 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (26ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[14:05:15 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[14:05:15 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNCIsInVuaXF1ZV9uYW1lIjoiaWxpYS1jaGFrYXJvdiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJpbGlhLWNoYWthcm92IiwiZXhwIjoxNzUyNjY3NTE1LCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.Ys_aZzfOHxcrQiGhxNFZq6sUrsZ95H9DVNrKJKp-0B8"}
+[14:05:15 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/basic-auth-login responded 200 in 801 ms
+[14:05:28 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[14:05:28 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[14:05:28 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Accounts ?pageNumber=1&pageSize=10
+[14:05:28 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNCIsInVuaXF1ZV9uYW1lIjoiaWxpYS1jaGFrYXJvdiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJpbGlhLWNoYWthcm92IiwiZXhwIjoxNzUyNjY3NTE1LCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.Ys_aZzfOHxcrQiGhxNFZq6sUrsZ95H9DVNrKJKp-0B8","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[14:05:28 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[14:05:28 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[14:05:28 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[14:05:28 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccountName], [a].[Balance], [a].[BalanceInEuro], [a].[Currency], [a].[DateCreated], [a].[IBAN], [a].[LastOperationDT], [a].[WalletId]
+FROM [Accounts] AS [a]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[14:05:28 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[14:05:28 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":2,"dateCreated":"2025-07-09T09:47:52.4600202","currency":"BGN","balance":555.00,"iban":"BGSTSA123456","accountName":"ilia-chakarov","lastOperationDT":"2025-07-09T09:47:52.4602967","balanceInEuro":275.00,"walletId":6},{"id":3,"dateCreated":"2025-07-14T17:34:48.6794994","currency":"BGN","balance":1000000.00,"iban":"123123123123","accountName":"MyPos","lastOperationDT":"2025-07-14T17:34:48.6797867","balanceInEuro":500000.00,"walletId":6}]
+[14:05:28 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Accounts responded 200 in 147 ms

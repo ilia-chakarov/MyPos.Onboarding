@@ -21,7 +21,7 @@ namespace WebAPI
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddSwaggerDocumentation();
-
+            
             builder.Services.AddAppSettings(builder.Configuration);
 
             builder.Services.AddDbContext<AppDbContext>(options => 
@@ -36,6 +36,7 @@ namespace WebAPI
             builder.Services.AddApplicationServices();
 
             builder.Services.AddJwtAuthentication(builder.Configuration);
+            
            
             builder.Host.ConfigureSerilog();
 
