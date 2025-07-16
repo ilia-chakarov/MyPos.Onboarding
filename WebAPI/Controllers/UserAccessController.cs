@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebAPI.DTOs;
-using WebAPI.Entities;
 using WebAPI.Services.Interfaces;
-using WebAPI.UnitOfWork;
 
 namespace WebAPI.Controllers
 {
@@ -33,9 +31,9 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll(int pageNumber = 1, int pageSize = 10)
         {
-            var uacDtos = await _uacService.GetAll();
+            var uacDtos = await _uacService.GetAll(pageNumber, pageSize);
 
             return Ok(uacDtos);
         }

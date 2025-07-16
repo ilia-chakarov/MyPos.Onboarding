@@ -60,9 +60,9 @@ namespace WebAPI.Services
             throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<CreateUserAccessControlDto>> GetAll(Func<IQueryable<UserAccessControlEntity>, IQueryable<UserAccessControlEntity>>? filter = null)
+        public async Task<IEnumerable<CreateUserAccessControlDto>> GetAll(int pageNumber, int pageSize, Func<IQueryable<UserAccessControlEntity>, IQueryable<UserAccessControlEntity>>? filter = null)
         {
-            var query = _unitOfWork.GetRepository<UserAccessControlEntity>().Query();
+            var query = _unitOfWork.GetRepository<UserAccessControlEntity>().Query().Skip((pageNumber - 1) * pageSize).Take(pageSize);
 
             if(filter != null)
                 query = filter(query);
