@@ -47,9 +47,9 @@ namespace WebAPI.Services
             return _mapper.Map<WalletDto>(wallet);
         }
 
-        public async Task<IEnumerable<WalletDto>> GetAll(Func<IQueryable<WalletEntity>, IQueryable<WalletEntity>>? filter = null)
+        public async Task<IEnumerable<WalletDto>> GetAll(int pageNumber, int pageSize, Func<IQueryable<WalletEntity>, IQueryable<WalletEntity>>? filter = null)
         {
-            var query = _unitOfWork.GetRepository<WalletEntity>().Query();
+            var query = _unitOfWork.GetRepository<WalletEntity>().Query().Skip((pageNumber - 1) * pageSize).Take(pageSize);
 
             if(filter != null)
                 query = filter(query);

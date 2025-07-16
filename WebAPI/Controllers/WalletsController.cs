@@ -43,9 +43,9 @@ namespace WebAPI.Controllers
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<WalletDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll(int pageNumber = 1, int pageSize = 10)
         {
-            var walletDtos = await _walletService.GetAll();
+            var walletDtos = await _walletService.GetAll(pageNumber, pageSize);
 
             return Ok(walletDtos);
         }
