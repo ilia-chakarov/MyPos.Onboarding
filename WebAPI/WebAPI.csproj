@@ -37,7 +37,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Handlers\" />
+    <Folder Include="External\Services\" />
   </ItemGroup>
 
 </Project>

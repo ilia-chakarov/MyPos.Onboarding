@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 using WebAPI.DTOs;
 
-namespace WebAPI.Controllers.External
+namespace WebAPI.External.Controllers
 {
     [ApiController]
     [Route("api/external/[controller]")]

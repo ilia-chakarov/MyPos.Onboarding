@@ -8,6 +8,8 @@ using WebAPI.UnitOfWork;
 using Serilog;
 using Microsoft.Extensions.Options;
 using WebAPI.Options;
+using WebAPI.ExternalClients.Clients.Interfaces;
+using WebAPI.ExternalClients.Clients;
 
 namespace WebAPI.Extensions
 {
@@ -21,6 +23,8 @@ namespace WebAPI.Extensions
             services.AddScoped<IWalletService, WalletService>();
             services.AddScoped<IUserAccessControlService, UserAccessControlService>();
             services.AddScoped<IAuthService, AuthService>();
+
+            services.AddScoped<IRegistrantsExtClientService, RegistrantsExtClientService>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>();
 

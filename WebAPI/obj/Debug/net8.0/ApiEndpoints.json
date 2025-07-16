@@ -154,7 +154,7 @@
     ]
   },
   {
-    "ContainingType": "WebAPI.Controllers.External.IvoRegistrantsController",
+    "ContainingType": "WebAPI.External.Controllers.IvoRegistrantsController",
     "Method": "CreateRegistrant",
     "RelativePath": "api/external/IvoRegistrants",
     "HttpMethod": "POST",
@@ -194,7 +194,7 @@
     ]
   },
   {
-    "ContainingType": "WebAPI.Controllers.External.IvoRegistrantsController",
+    "ContainingType": "WebAPI.External.Controllers.IvoRegistrantsController",
     "Method": "GetAll",
     "RelativePath": "api/external/IvoRegistrants",
     "HttpMethod": "GET",
@@ -239,7 +239,7 @@
     ]
   },
   {
-    "ContainingType": "WebAPI.Controllers.External.IvoRegistrantsController",
+    "ContainingType": "WebAPI.External.Controllers.IvoRegistrantsController",
     "Method": "GetById",
     "RelativePath": "api/external/IvoRegistrants/{id}",
     "HttpMethod": "GET",
@@ -279,7 +279,7 @@
     ]
   },
   {
-    "ContainingType": "WebAPI.Controllers.External.IvoRegistrantsController",
+    "ContainingType": "WebAPI.External.Controllers.IvoRegistrantsController",
     "Method": "Update",
     "RelativePath": "api/external/IvoRegistrants/{id}",
     "HttpMethod": "PUT",
@@ -333,7 +333,7 @@
     ]
   },
   {
-    "ContainingType": "WebAPI.Controllers.External.IvoRegistrantsController",
+    "ContainingType": "WebAPI.External.Controllers.IvoRegistrantsController",
     "Method": "Delete",
     "RelativePath": "api/external/IvoRegistrants/{id}",
     "HttpMethod": "DELETE",
@@ -382,7 +382,7 @@
     ]
   },
   {
-    "ContainingType": "WebAPI.Controllers.External.IvoUsersController",
+    "ContainingType": "WebAPI.External.Controllers.IvoUsersController",
     "Method": "CreateUser",
     "RelativePath": "api/external/IvoUsers/create-user",
     "HttpMethod": "POST",
@@ -423,7 +423,7 @@
     ]
   },
   {
-    "ContainingType": "WebAPI.Controllers.External.IvoUsersController",
+    "ContainingType": "WebAPI.External.Controllers.IvoUsersController",
     "Method": "LoginUser",
     "RelativePath": "api/external/IvoUsers/login-user",
     "HttpMethod": "POST",
