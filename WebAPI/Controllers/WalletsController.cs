@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebAPI.DTOs;
-using WebAPI.Entities;
 using WebAPI.Services.Interfaces;
-using WebAPI.UnitOfWork;
 
 namespace WebAPI.Controllers
 {

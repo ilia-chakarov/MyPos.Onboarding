@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using WebAPI.Exceptions;
+﻿using WebAPI.Exceptions;
 using WebAPI.Extensions;
 
 namespace WebAPI.Middleware
