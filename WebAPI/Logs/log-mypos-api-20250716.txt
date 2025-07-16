@@ -1,0 +1,118 @@
+[09:48:15 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[09:48:15 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[09:48:15 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[09:48:15 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[09:48:15 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[09:48:24 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[09:48:24 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[09:48:24 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Users 
+[09:48:24 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[09:48:24 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[09:48:25 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+[09:48:25 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[09:48:25 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":10,"username":"victor-martinov","registrantId":8},{"id":12,"username":"guest123","registrantId":8},{"id":13,"username":"georgi-marinov","registrantId":8},{"id":14,"username":"ilia-chakarov","registrantId":8},{"id":15,"username":"ivo","registrantId":8},{"id":16,"username":"external-usr","registrantId":8},{"id":18,"username":"external3","registrantId":8},{"id":19,"username":"vakisddot","registrantId":8},{"id":20,"username":"newest-real-usr","registrantId":8},{"id":21,"username":"crash-usr","registrantId":8}]
+[09:48:25 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Users responded 200 in 889 ms
+[09:49:21 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[09:49:21 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[09:49:21 INF] [Machine: MP-DT0KYVBJ] Incoming request: PUT /api/Users/10 
+[09:49:21 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"80","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[09:49:21 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "username": "victor-maslinov",
+  "password": "123123",
+  "registrantId": 8
+}
+[09:49:21 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (20ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+[09:49:22 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__dto_RegistrantId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__dto_RegistrantId_0
+[09:49:22 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Password] = @p0, [RegistrantId] = @p1, [Username] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;
+[09:49:22 ERR] [Machine: MP-DT0KYVBJ] Unhandled exception
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+UserEntity -> UserDto
+WebAPI.Entities.UserEntity -> WebAPI.DTOs.UserDto
+   at lambda_method170(Closure, Object, UserDto, ResolutionContext)
+   at WebAPI.Services.UserService.UpdateUser(Int32 id, CreateUserDto dto) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Services\UserService.cs:line 96
+   at WebAPI.Controllers.UsersController.Update(Int32 id, CreateUserDto dto) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Controllers\UsersController.cs:line 52
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 22
+[09:49:22 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[09:49:22 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"Missing type map configuration or unsupported mapping.\r\n\r\nMapping types:\r\nUserEntity -> UserDto\r\nWebAPI.Entities.UserEntity -> WebAPI.DTOs.UserDto"}
+[09:49:22 INF] [Machine: MP-DT0KYVBJ] Request completed: PUT /api/Users/10 responded 500 in 384 ms
+[09:50:34 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[09:50:34 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[09:50:34 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[09:50:34 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[09:50:34 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[09:50:51 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[09:50:51 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[09:50:51 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Users/10 
+[09:50:51 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[09:50:51 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[09:50:52 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (24ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+[09:50:52 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[09:50:52 INF] [Machine: MP-DT0KYVBJ] Response body: {"id":10,"username":"victor-maslinov","registrantId":8}
+[09:50:52 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Users/10 responded 200 in 850 ms
+[09:51:07 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[09:51:07 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[09:51:07 INF] [Machine: MP-DT0KYVBJ] Incoming request: PUT /api/Users/10 
+[09:51:07 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"80","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[09:51:07 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "username": "victor-martinov",
+  "password": "123123",
+  "registrantId": 8
+}
+[09:51:07 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+[09:51:07 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__dto_RegistrantId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__dto_RegistrantId_0
+[09:51:07 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Password] = @p0, [RegistrantId] = @p1, [Username] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;
+[09:51:07 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[09:51:07 INF] [Machine: MP-DT0KYVBJ] Response body: {"id":10,"username":"victor-martinov","registrantId":8}
+[09:51:07 INF] [Machine: MP-DT0KYVBJ] Request completed: PUT /api/Users/10 responded 200 in 182 ms
+[09:51:12 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[09:51:12 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[09:51:12 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Users/10 
+[09:51:12 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[09:51:12 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[09:51:12 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+[09:51:12 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[09:51:12 INF] [Machine: MP-DT0KYVBJ] Response body: {"id":10,"username":"victor-martinov","registrantId":8}
+[09:51:12 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Users/10 responded 200 in 13 ms

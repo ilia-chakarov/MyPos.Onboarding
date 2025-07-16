@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WebAPI.DTOs;
 using WebAPI.Entities;
@@ -12,11 +13,14 @@ namespace WebAPI.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IPasswordHasher<UserEntity> _passwordHasher;
+        private readonly IMapper _mapper;
 
-        public UserService(IUnitOfWork uow, IPasswordHasher<UserEntity> passwordHasher)
+        public UserService(IUnitOfWork uow, IPasswordHasher<UserEntity> passwordHasher,
+            IMapper mapper)
         {
             _unitOfWork = uow;
             _passwordHasher = passwordHasher;
+            _mapper = mapper;
         }
 
 
@@ -27,23 +31,14 @@ namespace WebAPI.Services
             if (registrant == null)
                 throw new MyPosApiException($"Registrant with ID {dto.RegistrantId} not found", StatusCodes.Status404NotFound);
 
-            var user = new UserEntity
-            {
-                Username = dto.Username,
-                RegistrantId = dto.RegistrantId,
-            };
+            var user = _mapper.Map<UserEntity>(dto);
 
             user.Password = _passwordHasher.HashPassword(user, dto.Password);
 
             await _unitOfWork.GetRepository<UserEntity>().AddAsync(user);
             await _unitOfWork.SaveChangesAsync();
 
-            var userDto = new UserDto
-            {
-                Id = user.Id,
-                Username = user.Username,
-                RegistrantId = user.RegistrantId,
-            };
+            var userDto = _mapper.Map<UserDto>(user);
 
             return userDto;
         }
@@ -55,6 +50,7 @@ namespace WebAPI.Services
             if(filter != null)
                 query = filter(query);
 
+            //No automapper here. Faster
             return await query.Select(u => new UserDto
             {
                 Id=u.Id,
@@ -72,12 +68,7 @@ namespace WebAPI.Services
             if (usr == null)
                 throw new MyPosApiException($"No user with id {id} found", StatusCodes.Status404NotFound);
 
-            return new UserDto
-            {
-                Id = usr.Id,
-                Username = usr.Username,
-                RegistrantId = usr.RegistrantId,
-            };
+            return _mapper.Map<UserDto>(usr);
         }
 
         public async Task<UserDto> UpdateUser(int id, CreateUserDto dto)
@@ -96,19 +87,13 @@ namespace WebAPI.Services
             if (registrant == null)
                 throw new MyPosApiException($"Registrant with ID {dto.RegistrantId} not found", StatusCodes.Status404NotFound);
 
-            user.Username = dto.Username;
+            _mapper.Map(dto, user);
             user.Password = _passwordHasher.HashPassword(user, dto.Password);
-            user.RegistrantId = dto.RegistrantId;
 
             _unitOfWork.GetRepository<UserEntity>().Update(user);
             await _unitOfWork.SaveChangesAsync();
 
-            return new UserDto
-            {
-                Id = id,
-                Username =dto.Username,
-                RegistrantId = dto.RegistrantId,
-            };
+            return _mapper.Map<UserDto>(user);
         }
         public async Task<UserDto> DeleteUser(int id)
         {
@@ -120,12 +105,8 @@ namespace WebAPI.Services
 
             _unitOfWork.GetRepository<UserEntity>().Delete(user);
             await _unitOfWork.SaveChangesAsync();
-            return new UserDto
-            {
-                Id= user.Id,
-                Username=user.Username,
-                RegistrantId = user.RegistrantId,
-            };
+
+            return _mapper.Map<UserDto>(user);
         }
     }
 }

@@ -1339,3 +1339,19 @@ WHERE [w].[Id] = @__p_0
 [17:43:15 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
 [17:43:15 INF] [Machine: MP-DT0KYVBJ] Response body: {"id":3,"dateCreated":"2025-07-08T16:23:35.9821979","status":"Active","tarifaCode":"123","limitCode":"123","registrantId":8}
 [17:43:15 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Wallets/3 responded 200 in 7 ms
+[17:47:06 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:47:06 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:47:06 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:47:06 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:47:06 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:47:21 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:47:21 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:47:21 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Wallets 
+[17:47:21 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNCIsInVuaXF1ZV9uYW1lIjoiaWxpYS1jaGFrYXJvdiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJpbGlhLWNoYWthcm92IiwiZXhwIjoxNzUyNTk0MTMyLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.MOFgoBiAsDsJabFG4x_d8Hds0Wt7bqQP3gwSCSHI7tQ","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:47:21 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:47:21 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+[17:47:21 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:47:21 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":3,"dateCreated":"2025-07-08T16:23:35.9821979","status":"Active","tarifaCode":"123","limitCode":"123","registrantId":8},{"id":4,"dateCreated":"2025-07-08T17:52:51.0161846","status":"Active","tarifaCode":"555","limitCode":"111","registrantId":8},{"id":6,"dateCreated":"2025-07-09T09:21:36.3457505","status":"Active","tarifaCode":"777","limitCode":"111","registrantId":8},{"id":7,"dateCreated":"2025-07-11T10:57:17.7492821","status":"pulen s mangizi (actually nqq nishto)","tarifaCode":"nz brat","limitCode":"bez limiti","registrantId":8}]
+[17:47:21 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Wallets responded 200 in 909 ms
