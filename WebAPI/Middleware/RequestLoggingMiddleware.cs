@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace WebAPI.Middleware
 {
@@ -38,6 +39,7 @@ namespace WebAPI.Middleware
                 requestBody = await reader.ReadToEndAsync();
                 context.Request.Body.Position = 0;
             }
+            var sanitizedBody = SanitizeRequestBody(path, requestBody);
 
             // for the response
             var originalStream = context.Response.Body;
@@ -47,7 +49,7 @@ namespace WebAPI.Middleware
             _logger.LogInformation("=== HTTP REQUEST ===");
             _logger.LogInformation("Incoming request: {Method} {Path} {QueryString}", method, path, queryString);
             _logger.LogInformation("Request headers: {@Headers}", headers);
-            _logger.LogInformation("Request body: {RequestBody}", requestBody);
+            _logger.LogInformation("Request body: {RequestBody}", sanitizedBody);
 
             await _next(context);
 
@@ -64,6 +66,22 @@ namespace WebAPI.Middleware
                 method, path, statusCode, stopwatch.ElapsedMilliseconds);
 
             await responseBodyStream.CopyToAsync(originalStream);
+        }
+        private string SanitizeRequestBody(string path, string requestBody)
+        {
+            if(path.Equals("/api/Auth/login", StringComparison.OrdinalIgnoreCase))
+            {
+                try
+                {
+                    var regex = new Regex(@"""password""\s*:\s*""[^""]*""", RegexOptions.IgnoreCase);
+                    return regex.Replace(requestBody, @"""password"": ""[REDACTED]""");
+                }
+                catch 
+                {
+                    return "[REDACTED]";
+                }
+            }
+            return requestBody;
         }
     }
 }

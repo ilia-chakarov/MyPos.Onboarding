@@ -1567,3 +1567,85 @@ OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
 [11:15:29 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
 [11:15:29 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":2,"dateCreated":"2025-07-09T09:47:52.4600202","currency":"BGN","balance":555.00,"iban":"BGSTSA123456","accountName":"ilia-chakarov","lastOperationDT":"2025-07-09T09:47:52.4602967","balanceInEuro":275.00,"walletId":6},{"id":3,"dateCreated":"2025-07-14T17:34:48.6794994","currency":"BGN","balance":1000000.00,"iban":"123123123123","accountName":"MyPos","lastOperationDT":"2025-07-14T17:34:48.6797867","balanceInEuro":500000.00,"walletId":6}]
 [11:15:29 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Accounts responded 200 in 4 ms
+[11:22:07 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[11:22:07 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[11:22:07 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[11:22:07 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[11:22:07 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[11:33:42 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[11:33:42 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[11:33:42 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[11:33:42 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[11:33:42 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[11:33:57 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[11:33:57 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[11:33:57 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[11:33:57 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"57","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[11:33:57 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "username": "ilia-chakarov",
+  "password": "123123"
+}
+[11:33:58 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (29ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[11:33:58 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[11:33:58 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNCIsInVuaXF1ZV9uYW1lIjoiaWxpYS1jaGFrYXJvdiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJpbGlhLWNoYWthcm92IiwiZXhwIjoxNzUyNjU4NDM4LCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.WJJWZ1avczwNJ2bHSi8J2WwlXr2mYzICWLsMEyU_A9w"}
+[11:33:58 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 200 in 976 ms
+[11:39:20 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[11:39:20 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[11:39:20 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[11:39:20 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[11:39:20 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[11:39:34 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[11:39:34 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[11:39:34 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[11:39:34 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"57","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[11:39:34 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "username": "ilia-chakarov",
+  "password": "[REDACTED]"
+}
+[11:39:35 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (33ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[11:39:35 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[11:39:35 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNCIsInVuaXF1ZV9uYW1lIjoiaWxpYS1jaGFrYXJvdiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJpbGlhLWNoYWthcm92IiwiZXhwIjoxNzUyNjU4Nzc1LCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.lIYzrqiKgA-dhn_VSMZGNMHPo__YzJqrLU2ihRySVFk"}
+[11:39:35 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 200 in 935 ms
+[11:40:27 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[11:40:27 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[11:40:27 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[11:40:27 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[11:40:27 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[11:40:38 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[11:40:38 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[11:40:38 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[11:40:38 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"57","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[11:40:38 INF] [Machine: MP-DT0KYVBJ] Request body: [REDACTED]
+[11:40:39 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (25ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[11:40:39 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[11:40:39 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNCIsInVuaXF1ZV9uYW1lIjoiaWxpYS1jaGFrYXJvdiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJpbGlhLWNoYWthcm92IiwiZXhwIjoxNzUyNjU4ODM5LCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.hQ8t0H4rQmSjWD2vgcLesf6uS4yk1ugts3xS1kceojM"}
+[11:40:39 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 200 in 901 ms
+[11:41:09 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[11:41:09 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[11:41:09 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[11:41:09 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[11:41:09 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[11:41:29 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[11:41:29 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[11:41:29 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[11:41:29 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[11:41:29 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "username": "string",
+  "password": "[REDACTED]"
+}
+[11:41:30 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (24ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[11:41:30 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[11:41:30 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Unauthorized","status":401,"detail":"Invalid credentials"}
+[11:41:30 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 401 in 869 ms
