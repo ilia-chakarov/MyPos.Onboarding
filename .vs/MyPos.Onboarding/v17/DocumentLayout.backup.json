@@ -3,40 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\automapper\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\automapper\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\services\\useraccesscontrolservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\services\\useraccesscontrolservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\automapper\\useraccesscontrolprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\automapper\\useraccesscontrolprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\services\\registrantservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\services\\registrantservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\automapper\\registrantprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\automapper\\registrantprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\automapper\\walletprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\automapper\\walletprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\automapper\\accountprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\automapper\\accountprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\services\\walletservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\services\\walletservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,119 +50,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T06:29:42.708Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserEntity.cs",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Entities\\UserEntity.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Entities\\UserEntity.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Entities\\UserEntity.cs",
-              "RelativeToolTip": "WebAPI\\Entities\\UserEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T06:28:52.901Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Services\\UserService.cs",
-              "RelativeToolTip": "WebAPI\\Services\\UserService.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAkwFoAAABNAAAAAAAAAA==",
+              "Title": "UserAccessControlProfile.cs",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\AutoMapper\\UserAccessControlProfile.cs",
+              "RelativeDocumentMoniker": "WebAPI\\AutoMapper\\UserAccessControlProfile.cs",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\AutoMapper\\UserAccessControlProfile.cs",
+              "RelativeToolTip": "WebAPI\\AutoMapper\\UserAccessControlProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T14:53:28.377Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserProfile.cs",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\AutoMapper\\UserProfile.cs",
-              "RelativeDocumentMoniker": "WebAPI\\AutoMapper\\UserProfile.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\AutoMapper\\UserProfile.cs",
-              "RelativeToolTip": "WebAPI\\AutoMapper\\UserProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T14:53:21.259Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "WalletService.cs",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Services\\WalletService.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Services\\WalletService.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Services\\WalletService.cs",
-              "RelativeToolTip": "WebAPI\\Services\\WalletService.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAmwEMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T14:34:52.206Z",
+              "WhenOpened": "2025-07-16T07:13:25.65Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "WalletProfile.cs",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\AutoMapper\\WalletProfile.cs",
-              "RelativeDocumentMoniker": "WebAPI\\AutoMapper\\WalletProfile.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\AutoMapper\\WalletProfile.cs",
-              "RelativeToolTip": "WebAPI\\AutoMapper\\WalletProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA2AAAAAAAAAA==",
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Services\\AuthService.cs",
+              "RelativeToolTip": "WebAPI\\Services\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T14:33:56.096Z",
+              "WhenOpened": "2025-07-16T07:13:04.677Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Program.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Program.cs",
-              "RelativeToolTip": "WebAPI\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAABLAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UserAccessControlService.cs",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Services\\UserAccessControlService.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Services\\UserAccessControlService.cs",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Services\\UserAccessControlService.cs",
+              "RelativeToolTip": "WebAPI\\Services\\UserAccessControlService.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAswGoAAAB3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T14:07:34.072Z",
+              "WhenOpened": "2025-07-16T07:12:54.726Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AccountProfile.cs",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\AutoMapper\\AccountProfile.cs",
-              "RelativeDocumentMoniker": "WebAPI\\AutoMapper\\AccountProfile.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\AutoMapper\\AccountProfile.cs",
-              "RelativeToolTip": "WebAPI\\AutoMapper\\AccountProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABOAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Services\\UserService.cs",
+              "RelativeToolTip": "WebAPI\\Services\\UserService.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T14:04:08.799Z",
+              "WhenOpened": "2025-07-16T07:08:59.566Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "AccountService.cs",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Services\\AccountService.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Services\\AccountService.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Services\\AccountService.cs",
-              "RelativeToolTip": "WebAPI\\Services\\AccountService.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAgwDcAAAAzAAAAAAAAAA==",
+              "Title": "WalletProfile.cs",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\AutoMapper\\WalletProfile.cs",
+              "RelativeDocumentMoniker": "WebAPI\\AutoMapper\\WalletProfile.cs",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\AutoMapper\\WalletProfile.cs",
+              "RelativeToolTip": "WebAPI\\AutoMapper\\WalletProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T14:02:40.074Z",
+              "WhenOpened": "2025-07-16T07:04:55.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegistrantProfile.cs",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\AutoMapper\\RegistrantProfile.cs",
+              "RelativeDocumentMoniker": "WebAPI\\AutoMapper\\RegistrantProfile.cs",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\AutoMapper\\RegistrantProfile.cs",
+              "RelativeToolTip": "WebAPI\\AutoMapper\\RegistrantProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T06:52:11.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegistrantService.cs",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Services\\RegistrantService.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Services\\RegistrantService.cs",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Services\\RegistrantService.cs",
+              "RelativeToolTip": "WebAPI\\Services\\RegistrantService.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAowHwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T06:51:48.755Z",
               "EditorCaption": ""
             }
           ]

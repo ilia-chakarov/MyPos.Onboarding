@@ -230,3 +230,697 @@ WHERE [r].[Id] = @__p_0
 [10:12:04 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
 [10:12:04 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":404,"detail":"Registrant with id 10 not found"}
 [10:12:04 INF] [Machine: MP-DT0KYVBJ] Request completed: DELETE /api/Registrants/10 responded 404 in 89 ms
+[10:17:08 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[10:17:08 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[10:17:08 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[10:17:08 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[10:17:08 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:17:32 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:17:32 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:17:32 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[10:17:32 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"57","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:17:32 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "username": "ilia-chakarov",
+  "password": "123123"
+}
+[10:17:32 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (27ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[10:17:32 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:17:32 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNCIsInVuaXF1ZV9uYW1lIjoiaWxpYS1jaGFrYXJvdiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJpbGlhLWNoYWthcm92IiwiZXhwIjoxNzUyNjUzODUyLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.dL2kGHUGLOy2kh8Huv_o2qqEv5iIopiXU8jSvLVzzMw"}
+[10:17:32 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 200 in 924 ms
+[10:18:36 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:18:36 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:18:36 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[10:18:36 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"56","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:18:36 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "username": "ilia-chakarov",
+  "password": "12323"
+}
+[10:18:36 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (8ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[10:18:36 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:18:36 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Unauthorized","status":401,"detail":"Invalid credentials"}
+[10:18:36 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 401 in 175 ms
+[10:26:23 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[10:26:23 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[10:26:23 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[10:26:23 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[10:26:23 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:26:53 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:26:53 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:26:53 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/UserAccess 
+[10:26:53 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:26:53 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:26:53 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+[10:26:53 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:26:53 INF] [Machine: MP-DT0KYVBJ] Response body: [{"userId":10,"walletId":4,"accessLevel":"Full"}]
+[10:26:53 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/UserAccess responded 200 in 844 ms
+[10:27:32 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:27:32 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:27:32 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/UserAccess 
+[10:27:32 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"60","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:27:32 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "userId": 10,
+  "walletId": 7,
+  "accessLevel": "Full"
+}
+[10:27:32 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (34ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__p_0
+[10:27:32 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+WHERE [w].[Id] = @__p_0
+[10:27:33 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserAccessControls] ([UserId], [WalletId], [AccessLevel])
+VALUES (@p0, @p1, @p2);
+[10:27:33 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:27:33 INF] [Machine: MP-DT0KYVBJ] Response body: {"userId":10,"walletId":7,"accessLevel":"Full"}
+[10:27:33 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/UserAccess responded 200 in 439 ms
+[10:27:36 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:27:36 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:27:36 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/UserAccess 
+[10:27:36 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:27:36 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:27:36 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+[10:27:36 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:27:36 INF] [Machine: MP-DT0KYVBJ] Response body: [{"userId":10,"walletId":4,"accessLevel":"Full"},{"userId":10,"walletId":7,"accessLevel":"Full"}]
+[10:27:36 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/UserAccess responded 200 in 35 ms
+[10:27:44 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:27:44 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:27:44 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/UserAccess/10/4 
+[10:27:44 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:27:44 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:27:44 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__walletId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
+[10:27:44 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:27:44 INF] [Machine: MP-DT0KYVBJ] Response body: {"userId":10,"walletId":4,"accessLevel":"Full"}
+[10:27:44 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/UserAccess/10/4 responded 200 in 28 ms
+[10:27:46 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:27:46 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:27:46 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/UserAccess/10/7 
+[10:27:46 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:27:46 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:27:46 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__walletId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
+[10:27:46 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:27:46 INF] [Machine: MP-DT0KYVBJ] Response body: {"userId":10,"walletId":7,"accessLevel":"Full"}
+[10:27:46 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/UserAccess/10/7 responded 200 in 5 ms
+[10:27:49 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:27:49 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:27:49 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/UserAccess/10/1 
+[10:27:49 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:27:49 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:27:49 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__walletId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
+[10:27:50 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:27:50 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":404,"detail":"User access control with userId 10 and wallet id 1 not found"}
+[10:27:50 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/UserAccess/10/1 responded 404 in 240 ms
+[10:28:07 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:28:07 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:28:07 INF] [Machine: MP-DT0KYVBJ] Incoming request: PUT /api/UserAccess/10/7 
+[10:28:07 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"62","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:28:07 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "userId": 10,
+  "walletId": 70,
+  "accessLevel": "Owner"
+}
+[10:28:08 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__walletId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
+[10:28:08 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [UserAccessControls]
+OUTPUT 1
+WHERE [UserId] = @p0 AND [WalletId] = @p1;
+INSERT INTO [UserAccessControls] ([UserId], [WalletId], [AccessLevel])
+VALUES (@p2, @p3, @p4);
+[10:28:08 ERR] [Machine: MP-DT0KYVBJ] An exception occurred in the database while saving changes for context type 'WebAPI.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_UserAccessControls_Wallets_WalletId". The conflict occurred in database "MyPosOnboardingDb", table "dbo.Wallets", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreResults(Boolean& moreResults)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryNextResult(Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.NextResultAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:24411683-2b4b-411e-ac70-e9c6bbbe71c4
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_UserAccessControls_Wallets_WalletId". The conflict occurred in database "MyPosOnboardingDb", table "dbo.Wallets", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreResults(Boolean& moreResults)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryNextResult(Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.NextResultAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:24411683-2b4b-411e-ac70-e9c6bbbe71c4
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+[10:28:08 ERR] [Machine: MP-DT0KYVBJ] Unhandled exception
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_UserAccessControls_Wallets_WalletId". The conflict occurred in database "MyPosOnboardingDb", table "dbo.Wallets", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreResults(Boolean& moreResults)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryNextResult(Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.NextResultAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:24411683-2b4b-411e-ac70-e9c6bbbe71c4
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at WebAPI.UnitOfWork.UnitOfWork.SaveChangesAsync() in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\UnitOfWork\UnitOfWork.cs:line 34
+   at WebAPI.Services.UserAccessControlService.UpdateUAC(Int32 userId, Int32 walletId, CreateUserAccessControlDto dto) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Services\UserAccessControlService.cs:line 119
+   at WebAPI.Controllers.UserAccessController.Update(Int32 userId, Int32 walletId, CreateUserAccessControlDto dto) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Controllers\UserAccessController.cs:line 46
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 22
+[10:28:08 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:28:08 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"An error occurred while saving the entity changes. See the inner exception for details."}
+[10:28:08 INF] [Machine: MP-DT0KYVBJ] Request completed: PUT /api/UserAccess/10/7 responded 500 in 281 ms
+[10:28:27 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:28:27 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:28:27 INF] [Machine: MP-DT0KYVBJ] Incoming request: PUT /api/UserAccess/10/7 
+[10:28:27 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"61","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:28:27 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "userId": 10,
+  "walletId": 7,
+  "accessLevel": "Owner"
+}
+[10:28:27 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__walletId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
+[10:28:27 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [UserAccessControls] SET [AccessLevel] = @p0
+OUTPUT 1
+WHERE [UserId] = @p1 AND [WalletId] = @p2;
+[10:28:27 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:28:27 INF] [Machine: MP-DT0KYVBJ] Response body: {"userId":10,"walletId":7,"accessLevel":"Owner"}
+[10:28:27 INF] [Machine: MP-DT0KYVBJ] Request completed: PUT /api/UserAccess/10/7 responded 200 in 15 ms
+[10:28:32 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:28:32 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:28:32 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/UserAccess 
+[10:28:32 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:28:32 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:28:32 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+[10:28:32 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:28:32 INF] [Machine: MP-DT0KYVBJ] Response body: [{"userId":10,"walletId":4,"accessLevel":"Full"},{"userId":10,"walletId":7,"accessLevel":"Owner"}]
+[10:28:32 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/UserAccess responded 200 in 7 ms
+[10:28:41 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:28:41 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:28:41 INF] [Machine: MP-DT0KYVBJ] Incoming request: DELETE /api/UserAccess/10/7 
+[10:28:41 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:28:41 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:28:41 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__walletId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
+[10:28:41 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [UserAccessControls]
+OUTPUT 1
+WHERE [UserId] = @p0 AND [WalletId] = @p1;
+[10:28:41 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:28:41 INF] [Machine: MP-DT0KYVBJ] Response body: {"userId":10,"walletId":7,"accessLevel":"Owner"}
+[10:28:41 INF] [Machine: MP-DT0KYVBJ] Request completed: DELETE /api/UserAccess/10/7 responded 200 in 19 ms
+[10:28:45 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:28:45 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:28:45 INF] [Machine: MP-DT0KYVBJ] Incoming request: DELETE /api/UserAccess/10/7 
+[10:28:45 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:28:45 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:28:45 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__walletId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
+[10:28:45 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:28:45 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":404,"detail":"User access control with userId 10 and wallet id 7 not found"}
+[10:28:45 INF] [Machine: MP-DT0KYVBJ] Request completed: DELETE /api/UserAccess/10/7 responded 404 in 142 ms
+[10:28:50 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:28:50 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:28:50 INF] [Machine: MP-DT0KYVBJ] Incoming request: DELETE /api/UserAccess/10/70 
+[10:28:50 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:28:50 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:28:50 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__walletId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
+[10:28:51 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:28:51 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":404,"detail":"User access control with userId 10 and wallet id 70 not found"}
+[10:28:51 INF] [Machine: MP-DT0KYVBJ] Request completed: DELETE /api/UserAccess/10/70 responded 404 in 114 ms
+[10:29:00 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:29:00 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:29:00 INF] [Machine: MP-DT0KYVBJ] Incoming request: PUT /api/UserAccess/10/7 
+[10:29:00 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"61","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:29:00 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "userId": 10,
+  "walletId": 7,
+  "accessLevel": "Owner"
+}
+[10:29:00 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__walletId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
+[10:29:00 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:29:00 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":404,"detail":"User access control with userId 10 and wallet id 7 not found"}
+[10:29:00 INF] [Machine: MP-DT0KYVBJ] Request completed: PUT /api/UserAccess/10/7 responded 404 in 137 ms
+[10:29:10 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:29:10 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:29:10 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/UserAccess 
+[10:29:10 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"60","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:29:10 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "userId": 10,
+  "walletId": 7,
+  "accessLevel": "Full"
+}
+[10:29:10 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__p_0
+[10:29:10 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+WHERE [w].[Id] = @__p_0
+[10:29:10 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserAccessControls] ([UserId], [WalletId], [AccessLevel])
+VALUES (@p0, @p1, @p2);
+[10:29:10 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:29:10 INF] [Machine: MP-DT0KYVBJ] Response body: {"userId":10,"walletId":7,"accessLevel":"Full"}
+[10:29:10 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/UserAccess responded 200 in 15 ms
+[10:29:17 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:29:17 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:29:17 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/UserAccess 
+[10:29:17 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:29:17 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:29:17 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+[10:29:17 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:29:17 INF] [Machine: MP-DT0KYVBJ] Response body: [{"userId":10,"walletId":4,"accessLevel":"Full"},{"userId":10,"walletId":7,"accessLevel":"Full"}]
+[10:29:17 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/UserAccess responded 200 in 5 ms
+[10:29:21 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:29:21 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:29:21 INF] [Machine: MP-DT0KYVBJ] Incoming request: PUT /api/UserAccess/10/7 
+[10:29:21 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"61","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:29:21 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "userId": 10,
+  "walletId": 7,
+  "accessLevel": "Owner"
+}
+[10:29:21 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__walletId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
+[10:29:21 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [UserAccessControls] SET [AccessLevel] = @p0
+OUTPUT 1
+WHERE [UserId] = @p1 AND [WalletId] = @p2;
+[10:29:21 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:29:21 INF] [Machine: MP-DT0KYVBJ] Response body: {"userId":10,"walletId":7,"accessLevel":"Owner"}
+[10:29:21 INF] [Machine: MP-DT0KYVBJ] Request completed: PUT /api/UserAccess/10/7 responded 200 in 8 ms
+[10:29:25 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:29:25 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:29:25 INF] [Machine: MP-DT0KYVBJ] Incoming request: PUT /api/UserAccess/10/7 
+[10:29:25 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"62","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:29:25 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "userId": 10,
+  "walletId": 70,
+  "accessLevel": "Owner"
+}
+[10:29:25 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__walletId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
+[10:29:25 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [UserAccessControls]
+OUTPUT 1
+WHERE [UserId] = @p0 AND [WalletId] = @p1;
+INSERT INTO [UserAccessControls] ([UserId], [WalletId], [AccessLevel])
+VALUES (@p2, @p3, @p4);
+[10:29:25 ERR] [Machine: MP-DT0KYVBJ] An exception occurred in the database while saving changes for context type 'WebAPI.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_UserAccessControls_Wallets_WalletId". The conflict occurred in database "MyPosOnboardingDb", table "dbo.Wallets", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreResults(Boolean& moreResults)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryNextResult(Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.NextResultAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:24411683-2b4b-411e-ac70-e9c6bbbe71c4
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_UserAccessControls_Wallets_WalletId". The conflict occurred in database "MyPosOnboardingDb", table "dbo.Wallets", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreResults(Boolean& moreResults)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryNextResult(Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.NextResultAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:24411683-2b4b-411e-ac70-e9c6bbbe71c4
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+[10:29:26 ERR] [Machine: MP-DT0KYVBJ] Unhandled exception
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_UserAccessControls_Wallets_WalletId". The conflict occurred in database "MyPosOnboardingDb", table "dbo.Wallets", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreResults(Boolean& moreResults)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryNextResult(Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.NextResultAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:24411683-2b4b-411e-ac70-e9c6bbbe71c4
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at WebAPI.UnitOfWork.UnitOfWork.SaveChangesAsync() in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\UnitOfWork\UnitOfWork.cs:line 34
+   at WebAPI.Services.UserAccessControlService.UpdateUAC(Int32 userId, Int32 walletId, CreateUserAccessControlDto dto) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Services\UserAccessControlService.cs:line 119
+   at WebAPI.Controllers.UserAccessController.Update(Int32 userId, Int32 walletId, CreateUserAccessControlDto dto) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Controllers\UserAccessController.cs:line 46
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 22
+[10:29:26 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:29:26 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"An error occurred while saving the entity changes. See the inner exception for details."}
+[10:29:26 INF] [Machine: MP-DT0KYVBJ] Request completed: PUT /api/UserAccess/10/7 responded 500 in 242 ms
+[10:33:47 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[10:33:47 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[10:33:47 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[10:33:47 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[10:33:47 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:33:59 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:33:59 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:33:59 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/UserAccess 
+[10:33:59 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:33:59 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:34:00 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+[10:34:00 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:34:00 INF] [Machine: MP-DT0KYVBJ] Response body: [{"userId":10,"walletId":4,"accessLevel":"Full"},{"userId":10,"walletId":7,"accessLevel":"Owner"}]
+[10:34:00 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/UserAccess responded 200 in 865 ms
+[10:34:14 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:34:14 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:34:14 INF] [Machine: MP-DT0KYVBJ] Incoming request: PUT /api/UserAccess/10/7 
+[10:34:14 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"63","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:34:14 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "userId": 10,
+  "walletId": 70,
+  "accessLevel": "string"
+}
+[10:34:14 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (39ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__walletId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
+[10:34:14 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__dto_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__dto_UserId_0
+[10:34:14 ERR] [Machine: MP-DT0KYVBJ] An exception occurred while iterating over the results of a query for context type 'WebAPI.Data.AppDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[10:34:15 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [UserAccessControls]
+OUTPUT 1
+WHERE [UserId] = @p0 AND [WalletId] = @p1;
+INSERT INTO [UserAccessControls] ([UserId], [WalletId], [AccessLevel])
+VALUES (@p2, @p3, @p4);
+[10:34:15 ERR] [Machine: MP-DT0KYVBJ] An exception occurred in the database while saving changes for context type 'WebAPI.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_UserAccessControls_Wallets_WalletId". The conflict occurred in database "MyPosOnboardingDb", table "dbo.Wallets", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreResults(Boolean& moreResults)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryNextResult(Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.NextResultAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:1df36379-e780-454f-8ed1-686116473ac7
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_UserAccessControls_Wallets_WalletId". The conflict occurred in database "MyPosOnboardingDb", table "dbo.Wallets", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreResults(Boolean& moreResults)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryNextResult(Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.NextResultAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:1df36379-e780-454f-8ed1-686116473ac7
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+[10:34:15 ERR] [Machine: MP-DT0KYVBJ] Unhandled exception
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_UserAccessControls_Wallets_WalletId". The conflict occurred in database "MyPosOnboardingDb", table "dbo.Wallets", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreResults(Boolean& moreResults)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryNextResult(Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.NextResultAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:1df36379-e780-454f-8ed1-686116473ac7
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at WebAPI.UnitOfWork.UnitOfWork.SaveChangesAsync() in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\UnitOfWork\UnitOfWork.cs:line 34
+   at WebAPI.Services.UserAccessControlService.UpdateUAC(Int32 userId, Int32 walletId, CreateUserAccessControlDto dto) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Services\UserAccessControlService.cs:line 127
+   at WebAPI.Controllers.UserAccessController.Update(Int32 userId, Int32 walletId, CreateUserAccessControlDto dto) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Controllers\UserAccessController.cs:line 46
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 22
+[10:34:15 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:34:15 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"An error occurred while saving the entity changes. See the inner exception for details."}
+[10:34:15 INF] [Machine: MP-DT0KYVBJ] Request completed: PUT /api/UserAccess/10/7 responded 500 in 851 ms
+[10:35:16 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[10:35:16 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[10:35:16 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[10:35:16 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[10:35:16 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:35:28 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:35:28 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:35:28 INF] [Machine: MP-DT0KYVBJ] Incoming request: PUT /api/UserAccess/10/7 
+[10:35:28 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"63","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:35:28 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "userId": 10,
+  "walletId": 70,
+  "accessLevel": "string"
+}
+[10:35:29 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (25ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__walletId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
+[10:35:29 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__dto_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__dto_UserId_0
+[10:35:29 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__dto_WalletId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+WHERE [w].[Id] = @__dto_WalletId_0
+[10:35:29 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:35:29 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":404,"detail":"Wallet with id 70 not found"}
+[10:35:29 INF] [Machine: MP-DT0KYVBJ] Request completed: PUT /api/UserAccess/10/7 responded 404 in 995 ms
