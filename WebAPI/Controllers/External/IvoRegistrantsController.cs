@@ -40,7 +40,7 @@ namespace WebAPI.Controllers.External
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Microsoft.AspNetCore.Mvc.ProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Microsoft.AspNetCore.Mvc.ProblemDetails), StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll(int pageNumber = 1, int pageSize = 10)
         {
             var token = ExtractToken();
 
@@ -48,13 +48,15 @@ namespace WebAPI.Controllers.External
             {
                 _apiClient.SetBearerToken(token);
 
-                var res = await _apiClient.RegistrantAllAsync();
+                var res = await _apiClient.AllAllAsync(pageNumber, pageSize);
 
                 return Ok(res);
-            }catch(ApiException ex) when (ex.StatusCode == 401)
+            }
+            catch (ApiException ex) when (ex.StatusCode == 401)
             {
                 return Unauthorized();
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
