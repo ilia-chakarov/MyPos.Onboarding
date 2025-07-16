@@ -38,9 +38,9 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll(int pageNumber = 1, int pageSize = 10)
         {
-            var accountDtos = await _accountService.GetAll();
+            var accountDtos = await _accountService.GetAll(pageNumber, pageSize);
 
             return Ok(accountDtos);
         }

@@ -31,9 +31,9 @@ namespace WebAPI.Services
             return _mapper.Map<AccountDto>(account);
         }
 
-        public async Task<IEnumerable<AccountDto>> GetAll(Func<IQueryable<AccountEntity>, IQueryable<AccountEntity>>? filter = null)
+        public async Task<IEnumerable<AccountDto>> GetAll(int pageNumber, int pageSize, Func<IQueryable<AccountEntity>, IQueryable<AccountEntity>>? filter = null)
         {
-            var query = _unitOfWork.GetRepository<AccountEntity>().Query();
+            var query = _unitOfWork.GetRepository<AccountEntity>().Query().Skip((pageNumber - 1) * pageSize).Take(pageSize);
 
             if (filter != null)
                 query = filter(query);

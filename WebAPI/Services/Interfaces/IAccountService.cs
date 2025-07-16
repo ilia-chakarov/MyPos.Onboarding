@@ -5,7 +5,7 @@ namespace WebAPI.Services.Interfaces
 {
     public interface IAccountService
     {
-        Task<IEnumerable<AccountDto>> GetAll(Func<IQueryable<AccountEntity>, IQueryable<AccountEntity>>? filter = null);
+        Task<IEnumerable<AccountDto>> GetAll(int pageNumber, int pageSize, Func<IQueryable<AccountEntity>, IQueryable<AccountEntity>>? filter = null);
 
         Task<AccountDto> CreateAccount(CreateAccountDto dto);
 
