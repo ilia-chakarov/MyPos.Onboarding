@@ -44,9 +44,9 @@ namespace WebAPI.Services
             return _mapper.Map<RegistrantDto>(registrant);
         }
 
-        public async Task<IEnumerable<RegistrantDto>> GetAll(Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>? filter = null)
+        public async Task<IEnumerable<RegistrantDto>> GetAll(int pageNumber, int pageSize, Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>? filter = null)
         {
-            var query = _unitOfWork.GetRepository<RegistrantEntity>().Query();
+            var query = _unitOfWork.GetRepository<RegistrantEntity>().Query().Skip((pageNumber - 1) * pageSize).Take(pageSize);
 
             if (filter != null)
                 query = filter(query);
@@ -65,9 +65,9 @@ namespace WebAPI.Services
             }).ToListAsync();
         }
 
-        public async Task<IEnumerable<RegistrantWithAllWalletsAndUsersDto>> GetAllWithWalletsAndUsers(Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>? filter = null)
+        public async Task<IEnumerable<RegistrantWithAllWalletsAndUsersDto>> GetAllWithWalletsAndUsers(int pageNumber, int pageSize, Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>? filter = null)
         {
-            var query = _unitOfWork.GetRepository<RegistrantEntity>().Query();
+            var query = _unitOfWork.GetRepository<RegistrantEntity>().Query().Skip((pageNumber - 1) * pageSize).Take(pageSize);
 
             if (filter != null)
                 query = filter(query);

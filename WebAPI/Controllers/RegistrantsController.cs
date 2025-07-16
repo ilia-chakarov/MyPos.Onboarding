@@ -19,9 +19,9 @@ namespace WebAPI.Controllers
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<RegistrantDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<IEnumerable<RegistrantDto>>> GetAll()
+        public async Task<ActionResult<IEnumerable<RegistrantDto>>> GetAll(int pageNumber = 1, int pageSize = 10)
         {
-            var result = await _registrantService.GetAll();
+            var result = await _registrantService.GetAll(pageNumber, pageSize);
 
             return Ok(result);
         }
@@ -33,9 +33,9 @@ namespace WebAPI.Controllers
         [HttpGet("registrants/with-realated-data")]
         [ProducesResponseType(typeof(IEnumerable<RegistrantWithAllWalletsAndUsersDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<IEnumerable<RegistrantWithAllWalletsAndUsersDto>>> GetAllWithWalletsAndUsers([FromQuery]int? id)
+        public async Task<ActionResult<IEnumerable<RegistrantWithAllWalletsAndUsersDto>>> GetAllWithWalletsAndUsers([FromQuery]int? id, int pageNumber = 1, int pageSize = 10)
         {
-            var dtos = await _registrantService.GetAllWithWalletsAndUsers(query =>
+            var dtos = await _registrantService.GetAllWithWalletsAndUsers(pageNumber, pageSize, query =>
             {
                 if(id.HasValue)
                     return query.Where(r => r.Id == id.Value);
