@@ -40,18 +40,34 @@ namespace WebAPI.ExternalClients.Clients
 
         public async Task Delete(string id)
         {
-            var bearerToken = ExtractToken();
-            _apiClient.SetBearerToken(bearerToken);
+            try
+            {
+                var bearerToken = ExtractToken();
+                _apiClient.SetBearerToken(bearerToken);
 
-            await _apiClient.RegistrantDELETEAsync(id);
+                await _apiClient.RegistrantDELETEAsync(id);
+            }
+            catch (ApiException ex)
+            {
+                throw new MyPosApiException($"External API error: {ex.Message}", (int)ex.StatusCode);
+            }
         }
 
         public async Task<ICollection<RegistrantDisplayDTO>> GetAllAsync(int? pageNumber, int? pageSize)
         {
-            var bearerToken = ExtractToken();
-            _apiClient.SetBearerToken(bearerToken);
+            try
+            {
+                var bearerToken = ExtractToken();
+                _apiClient.SetBearerToken(bearerToken);
 
-            return await _apiClient.AllAllAsync(pageNumber, pageSize);
+                var res = await _apiClient.AllAllAsync(pageNumber, pageSize);
+                Console.Write(res);
+                return res;
+            }
+            catch (ApiException ex)
+            {
+                throw new MyPosApiException($"External API error: {ex.Message}", (int)ex.StatusCode);
+            }
         }
 
         public async Task<RegistrantDisplayDTO> GetById(string id)
@@ -59,12 +75,19 @@ namespace WebAPI.ExternalClients.Clients
             var bearerToken = ExtractToken();
             _apiClient.SetBearerToken(bearerToken);
 
-            var res = await _apiClient.RegistrantGETAsync(id);
+            try
+            {
+                var res = await _apiClient.RegistrantGETAsync(id);
 
-            if(res == null)
-                throw new MyPosApiException($"Registrant with id {id} not found", StatusCodes.Status404NotFound);
+                if (res == null)
+                    throw new MyPosApiException($"Registrant with id {id} not found", StatusCodes.Status404NotFound);
 
-            return res;
+                return res;
+            }
+            catch (ApiException ex)
+            {
+                throw new MyPosApiException($"External API error: {ex.Message}", (int)ex.StatusCode);
+            }
         }
 
         public async Task<RegistrantDisplayDTO> Update(string id, RegistrantFormDTO dto)
@@ -72,12 +95,21 @@ namespace WebAPI.ExternalClients.Clients
             var bearerToken = ExtractToken();
             _apiClient.SetBearerToken(bearerToken);
 
-            var res = await _apiClient.RegistrantPUTAsync(id, dto);
+            try
+            {
 
-            if (res == null)
-                throw new MyPosApiException($"Registrant with id {id} not found", StatusCodes.Status404NotFound);
 
-            return res;
+                var res = await _apiClient.RegistrantPUTAsync(id, dto);
+
+                if (res == null)
+                    throw new MyPosApiException($"Registrant with id {id} not found", StatusCodes.Status404NotFound);
+
+                return res;
+            }
+            catch (ApiException ex)
+            {
+                throw new MyPosApiException($"External API error: {ex.Message}", (int)ex.StatusCode);
+            }
         }
 
         private string ExtractToken()

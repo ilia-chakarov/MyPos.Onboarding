@@ -3091,3 +3091,1010 @@ Response:
 [17:02:59 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
 [17:02:59 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjc4MTgwLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.nr2pqV8dqGRZDkZ8Ki0sl6fxJNtr9dgem08xENCoYlE"}
 [17:02:59 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/external/IvoUsers/login-user responded 200 in 209 ms
+[17:22:02 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:22:02 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:22:02 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:22:02 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:22:02 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:22:15 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:22:15 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:22:15 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/external/IvoUsers/login-user 
+[17:22:15 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:22:15 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "userName": "string",
+  "password": "string"
+}
+[17:22:15 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[17:22:15 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[17:22:15 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 149.9989ms - 200
+[17:22:15 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 154.4305ms - 200
+[17:22:15 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:22:15 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjc5MzM2LCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.R01JXc2obTJewTQf06-_wRvpKPe-NDGcPWtYigBW-GU"}
+[17:22:15 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/external/IvoUsers/login-user responded 200 in 310 ms
+[17:22:27 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:22:27 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:22:27 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:22:27 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjc5MzM2LCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.R01JXc2obTJewTQf06-_wRvpKPe-NDGcPWtYigBW-GU","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:22:27 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:22:27 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:22:27 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:22:27 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 59.8917ms - 200
+[17:22:27 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 60.2091ms - 200
+[17:22:27 ERR] [Machine: MP-DT0KYVBJ] Unhandled exception
+HTTP Response: 
+
+
+
+ExternalApi.ApiException: Could not deserialize the response body stream as System.Collections.Generic.ICollection`1[[ExternalApi.RegistrantDisplayDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].
+
+Status: 200
+Response: 
+
+ ---> Newtonsoft.Json.JsonReaderException: Could not convert string to DateTimeOffset: 0001-01-01T00:00:00. Path '[0].createdAt', line 1, position 79.
+   at Newtonsoft.Json.JsonReader.ReadDateTimeOffsetString(String s)
+   at Newtonsoft.Json.JsonTextReader.FinishReadQuotedStringValue(ReadType readType)
+   at Newtonsoft.Json.JsonTextReader.ReadStringValue(ReadType readType)
+   at Newtonsoft.Json.JsonTextReader.ReadAsDateTimeOffset()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize[T](JsonReader reader)
+   at ExternalApi.Client.ReadObjectResponseAsync[T](HttpResponseMessage response, IReadOnlyDictionary`2 headers, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 3768
+   --- End of inner exception stack trace ---
+   at ExternalApi.Client.ReadObjectResponseAsync[T](HttpResponseMessage response, IReadOnlyDictionary`2 headers, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 3775
+   at ExternalApi.Client.AllAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 1974
+   at WebAPI.ExternalClients.Clients.RegistrantsExtClientService.GetAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Clients\RegistrantsExtClientService.cs:line 54
+   at WebAPI.External.Controllers.IvoRegistrantsController.GetAll(Int32 pageNumber, Int32 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Controllers\IvoRegistrantsController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 21
+[17:22:27 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:22:27 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"Could not deserialize the response body stream as System.Collections.Generic.ICollection`1[[ExternalApi.RegistrantDisplayDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].\n\nStatus: 200\nResponse: \n"}
+[17:22:27 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 500 in 267 ms
+[17:22:59 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:22:59 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:22:59 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:22:59 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:22:59 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:24:11 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:24:11 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:24:11 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:24:11 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:24:11 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:24:11 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:24:11 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:24:11 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 24.7443ms - 401
+[17:24:11 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 28.9051ms - 401
+[17:24:11 ERR] [Machine: MP-DT0KYVBJ] Unhandled exception
+HTTP Response: 
+
+
+
+ExternalApi.ApiException: Response was null which was not expected.
+
+Status: 401
+Response: 
+
+   at ExternalApi.Client.AllAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 1987
+   at WebAPI.ExternalClients.Clients.RegistrantsExtClientService.GetAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Clients\RegistrantsExtClientService.cs:line 54
+   at WebAPI.External.Controllers.IvoRegistrantsController.GetAll(Int32 pageNumber, Int32 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Controllers\IvoRegistrantsController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 21
+[17:24:11 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:24:11 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"Response was null which was not expected.\n\nStatus: 401\nResponse: \n"}
+[17:24:11 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 500 in 283 ms
+[17:24:23 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:24:23 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:24:23 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:24:23 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:24:23 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:24:23 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:24:23 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:24:23 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 10.153ms - 401
+[17:24:23 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 11.2051ms - 401
+[17:24:23 ERR] [Machine: MP-DT0KYVBJ] Unhandled exception
+HTTP Response: 
+
+
+
+ExternalApi.ApiException: Response was null which was not expected.
+
+Status: 401
+Response: 
+
+   at ExternalApi.Client.AllAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 1987
+   at WebAPI.ExternalClients.Clients.RegistrantsExtClientService.GetAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Clients\RegistrantsExtClientService.cs:line 54
+   at WebAPI.External.Controllers.IvoRegistrantsController.GetAll(Int32 pageNumber, Int32 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Controllers\IvoRegistrantsController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 21
+[17:24:23 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:24:23 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"Response was null which was not expected.\n\nStatus: 401\nResponse: \n"}
+[17:24:23 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 500 in 86 ms
+[17:24:25 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:24:25 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:24:25 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:24:25 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:24:25 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:24:25 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:24:25 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:24:25 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 3.4774ms - 401
+[17:24:25 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 3.9236ms - 401
+[17:24:26 ERR] [Machine: MP-DT0KYVBJ] Unhandled exception
+HTTP Response: 
+
+
+
+ExternalApi.ApiException: Response was null which was not expected.
+
+Status: 401
+Response: 
+
+   at ExternalApi.Client.AllAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 1987
+   at WebAPI.ExternalClients.Clients.RegistrantsExtClientService.GetAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Clients\RegistrantsExtClientService.cs:line 54
+   at WebAPI.External.Controllers.IvoRegistrantsController.GetAll(Int32 pageNumber, Int32 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Controllers\IvoRegistrantsController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 21
+[17:24:26 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:24:26 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"Response was null which was not expected.\n\nStatus: 401\nResponse: \n"}
+[17:24:26 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 500 in 73 ms
+[17:24:28 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:24:28 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:24:28 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:24:28 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:24:28 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:24:28 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:24:28 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:24:28 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 3.4092ms - 401
+[17:24:28 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 3.5981ms - 401
+[17:24:28 ERR] [Machine: MP-DT0KYVBJ] Unhandled exception
+HTTP Response: 
+
+
+
+ExternalApi.ApiException: Response was null which was not expected.
+
+Status: 401
+Response: 
+
+   at ExternalApi.Client.AllAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 1987
+   at WebAPI.ExternalClients.Clients.RegistrantsExtClientService.GetAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Clients\RegistrantsExtClientService.cs:line 54
+   at WebAPI.External.Controllers.IvoRegistrantsController.GetAll(Int32 pageNumber, Int32 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Controllers\IvoRegistrantsController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 21
+[17:24:28 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:24:28 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"Response was null which was not expected.\n\nStatus: 401\nResponse: \n"}
+[17:24:28 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 500 in 70 ms
+[17:25:58 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:25:58 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:25:58 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:25:58 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:25:58 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:26:05 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:26:05 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:26:05 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:26:05 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:26:05 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:26:05 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:26:05 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:26:05 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 19.5095ms - 401
+[17:26:05 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 23.5372ms - 401
+[17:26:05 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:26:05 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":401,"detail":"External API error: Response was null which was not expected.\n\nStatus: 401\nResponse: \n"}
+[17:26:05 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 401 in 336 ms
+[17:26:25 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:26:25 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:26:25 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/external/IvoUsers/login-user 
+[17:26:25 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:26:25 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "userName": "string",
+  "password": "string"
+}
+[17:26:25 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[17:26:25 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[17:26:25 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 32.3153ms - 200
+[17:26:25 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 32.6628ms - 200
+[17:26:25 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:26:25 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjc5NTg2LCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.HA63M-4NhRx-8PlWCrChjPxJ04oHIhxHobnzD-re7PA"}
+[17:26:25 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/external/IvoUsers/login-user responded 200 in 78 ms
+[17:26:35 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:26:35 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:26:35 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:26:35 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjc5NTg2LCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.HA63M-4NhRx-8PlWCrChjPxJ04oHIhxHobnzD-re7PA","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:26:35 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:26:35 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:26:35 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:26:35 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 26.4827ms - 200
+[17:26:35 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 26.74ms - 200
+[17:26:36 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:26:36 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":200,"detail":"External API error: Could not deserialize the response body stream as System.Collections.Generic.ICollection`1[[ExternalApi.RegistrantDisplayDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].\n\nStatus: 200\nResponse: \n"}
+[17:26:36 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 199 ms
+[17:26:38 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:26:38 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:26:38 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:26:38 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjc5NTg2LCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.HA63M-4NhRx-8PlWCrChjPxJ04oHIhxHobnzD-re7PA","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:26:38 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:26:38 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:26:38 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:26:38 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 6.4943ms - 200
+[17:26:38 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 6.7275ms - 200
+[17:26:38 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:26:38 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":200,"detail":"External API error: Could not deserialize the response body stream as System.Collections.Generic.ICollection`1[[ExternalApi.RegistrantDisplayDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].\n\nStatus: 200\nResponse: \n"}
+[17:26:38 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 117 ms
+[17:28:31 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:28:31 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:28:31 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:28:31 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:28:31 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:28:48 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:28:48 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:28:48 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:28:48 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjc5NTg2LCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.HA63M-4NhRx-8PlWCrChjPxJ04oHIhxHobnzD-re7PA","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:28:48 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:28:48 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:28:48 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:28:50 ERR] [Machine: MP-DT0KYVBJ] Unhandled exception
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (10.80.55.56:7191)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at ExternalApi.Client.AllAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 1956
+   at WebAPI.ExternalClients.Clients.RegistrantsExtClientService.GetAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Clients\RegistrantsExtClientService.cs:line 63
+   at WebAPI.External.Controllers.IvoRegistrantsController.GetAll(Int32 pageNumber, Int32 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Controllers\IvoRegistrantsController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 21
+[17:28:50 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:28:50 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"No connection could be made because the target machine actively refused it. (10.80.55.56:7191)"}
+[17:28:50 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 500 in 2300 ms
+[17:29:01 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:29:01 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:29:01 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:29:01 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:29:01 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:29:17 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:29:17 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:29:17 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:29:17 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:29:17 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:29:17 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:29:17 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:29:19 ERR] [Machine: MP-DT0KYVBJ] Unhandled exception
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (10.80.55.56:7191)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at ExternalApi.Client.AllAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 1956
+   at WebAPI.ExternalClients.Clients.RegistrantsExtClientService.GetAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Clients\RegistrantsExtClientService.cs:line 63
+   at WebAPI.External.Controllers.IvoRegistrantsController.GetAll(Int32 pageNumber, Int32 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Controllers\IvoRegistrantsController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 21
+[17:29:19 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:29:19 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"No connection could be made because the target machine actively refused it. (10.80.55.56:7191)"}
+[17:29:19 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 500 in 2270 ms
+[17:29:29 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:29:29 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:29:29 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:29:29 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:29:29 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:29:35 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:29:35 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:29:35 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:29:35 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:29:35 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:29:35 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:29:35 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:29:37 ERR] [Machine: MP-DT0KYVBJ] Unhandled exception
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (10.80.55.56:7191)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at ExternalApi.Client.AllAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 1956
+   at WebAPI.ExternalClients.Clients.RegistrantsExtClientService.GetAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Clients\RegistrantsExtClientService.cs:line 62
+   at WebAPI.External.Controllers.IvoRegistrantsController.GetAll(Int32 pageNumber, Int32 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Controllers\IvoRegistrantsController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 21
+[17:29:37 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:29:37 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"No connection could be made because the target machine actively refused it. (10.80.55.56:7191)"}
+[17:29:37 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 500 in 2275 ms
+[17:29:48 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:29:48 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:29:48 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:29:48 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:29:48 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:29:53 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:29:53 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:29:53 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:29:53 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:29:53 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:29:53 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:29:53 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:29:55 ERR] [Machine: MP-DT0KYVBJ] Unhandled exception
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (10.80.55.56:7191)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at ExternalApi.Client.AllAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 1956
+   at WebAPI.ExternalClients.Clients.RegistrantsExtClientService.GetAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Clients\RegistrantsExtClientService.cs:line 63
+   at WebAPI.External.Controllers.IvoRegistrantsController.GetAll(Int32 pageNumber, Int32 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Controllers\IvoRegistrantsController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 21
+[17:29:55 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:29:55 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"No connection could be made because the target machine actively refused it. (10.80.55.56:7191)"}
+[17:29:55 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 500 in 2263 ms
+[17:30:15 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:30:15 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:30:15 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:30:15 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:30:15 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:30:20 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:30:20 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:30:20 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:30:20 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:30:20 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:30:20 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:30:20 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:30:20 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 17.0757ms - 401
+[17:30:20 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 21.6672ms - 401
+[17:30:20 ERR] [Machine: MP-DT0KYVBJ] Unhandled exception
+HTTP Response: 
+
+
+
+ExternalApi.ApiException: Response was null which was not expected.
+
+Status: 401
+Response: 
+
+   at ExternalApi.Client.AllAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 1987
+   at WebAPI.ExternalClients.Clients.RegistrantsExtClientService.GetAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Clients\RegistrantsExtClientService.cs:line 62
+   at WebAPI.External.Controllers.IvoRegistrantsController.GetAll(Int32 pageNumber, Int32 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Controllers\IvoRegistrantsController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 21
+[17:30:20 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:30:20 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"Response was null which was not expected.\n\nStatus: 401\nResponse: \n"}
+[17:30:20 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 500 in 266 ms
+[17:33:29 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:33:29 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:33:29 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:33:29 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:33:29 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:33:40 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:33:40 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:33:40 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/external/IvoUsers/login-user 
+[17:33:40 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:33:40 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "userName": "string",
+  "password": "string"
+}
+[17:33:40 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[17:33:40 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[17:33:40 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 118.685ms - 200
+[17:33:40 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 122.6786ms - 200
+[17:33:40 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:33:40 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMDIxLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.YdZ2J0RGN2unTszbkBR5g_tivEcPlLKuz-IO3ebQaSc"}
+[17:33:40 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/external/IvoUsers/login-user responded 200 in 294 ms
+[17:33:53 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:33:53 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:33:53 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:33:53 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMDIxLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.YdZ2J0RGN2unTszbkBR5g_tivEcPlLKuz-IO3ebQaSc","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:33:53 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:33:53 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:33:53 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:33:53 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 97.7505ms - 200
+[17:33:53 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 98.0351ms - 200
+[17:33:54 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:33:54 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":200,"detail":"External API error: Could not deserialize the response body stream as System.Collections.Generic.ICollection`1[[ExternalApi.RegistrantDisplayDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].\n\nStatus: 200\nResponse: \n"}
+[17:33:54 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 303 ms
+[17:34:34 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:34:34 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:34:34 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:34:34 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMDIxLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.YdZ2J0RGN2unTszbkBR5g_tivEcPlLKuz-IO3ebQaSc","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:34:34 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:34:34 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:34:34 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:34:34 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 8.2859ms - 200
+[17:34:34 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 8.6837ms - 200
+[17:34:34 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:34:34 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":200,"detail":"External API error: Could not deserialize the response body stream as System.Collections.Generic.ICollection`1[[ExternalApi.RegistrantDisplayDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].\n\nStatus: 200\nResponse: \n"}
+[17:34:34 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 128 ms
+[17:34:59 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:34:59 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:34:59 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:34:59 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:34:59 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:35:12 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:35:12 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:35:12 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:35:12 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMDIxLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.YdZ2J0RGN2unTszbkBR5g_tivEcPlLKuz-IO3ebQaSc","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:35:12 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:35:13 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:35:13 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:35:13 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 20.3434ms - 200
+[17:35:13 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 25.6385ms - 200
+[17:35:13 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:35:13 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":200,"detail":"External API error: Could not deserialize the response body stream as System.Collections.Generic.ICollection`1[[ExternalApi.RegistrantDisplayDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].\n\nStatus: 200\nResponse: \n"}
+[17:35:13 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 362 ms
+[17:36:42 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:36:42 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:36:42 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/external/IvoRegistrants 
+[17:36:42 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMDIxLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.YdZ2J0RGN2unTszbkBR5g_tivEcPlLKuz-IO3ebQaSc","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"131","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:36:42 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "displayName": "string",
+  "phoneNumber": "+(124)621.1407",
+  "country": "string",
+  "address": "string",
+  "isCompany": true
+}
+[17:36:42 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/Registrant
+[17:36:42 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/Registrant
+[17:36:42 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 46.5946ms - 200
+[17:36:42 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 46.9204ms - 200
+[17:36:43 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:36:43 INF] [Machine: MP-DT0KYVBJ] Response body: {"id":"d9aae319-0e56-4550-b4d1-42f8db9f5b12","createdAt":"2025-07-16T14:36:43.9614787+00:00","displayName":"string","phoneNumber":"+(124)621.1407","country":"string","address":"string","isCompany":true}
+[17:36:43 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/external/IvoRegistrants responded 200 in 90 ms
+[17:36:56 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:36:56 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:36:56 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants/d9aae319-0e56-4550-b4d1-42f8db9f5b12 
+[17:36:56 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMDIxLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.YdZ2J0RGN2unTszbkBR5g_tivEcPlLKuz-IO3ebQaSc","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:36:56 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:36:56 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/d9aae319-0e56-4550-b4d1-42f8db9f5b12
+[17:36:56 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/d9aae319-0e56-4550-b4d1-42f8db9f5b12
+[17:36:56 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 15.7138ms - 200
+[17:36:56 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 16.1102ms - 200
+[17:36:56 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:36:56 INF] [Machine: MP-DT0KYVBJ] Response body: {"id":"d9aae319-0e56-4550-b4d1-42f8db9f5b12","createdAt":"2025-07-16T14:36:43.9614787+03:00","displayName":"string","phoneNumber":"+(124)621.1407","country":"string","address":"string","isCompany":true}
+[17:36:56 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants/d9aae319-0e56-4550-b4d1-42f8db9f5b12 responded 200 in 27 ms
+[17:37:02 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:37:02 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:37:02 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:37:02 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMDIxLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.YdZ2J0RGN2unTszbkBR5g_tivEcPlLKuz-IO3ebQaSc","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:37:02 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:37:02 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:37:02 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:37:02 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 9.1517ms - 200
+[17:37:02 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 9.4913ms - 200
+[17:37:02 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:37:02 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":200,"detail":"External API error: Could not deserialize the response body stream as System.Collections.Generic.ICollection`1[[ExternalApi.RegistrantDisplayDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].\n\nStatus: 200\nResponse: \n"}
+[17:37:02 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 130 ms
+[17:37:08 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:37:08 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:37:08 INF] [Machine: MP-DT0KYVBJ] Incoming request: PUT /api/external/IvoRegistrants/d9aae319-0e56-4550-b4d1-42f8db9f5b12 
+[17:37:08 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMDIxLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.YdZ2J0RGN2unTszbkBR5g_tivEcPlLKuz-IO3ebQaSc","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"131","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:37:08 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "displayName": "string",
+  "phoneNumber": "+205)568-47251",
+  "country": "string",
+  "address": "string",
+  "isCompany": true
+}
+[17:37:08 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request PUT https://10.80.55.56:7191/api/Registrant/d9aae319-0e56-4550-b4d1-42f8db9f5b12
+[17:37:08 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request PUT https://10.80.55.56:7191/api/Registrant/d9aae319-0e56-4550-b4d1-42f8db9f5b12
+[17:37:08 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 20.4532ms - 200
+[17:37:08 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 20.7327ms - 200
+[17:37:08 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:37:08 INF] [Machine: MP-DT0KYVBJ] Response body: {"id":"d9aae319-0e56-4550-b4d1-42f8db9f5b12","createdAt":"2025-07-16T14:36:43.9614787+03:00","displayName":"string","phoneNumber":"+205)568-47251","country":"string","address":"string","isCompany":true}
+[17:37:08 INF] [Machine: MP-DT0KYVBJ] Request completed: PUT /api/external/IvoRegistrants/d9aae319-0e56-4550-b4d1-42f8db9f5b12 responded 200 in 30 ms
+[17:37:16 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:37:16 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:37:16 INF] [Machine: MP-DT0KYVBJ] Incoming request: PUT /api/external/IvoRegistrants/d9aae319-0e56-4550-b4d1-42f8db9f5b12 
+[17:37:16 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMDIxLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.YdZ2J0RGN2unTszbkBR5g_tivEcPlLKuz-IO3ebQaSc","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"132","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:37:16 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "displayName": "string",
+  "phoneNumber": "+205)568-472222",
+  "country": "string",
+  "address": "string",
+  "isCompany": true
+}
+[17:37:16 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request PUT https://10.80.55.56:7191/api/Registrant/d9aae319-0e56-4550-b4d1-42f8db9f5b12
+[17:37:16 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request PUT https://10.80.55.56:7191/api/Registrant/d9aae319-0e56-4550-b4d1-42f8db9f5b12
+[17:37:16 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 34.576ms - 200
+[17:37:16 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 35.5661ms - 200
+[17:37:16 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:37:16 INF] [Machine: MP-DT0KYVBJ] Response body: {"id":"d9aae319-0e56-4550-b4d1-42f8db9f5b12","createdAt":"2025-07-16T14:36:43.9614787+03:00","displayName":"string","phoneNumber":"+205)568-472222","country":"string","address":"string","isCompany":true}
+[17:37:16 INF] [Machine: MP-DT0KYVBJ] Request completed: PUT /api/external/IvoRegistrants/d9aae319-0e56-4550-b4d1-42f8db9f5b12 responded 200 in 37 ms
+[17:37:24 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:37:24 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:37:24 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants/d9aae319-0e56-4550-b4d1-42f8db9f5b12 
+[17:37:24 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMDIxLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.YdZ2J0RGN2unTszbkBR5g_tivEcPlLKuz-IO3ebQaSc","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:37:24 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:37:24 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/d9aae319-0e56-4550-b4d1-42f8db9f5b12
+[17:37:24 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/d9aae319-0e56-4550-b4d1-42f8db9f5b12
+[17:37:24 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 8.7672ms - 200
+[17:37:24 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 8.9433ms - 200
+[17:37:24 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:37:24 INF] [Machine: MP-DT0KYVBJ] Response body: {"id":"d9aae319-0e56-4550-b4d1-42f8db9f5b12","createdAt":"2025-07-16T14:36:43.9614787+03:00","displayName":"string","phoneNumber":"+205)568-472222","country":"string","address":"string","isCompany":true}
+[17:37:24 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants/d9aae319-0e56-4550-b4d1-42f8db9f5b12 responded 200 in 9 ms
+[17:37:29 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:37:29 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:37:29 INF] [Machine: MP-DT0KYVBJ] Incoming request: DELETE /api/external/IvoRegistrants/d9aae319-0e56-4550-b4d1-42f8db9f5b12 
+[17:37:29 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMDIxLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.YdZ2J0RGN2unTszbkBR5g_tivEcPlLKuz-IO3ebQaSc","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:37:29 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:37:29 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request DELETE https://10.80.55.56:7191/api/Registrant/d9aae319-0e56-4550-b4d1-42f8db9f5b12
+[17:37:29 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request DELETE https://10.80.55.56:7191/api/Registrant/d9aae319-0e56-4550-b4d1-42f8db9f5b12
+[17:37:29 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 29.5044ms - 200
+[17:37:29 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 29.6891ms - 200
+[17:37:29 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:37:29 INF] [Machine: MP-DT0KYVBJ] Response body: 
+[17:37:29 INF] [Machine: MP-DT0KYVBJ] Request completed: DELETE /api/external/IvoRegistrants/d9aae319-0e56-4550-b4d1-42f8db9f5b12 responded 200 in 35 ms
+[17:37:35 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:37:35 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:37:35 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:37:35 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMDIxLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.YdZ2J0RGN2unTszbkBR5g_tivEcPlLKuz-IO3ebQaSc","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:37:35 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:37:35 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:37:35 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:37:35 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 8.9287ms - 200
+[17:37:35 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 9.1604ms - 200
+[17:37:35 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:37:35 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":200,"detail":"External API error: Could not deserialize the response body stream as System.Collections.Generic.ICollection`1[[ExternalApi.RegistrantDisplayDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].\n\nStatus: 200\nResponse: \n"}
+[17:37:35 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 139 ms
+[17:37:39 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:37:39 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:37:39 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants/d9aae319-0e56-4550-b4d1-42f8db9f5b12 
+[17:37:39 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMDIxLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.YdZ2J0RGN2unTszbkBR5g_tivEcPlLKuz-IO3ebQaSc","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:37:39 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:37:39 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/d9aae319-0e56-4550-b4d1-42f8db9f5b12
+[17:37:39 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/d9aae319-0e56-4550-b4d1-42f8db9f5b12
+[17:37:39 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 166.1324ms - 404
+[17:37:39 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 166.2904ms - 404
+[17:37:39 ERR] [Machine: MP-DT0KYVBJ] Unhandled exception
+HTTP Response: 
+
+
+
+ExternalApi.ApiException`1[ExternalApi.ProblemDetails]: Not Found
+
+Status: 404
+Response: 
+
+   at ExternalApi.Client.RegistrantGETAsync(String id, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 1679
+   at WebAPI.ExternalClients.Clients.RegistrantsExtClientService.GetById(String id) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Clients\RegistrantsExtClientService.cs:line 76
+   at WebAPI.External.Controllers.IvoRegistrantsController.GetById(String id) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Controllers\IvoRegistrantsController.cs:line 46
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 21
+[17:37:39 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:37:39 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"Not Found\n\nStatus: 404\nResponse: \n"}
+[17:37:39 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants/d9aae319-0e56-4550-b4d1-42f8db9f5b12 responded 500 in 252 ms
+[17:38:45 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:38:45 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:38:45 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants/d9aae319-0e56-4550-b4d1-42f8db9f5b12 
+[17:38:45 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMDIxLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.YdZ2J0RGN2unTszbkBR5g_tivEcPlLKuz-IO3ebQaSc","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:38:45 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:38:45 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/d9aae319-0e56-4550-b4d1-42f8db9f5b12
+[17:38:45 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/d9aae319-0e56-4550-b4d1-42f8db9f5b12
+[17:38:45 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 145.9438ms - 404
+[17:38:45 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 146.2206ms - 404
+[17:38:45 ERR] [Machine: MP-DT0KYVBJ] Unhandled exception
+HTTP Response: 
+
+
+
+ExternalApi.ApiException`1[ExternalApi.ProblemDetails]: Not Found
+
+Status: 404
+Response: 
+
+   at ExternalApi.Client.RegistrantGETAsync(String id, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 1679
+   at WebAPI.ExternalClients.Clients.RegistrantsExtClientService.GetById(String id) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Clients\RegistrantsExtClientService.cs:line 76
+   at WebAPI.External.Controllers.IvoRegistrantsController.GetById(String id) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Controllers\IvoRegistrantsController.cs:line 46
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 21
+[17:38:45 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:38:45 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"Not Found\n\nStatus: 404\nResponse: \n"}
+[17:38:45 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants/d9aae319-0e56-4550-b4d1-42f8db9f5b12 responded 500 in 223 ms
+[17:38:51 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:38:51 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:38:51 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:38:51 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:38:51 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:38:59 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:38:59 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:38:59 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/external/IvoUsers/login-user 
+[17:38:59 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:38:59 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "userName": "string",
+  "password": "string"
+}
+[17:38:59 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[17:38:59 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[17:38:59 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 74.6507ms - 200
+[17:38:59 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 79.9327ms - 200
+[17:38:59 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:38:59 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMzQwLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.W7KHUcbnDDDBkidA1f26z5GhwBQqxnaxNTaHD8915JQ"}
+[17:38:59 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/external/IvoUsers/login-user responded 200 in 273 ms
+[17:39:16 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:39:16 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:39:16 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants/d9aae319-0e56-4550-b4d1-42f8db9f5b12 
+[17:39:16 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMzQwLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.W7KHUcbnDDDBkidA1f26z5GhwBQqxnaxNTaHD8915JQ","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:39:16 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:39:16 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/d9aae319-0e56-4550-b4d1-42f8db9f5b12
+[17:39:16 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/d9aae319-0e56-4550-b4d1-42f8db9f5b12
+[17:39:16 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 97.4831ms - 404
+[17:39:16 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 97.8208ms - 404
+[17:39:16 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:39:16 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":404,"detail":"External API error: Not Found\n\nStatus: 404\nResponse: \n"}
+[17:39:16 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants/d9aae319-0e56-4550-b4d1-42f8db9f5b12 responded 404 in 269 ms
+[17:40:07 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:40:07 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:40:07 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:40:07 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMzQwLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.W7KHUcbnDDDBkidA1f26z5GhwBQqxnaxNTaHD8915JQ","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:40:07 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:40:07 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:40:07 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:40:07 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 23.8803ms - 200
+[17:40:07 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 24.1957ms - 200
+[17:40:07 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:40:07 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":200,"detail":"External API error: Could not deserialize the response body stream as System.Collections.Generic.ICollection`1[[ExternalApi.RegistrantDisplayDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].\n\nStatus: 200\nResponse: \n"}
+[17:40:07 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 167 ms
+[17:40:25 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:40:25 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:40:25 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:40:25 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:40:25 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:40:35 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:40:35 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:40:35 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:40:35 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMzQwLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.W7KHUcbnDDDBkidA1f26z5GhwBQqxnaxNTaHD8915JQ","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:40:35 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:40:46 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:40:46 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:40:46 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 35.5078ms - 200
+[17:40:46 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 39.7903ms - 200
+[17:41:17 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:41:17 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:41:17 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:41:17 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:41:17 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:41:29 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:41:29 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:41:29 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:41:29 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMzQwLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.W7KHUcbnDDDBkidA1f26z5GhwBQqxnaxNTaHD8915JQ","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:41:29 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:41:51 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:41:51 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:41:51 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 28.3521ms - 200
+[17:41:51 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 32.7286ms - 200
+[17:42:06 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:42:06 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":200,"detail":"External API error: Could not deserialize the response body stream as System.Collections.Generic.ICollection`1[[ExternalApi.RegistrantDisplayDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].\n\nStatus: 200\nResponse: \n"}
+[17:42:06 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 37133 ms
+[17:42:12 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:42:12 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:42:12 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:42:12 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMzQwLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.W7KHUcbnDDDBkidA1f26z5GhwBQqxnaxNTaHD8915JQ","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:42:12 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:43:03 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:43:03 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:43:03 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 42.8841ms - 200
+[17:43:03 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 44.4835ms - 200
+[17:45:41 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:45:41 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":200,"detail":"External API error: Could not deserialize the response body stream as System.Collections.Generic.ICollection`1[[ExternalApi.RegistrantDisplayDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].\n\nStatus: 200\nResponse: \n"}
+[17:45:41 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 209641 ms
+[17:47:16 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:47:16 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:47:16 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Registrants ?pageNumber=1&pageSize=10
+[17:47:16 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMzQwLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.W7KHUcbnDDDBkidA1f26z5GhwBQqxnaxNTaHD8915JQ","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:47:16 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:47:17 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[17:47:17 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[17:47:17 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (28ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[17:47:17 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:47:17 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":5,"dateCreated":"2025-07-08T16:23:35.9821979","displayName":"papasmurfie","gsm":"0897614957","country":"Bulgaria","address":"ul. Tsar Asen 74","isCompany":false},{"id":6,"dateCreated":"2025-07-08T16:24:08.82214","displayName":"jacksonville","gsm":"0898555444","country":"USA","address":"I dont know Avenue 123","isCompany":false},{"id":7,"dateCreated":"2025-07-08T16:24:38.7776089","displayName":"lil yachty","gsm":"0897777777","country":"USA","address":"Washington DC","isCompany":false},{"id":8,"dateCreated":"2025-07-08T16:25:28.3671217","displayName":"mMyPos","gsm":"0895789654","country":"Bulgaria","address":"Varna, Idk","isCompany":true},{"id":9,"dateCreated":"2025-07-15T09:28:01.2499504","displayName":"Honestly Healthy","gsm":"0895558749","country":"Bulgaria","address":"Vazrazhdane 6","isCompany":true}]
+[17:47:17 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Registrants responded 200 in 801 ms
+[17:47:33 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:47:33 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:47:33 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/external/IvoRegistrants 
+[17:47:33 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMzQwLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.W7KHUcbnDDDBkidA1f26z5GhwBQqxnaxNTaHD8915JQ","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"128","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:47:33 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "displayName": "string",
+  "phoneNumber": "625)5359123",
+  "country": "string",
+  "address": "string",
+  "isCompany": true
+}
+[17:47:33 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/Registrant
+[17:47:33 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/Registrant
+[17:47:33 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 18.2ms - 200
+[17:47:33 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 18.499ms - 200
+[17:47:33 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:47:33 INF] [Machine: MP-DT0KYVBJ] Response body: {"id":"91e33fc1-2bd8-4862-93df-289de2019cc8","createdAt":"2025-07-16T14:47:34.656738+00:00","displayName":"string","phoneNumber":"625)5359123","country":"string","address":"string","isCompany":true}
+[17:47:33 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/external/IvoRegistrants responded 200 in 55 ms
+[17:47:44 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:47:44 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:47:44 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:47:44 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMzQwLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.W7KHUcbnDDDBkidA1f26z5GhwBQqxnaxNTaHD8915JQ","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:47:44 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:47:46 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:47:46 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:47:46 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 5.2278ms - 200
+[17:47:46 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 5.4274ms - 200
+[17:47:46 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:47:46 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":200,"detail":"External API error: Could not deserialize the response body stream as System.Collections.Generic.ICollection`1[[ExternalApi.RegistrantDisplayDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].\n\nStatus: 200\nResponse: \n"}
+[17:47:46 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 1675 ms
+[17:48:09 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:48:09 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:48:09 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants/91e33fc1-2bd8-4862-93df-289de2019cc8 
+[17:48:09 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMzQwLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.W7KHUcbnDDDBkidA1f26z5GhwBQqxnaxNTaHD8915JQ","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:48:09 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:48:09 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/91e33fc1-2bd8-4862-93df-289de2019cc8
+[17:48:09 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/91e33fc1-2bd8-4862-93df-289de2019cc8
+[17:48:09 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 4.8859ms - 200
+[17:48:09 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 5.3691ms - 200
+[17:48:09 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:48:09 INF] [Machine: MP-DT0KYVBJ] Response body: {"id":"91e33fc1-2bd8-4862-93df-289de2019cc8","createdAt":"2025-07-16T14:47:34.656738+03:00","displayName":"string","phoneNumber":"625)5359123","country":"string","address":"string","isCompany":true}
+[17:48:09 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants/91e33fc1-2bd8-4862-93df-289de2019cc8 responded 200 in 11 ms
+[17:48:20 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:48:20 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:48:20 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:48:20 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwMzQwLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.W7KHUcbnDDDBkidA1f26z5GhwBQqxnaxNTaHD8915JQ","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:48:20 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:48:20 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:48:20 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:48:20 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 8.0657ms - 200
+[17:48:20 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 8.397ms - 200
+[17:48:20 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:48:20 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":200,"detail":"External API error: Could not deserialize the response body stream as System.Collections.Generic.ICollection`1[[ExternalApi.RegistrantDisplayDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].\n\nStatus: 200\nResponse: \n"}
+[17:48:20 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 127 ms
+[17:49:02 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:49:02 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:49:02 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:49:02 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:49:02 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:49:10 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:49:10 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:49:10 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/external/IvoUsers/login-user 
+[17:49:10 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:49:10 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "userName": "string",
+  "password": "string"
+}
+[17:49:10 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[17:49:10 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[17:49:11 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 37.6775ms - 200
+[17:49:11 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 42.4644ms - 200
+[17:49:11 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:49:11 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwOTUyLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.m-RDjXn1tzDmTU5JSVhOT3FbJ_Hx6cAUaDZSQrx9d6c"}
+[17:49:11 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/external/IvoUsers/login-user responded 200 in 230 ms
+[17:49:23 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:49:23 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:49:23 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:49:23 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwOTUyLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.m-RDjXn1tzDmTU5JSVhOT3FbJ_Hx6cAUaDZSQrx9d6c","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:49:23 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:49:23 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:49:23 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:49:23 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 5.2262ms - 200
+[17:49:23 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 5.5764ms - 200
+[17:49:23 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:49:23 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":200,"detail":"External API error: Could not deserialize the response body stream as System.Collections.Generic.ICollection`1[[ExternalApi.RegistrantDisplayDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].\n\nStatus: 200\nResponse: \n"}
+[17:49:23 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 202 ms
+[17:50:13 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:50:13 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:50:13 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:50:13 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwOTUyLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.m-RDjXn1tzDmTU5JSVhOT3FbJ_Hx6cAUaDZSQrx9d6c","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:50:13 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:50:13 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:50:13 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:50:13 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 17.1762ms - 200
+[17:50:13 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 17.639ms - 200
+[17:50:45 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:50:45 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":200,"detail":"External API error: Could not deserialize the response body stream as System.Collections.Generic.ICollection`1[[ExternalApi.RegistrantDisplayDTO, WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]].\n\nStatus: 200\nResponse: \n"}
+[17:50:45 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 31485 ms
+[17:50:53 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:50:53 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:50:53 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:50:53 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:50:53 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:51:03 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:51:03 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:51:03 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:51:03 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwOTUyLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.m-RDjXn1tzDmTU5JSVhOT3FbJ_Hx6cAUaDZSQrx9d6c","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:51:03 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:51:04 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:51:04 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:51:04 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 15.9379ms - 200
+[17:51:04 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 19.8977ms - 200
+[17:52:20 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:52:20 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:52:20 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:52:20 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:52:20 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:52:31 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[17:52:31 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[17:52:31 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[17:52:31 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNjgwOTUyLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.m-RDjXn1tzDmTU5JSVhOT3FbJ_Hx6cAUaDZSQrx9d6c","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[17:52:31 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[17:52:31 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:52:31 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:52:31 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 17.3182ms - 200
+[17:52:31 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 21.4054ms - 200
+[17:52:34 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[17:52:34 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":"d70947d3-82cf-411d-64cc-08ddc471097b","createdAt":"0001-01-01T00:00:00","displayName":"string","phoneNumber":"+424.3327125","country":"string","address":"string","isCompany":true},{"id":"91e33fc1-2bd8-4862-93df-289de2019cc8","createdAt":"2025-07-16T14:47:34.656738","displayName":"string","phoneNumber":"625)5359123","country":"string","address":"string","isCompany":true},{"id":"89335a14-465b-40f8-92c1-bb742322c9b6","createdAt":"2025-07-08T10:48:39.7867241","displayName":"myPOS","phoneNumber":"12345678","country":"Bulgaria","address":"Business Park, Varna","isCompany":true},{"id":"89ab57c5-e8f6-49bf-bb0e-dc6e1912b874","createdAt":"2025-07-16T14:26:00.3965573","displayName":"stringasd","phoneNumber":"+185405 8033","country":"string","address":"string","isCompany":true}]
+[17:52:34 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 2729 ms
