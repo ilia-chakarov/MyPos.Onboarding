@@ -924,3 +924,77 @@ WHERE [w].[Id] = @__dto_WalletId_0
 [10:35:29 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
 [10:35:29 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":404,"detail":"Wallet with id 70 not found"}
 [10:35:29 INF] [Machine: MP-DT0KYVBJ] Request completed: PUT /api/UserAccess/10/7 responded 404 in 995 ms
+[10:40:12 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[10:40:12 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[10:40:12 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[10:40:12 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[10:40:12 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:40:38 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:40:38 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:40:38 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/UserAccess 
+[10:40:38 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:40:38 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:40:40 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+[10:40:40 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:40:40 INF] [Machine: MP-DT0KYVBJ] Response body: [{"userId":10,"walletId":4,"accessLevel":"Full"},{"userId":10,"walletId":7,"accessLevel":"Owner"}]
+[10:40:40 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/UserAccess responded 200 in 1685 ms
+[10:40:43 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:40:43 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:40:43 INF] [Machine: MP-DT0KYVBJ] Incoming request: PUT /api/UserAccess/10/7 
+[10:40:43 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"60","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:40:43 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "userId": 10,
+  "walletId": 6,
+  "accessLevel": "Full"
+}
+[10:40:44 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (30ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__walletId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
+[10:40:44 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__dto_UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__dto_UserId_0
+[10:40:44 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__dto_WalletId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+WHERE [w].[Id] = @__dto_WalletId_0
+[10:40:44 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [UserAccessControls]
+OUTPUT 1
+WHERE [UserId] = @p0 AND [WalletId] = @p1;
+INSERT INTO [UserAccessControls] ([UserId], [WalletId], [AccessLevel])
+VALUES (@p2, @p3, @p4);
+[10:40:44 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:40:44 INF] [Machine: MP-DT0KYVBJ] Response body: {"userId":10,"walletId":6,"accessLevel":"Full"}
+[10:40:44 INF] [Machine: MP-DT0KYVBJ] Request completed: PUT /api/UserAccess/10/7 responded 200 in 499 ms
+[10:40:47 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:40:47 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:40:47 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/UserAccess 
+[10:40:47 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:40:47 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:40:47 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+[10:40:47 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:40:47 INF] [Machine: MP-DT0KYVBJ] Response body: [{"userId":10,"walletId":4,"accessLevel":"Full"},{"userId":10,"walletId":6,"accessLevel":"Full"}]
+[10:40:47 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/UserAccess responded 200 in 25 ms
+[10:40:52 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:40:52 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:40:52 INF] [Machine: MP-DT0KYVBJ] Incoming request: PUT /api/UserAccess/10/7 
+[10:40:52 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"60","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:40:52 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "userId": 10,
+  "walletId": 6,
+  "accessLevel": "Full"
+}
+[10:40:52 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__walletId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[WalletId], [u].[AccessLevel]
+FROM [UserAccessControls] AS [u]
+WHERE [u].[UserId] = @__userId_0 AND [u].[WalletId] = @__walletId_1
+[10:40:52 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:40:52 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":404,"detail":"User access control with userId 10 and wallet id 7 not found"}
+[10:40:52 INF] [Machine: MP-DT0KYVBJ] Request completed: PUT /api/UserAccess/10/7 responded 404 in 176 ms

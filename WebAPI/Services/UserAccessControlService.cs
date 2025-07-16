@@ -115,12 +115,9 @@ namespace WebAPI.Services
             else
             {
                 _unitOfWork.GetRepository<UserAccessControlEntity>().Delete(uac);
-                var newUac = new UserAccessControlEntity
-                {
-                    UserId = dto.UserId,
-                    WalletId = dto.WalletId,
-                    AccessLevel = dto.AccessLevel,
-                };
+
+                var newUac = _mapper.Map<UserAccessControlEntity>(dto);
+
                 await _unitOfWork.GetRepository<UserAccessControlEntity>().AddAsync(newUac);
             }
 
