@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPos.Data", "MyPos.Data\My
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPos.Domain", "MyPos.Domain\MyPos.Domain.csproj", "{6A1DCF53-E69E-4864-8AA8-0A38FBB1FC16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPos.Services", "MyPos.Services\MyPos.Services.csproj", "{8C4346B4-BC15-4ABB-8914-1F65170302A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{6A1DCF53-E69E-4864-8AA8-0A38FBB1FC16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A1DCF53-E69E-4864-8AA8-0A38FBB1FC16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A1DCF53-E69E-4864-8AA8-0A38FBB1FC16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C4346B4-BC15-4ABB-8914-1F65170302A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C4346B4-BC15-4ABB-8914-1F65170302A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C4346B4-BC15-4ABB-8914-1F65170302A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C4346B4-BC15-4ABB-8914-1F65170302A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
