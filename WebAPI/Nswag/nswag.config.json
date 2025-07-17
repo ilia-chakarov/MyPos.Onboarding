@@ -95,7 +95,7 @@
       "templateDirectory": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": "../Documents/Repos/ilia-chakarov/MyPos.Onboarding/WebAPI/Generated/IvoApiClient.cs",
+      "output": "../Generated/IvoApiClient.cs",
       "newLineBehavior": "Auto"
     }
   }
