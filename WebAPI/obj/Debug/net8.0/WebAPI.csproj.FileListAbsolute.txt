@@ -487,3 +487,7 @@ C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\obj
 C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\obj\Debug\net8.0\ref\WebAPI.dll
 C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\Nswag\ivo.swagger.json
 C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\Nswag\nswag.config.json
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\MyPos.Data.dll
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\MyPos.Domain.dll
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\MyPos.Data.pdb
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\MyPos.Domain.pdb

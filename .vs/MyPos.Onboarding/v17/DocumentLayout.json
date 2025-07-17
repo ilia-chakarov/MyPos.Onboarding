@@ -3,32 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\generated\\ivoapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\generated\\ivoapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\generated\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\generated\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\nswag\\nswag-help.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\nswag\\nswag-help.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\nswag\\ivo.swagger.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\nswag\\ivo.swagger.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\nswag\\nswag.config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\nswag\\nswag.config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{4D3DDE55-9462-41ED-BFCF-F8896072C58C}|MyPos.Data\\MyPos.Data.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\mypos.data\\mypos.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4D3DDE55-9462-41ED-BFCF-F8896072C58C}|MyPos.Data\\MyPos.Data.csproj|solutionrelative:mypos.data\\mypos.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,40 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ServiceCollectionExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Extensions\\ServiceCollectionExtensions.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Extensions\\ServiceCollectionExtensions.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Extensions\\ServiceCollectionExtensions.cs*",
-              "RelativeToolTip": "WebAPI\\Extensions\\ServiceCollectionExtensions.cs*",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAlwGUAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-17T06:53:00.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Program.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Program.cs",
-              "RelativeToolTip": "WebAPI\\Program.cs",
+              "Title": "MyPos.Data",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Data\\MyPos.Data.csproj",
+              "RelativeDocumentMoniker": "MyPos.Data\\MyPos.Data.csproj",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Data\\MyPos.Data.csproj",
+              "RelativeToolTip": "MyPos.Data\\MyPos.Data.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-17T06:52:50.91Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IvoApiClient.cs",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Generated\\IvoApiClient.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Generated\\IvoApiClient.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Generated\\IvoApiClient.cs",
-              "RelativeToolTip": "WebAPI\\Generated\\IvoApiClient.cs",
-              "ViewState": "AgIAAGgPAAAAAAAAAAAqwHsPAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-17T06:51:44.959Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-17T07:46:39.205Z",
               "EditorCaption": ""
             },
             {
@@ -92,56 +42,8 @@
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Client.cs",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Generated\\Client.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Generated\\Client.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Generated\\Client.cs",
-              "RelativeToolTip": "WebAPI\\Generated\\Client.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-17T06:37:31.216Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ivo.swagger.json",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Nswag\\ivo.swagger.json",
-              "RelativeDocumentMoniker": "WebAPI\\Nswag\\ivo.swagger.json",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Nswag\\ivo.swagger.json",
-              "RelativeToolTip": "WebAPI\\Nswag\\ivo.swagger.json",
-              "ViewState": "AgIAAPgLAAAAAAAAAAAwwAUMAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-17T06:30:39.584Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "nswag.config.json",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Nswag\\nswag.config.json",
-              "RelativeDocumentMoniker": "WebAPI\\Nswag\\nswag.config.json",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Nswag\\nswag.config.json",
-              "RelativeToolTip": "WebAPI\\Nswag\\nswag.config.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-17T06:24:01.393Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "nswag-help.txt",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Nswag\\nswag-help.txt",
-              "RelativeDocumentMoniker": "WebAPI\\Nswag\\nswag-help.txt",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Nswag\\nswag-help.txt",
-              "RelativeToolTip": "WebAPI\\Nswag\\nswag-help.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-07-17T06:18:29.257Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             }
           ]
         }

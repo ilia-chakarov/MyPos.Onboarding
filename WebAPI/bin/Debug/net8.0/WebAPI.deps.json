@@ -15,6 +15,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.17",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.17",
           "Microsoft.IdentityModel.Tokens": "8.12.1",
+          "MyPos.Data": "1.0.0",
+          "MyPos.Domain": "1.0.0",
           "NSwag.AspNetCore": "14.4.0",
           "NSwag.MSBuild": "13.20.0",
           "Serilog": "4.3.0",
@@ -1262,6 +1264,27 @@
             "fileVersion": "16.3.0.0"
           }
         }
+      },
+      "MyPos.Data/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.17",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.17",
+          "MyPos.Domain": "1.0.0"
+        },
+        "runtime": {
+          "MyPos.Data.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "MyPos.Domain/1.0.0": {
+        "runtime": {
+          "MyPos.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -2033,6 +2056,16 @@
       "sha512": "sha512-SgMOdxbz8X65z8hraIs6hOEdnkH6hESTAIUa7viEngHOYaH+6q5XJmwr1+yb9vJpNQ19hCQY69xbFsLtXpobQA==",
       "path": "yamldotnet/16.3.0",
       "hashPath": "yamldotnet.16.3.0.nupkg.sha512"
+    },
+    "MyPos.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MyPos.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

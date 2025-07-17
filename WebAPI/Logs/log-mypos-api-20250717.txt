@@ -109,3 +109,55 @@ WHERE [u].[Username] = @__dto_Username_0
 [09:53:30 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
 [09:53:30 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":"d70947d3-82cf-411d-64cc-08ddc471097b","createdAt":"0001-01-01T00:00:00","displayName":"string","phoneNumber":"+424.3327125","country":"string","address":"string","isCompany":true},{"id":"91e33fc1-2bd8-4862-93df-289de2019cc8","createdAt":"2025-07-16T14:47:34.656738","displayName":"string","phoneNumber":"625)5359123","country":"string","address":"string","isCompany":true},{"id":"89335a14-465b-40f8-92c1-bb742322c9b6","createdAt":"2025-07-08T10:48:39.7867241","displayName":"myPOS","phoneNumber":"12345678","country":"Bulgaria","address":"Business Park, Varna","isCompany":true},{"id":"89ab57c5-e8f6-49bf-bb0e-dc6e1912b874","createdAt":"2025-07-16T14:26:00.3965573","displayName":"stringasd","phoneNumber":"+185405 8033","country":"string","address":"string","isCompany":true}]
 [09:53:30 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 179 ms
+[10:15:15 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[10:15:15 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[10:15:15 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[10:15:15 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[10:15:15 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:15:21 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:15:21 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:15:21 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/external/IvoUsers/login-user 
+[10:15:21 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:15:21 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "userName": "string",
+  "password": "string"
+}
+[10:15:21 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[10:15:21 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[10:15:21 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 149.3225ms - 200
+[10:15:21 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 153.8831ms - 200
+[10:15:21 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:15:21 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNzQwMTIxLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.UjhqxZyq1NNEAnSlApMqGTYmP_M4i_lE7dtNemoWkI8"}
+[10:15:21 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/external/IvoUsers/login-user responded 200 in 308 ms
+[10:15:31 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:15:31 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:15:31 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[10:15:31 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyNzQwMTIxLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.UjhqxZyq1NNEAnSlApMqGTYmP_M4i_lE7dtNemoWkI8","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:15:31 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:15:31 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[10:15:31 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[10:15:31 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 9.6617ms - 200
+[10:15:31 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 9.9277ms - 200
+[10:15:31 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:15:31 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":"d70947d3-82cf-411d-64cc-08ddc471097b","createdAt":"0001-01-01T00:00:00","displayName":"string","phoneNumber":"+424.3327125","country":"string","address":"string","isCompany":true},{"id":"91e33fc1-2bd8-4862-93df-289de2019cc8","createdAt":"2025-07-16T14:47:34.656738","displayName":"string","phoneNumber":"625)5359123","country":"string","address":"string","isCompany":true},{"id":"89335a14-465b-40f8-92c1-bb742322c9b6","createdAt":"2025-07-08T10:48:39.7867241","displayName":"myPOS","phoneNumber":"12345678","country":"Bulgaria","address":"Business Park, Varna","isCompany":true},{"id":"89ab57c5-e8f6-49bf-bb0e-dc6e1912b874","createdAt":"2025-07-16T14:26:00.3965573","displayName":"stringasd","phoneNumber":"+185405 8033","country":"string","address":"string","isCompany":true}]
+[10:15:31 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 78 ms
+[10:47:00 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[10:47:00 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[10:47:00 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[10:47:00 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[10:47:00 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:47:15 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:47:15 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:47:15 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Users ?pageNumber=1&pageSize=10
+[10:47:15 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:47:15 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:47:16 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[10:47:16 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[10:47:16 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (28ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[10:47:16 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:47:16 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":10,"username":"victor-martinov","registrantId":8},{"id":12,"username":"guest123","registrantId":8},{"id":13,"username":"georgi-marinov","registrantId":8},{"id":14,"username":"ilia-chakarov","registrantId":8},{"id":15,"username":"ivo","registrantId":8},{"id":16,"username":"external-usr","registrantId":8},{"id":18,"username":"external3","registrantId":8},{"id":19,"username":"vakisddot","registrantId":8},{"id":20,"username":"newest-real-usr","registrantId":8},{"id":21,"username":"crash-usr","registrantId":8}]
+[10:47:16 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Users responded 200 in 828 ms

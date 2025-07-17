@@ -40,4 +40,9 @@
     <Folder Include="External\Services\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MyPos.Data\MyPos.Data.csproj" />
+    <ProjectReference Include="..\MyPos.Domain\MyPos.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
