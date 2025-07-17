@@ -206,3 +206,59 @@ OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
 [11:14:48 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
 [11:14:48 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
 [11:14:48 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[11:20:36 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[11:20:36 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[11:20:36 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[11:20:36 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[11:20:36 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[11:29:56 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[11:29:56 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[11:29:56 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[11:29:56 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[11:29:56 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[11:30:03 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[11:30:03 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[11:30:03 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Accounts ?pageNumber=1&pageSize=10
+[11:30:03 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[11:30:03 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[11:30:03 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[11:30:03 INF] [Machine: MP-DT0KYVBJ] Response body: 
+[11:30:03 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Accounts responded 401 in 93 ms
+[11:30:09 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[11:30:09 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[11:30:09 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[11:30:09 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[11:30:09 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "username": "string",
+  "password": "[REDACTED]"
+}
+[11:30:09 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (27ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[11:30:10 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[11:30:10 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1Mjc0NDYxMCwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.H2QFnVtrO058MBwiAhLxkXaxgx-hETQiUrtRCFu2-sM"}
+[11:30:10 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 200 in 868 ms
+[11:30:18 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[11:30:18 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[11:30:18 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Accounts ?pageNumber=1&pageSize=10
+[11:30:18 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[11:30:18 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[11:30:18 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[11:30:18 INF] [Machine: MP-DT0KYVBJ] Response body: 
+[11:30:18 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Accounts responded 401 in 1 ms
+[11:30:22 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[11:30:22 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[11:30:22 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Accounts ?pageNumber=1&pageSize=10
+[11:30:22 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1Mjc0NDYxMCwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.H2QFnVtrO058MBwiAhLxkXaxgx-hETQiUrtRCFu2-sM","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[11:30:22 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[11:30:22 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[11:30:22 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[11:30:22 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccountName], [a].[Balance], [a].[BalanceInEuro], [a].[Currency], [a].[DateCreated], [a].[IBAN], [a].[LastOperationDT], [a].[WalletId]
+FROM [Accounts] AS [a]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[11:30:22 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[11:30:22 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":2,"dateCreated":"2025-07-09T09:47:52.4600202","currency":"BGN","balance":555.00,"iban":"BGSTSA123456","accountName":"ilia-chakarov","lastOperationDT":"2025-07-09T09:47:52.4602967","balanceInEuro":275.00,"walletId":6},{"id":3,"dateCreated":"2025-07-14T17:34:48.6794994","currency":"BGN","balance":1000000.00,"iban":"123123123123","accountName":"MyPos","lastOperationDT":"2025-07-14T17:34:48.6797867","balanceInEuro":500000.00,"walletId":6}]
+[11:30:22 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Accounts responded 200 in 138 ms
