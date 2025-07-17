@@ -6,6 +6,7 @@ using WebAPI.Entities;
 using WebAPI.Exceptions;
 using WebAPI.Services.Interfaces;
 using WebAPI.UnitOfWork;
+using Microsoft.AspNetCore.Http;
 
 namespace WebAPI.Services
 {

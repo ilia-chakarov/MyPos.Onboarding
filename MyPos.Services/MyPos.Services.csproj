@@ -6,4 +6,19 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.3.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.3.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="9.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyPos.APIContracts\MyPos.APIContracts.csproj" />
+    <ProjectReference Include="..\MyPos.Configuration\MyPos.Configuration.csproj" />
+    <ProjectReference Include="..\MyPos.Data\MyPos.Data.csproj" />
+    <ProjectReference Include="..\MyPos.Domain\MyPos.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

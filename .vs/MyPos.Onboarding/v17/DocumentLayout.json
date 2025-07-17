@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4D3DDE55-9462-41ED-BFCF-F8896072C58C}|MyPos.Data\\MyPos.Data.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\mypos.data\\mypos.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{4D3DDE55-9462-41ED-BFCF-F8896072C58C}|MyPos.Data\\MyPos.Data.csproj|solutionrelative:mypos.data\\mypos.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
@@ -19,14 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MyPos.Data",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Data\\MyPos.Data.csproj",
-              "RelativeDocumentMoniker": "MyPos.Data\\MyPos.Data.csproj",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Data\\MyPos.Data.csproj",
-              "RelativeToolTip": "MyPos.Data\\MyPos.Data.csproj",
+              "Title": "WebAPI",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\WebAPI.csproj",
+              "RelativeDocumentMoniker": "WebAPI\\WebAPI.csproj",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\WebAPI.csproj*",
+              "RelativeToolTip": "WebAPI\\WebAPI.csproj*",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-17T07:46:39.205Z",
+              "WhenOpened": "2025-07-17T08:14:11.118Z",
               "EditorCaption": ""
             },
             {
@@ -44,6 +48,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MyPos.Data",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Data\\MyPos.Data.csproj",
+              "RelativeDocumentMoniker": "MyPos.Data\\MyPos.Data.csproj",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Data\\MyPos.Data.csproj",
+              "RelativeToolTip": "MyPos.Data\\MyPos.Data.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-17T08:13:50.021Z",
+              "EditorCaption": ""
             }
           ]
         }
