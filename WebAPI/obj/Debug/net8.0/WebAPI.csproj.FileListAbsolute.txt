@@ -314,7 +314,6 @@ C:\Users\ilia.chakarov\Documents\vs_proj\MyPos.Onboarding\WebAPI\obj\Debug\net8.
 C:\Users\ilia.chakarov\Documents\vs_proj\MyPos.Onboarding\WebAPI\obj\Debug\net8.0\ref\WebAPI.dll
 C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\appsettings.json
-C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\Nswag\nswag.json
 C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\WebAPI.staticwebassets.endpoints.json
 C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\WebAPI.exe
 C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\WebAPI.deps.json
@@ -486,3 +485,5 @@ C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\obj
 C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\obj\Debug\net8.0\WebAPI.pdb
 C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\obj\Debug\net8.0\WebAPI.genruntimeconfig.cache
 C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\obj\Debug\net8.0\ref\WebAPI.dll
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\Nswag\ivo.swagger.json
+C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\bin\Debug\net8.0\Nswag\nswag.config.json

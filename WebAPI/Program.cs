@@ -1,4 +1,3 @@
-global using IvoApiClient = ExternalApi.Client;
 
 using Microsoft.EntityFrameworkCore;
 using WebAPI.Data;

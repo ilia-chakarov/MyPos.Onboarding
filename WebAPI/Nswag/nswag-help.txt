@@ -1,2 +1,5 @@
 command to generate the nswag external api client:
 nswag openapi2csclient /input:Nswag/nswag.json /output:Generated/IvoApiClient.cs /namespace:ExternalApi
+nswag openapi2csclient /input:Nswag/ivo.swagger.json /output:Generated/IvoApiClient.cs /namespace:ExternalApi
+
+nswag run Nswag/nswag.config.json

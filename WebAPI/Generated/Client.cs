@@ -1,7 +1,7 @@
 ﻿
 namespace ExternalApi
 {
-    public partial class Client
+    public partial class IvoApiClient
     {
         private string? _authToken;
 

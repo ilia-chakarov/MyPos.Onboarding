@@ -10,6 +10,7 @@ using Microsoft.Extensions.Options;
 using WebAPI.Options;
 using WebAPI.ExternalClients.Clients.Interfaces;
 using WebAPI.ExternalClients.Clients;
+using ExternalApi;
 
 namespace WebAPI.Extensions
 {
