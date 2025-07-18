@@ -1,12 +1,10 @@
 ﻿using ExternalApi;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text.Json;
 using WebAPI.Exceptions;
 using WebAPI.ExternalClients.Clients.Interfaces;
 using WebAPI.Options;
-using YamlDotNet.Core.Tokens;
 
 namespace WebAPI.ExternalClients.Clients
 {

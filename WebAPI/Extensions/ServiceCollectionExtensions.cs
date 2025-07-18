@@ -13,6 +13,8 @@ using WebAPI.ExternalClients.Clients;
 using ExternalApi;
 using MyPos.Configuration.Options;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using MyPos.WebAPI.External.ClientServices.Interfaces;
+using MyPos.WebAPI.External.ClientServices;
 
 namespace WebAPI.Extensions
 {
@@ -28,6 +30,7 @@ namespace WebAPI.Extensions
             services.AddScoped<IAuthService, AuthService>();
 
             services.AddScoped<IRegistrantsExtClientService, RegistrantsExtClientService>();
+            services.AddScoped<IAuthExtClientService, AuthExtClientService>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork.UnitOfWork>();
 

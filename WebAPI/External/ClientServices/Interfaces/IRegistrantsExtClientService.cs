@@ -1,5 +1,4 @@
 ﻿using ExternalApi;
-using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.ExternalClients.Clients.Interfaces
 {

@@ -2172,3 +2172,298 @@ OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
 }
 
 
+[17:29:49 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:29:49 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:29:49 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:29:49 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:29:49 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:29:55 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[17:29:55 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[17:29:55 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (24ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[17:29:55 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "10.80.55.95:7168",
+    "traceparent": "00-a4d36320976198a04a82337effb609cf-224c0bcb3d5e67b7-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 814,
+  "Timestamp": "2025-07-18T14:29:55.3519619Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:31:02 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[17:31:02 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Auth/login",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "10.80.55.95:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-78fd890d3f073b670ca8c31e7ebf7802-507944b5d7e98b17-00",
+    "Content-Length": "41"
+  },
+  "RequestBody": "{\u0022username\u0022:\u0022string\u0022,\u0022password\u0022: \u0022[REDACTED]\u0022}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022token\u0022:\u0022eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1Mjg1MjY2MiwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.6OAaq4jadAogMNUSbH90TQuI7a--X8lRNWQvGHH1_Ao\u0022}",
+  "ElapsedMilliseconds": 166,
+  "Timestamp": "2025-07-18T14:31:02.6643206Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:31:02 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[17:31:02 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[17:31:02 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[17:31:02 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Wallets",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "10.80.55.95:7168",
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1Mjg1MjY2MiwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.6OAaq4jadAogMNUSbH90TQuI7a--X8lRNWQvGHH1_Ao",
+    "traceparent": "00-78fd890d3f073b670ca8c31e7ebf7802-dcef914745361cb0-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:3,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022status\u0022:\u0022Active\u0022,\u0022tarifaCode\u0022:\u0022123\u0022,\u0022limitCode\u0022:\u0022123\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:4,\u0022dateCreated\u0022:\u00222025-07-08T17:52:51.0161846\u0022,\u0022status\u0022:\u0022Active\u0022,\u0022tarifaCode\u0022:\u0022555\u0022,\u0022limitCode\u0022:\u0022111\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-09T09:21:36.3457505\u0022,\u0022status\u0022:\u0022Active\u0022,\u0022tarifaCode\u0022:\u0022777\u0022,\u0022limitCode\u0022:\u0022111\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-11T10:57:17.7492821\u0022,\u0022status\u0022:\u0022pulen s mangizi (actually nqq nishto)\u0022,\u0022tarifaCode\u0022:\u0022nz brat\u0022,\u0022limitCode\u0022:\u0022bez limiti\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 56,
+  "Timestamp": "2025-07-18T14:31:02.7690214Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:31:20 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[17:31:20 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "10.80.55.95:7168",
+    "traceparent": "00-3a10f7b287ce0551dec1ba1062b147cd-dfb50fcd964e3700-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 6,
+  "Timestamp": "2025-07-18T14:31:20.4215157Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:31:23 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[17:31:23 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Wallets",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "10.80.55.95:7168",
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1Mjg1MjY2MiwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.6OAaq4jadAogMNUSbH90TQuI7a--X8lRNWQvGHH1_Ao",
+    "traceparent": "00-0b74fc929e500f7d672f5ae6cdbbd9f7-55caedc1f48ec1e8-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:3,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022status\u0022:\u0022Active\u0022,\u0022tarifaCode\u0022:\u0022123\u0022,\u0022limitCode\u0022:\u0022123\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:4,\u0022dateCreated\u0022:\u00222025-07-08T17:52:51.0161846\u0022,\u0022status\u0022:\u0022Active\u0022,\u0022tarifaCode\u0022:\u0022555\u0022,\u0022limitCode\u0022:\u0022111\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-09T09:21:36.3457505\u0022,\u0022status\u0022:\u0022Active\u0022,\u0022tarifaCode\u0022:\u0022777\u0022,\u0022limitCode\u0022:\u0022111\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-11T10:57:17.7492821\u0022,\u0022status\u0022:\u0022pulen s mangizi (actually nqq nishto)\u0022,\u0022tarifaCode\u0022:\u0022nz brat\u0022,\u0022limitCode\u0022:\u0022bez limiti\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-18T14:31:23.9390802Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:31:38 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:31:38 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:31:38 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:31:38 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:31:38 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:47:14 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:47:14 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:47:14 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:47:14 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:47:14 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:47:20 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[17:47:20 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[17:47:23 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 2429.402ms - 200
+[17:47:23 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 2437.9787ms - 200
+[17:47:23 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/external/IvoUsers/login-user",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "*/*",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Content-Type": "application/json",
+    "Origin": "https://localhost:7168",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "Content-Length": "50",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "{\n  \u0022userName\u0022: \u0022string\u0022,\n  \u0022password\u0022: \u0022string\u0022\n}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022token\u0022:\u0022eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyODUzNjQzLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.0q-IDcnwi_ruM5sQR586D2D79ekBDPevBQ9ULVLjERg\u0022}",
+  "ElapsedMilliseconds": 2584,
+  "Timestamp": "2025-07-18T14:47:23.2575396Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:47:35 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[17:47:35 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[17:47:35 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 169.0657ms - 400
+[17:47:35 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 169.3695ms - 400
+[17:47:36 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/external/IvoUsers/create-user",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "*/*",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Content-Type": "application/json",
+    "Origin": "https://localhost:7168",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "Content-Length": "50",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "{\n  \u0022userName\u0022: \u0022string\u0022,\n  \u0022password\u0022: \u0022string\u0022\n}",
+  "StatusCode": 400,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:400,\u0022detail\u0022:\u0022External API error: Bad Request\\n\\nStatus: 400\\nResponse: \\n\u0022}",
+  "ElapsedMilliseconds": 301,
+  "Timestamp": "2025-07-18T14:47:36.0636772Z",
+  "ExceptionMessage": "External API error: Bad Request\n\nStatus: 400\nResponse: \n",
+  "ExceptionStackTrace": "   at MyPos.WebAPI.External.ClientServices.AuthExtClientService.CreateUser(UserFormDTO dto) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\ClientServices\\AuthExtClientService.cs:line 28\r\n   at WebAPI.External.Controllers.IvoUsersController.CreateUser(UserFormDTO dto) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\Controllers\\IvoUsersController.cs:line 26\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 62"
+}
+
+
+[17:47:44 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[17:47:44 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[17:47:44 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 190.3144ms - 201
+[17:47:44 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 190.633ms - 201
+[17:47:44 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/external/IvoUsers/create-user",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "*/*",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Content-Type": "application/json",
+    "Origin": "https://localhost:7168",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "Content-Length": "57",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "{\n  \u0022userName\u0022: \u0022string-ext-fr\u0022,\n  \u0022password\u0022: \u0022string\u0022\n}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:\u002272af3f6a-debc-4235-be2a-6aeb80e69387\u0022,\u0022userName\u0022:\u0022string-ext-fr\u0022}",
+  "ElapsedMilliseconds": 194,
+  "Timestamp": "2025-07-18T14:47:44.7343424Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:47:48 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/register
+[17:47:48 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/register
+[17:47:48 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 95.0568ms - 400
+[17:47:48 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 96.0714ms - 400
+[17:47:48 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/external/IvoUsers/create-user",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "*/*",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Content-Type": "application/json",
+    "Origin": "https://localhost:7168",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "Content-Length": "57",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "{\n  \u0022userName\u0022: \u0022string-ext-fr\u0022,\n  \u0022password\u0022: \u0022string\u0022\n}",
+  "StatusCode": 400,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:400,\u0022detail\u0022:\u0022External API error: Bad Request\\n\\nStatus: 400\\nResponse: \\n\u0022}",
+  "ElapsedMilliseconds": 167,
+  "Timestamp": "2025-07-18T14:47:48.1727877Z",
+  "ExceptionMessage": "External API error: Bad Request\n\nStatus: 400\nResponse: \n",
+  "ExceptionStackTrace": "   at MyPos.WebAPI.External.ClientServices.AuthExtClientService.CreateUser(UserFormDTO dto) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\ClientServices\\AuthExtClientService.cs:line 28\r\n   at WebAPI.External.Controllers.IvoUsersController.CreateUser(UserFormDTO dto) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\Controllers\\IvoUsersController.cs:line 26\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 62"
+}
+
+

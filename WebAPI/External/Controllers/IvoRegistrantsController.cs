@@ -1,6 +1,5 @@
 ﻿using ExternalApi;
 using Microsoft.AspNetCore.Mvc;
-using WebAPI.Exceptions;
 using WebAPI.ExternalClients.Clients.Interfaces;
 
 namespace WebAPI.External.Controllers

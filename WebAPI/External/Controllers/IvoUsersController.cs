@@ -1,7 +1,7 @@
 ﻿using ExternalApi;
 using Microsoft.AspNetCore.Mvc;
+using MyPos.WebAPI.External.ClientServices.Interfaces;
 using System.Text.Json;
-using WebAPI.DTOs;
 
 namespace WebAPI.External.Controllers
 {
@@ -9,11 +9,11 @@ namespace WebAPI.External.Controllers
     [Route("api/external/[controller]")]
     public class IvoUsersController : ControllerBase
     {
-        private readonly IvoApiClient _client;
+        private readonly IAuthExtClientService _authExtClientService;
 
-        public IvoUsersController(IvoApiClient cl)
+        public IvoUsersController(IAuthExtClientService authExtClientService)
         {
-            _client = cl;
+            _authExtClientService = authExtClientService;
         }
 
         [HttpPost("create-user")]
@@ -23,45 +23,16 @@ namespace WebAPI.External.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> CreateUser([FromBody] UserFormDTO dto)
         {
-            try
-            {
-                var res = await _client.Register2Async(dto);
-                return Ok(res);
+            var res = await _authExtClientService.CreateUser(dto);
 
-            }catch(ApiException e) when (e.StatusCode == 201)
-            {
-                Console.WriteLine(e.Response);
-                return Created();
-            }
-            catch(ApiException ex)when(ex.StatusCode == 400)
-            {
-                return BadRequest(ex.Response);
-            }catch(ApiException ex)
-            {
-                Console.WriteLine($"Status: {ex.StatusCode}");
-                Console.WriteLine($"Raw Response: {ex.Response}");
-
-                return StatusCode(500, new ExternalApi.ProblemDetails
-                {
-                    Title = "Ivo API error",
-                    Detail = ex.Response,
-                    Status = 500
-                });
-            }
-
+            return Ok(res);
         }
         [HttpPost("login-user")]
         public async Task<IActionResult> LoginUser([FromBody]UserFormDTO dto)
         {
-            try
-            {
-                object token = await _client.Login2Async(dto);
-                var tokenDeserialized = JsonSerializer.Deserialize<object>(token.ToString());
-                return Ok(tokenDeserialized);
-            }catch(ApiException e)
-            {
-                return Unauthorized("Invalid username or password " + e.Response);
-            }
+            var res = await _authExtClientService.LoginUser(dto);
+
+            return Ok(res);
         }
     }
 }
