@@ -3,28 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\external\\clientservices\\authextclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|solutionrelative:webapi\\external\\clientservices\\authextclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ilia.chakarov\\AppData\\Roaming\\Microsoft\\UserSecrets\\2a96e732-085b-4177-8c1c-178504f1bb30\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\external\\clientservices\\registrantsextclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|solutionrelative:webapi\\external\\clientservices\\registrantsextclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\external\\clientservices\\interfaces\\iauthextclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|solutionrelative:webapi\\external\\clientservices\\interfaces\\iauthextclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\external\\controllers\\ivouserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|solutionrelative:webapi\\external\\controllers\\ivouserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\external\\controllers\\ivoregistrantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|solutionrelative:webapi\\external\\controllers\\ivoregistrantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\external\\clientservices\\interfaces\\iregistrantsextclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|solutionrelative:webapi\\external\\clientservices\\interfaces\\iregistrantsextclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|solutionrelative:webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +17,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,80 +37,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IAuthExtClientService.cs",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\ClientServices\\Interfaces\\IAuthExtClientService.cs",
-              "RelativeDocumentMoniker": "WebAPI\\External\\ClientServices\\Interfaces\\IAuthExtClientService.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\ClientServices\\Interfaces\\IAuthExtClientService.cs*",
-              "RelativeToolTip": "WebAPI\\External\\ClientServices\\Interfaces\\IAuthExtClientService.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T14:37:37.035Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AuthExtClientService.cs",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\ClientServices\\AuthExtClientService.cs",
-              "RelativeDocumentMoniker": "WebAPI\\External\\ClientServices\\AuthExtClientService.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\ClientServices\\AuthExtClientService.cs",
-              "RelativeToolTip": "WebAPI\\External\\ClientServices\\AuthExtClientService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwC0AAABhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T14:34:26.997Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IvoUsersController.cs",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\Controllers\\IvoUsersController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\External\\Controllers\\IvoUsersController.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\Controllers\\IvoUsersController.cs",
-              "RelativeToolTip": "WebAPI\\External\\Controllers\\IvoUsersController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T14:30:59.907Z",
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\AppData\\Roaming\\Microsoft\\UserSecrets\\2a96e732-085b-4177-8c1c-178504f1bb30\\secrets.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\2a96e732-085b-4177-8c1c-178504f1bb30\\secrets.json",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\AppData\\Roaming\\Microsoft\\UserSecrets\\2a96e732-085b-4177-8c1c-178504f1bb30\\secrets.json",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\2a96e732-085b-4177-8c1c-178504f1bb30\\secrets.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-18T14:57:18.17Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RegistrantsExtClientService.cs",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\ClientServices\\RegistrantsExtClientService.cs",
-              "RelativeDocumentMoniker": "WebAPI\\External\\ClientServices\\RegistrantsExtClientService.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\ClientServices\\RegistrantsExtClientService.cs",
-              "RelativeToolTip": "WebAPI\\External\\ClientServices\\RegistrantsExtClientService.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAYwD4AAAB1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T14:32:25.346Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IRegistrantsExtClientService.cs",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\ClientServices\\Interfaces\\IRegistrantsExtClientService.cs",
-              "RelativeDocumentMoniker": "WebAPI\\External\\ClientServices\\Interfaces\\IRegistrantsExtClientService.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\ClientServices\\Interfaces\\IRegistrantsExtClientService.cs",
-              "RelativeToolTip": "WebAPI\\External\\ClientServices\\Interfaces\\IRegistrantsExtClientService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T14:31:54.222Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IvoRegistrantsController.cs",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\Controllers\\IvoRegistrantsController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\External\\Controllers\\IvoRegistrantsController.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\Controllers\\IvoRegistrantsController.cs",
-              "RelativeToolTip": "WebAPI\\External\\Controllers\\IvoRegistrantsController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAsAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-18T14:30:52.005Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "WebAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\appsettings.json",
+              "RelativeToolTip": "WebAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-18T14:55:11.874Z",
               "EditorCaption": ""
             }
           ]
