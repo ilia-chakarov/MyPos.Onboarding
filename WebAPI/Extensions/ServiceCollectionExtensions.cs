@@ -11,6 +11,8 @@ using WebAPI.Options;
 using WebAPI.ExternalClients.Clients.Interfaces;
 using WebAPI.ExternalClients.Clients;
 using ExternalApi;
+using MyPos.Configuration.Options;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace WebAPI.Extensions
 {
@@ -34,12 +36,19 @@ namespace WebAPI.Extensions
             return services;
         }
 
-        public static IServiceCollection AddSwaggerDocumentation(this IServiceCollection services)
+        public static IServiceCollection AddSwaggerDocumentation(this IServiceCollection services, IConfiguration configuration)
         {
+            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            var swaggerOptions = configuration.GetSection("SwaggerOptions").Get<SwaggerOptions>();
+
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "MyPos API", Version = "v1" });
+                c.SwaggerDoc(swaggerOptions.Version, 
+                    new Microsoft.OpenApi.Models.OpenApiInfo 
+                    { 
+                        Title = swaggerOptions.Title, Version = swaggerOptions.Version 
+                    });
 
                 // JWT Bearer setup
                 var jwtSecurityScheme = new OpenApiSecurityScheme
@@ -49,7 +58,7 @@ namespace WebAPI.Extensions
                     Name = "Authorization",
                     In = ParameterLocation.Header,
                     Type = SecuritySchemeType.Http,
-                    Description = "Enter your JWT token below (without 'Bearer' prefix)",
+                    Description = swaggerOptions.JwtDescription,
 
                     Reference = new OpenApiReference
                     {
@@ -76,7 +85,7 @@ namespace WebAPI.Extensions
                     Scheme = "basic",
                     Name = "Authorization",
                     In = ParameterLocation.Header,
-                    Description = "Basic Authentication using username and password",
+                    Description = swaggerOptions.BasicDescription,
 
                     Reference = new OpenApiReference
                     {
@@ -123,6 +132,7 @@ namespace WebAPI.Extensions
 
         public static IHostBuilder ConfigureSerilog(this IHostBuilder hostBuilder)
         {
+            // Hardcoded here so that IT has freedom to use appsettings.json
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Information()
                 .MinimumLevel.Override("Microsoft.AspNetCore", Serilog.Events.LogEventLevel.Warning)
@@ -141,8 +151,9 @@ namespace WebAPI.Extensions
             return hostBuilder;
         }
 
-        public static IServiceCollection AddAppSettings(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddAppOptions(this IServiceCollection services, IConfiguration configuration)
         {
+            services.Configure<SwaggerOptions>(configuration.GetSection("SwaggerOptions"));
             services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));
             services.Configure<IvoApiSettings>(configuration.GetSection("IvoApi"));
 
