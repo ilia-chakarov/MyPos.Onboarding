@@ -22,7 +22,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MyPos.Configuration\MyPos.Configuration.csproj" />
+    <ProjectReference Include="..\MyPos.Data\MyPos.Data.csproj" />
+    <ProjectReference Include="..\MyPos.Domain\MyPos.Domain.csproj" />
     <ProjectReference Include="..\MyPos.Services\MyPos.Services.csproj" />
+    <ProjectReference Include="..\WebAPI\MyPos.WebAPI.csproj" />
   </ItemGroup>
 
 </Project>

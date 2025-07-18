@@ -1,0 +1,20 @@
+[10:34:37 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[10:34:37 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[10:34:37 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[10:34:37 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[10:34:37 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:34:46 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:34:46 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:34:46 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Registrants ?pageNumber=1&pageSize=10
+[10:34:46 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[10:34:46 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:34:46 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[10:34:46 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[10:34:47 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (31ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[10:34:47 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:34:47 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":5,"dateCreated":"2025-07-08T16:23:35.9821979","displayName":"papasmurfie","gsm":"0897614957","country":"Bulgaria","address":"ul. Tsar Asen 74","isCompany":false},{"id":6,"dateCreated":"2025-07-08T16:24:08.82214","displayName":"jacksonville","gsm":"0898555444","country":"USA","address":"I dont know Avenue 123","isCompany":false},{"id":7,"dateCreated":"2025-07-08T16:24:38.7776089","displayName":"lil yachty","gsm":"0897777777","country":"USA","address":"Washington DC","isCompany":false},{"id":8,"dateCreated":"2025-07-08T16:25:28.3671217","displayName":"mMyPos","gsm":"0895789654","country":"Bulgaria","address":"Varna, Idk","isCompany":true},{"id":9,"dateCreated":"2025-07-15T09:28:01.2499504","displayName":"Honestly Healthy","gsm":"0895558749","country":"Bulgaria","address":"Vazrazhdane 6","isCompany":true}]
+[10:34:47 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Registrants responded 200 in 1704 ms
