@@ -37,10 +37,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="External\Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\MyPos.APIContracts\MyPos.APIContracts.csproj" />
     <ProjectReference Include="..\MyPos.Data\MyPos.Data.csproj" />
     <ProjectReference Include="..\MyPos.Domain\MyPos.Domain.csproj" />

@@ -1,7 +1,10 @@
 ﻿using ExternalApi;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using System.Text.Json;
 using WebAPI.Exceptions;
 using WebAPI.ExternalClients.Clients.Interfaces;
+using WebAPI.Options;
 using YamlDotNet.Core.Tokens;
 
 namespace WebAPI.ExternalClients.Clients
@@ -10,17 +13,35 @@ namespace WebAPI.ExternalClients.Clients
     {
         private readonly IvoApiClient _apiClient;
         private readonly IHttpContextAccessor _contextAccessor;
+        private readonly IvoApiSettings _ivoApiSettings;
 
-        public RegistrantsExtClientService(IvoApiClient c, IHttpContextAccessor contextAccessor)
+        public RegistrantsExtClientService(IvoApiClient c, IHttpContextAccessor contextAccessor, IOptions<IvoApiSettings> ivoApiSettings)
         {
             _apiClient = c;
             _contextAccessor = contextAccessor;
+            _ivoApiSettings = ivoApiSettings.Value;
+        }
+
+        private async Task SetTokenAsync()
+        {
+            var loginDto = new UserFormDTO
+            {
+                UserName = _ivoApiSettings.ClientUsername,
+                Password = _ivoApiSettings.ClientPassword
+            };
+            await SetTokenAsync();
+
+            _apiClient.SetBearerToken(bearerToken);
+        }
+        private string ExtractTokenFromLoginResponse(object loginResponse)
+        {
+            var tokenObj = JsonSerializer.Deserialize<JsonElement>(loginResponse.ToString());
+            return tokenObj.GetProperty("token").GetString();
         }
 
         public async Task<RegistrantDisplayDTO> CreateRegistrant(RegistrantFormDTO dto)
         {
-            var bearerToken = ExtractToken();
-            _apiClient.SetBearerToken(bearerToken);
+            await SetTokenAsync();
 
             try
             {
@@ -42,8 +63,7 @@ namespace WebAPI.ExternalClients.Clients
         {
             try
             {
-                var bearerToken = ExtractToken();
-                _apiClient.SetBearerToken(bearerToken);
+                await SetTokenAsync();
 
                 await _apiClient.RegistrantDELETEAsync(id);
             }
@@ -57,8 +77,7 @@ namespace WebAPI.ExternalClients.Clients
         {
             try
             {
-                var bearerToken = ExtractToken();
-                _apiClient.SetBearerToken(bearerToken);
+                await SetTokenAsync();
 
                 var res = await _apiClient.AllAllAsync(pageNumber, pageSize);
                 Console.Write(res);
@@ -72,8 +91,7 @@ namespace WebAPI.ExternalClients.Clients
 
         public async Task<RegistrantDisplayDTO> GetById(string id)
         {
-            var bearerToken = ExtractToken();
-            _apiClient.SetBearerToken(bearerToken);
+            await SetTokenAsync();
 
             try
             {
@@ -92,8 +110,7 @@ namespace WebAPI.ExternalClients.Clients
 
         public async Task<RegistrantDisplayDTO> Update(string id, RegistrantFormDTO dto)
         {
-            var bearerToken = ExtractToken();
-            _apiClient.SetBearerToken(bearerToken);
+            await SetTokenAsync();
 
             try
             {
@@ -112,12 +129,5 @@ namespace WebAPI.ExternalClients.Clients
             }
         }
 
-        private string ExtractToken()
-        {
-            if (_contextAccessor.HttpContext == null)
-                throw new MyPosApiException($"HttpContext is null", StatusCodes.Status400BadRequest);
-
-            return _contextAccessor.HttpContext.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
-        }
     }
 }

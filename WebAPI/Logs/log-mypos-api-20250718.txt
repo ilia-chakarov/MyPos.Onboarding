@@ -18,3 +18,191 @@ OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
 [10:34:47 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
 [10:34:47 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":5,"dateCreated":"2025-07-08T16:23:35.9821979","displayName":"papasmurfie","gsm":"0897614957","country":"Bulgaria","address":"ul. Tsar Asen 74","isCompany":false},{"id":6,"dateCreated":"2025-07-08T16:24:08.82214","displayName":"jacksonville","gsm":"0898555444","country":"USA","address":"I dont know Avenue 123","isCompany":false},{"id":7,"dateCreated":"2025-07-08T16:24:38.7776089","displayName":"lil yachty","gsm":"0897777777","country":"USA","address":"Washington DC","isCompany":false},{"id":8,"dateCreated":"2025-07-08T16:25:28.3671217","displayName":"mMyPos","gsm":"0895789654","country":"Bulgaria","address":"Varna, Idk","isCompany":true},{"id":9,"dateCreated":"2025-07-15T09:28:01.2499504","displayName":"Honestly Healthy","gsm":"0895558749","country":"Bulgaria","address":"Vazrazhdane 6","isCompany":true}]
 [10:34:47 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Registrants responded 200 in 1704 ms
+[10:38:27 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[10:38:27 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[10:38:27 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[10:38:27 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[10:38:27 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:44:59 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[10:44:59 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[10:44:59 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[10:44:59 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[10:44:59 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:45:33 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:45:33 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:45:33 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[10:45:33 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Content-Type":"application/json","traceparent":"00-5201a7e1e364ebd5f948aa8ef2bdcf39-fc7a523db59b6b15-00","Content-Length":"41"}
+[10:45:33 INF] [Machine: MP-DT0KYVBJ] Request body: {"username":"string","password": "[REDACTED]"}
+[10:45:35 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (23ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[10:45:35 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:45:35 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgyODMzNSwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.Id-RFVfom5suEvM-Yb-CQpUfyzUK20f8g2njktQSpH8"}
+[10:45:35 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 200 in 2167 ms
+[10:56:17 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:56:17 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:56:17 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Registrants ?pageNumber=1&pageSize=10
+[10:56:17 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyODI4OTE3LCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.xUZLAMmjQ9_9sM0qQ7zWU4OlrBEROm5AT-zaxF-IREQ","traceparent":"00-0b93f2127fd16e40834b82f7b012bdbe-18e775ebad2c2abb-00"}
+[10:56:17 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:56:17 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[10:56:17 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[10:56:17 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[10:56:17 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:56:17 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":5,"dateCreated":"2025-07-08T16:23:35.9821979","displayName":"papasmurfie","gsm":"0897614957","country":"Bulgaria","address":"ul. Tsar Asen 74","isCompany":false},{"id":6,"dateCreated":"2025-07-08T16:24:08.82214","displayName":"jacksonville","gsm":"0898555444","country":"USA","address":"I dont know Avenue 123","isCompany":false},{"id":7,"dateCreated":"2025-07-08T16:24:38.7776089","displayName":"lil yachty","gsm":"0897777777","country":"USA","address":"Washington DC","isCompany":false},{"id":8,"dateCreated":"2025-07-08T16:25:28.3671217","displayName":"mMyPos","gsm":"0895789654","country":"Bulgaria","address":"Varna, Idk","isCompany":true},{"id":9,"dateCreated":"2025-07-15T09:28:01.2499504","displayName":"Honestly Healthy","gsm":"0895558749","country":"Bulgaria","address":"Vazrazhdane 6","isCompany":true}]
+[10:56:17 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Registrants responded 200 in 152 ms
+[10:56:41 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:56:41 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:56:41 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Registrants ?pageNumber=1&pageSize=10
+[10:56:41 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Authorization":"Bearer 1","traceparent":"00-b5b0d736f959d70fc0bbb797e039464b-fa536cc01f626250-00"}
+[10:56:41 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:56:41 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[10:56:41 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:56:41 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":5,"dateCreated":"2025-07-08T16:23:35.9821979","displayName":"papasmurfie","gsm":"0897614957","country":"Bulgaria","address":"ul. Tsar Asen 74","isCompany":false},{"id":6,"dateCreated":"2025-07-08T16:24:08.82214","displayName":"jacksonville","gsm":"0898555444","country":"USA","address":"I dont know Avenue 123","isCompany":false},{"id":7,"dateCreated":"2025-07-08T16:24:38.7776089","displayName":"lil yachty","gsm":"0897777777","country":"USA","address":"Washington DC","isCompany":false},{"id":8,"dateCreated":"2025-07-08T16:25:28.3671217","displayName":"mMyPos","gsm":"0895789654","country":"Bulgaria","address":"Varna, Idk","isCompany":true},{"id":9,"dateCreated":"2025-07-15T09:28:01.2499504","displayName":"Honestly Healthy","gsm":"0895558749","country":"Bulgaria","address":"Vazrazhdane 6","isCompany":true}]
+[10:56:41 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Registrants responded 200 in 13 ms
+[10:57:21 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[10:57:21 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[10:57:21 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Wallets ?pageNumber=1&pageSize=10
+[10:57:21 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Authorization":"Bearer 1","traceparent":"00-4f830a3d057d8244f57edbc9efa5b858-712b1014426c9c02-00"}
+[10:57:21 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[10:57:21 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[10:57:21 INF] [Machine: MP-DT0KYVBJ] Response body: 
+[10:57:21 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Wallets responded 401 in 5 ms
+[11:16:37 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[11:16:37 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[11:16:37 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[11:16:37 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[11:16:37 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[11:16:43 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[11:16:43 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[11:16:43 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[11:16:43 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[11:16:43 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[11:16:43 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[11:16:43 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[11:16:45 ERR] [Machine: MP-DT0KYVBJ] Unhandled exception
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (10.80.55.56:7191)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at ExternalApi.IvoApiClient.Login2Async(UserFormDTO body, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 2249
+   at WebAPI.ExternalClients.Clients.RegistrantsExtClientService.SetTokenAsync() in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Clients\RegistrantsExtClientService.cs:line 32
+   at WebAPI.ExternalClients.Clients.RegistrantsExtClientService.GetAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Clients\RegistrantsExtClientService.cs:line 85
+   at WebAPI.External.Controllers.IvoRegistrantsController.GetAll(Int32 pageNumber, Int32 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Controllers\IvoRegistrantsController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 21
+[11:16:45 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[11:16:45 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"No connection could be made because the target machine actively refused it. (10.80.55.56:7191)"}
+[11:16:45 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 500 in 2399 ms
+[11:16:54 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[11:16:54 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[11:16:54 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[11:16:54 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[11:16:54 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[11:17:18 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[11:17:18 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[11:17:25 ERR] [Machine: MP-DT0KYVBJ] Unhandled exception
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (10.80.55.56:7191)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at ExternalApi.IvoApiClient.Login2Async(UserFormDTO body, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 2249
+   at WebAPI.ExternalClients.Clients.RegistrantsExtClientService.SetTokenAsync() in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Clients\RegistrantsExtClientService.cs:line 32
+   at WebAPI.ExternalClients.Clients.RegistrantsExtClientService.GetAllAsync(Nullable`1 pageNumber, Nullable`1 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Clients\RegistrantsExtClientService.cs:line 85
+   at WebAPI.External.Controllers.IvoRegistrantsController.GetAll(Int32 pageNumber, Int32 pageSize) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Controllers\IvoRegistrantsController.cs:line 35
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 21
+[11:17:25 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[11:17:25 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"No connection could be made because the target machine actively refused it. (10.80.55.56:7191)"}
+[11:17:25 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 500 in 30946 ms
+[11:17:26 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[11:17:26 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[11:17:26 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[11:17:26 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[11:17:26 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[11:17:43 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[11:17:43 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[11:18:01 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[11:18:01 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[11:18:01 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[11:18:01 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[11:18:01 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[11:18:28 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[11:18:28 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[11:18:28 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[11:18:28 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[11:18:28 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[11:18:50 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[11:18:50 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[11:18:50 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[11:18:50 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[11:18:50 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[11:18:55 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[11:18:55 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[11:18:57 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 1605.2251ms - 200
+[11:18:57 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 1611.2271ms - 200
+[11:18:57 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[11:18:57 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[11:18:57 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 102.9011ms - 200
+[11:18:57 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 103.1532ms - 200
+[11:18:57 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[11:18:57 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":"d70947d3-82cf-411d-64cc-08ddc471097b","createdAt":"0001-01-01T00:00:00","displayName":"string","phoneNumber":"+424.3327125","country":"string","address":"string","isCompany":true},{"id":"91e33fc1-2bd8-4862-93df-289de2019cc8","createdAt":"2025-07-16T14:47:34.656738","displayName":"string","phoneNumber":"625)5359123","country":"string","address":"string","isCompany":true},{"id":"89335a14-465b-40f8-92c1-bb742322c9b6","createdAt":"2025-07-08T10:48:39.7867241","displayName":"myPOS","phoneNumber":"12345678","country":"Bulgaria","address":"Business Park, Varna","isCompany":true},{"id":"89ab57c5-e8f6-49bf-bb0e-dc6e1912b874","createdAt":"2025-07-16T14:26:00.3965573","displayName":"stringasd","phoneNumber":"+185405 8033","country":"string","address":"string","isCompany":true}]
+[11:18:57 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 7524 ms
