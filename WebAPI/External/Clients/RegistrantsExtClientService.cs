@@ -15,6 +15,9 @@ namespace WebAPI.ExternalClients.Clients
         private readonly IHttpContextAccessor _contextAccessor;
         private readonly IvoApiSettings _ivoApiSettings;
 
+        private string _cachedToken;
+        private DateTime _tokenExpiry;
+
         public RegistrantsExtClientService(IvoApiClient c, IHttpContextAccessor contextAccessor, IOptions<IvoApiSettings> ivoApiSettings)
         {
             _apiClient = c;
@@ -24,15 +27,21 @@ namespace WebAPI.ExternalClients.Clients
 
         private async Task SetTokenAsync()
         {
-            var loginDto = new UserFormDTO
+            if (_cachedToken == null && DateTime.UtcNow >= _tokenExpiry)
             {
-                UserName = _ivoApiSettings.ClientUsername,
-                Password = _ivoApiSettings.ClientPassword
-            };
-            var token = await _apiClient.Login2Async(loginDto);
-            var bearerToken = ExtractTokenFromLoginResponse(token);
+                var loginDto = new UserFormDTO
+                {
+                    UserName = _ivoApiSettings.ClientUsername,
+                    Password = _ivoApiSettings.ClientPassword
+                };
+                var token = await _apiClient.Login2Async(loginDto);
+                var bearerToken = ExtractTokenFromLoginResponse(token);
 
-            _apiClient.SetBearerToken(bearerToken);
+                _cachedToken = bearerToken;
+                _tokenExpiry = DateTime.UtcNow.AddMinutes(55);
+            }
+
+            _apiClient.SetBearerToken(_cachedToken!);
         }
         private string ExtractTokenFromLoginResponse(object loginResponse)
         {
