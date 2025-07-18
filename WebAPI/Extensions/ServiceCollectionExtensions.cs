@@ -123,13 +123,20 @@ namespace WebAPI.Extensions
 
         public static IHostBuilder ConfigureSerilog(this IHostBuilder hostBuilder)
         {
-            hostBuilder.UseSerilog((context, services, configuration) => configuration
-                .ReadFrom.Configuration(context.Configuration)
-                .ReadFrom.Services(services)
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Information()
+                .MinimumLevel.Override("Microsoft.AspNetCore", Serilog.Events.LogEventLevel.Warning)
                 .Enrich.FromLogContext()
                 .Enrich.WithMachineName()
                 .Enrich.WithThreadId()
-                );
+                .Enrich.WithProperty("Application", "MyPos.Onboarding.WebAPI")
+                .WriteTo.File(
+                    "Logs/log-mypos-api-.txt",
+                    rollingInterval: RollingInterval.Day,
+                    outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] [Machine: {MachineName}] {Message:lj}{NewLine}{Exception}"
+                ).CreateLogger();
+
+            hostBuilder.UseSerilog();
 
             return hostBuilder;
         }
