@@ -1,5 +1,7 @@
-﻿using System.Diagnostics;
+﻿using MyPos.Services.DTOs.Log;
+using System.Diagnostics;
 using System.Text;
+using System.Text.Json;
 using System.Text.RegularExpressions;
 
 namespace WebAPI.Middleware
@@ -45,11 +47,6 @@ namespace WebAPI.Middleware
             var originalStream = context.Response.Body;
             using var responseBodyStream = new MemoryStream();
             context.Response.Body = responseBodyStream;
-            _logger.LogInformation("==============================================================================================================================");
-            _logger.LogInformation("=== HTTP REQUEST ===");
-            _logger.LogInformation("Incoming request: {Method} {Path} {QueryString}", method, path, queryString);
-            _logger.LogInformation("Request headers: {@Headers}", headers);
-            _logger.LogInformation("Request body: {RequestBody}", sanitizedBody);
 
             await _next(context);
 
@@ -60,10 +57,24 @@ namespace WebAPI.Middleware
             string responseBody = await new StreamReader(context.Response.Body).ReadToEndAsync();
             context.Response.Body.Seek(0, SeekOrigin.Begin);
 
-            _logger.LogInformation("=== HTTP RESPONSE ===");
-            _logger.LogInformation("Response body: {ResponseBody}", responseBody);
-            _logger.LogInformation("Request completed: {Method} {Path} responded {StatusCode} in {Elapsed} ms",
-                method, path, statusCode, stopwatch.ElapsedMilliseconds);
+            var logentry = new HttpLogEntry
+            {
+                Method = method,
+                Path = path,
+                QueryString = queryString,
+                Headers = headers,
+                RequestBody = sanitizedBody,
+                StatusCode = statusCode,
+                ResponseBody = responseBody,
+                ElapsedMilliseconds = stopwatch.ElapsedMilliseconds
+            };
+
+            var formattedLog = JsonSerializer.Serialize(logentry, new JsonSerializerOptions
+            {
+                WriteIndented = true
+            });
+
+            _logger.LogInformation("Http Log entry: \n{@HttpLogEntry}\n\n", formattedLog);
 
             await responseBodyStream.CopyToAsync(originalStream);
         }
