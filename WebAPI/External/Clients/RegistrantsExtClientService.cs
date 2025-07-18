@@ -44,6 +44,7 @@ namespace WebAPI.ExternalClients.Clients
         private string ExtractTokenFromLoginResponse(object loginResponse)
         {
             var tokenObj = JsonSerializer.Deserialize<JsonElement>(loginResponse.ToString());
+            tokenObj.GetProperty("expiry")
             return tokenObj.GetProperty("token").GetString();
         }
 

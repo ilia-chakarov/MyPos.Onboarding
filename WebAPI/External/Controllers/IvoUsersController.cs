@@ -50,5 +50,18 @@ namespace WebAPI.External.Controllers
             }
 
         }
+        [HttpPost("login-user")]
+        public async Task<IActionResult> LoginUser([FromBody]UserFormDTO dto)
+        {
+            try
+            {
+                object token = await _client.Login2Async(dto);
+                var tokenDeserialized = JsonSerializer.Deserialize<object>(token.ToString());
+                return Ok(tokenDeserialized);
+            }catch(ApiException e)
+            {
+                return Unauthorized("Invalid username or password " + e.Response);
+            }
+        }
     }
 }
