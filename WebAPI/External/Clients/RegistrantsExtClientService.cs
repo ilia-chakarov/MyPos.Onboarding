@@ -29,7 +29,8 @@ namespace WebAPI.ExternalClients.Clients
                 UserName = _ivoApiSettings.ClientUsername,
                 Password = _ivoApiSettings.ClientPassword
             };
-            await SetTokenAsync();
+            var token = await _apiClient.Login2Async(loginDto);
+            var bearerToken = ExtractTokenFromLoginResponse(token);
 
             _apiClient.SetBearerToken(bearerToken);
         }
@@ -129,5 +130,12 @@ namespace WebAPI.ExternalClients.Clients
             }
         }
 
+        private string ExtractToken()
+        {
+            if (_contextAccessor.HttpContext == null)
+                throw new MyPosApiException($"HttpContext is null", StatusCodes.Status400BadRequest);
+
+            return _contextAccessor.HttpContext.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+        }
     }
 }

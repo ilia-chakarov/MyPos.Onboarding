@@ -206,3 +206,78 @@ System.Net.Http.HttpRequestException: No connection could be made because the ta
 [11:18:57 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
 [11:18:57 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":"d70947d3-82cf-411d-64cc-08ddc471097b","createdAt":"0001-01-01T00:00:00","displayName":"string","phoneNumber":"+424.3327125","country":"string","address":"string","isCompany":true},{"id":"91e33fc1-2bd8-4862-93df-289de2019cc8","createdAt":"2025-07-16T14:47:34.656738","displayName":"string","phoneNumber":"625)5359123","country":"string","address":"string","isCompany":true},{"id":"89335a14-465b-40f8-92c1-bb742322c9b6","createdAt":"2025-07-08T10:48:39.7867241","displayName":"myPOS","phoneNumber":"12345678","country":"Bulgaria","address":"Business Park, Varna","isCompany":true},{"id":"89ab57c5-e8f6-49bf-bb0e-dc6e1912b874","createdAt":"2025-07-16T14:26:00.3965573","displayName":"stringasd","phoneNumber":"+185405 8033","country":"string","address":"string","isCompany":true}]
 [11:18:57 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 7524 ms
+[11:27:19 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[11:27:19 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[11:27:19 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[11:27:19 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[11:27:19 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[11:27:26 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[11:27:26 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[11:27:26 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[11:27:26 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[11:27:26 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[11:27:26 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[11:27:26 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[11:27:27 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 983.1608ms - 200
+[11:27:27 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 989.2394ms - 200
+[11:27:27 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[11:27:27 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[11:27:27 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 108.4039ms - 200
+[11:27:27 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 108.6928ms - 200
+[11:27:27 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[11:27:27 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":"d70947d3-82cf-411d-64cc-08ddc471097b","createdAt":"0001-01-01T00:00:00","displayName":"string","phoneNumber":"+424.3327125","country":"string","address":"string","isCompany":true},{"id":"91e33fc1-2bd8-4862-93df-289de2019cc8","createdAt":"2025-07-16T14:47:34.656738","displayName":"string","phoneNumber":"625)5359123","country":"string","address":"string","isCompany":true},{"id":"89335a14-465b-40f8-92c1-bb742322c9b6","createdAt":"2025-07-08T10:48:39.7867241","displayName":"myPOS","phoneNumber":"12345678","country":"Bulgaria","address":"Business Park, Varna","isCompany":true},{"id":"89ab57c5-e8f6-49bf-bb0e-dc6e1912b874","createdAt":"2025-07-16T14:26:00.3965573","displayName":"stringasd","phoneNumber":"+185405 8033","country":"string","address":"string","isCompany":true}]
+[11:27:27 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 1285 ms
+[11:27:37 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[11:27:37 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[11:27:37 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants/d70947d3-82cf-411d-64cc-08ddc471097b 
+[11:27:37 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[11:27:37 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[11:27:37 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[11:27:37 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[11:27:37 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 35.7848ms - 200
+[11:27:37 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 36.0994ms - 200
+[11:27:37 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/d70947d3-82cf-411d-64cc-08ddc471097b
+[11:27:37 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/d70947d3-82cf-411d-64cc-08ddc471097b
+[11:27:37 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 17.349ms - 200
+[11:27:37 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 17.6275ms - 200
+[11:27:37 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[11:27:37 INF] [Machine: MP-DT0KYVBJ] Response body: {"id":"d70947d3-82cf-411d-64cc-08ddc471097b","createdAt":"0001-01-01T00:00:00","displayName":"string","phoneNumber":"+424.3327125","country":"string","address":"string","isCompany":true}
+[11:27:37 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants/d70947d3-82cf-411d-64cc-08ddc471097b responded 200 in 64 ms
+[11:27:42 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[11:27:42 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[11:27:42 INF] [Machine: MP-DT0KYVBJ] Incoming request: PUT /api/external/IvoRegistrants/d70947d3-82cf-411d-64cc-08ddc471097b 
+[11:27:42 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"133","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[11:27:42 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "displayName": "string",
+  "phoneNumber": "+712)-289.764593",
+  "country": "string",
+  "address": "string",
+  "isCompany": true
+}
+[11:27:42 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[11:27:42 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[11:27:42 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 30.8465ms - 200
+[11:27:42 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 31.0797ms - 200
+[11:27:42 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request PUT https://10.80.55.56:7191/api/Registrant/d70947d3-82cf-411d-64cc-08ddc471097b
+[11:27:42 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request PUT https://10.80.55.56:7191/api/Registrant/d70947d3-82cf-411d-64cc-08ddc471097b
+[11:27:42 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 58.0639ms - 200
+[11:27:42 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 58.2405ms - 200
+[11:27:42 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[11:27:42 INF] [Machine: MP-DT0KYVBJ] Response body: {"id":"d70947d3-82cf-411d-64cc-08ddc471097b","createdAt":"0001-01-01T00:00:00","displayName":"string","phoneNumber":"+712)-289.764593","country":"string","address":"string","isCompany":true}
+[11:27:42 INF] [Machine: MP-DT0KYVBJ] Request completed: PUT /api/external/IvoRegistrants/d70947d3-82cf-411d-64cc-08ddc471097b responded 200 in 104 ms
+[11:27:46 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[11:27:46 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[11:27:46 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants/d70947d3-82cf-411d-64cc-08ddc471097b 
+[11:27:46 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[11:27:46 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[11:27:46 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[11:27:46 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[11:27:46 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 23.5114ms - 200
+[11:27:46 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 23.7432ms - 200
+[11:27:46 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/d70947d3-82cf-411d-64cc-08ddc471097b
+[11:27:46 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/d70947d3-82cf-411d-64cc-08ddc471097b
+[11:27:46 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 4.2579ms - 200
+[11:27:46 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 4.3804ms - 200
+[11:27:46 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[11:27:46 INF] [Machine: MP-DT0KYVBJ] Response body: {"id":"d70947d3-82cf-411d-64cc-08ddc471097b","createdAt":"0001-01-01T00:00:00","displayName":"string","phoneNumber":"+712)-289.764593","country":"string","address":"string","isCompany":true}
+[11:27:46 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants/d70947d3-82cf-411d-64cc-08ddc471097b responded 200 in 29 ms
