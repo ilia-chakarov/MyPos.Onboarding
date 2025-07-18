@@ -12,16 +12,14 @@ namespace WebAPI.ExternalClients.Clients
     public class RegistrantsExtClientService : IRegistrantsExtClientService
     {
         private readonly IvoApiClient _apiClient;
-        private readonly IHttpContextAccessor _contextAccessor;
         private readonly IvoApiSettings _ivoApiSettings;
 
         private string _cachedToken;
         private DateTime _tokenExpiry;
 
-        public RegistrantsExtClientService(IvoApiClient c, IHttpContextAccessor contextAccessor, IOptions<IvoApiSettings> ivoApiSettings)
+        public RegistrantsExtClientService(IvoApiClient c, IOptions<IvoApiSettings> ivoApiSettings)
         {
             _apiClient = c;
-            _contextAccessor = contextAccessor;
             _ivoApiSettings = ivoApiSettings.Value;
         }
 
@@ -139,12 +137,5 @@ namespace WebAPI.ExternalClients.Clients
             }
         }
 
-        private string ExtractToken()
-        {
-            if (_contextAccessor.HttpContext == null)
-                throw new MyPosApiException($"HttpContext is null", StatusCodes.Status400BadRequest);
-
-            return _contextAccessor.HttpContext.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
-        }
     }
 }
