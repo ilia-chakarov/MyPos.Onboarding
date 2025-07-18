@@ -1,6 +1,7 @@
 ﻿using ExternalApi;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using System.IdentityModel.Tokens.Jwt;
 using System.Text.Json;
 using WebAPI.Exceptions;
 using WebAPI.ExternalClients.Clients.Interfaces;
@@ -14,8 +15,8 @@ namespace WebAPI.ExternalClients.Clients
         private readonly IvoApiClient _apiClient;
         private readonly IvoApiSettings _ivoApiSettings;
 
-        private string _cachedToken;
-        private DateTime _tokenExpiry;
+        private static string _cachedToken = null!;
+        private static DateTime _tokenExpiry;
 
         public RegistrantsExtClientService(IvoApiClient c, IOptions<IvoApiSettings> ivoApiSettings)
         {
@@ -33,19 +34,23 @@ namespace WebAPI.ExternalClients.Clients
                     Password = _ivoApiSettings.ClientPassword
                 };
                 var token = await _apiClient.Login2Async(loginDto);
-                var bearerToken = ExtractTokenFromLoginResponse(token);
+                var (bearerToken, expiry) = ExtractTokenFromLoginResponse(token);
 
                 _cachedToken = bearerToken;
-                _tokenExpiry = DateTime.UtcNow.AddMinutes(55);
+                _tokenExpiry = expiry;
             }
 
             _apiClient.SetBearerToken(_cachedToken!);
         }
-        private string ExtractTokenFromLoginResponse(object loginResponse)
+        private (string token, DateTime expiry) ExtractTokenFromLoginResponse(object loginResponse)
         {
             var tokenObj = JsonSerializer.Deserialize<JsonElement>(loginResponse.ToString());
-            tokenObj.GetProperty("expiry")
-            return tokenObj.GetProperty("token").GetString();
+            var token = tokenObj.GetProperty("token").GetString();
+
+            var jwt = new JwtSecurityTokenHandler().ReadJwtToken(token);
+            var expiry = jwt.ValidTo;
+
+            return (token, expiry);
         }
 
         public async Task<RegistrantDisplayDTO> CreateRegistrant(RegistrantFormDTO dto)

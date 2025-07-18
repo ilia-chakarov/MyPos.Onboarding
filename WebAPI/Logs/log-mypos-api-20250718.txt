@@ -599,3 +599,431 @@ System.Net.Http.HttpRequestException: No connection could be made because the ta
 [11:50:31 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
 [11:50:31 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"No connection could be made because the target machine actively refused it. (10.80.55.56:7191)"}
 [11:50:31 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 500 in 2325 ms
+[13:19:34 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[13:19:34 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[13:19:34 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[13:19:34 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[13:19:34 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:19:41 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:19:41 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:19:41 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/basic-auth-login 
+[13:19:41 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"0","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:19:41 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:19:41 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:19:41 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Request failed","status":401,"detail":"Invalid / Incorrect Basic auth"}
+[13:19:41 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/basic-auth-login responded 401 in 187 ms
+[13:19:47 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:19:47 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:19:47 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/external/IvoUsers/login-user 
+[13:19:47 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:19:47 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "userName": "string",
+  "password": "string"
+}
+[13:19:47 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[13:19:47 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[13:19:49 ERR] [Machine: MP-DT0KYVBJ] Unhandled exception
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (10.80.55.56:7191)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at ExternalApi.IvoApiClient.Login2Async(UserFormDTO body, CancellationToken cancellationToken) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Generated\IvoApiClient.cs:line 2249
+   at WebAPI.External.Controllers.IvoUsersController.LoginUser(UserFormDTO dto) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\External\Controllers\IvoUsersController.cs:line 58
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context) in C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI\Middleware\ExceptionHandlingMiddleware.cs:line 21
+[13:19:49 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:19:49 INF] [Machine: MP-DT0KYVBJ] Response body: {"title":"Internal Server Error","status":500,"detail":"No connection could be made because the target machine actively refused it. (10.80.55.56:7191)"}
+[13:19:49 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/external/IvoUsers/login-user responded 500 in 2185 ms
+[13:20:05 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:20:05 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:20:05 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[13:20:05 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:20:05 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "username": "string",
+  "password": "[REDACTED]"
+}
+[13:20:06 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (27ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[13:20:06 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:20:06 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgzNzYwNiwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.-Ek_Q2nImH26tXFw3DqEKqfH-hLO02YXDY-aDmfFPG4"}
+[13:20:06 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 200 in 1518 ms
+[13:21:45 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:21:45 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:21:45 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[13:21:45 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Content-Type":"application/json","traceparent":"00-a53d4c8b04f6cf18ec01ade3bd69a276-eefe0a7d9a20290b-00","Content-Length":"41"}
+[13:21:45 INF] [Machine: MP-DT0KYVBJ] Request body: {"username":"string","password": "[REDACTED]"}
+[13:21:45 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[13:21:45 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:21:45 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgzNzcwNSwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.4GtE8wwjl-vR-rMlWmAD0EO8-dgPYDoZYvbFA393lgA"}
+[13:21:45 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 200 in 73 ms
+[13:21:46 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:21:46 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:21:46 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Wallets ?pageNumber=1&pageSize=10
+[13:21:46 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgzNzcwNSwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.4GtE8wwjl-vR-rMlWmAD0EO8-dgPYDoZYvbFA393lgA","traceparent":"00-a53d4c8b04f6cf18ec01ade3bd69a276-03c387c0da049a29-00"}
+[13:21:46 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:21:46 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[13:21:46 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[13:21:46 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[13:21:46 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:21:46 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":3,"dateCreated":"2025-07-08T16:23:35.9821979","status":"Active","tarifaCode":"123","limitCode":"123","registrantId":8},{"id":4,"dateCreated":"2025-07-08T17:52:51.0161846","status":"Active","tarifaCode":"555","limitCode":"111","registrantId":8},{"id":6,"dateCreated":"2025-07-09T09:21:36.3457505","status":"Active","tarifaCode":"777","limitCode":"111","registrantId":8},{"id":7,"dateCreated":"2025-07-11T10:57:17.7492821","status":"pulen s mangizi (actually nqq nishto)","tarifaCode":"nz brat","limitCode":"bez limiti","registrantId":8}]
+[13:21:46 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Wallets responded 200 in 105 ms
+[13:27:34 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:27:34 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:27:34 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[13:27:34 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Content-Type":"application/json","traceparent":"00-b63bb055f28c3a48f6691d006e612871-825b16d63d828d6e-00","Content-Length":"41"}
+[13:27:34 INF] [Machine: MP-DT0KYVBJ] Request body: {"username":"string","password": "[REDACTED]"}
+[13:27:34 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[13:27:34 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:27:34 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgzODA1NCwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.OVFLCY5rOVcTpOHL7BNR97wsh9Dz5Zail1oL7ltd4lo"}
+[13:27:34 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 200 in 90 ms
+[13:27:58 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:27:58 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:27:58 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/external/IvoUsers/login-user 
+[13:27:58 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Content-Type":"application/json","Origin":"https://localhost:7168","Referer":"https://localhost:7168/swagger/index.html","Content-Length":"50","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:27:58 INF] [Machine: MP-DT0KYVBJ] Request body: {
+  "userName": "string",
+  "password": "string"
+}
+[13:27:58 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[13:27:58 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[13:28:06 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 8173.4244ms - 200
+[13:28:06 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 8175.0934ms - 200
+[13:28:06 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:28:06 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjBkNzE0ODViLThjOWItNDA3My05NGNmLTg4M2IxZTQwZTFjMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdHJpbmciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzUyODM4MDg2LCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.Brng5E0ZPsUT6IM88vB8H39IKgha-XfDoAXgwLX8OeU"}
+[13:28:06 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/external/IvoUsers/login-user responded 200 in 8197 ms
+[13:28:14 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:28:14 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:28:14 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[13:28:14 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Content-Type":"application/json","traceparent":"00-0a8c41af39dea8d1e6c34a6a341cc6dc-c6ba25121a620688-00","Content-Length":"41"}
+[13:28:14 INF] [Machine: MP-DT0KYVBJ] Request body: {"username":"string","password": "[REDACTED]"}
+[13:28:14 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[13:28:14 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:28:14 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgzODA5NCwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.aKBvAbaJL29lVmLVVlZRRpZbz0sUSdl9UgRNTTpdwPw"}
+[13:28:14 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 200 in 42 ms
+[13:28:16 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:28:16 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:28:16 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[13:28:16 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Content-Type":"application/json","traceparent":"00-a6a9e87a3183a7c3a21a1f0c4d499e53-1986be1b45d0051b-00","Content-Length":"41"}
+[13:28:16 INF] [Machine: MP-DT0KYVBJ] Request body: {"username":"string","password": "[REDACTED]"}
+[13:28:16 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[13:28:16 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:28:16 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgzODA5NiwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.Co-wRHxio0WjjIUlpTKKAyH6wMOye98bhzfoy5vVDE4"}
+[13:28:16 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 200 in 41 ms
+[13:28:55 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:28:55 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:28:55 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[13:28:55 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Content-Type":"application/json","traceparent":"00-257377c18cbaf49374b0bd7e074d0b30-e1a11bf19b33fc21-00","Content-Length":"41"}
+[13:28:55 INF] [Machine: MP-DT0KYVBJ] Request body: {"username":"string","password": "[REDACTED]"}
+[13:28:55 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[13:28:55 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:28:55 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgzODEzNSwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.1KOIJ5OtpWo2MO7npZOcYTgT4d_lQKV1NDqfFyle6tc"}
+[13:28:55 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 200 in 42 ms
+[13:29:06 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:29:06 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:29:06 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[13:29:06 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Content-Type":"application/json","traceparent":"00-bb364e5ad443bab553ebd0d1c9839ae1-b08507a70b4ce5c1-00","Content-Length":"41"}
+[13:29:06 INF] [Machine: MP-DT0KYVBJ] Request body: {"username":"string","password": "[REDACTED]"}
+[13:29:06 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[13:29:06 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:29:06 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgzODE0NiwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.m4CGT7t7yh5MIEELq-0xgLw6W9spxp0Io4Su64YPFbk"}
+[13:29:06 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 200 in 41 ms
+[13:31:52 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:31:52 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:31:52 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[13:31:52 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Content-Type":"application/json","traceparent":"00-7aa8817c816e6e33895920bfce026e57-89db1d7d8b766c85-00","Content-Length":"41"}
+[13:31:52 INF] [Machine: MP-DT0KYVBJ] Request body: {"username":"string","password": "[REDACTED]"}
+[13:31:52 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[13:31:52 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:31:52 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgzODMxMiwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.c-705yxYXPAY3R1_jHertRvW_C0Bnz1gc9xpVsVtO5Q"}
+[13:31:52 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 200 in 40 ms
+[13:31:52 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:31:52 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:31:52 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Wallets ?pageNumber=1&pageSize=10
+[13:31:52 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgzODMxMiwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.c-705yxYXPAY3R1_jHertRvW_C0Bnz1gc9xpVsVtO5Q","traceparent":"00-7aa8817c816e6e33895920bfce026e57-8461f3d56926de61-00"}
+[13:31:52 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:31:52 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[13:31:52 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:31:52 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":3,"dateCreated":"2025-07-08T16:23:35.9821979","status":"Active","tarifaCode":"123","limitCode":"123","registrantId":8},{"id":4,"dateCreated":"2025-07-08T17:52:51.0161846","status":"Active","tarifaCode":"555","limitCode":"111","registrantId":8},{"id":6,"dateCreated":"2025-07-09T09:21:36.3457505","status":"Active","tarifaCode":"777","limitCode":"111","registrantId":8},{"id":7,"dateCreated":"2025-07-11T10:57:17.7492821","status":"pulen s mangizi (actually nqq nishto)","tarifaCode":"nz brat","limitCode":"bez limiti","registrantId":8}]
+[13:31:52 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Wallets responded 200 in 9 ms
+[13:32:10 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:32:10 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:32:10 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[13:32:10 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Content-Type":"application/json","traceparent":"00-7227b7c33e5d667a3f2c71b31f4bf989-6fbe1deded1be88a-00","Content-Length":"41"}
+[13:32:10 INF] [Machine: MP-DT0KYVBJ] Request body: {"username":"string","password": "[REDACTED]"}
+[13:32:10 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[13:32:10 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:32:10 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgzODMzMCwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.NVxeHrz9qkoTXZjy90ctocPf52h6INZsHInrjlRYngI"}
+[13:32:10 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 200 in 41 ms
+[13:32:20 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:32:20 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:32:20 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Wallets ?pageNumber=1&pageSize=10
+[13:32:20 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgzODMzMCwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.NVxeHrz9qkoTXZjy90ctocPf52h6INZsHInrjlRYngI","traceparent":"00-7227b7c33e5d667a3f2c71b31f4bf989-8c17fd886a85d4e6-00"}
+[13:32:20 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:32:20 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (47ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[13:32:20 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:32:20 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":3,"dateCreated":"2025-07-08T16:23:35.9821979","status":"Active","tarifaCode":"123","limitCode":"123","registrantId":8},{"id":4,"dateCreated":"2025-07-08T17:52:51.0161846","status":"Active","tarifaCode":"555","limitCode":"111","registrantId":8},{"id":6,"dateCreated":"2025-07-09T09:21:36.3457505","status":"Active","tarifaCode":"777","limitCode":"111","registrantId":8},{"id":7,"dateCreated":"2025-07-11T10:57:17.7492821","status":"pulen s mangizi (actually nqq nishto)","tarifaCode":"nz brat","limitCode":"bez limiti","registrantId":8}]
+[13:32:20 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Wallets responded 200 in 52 ms
+[13:32:53 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:32:53 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:32:53 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[13:32:53 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Content-Type":"application/json","traceparent":"00-6f2e2b1ec608b70101db4a5955ce4ccd-5adba9ce73032cd1-00","Content-Length":"41"}
+[13:32:53 INF] [Machine: MP-DT0KYVBJ] Request body: {"username":"string","password": "[REDACTED]"}
+[13:32:53 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[13:32:53 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:32:53 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgzODM3MywiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.0MvYrmFF6s5P7y8P31COoRnqWwMzVTrDiqYaR_SBGiQ"}
+[13:32:53 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 200 in 43 ms
+[13:32:53 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:32:53 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:32:53 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Wallets ?pageNumber=1&pageSize=10
+[13:32:53 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgzODM3MywiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.0MvYrmFF6s5P7y8P31COoRnqWwMzVTrDiqYaR_SBGiQ","traceparent":"00-6f2e2b1ec608b70101db4a5955ce4ccd-a53b2ac63e18ef22-00"}
+[13:32:53 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:32:53 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[13:32:53 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:32:53 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":3,"dateCreated":"2025-07-08T16:23:35.9821979","status":"Active","tarifaCode":"123","limitCode":"123","registrantId":8},{"id":4,"dateCreated":"2025-07-08T17:52:51.0161846","status":"Active","tarifaCode":"555","limitCode":"111","registrantId":8},{"id":6,"dateCreated":"2025-07-09T09:21:36.3457505","status":"Active","tarifaCode":"777","limitCode":"111","registrantId":8},{"id":7,"dateCreated":"2025-07-11T10:57:17.7492821","status":"pulen s mangizi (actually nqq nishto)","tarifaCode":"nz brat","limitCode":"bez limiti","registrantId":8}]
+[13:32:53 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Wallets responded 200 in 2 ms
+[13:33:02 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:33:02 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:33:02 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[13:33:02 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Content-Type":"application/json","traceparent":"00-d24baa48debf53b09723295da344dc52-4e54d8ae142e6283-00","Content-Length":"41"}
+[13:33:02 INF] [Machine: MP-DT0KYVBJ] Request body: {"username":"string","password": "[REDACTED]"}
+[13:33:02 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[13:33:02 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:33:02 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgzODM4MiwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.4lk84b_kRWp3QfTOMAnuz35vnd7uPm2lTASQkcZG7ys"}
+[13:33:02 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 200 in 39 ms
+[13:34:23 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:34:23 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:34:23 INF] [Machine: MP-DT0KYVBJ] Incoming request: POST /api/Auth/login 
+[13:34:23 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Content-Type":"application/json","traceparent":"00-0599a60af903e7bd659842a76c8120b4-d86a42f389239ce5-00","Content-Length":"41"}
+[13:34:23 INF] [Machine: MP-DT0KYVBJ] Request body: {"username":"string","password": "[REDACTED]"}
+[13:34:23 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[13:34:23 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:34:23 INF] [Machine: MP-DT0KYVBJ] Response body: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgzODQ2MywiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.RFRGkqPucT1ig2WSmGAZMdjImq_IAZTRhtLx2I-HSFU"}
+[13:34:23 INF] [Machine: MP-DT0KYVBJ] Request completed: POST /api/Auth/login responded 200 in 50 ms
+[13:34:34 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:34:34 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:34:34 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Wallets ?pageNumber=1&pageSize=10
+[13:34:34 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgzODQ2MywiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.RFRGkqPucT1ig2WSmGAZMdjImq_IAZTRhtLx2I-HSFU","traceparent":"00-0599a60af903e7bd659842a76c8120b4-21f694135b073e36-00"}
+[13:34:34 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:34:34 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[13:34:34 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:34:34 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":3,"dateCreated":"2025-07-08T16:23:35.9821979","status":"Active","tarifaCode":"123","limitCode":"123","registrantId":8},{"id":4,"dateCreated":"2025-07-08T17:52:51.0161846","status":"Active","tarifaCode":"555","limitCode":"111","registrantId":8},{"id":6,"dateCreated":"2025-07-09T09:21:36.3457505","status":"Active","tarifaCode":"777","limitCode":"111","registrantId":8},{"id":7,"dateCreated":"2025-07-11T10:57:17.7492821","status":"pulen s mangizi (actually nqq nishto)","tarifaCode":"nz brat","limitCode":"bez limiti","registrantId":8}]
+[13:34:34 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Wallets responded 200 in 3 ms
+[13:34:36 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:34:36 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:34:36 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Wallets ?pageNumber=1&pageSize=10
+[13:34:36 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgzODQ2MywiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.RFRGkqPucT1ig2WSmGAZMdjImq_IAZTRhtLx2I-HSFU","traceparent":"00-00084dadeb9a21e5a813792b836718a0-4ef8463cd5626e3a-00"}
+[13:34:36 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:34:36 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[13:34:36 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:34:36 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":3,"dateCreated":"2025-07-08T16:23:35.9821979","status":"Active","tarifaCode":"123","limitCode":"123","registrantId":8},{"id":4,"dateCreated":"2025-07-08T17:52:51.0161846","status":"Active","tarifaCode":"555","limitCode":"111","registrantId":8},{"id":6,"dateCreated":"2025-07-09T09:21:36.3457505","status":"Active","tarifaCode":"777","limitCode":"111","registrantId":8},{"id":7,"dateCreated":"2025-07-11T10:57:17.7492821","status":"pulen s mangizi (actually nqq nishto)","tarifaCode":"nz brat","limitCode":"bez limiti","registrantId":8}]
+[13:34:36 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Wallets responded 200 in 2 ms
+[13:34:40 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:34:40 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:34:40 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Wallets ?pageNumber=1&pageSize=10
+[13:34:40 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgzODQ2MywiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.RFRGkqPucT1ig2WSmGAZMdjImq_IAZTRhtLx2I-HSFU","traceparent":"00-1dee0778014683cc0aec982fcf6dafa1-ffd7b64b22fe4b27-00"}
+[13:34:40 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:34:40 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[13:34:40 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:34:40 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":3,"dateCreated":"2025-07-08T16:23:35.9821979","status":"Active","tarifaCode":"123","limitCode":"123","registrantId":8},{"id":4,"dateCreated":"2025-07-08T17:52:51.0161846","status":"Active","tarifaCode":"555","limitCode":"111","registrantId":8},{"id":6,"dateCreated":"2025-07-09T09:21:36.3457505","status":"Active","tarifaCode":"777","limitCode":"111","registrantId":8},{"id":7,"dateCreated":"2025-07-11T10:57:17.7492821","status":"pulen s mangizi (actually nqq nishto)","tarifaCode":"nz brat","limitCode":"bez limiti","registrantId":8}]
+[13:34:40 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Wallets responded 200 in 3 ms
+[13:34:40 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:34:40 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:34:40 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Wallets ?pageNumber=1&pageSize=10
+[13:34:40 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"10.80.55.95:7168","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MjgzODQ2MywiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.RFRGkqPucT1ig2WSmGAZMdjImq_IAZTRhtLx2I-HSFU","traceparent":"00-167dbad1007a6856dc0f1f9c267b7164-598135a877002fbc-00"}
+[13:34:40 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:34:40 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[DateCreated], [w].[LimitCode], [w].[RegistrantId], [w].[Status], [w].[TarifaCode]
+FROM [Wallets] AS [w]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[13:34:40 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:34:40 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":3,"dateCreated":"2025-07-08T16:23:35.9821979","status":"Active","tarifaCode":"123","limitCode":"123","registrantId":8},{"id":4,"dateCreated":"2025-07-08T17:52:51.0161846","status":"Active","tarifaCode":"555","limitCode":"111","registrantId":8},{"id":6,"dateCreated":"2025-07-09T09:21:36.3457505","status":"Active","tarifaCode":"777","limitCode":"111","registrantId":8},{"id":7,"dateCreated":"2025-07-11T10:57:17.7492821","status":"pulen s mangizi (actually nqq nishto)","tarifaCode":"nz brat","limitCode":"bez limiti","registrantId":8}]
+[13:34:40 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Wallets responded 200 in 3 ms
+[13:35:24 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[13:35:24 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[13:35:24 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[13:35:24 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[13:35:24 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:35:32 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:35:32 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:35:32 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/Registrants ?pageNumber=1&pageSize=10
+[13:35:32 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"text/plain","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:35:32 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:35:33 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[13:35:33 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[13:35:33 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (30ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[13:35:33 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:35:33 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":5,"dateCreated":"2025-07-08T16:23:35.9821979","displayName":"papasmurfie","gsm":"0897614957","country":"Bulgaria","address":"ul. Tsar Asen 74","isCompany":false},{"id":6,"dateCreated":"2025-07-08T16:24:08.82214","displayName":"jacksonville","gsm":"0898555444","country":"USA","address":"I dont know Avenue 123","isCompany":false},{"id":7,"dateCreated":"2025-07-08T16:24:38.7776089","displayName":"lil yachty","gsm":"0897777777","country":"USA","address":"Washington DC","isCompany":false},{"id":8,"dateCreated":"2025-07-08T16:25:28.3671217","displayName":"mMyPos","gsm":"0895789654","country":"Bulgaria","address":"Varna, Idk","isCompany":true},{"id":9,"dateCreated":"2025-07-15T09:28:01.2499504","displayName":"Honestly Healthy","gsm":"0895558749","country":"Bulgaria","address":"Vazrazhdane 6","isCompany":true}]
+[13:35:33 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/Registrants responded 200 in 900 ms
+[13:39:45 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[13:39:45 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[13:39:45 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[13:39:45 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[13:39:45 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:39:52 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:39:52 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:39:52 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[13:39:52 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:39:52 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:39:58 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[13:39:58 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[13:39:59 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 1554.9046ms - 200
+[13:39:59 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 1561.2192ms - 200
+[13:40:12 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[13:40:12 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[13:40:12 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 92.9008ms - 200
+[13:40:12 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 93.2665ms - 200
+[13:40:12 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:40:12 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":"d70947d3-82cf-411d-64cc-08ddc471097b","createdAt":"0001-01-01T00:00:00","displayName":"string","phoneNumber":"+712)-289.764593","country":"string","address":"string","isCompany":true},{"id":"91e33fc1-2bd8-4862-93df-289de2019cc8","createdAt":"2025-07-16T14:47:34.656738","displayName":"string","phoneNumber":"625)5359123","country":"string","address":"string","isCompany":true},{"id":"89335a14-465b-40f8-92c1-bb742322c9b6","createdAt":"2025-07-08T10:48:39.7867241","displayName":"string","phoneNumber":"(422232-50803","country":"string","address":"string","isCompany":true},{"id":"89ab57c5-e8f6-49bf-bb0e-dc6e1912b874","createdAt":"2025-07-16T14:26:00.3965573","displayName":"stringasd","phoneNumber":"+185405 8033","country":"string","address":"string","isCompany":true}]
+[13:40:12 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 19811 ms
+[13:40:16 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:40:16 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:40:16 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[13:40:16 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:40:16 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:40:37 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[13:40:37 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[13:40:37 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[13:40:37 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[13:40:37 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:40:42 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:40:42 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:40:42 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[13:40:42 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:40:42 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:40:45 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[13:40:45 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[13:40:45 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 69.2248ms - 200
+[13:40:45 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 75.638ms - 200
+[13:40:51 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[13:40:51 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[13:40:51 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 8.456ms - 200
+[13:40:51 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 8.8219ms - 200
+[13:40:51 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:40:51 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":"d70947d3-82cf-411d-64cc-08ddc471097b","createdAt":"0001-01-01T00:00:00","displayName":"string","phoneNumber":"+712)-289.764593","country":"string","address":"string","isCompany":true},{"id":"91e33fc1-2bd8-4862-93df-289de2019cc8","createdAt":"2025-07-16T14:47:34.656738","displayName":"string","phoneNumber":"625)5359123","country":"string","address":"string","isCompany":true},{"id":"89335a14-465b-40f8-92c1-bb742322c9b6","createdAt":"2025-07-08T10:48:39.7867241","displayName":"string","phoneNumber":"(422232-50803","country":"string","address":"string","isCompany":true},{"id":"89ab57c5-e8f6-49bf-bb0e-dc6e1912b874","createdAt":"2025-07-16T14:26:00.3965573","displayName":"stringasd","phoneNumber":"+185405 8033","country":"string","address":"string","isCompany":true}]
+[13:40:51 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 9374 ms
+[13:40:53 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:40:53 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:40:53 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[13:40:53 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:40:53 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:41:00 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[13:41:00 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[13:41:00 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 7.8029ms - 200
+[13:41:00 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 8.2934ms - 200
+[13:41:00 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:41:00 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":"d70947d3-82cf-411d-64cc-08ddc471097b","createdAt":"0001-01-01T00:00:00","displayName":"string","phoneNumber":"+712)-289.764593","country":"string","address":"string","isCompany":true},{"id":"91e33fc1-2bd8-4862-93df-289de2019cc8","createdAt":"2025-07-16T14:47:34.656738","displayName":"string","phoneNumber":"625)5359123","country":"string","address":"string","isCompany":true},{"id":"89335a14-465b-40f8-92c1-bb742322c9b6","createdAt":"2025-07-08T10:48:39.7867241","displayName":"string","phoneNumber":"(422232-50803","country":"string","address":"string","isCompany":true},{"id":"89ab57c5-e8f6-49bf-bb0e-dc6e1912b874","createdAt":"2025-07-16T14:26:00.3965573","displayName":"stringasd","phoneNumber":"+185405 8033","country":"string","address":"string","isCompany":true}]
+[13:41:00 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 6846 ms
+[13:41:38 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[13:41:38 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[13:41:38 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[13:41:38 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[13:41:38 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[13:41:43 INF] [Machine: MP-DT0KYVBJ] ==============================================================================================================================
+[13:41:43 INF] [Machine: MP-DT0KYVBJ] === HTTP REQUEST ===
+[13:41:43 INF] [Machine: MP-DT0KYVBJ] Incoming request: GET /api/external/IvoRegistrants ?pageNumber=1&pageSize=10
+[13:41:43 INF] [Machine: MP-DT0KYVBJ] Request headers: {"Accept":"*/*","Host":"localhost:7168","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"en-US,en;q=0.9","Referer":"https://localhost:7168/swagger/index.html","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Microsoft Edge\";v=\"138\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","priority":"u=1, i"}
+[13:41:43 INF] [Machine: MP-DT0KYVBJ] Request body: 
+[13:41:43 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request POST https://10.80.55.56:7191/api/User/login
+[13:41:43 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request POST https://10.80.55.56:7191/api/User/login
+[13:41:43 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 51.0851ms - 200
+[13:41:43 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 56.5389ms - 200
+[13:41:43 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[13:41:43 INF] [Machine: MP-DT0KYVBJ] Sending HTTP request GET https://10.80.55.56:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[13:41:44 INF] [Machine: MP-DT0KYVBJ] Received HTTP response headers after 14.8539ms - 200
+[13:41:44 INF] [Machine: MP-DT0KYVBJ] End processing HTTP request after 15.2667ms - 200
+[13:41:44 INF] [Machine: MP-DT0KYVBJ] === HTTP RESPONSE ===
+[13:41:44 INF] [Machine: MP-DT0KYVBJ] Response body: [{"id":"d70947d3-82cf-411d-64cc-08ddc471097b","createdAt":"0001-01-01T00:00:00","displayName":"string","phoneNumber":"+712)-289.764593","country":"string","address":"string","isCompany":true},{"id":"91e33fc1-2bd8-4862-93df-289de2019cc8","createdAt":"2025-07-16T14:47:34.656738","displayName":"string","phoneNumber":"625)5359123","country":"string","address":"string","isCompany":true},{"id":"89335a14-465b-40f8-92c1-bb742322c9b6","createdAt":"2025-07-08T10:48:39.7867241","displayName":"string","phoneNumber":"(422232-50803","country":"string","address":"string","isCompany":true},{"id":"89ab57c5-e8f6-49bf-bb0e-dc6e1912b874","createdAt":"2025-07-16T14:26:00.3965573","displayName":"stringasd","phoneNumber":"+185405 8033","country":"string","address":"string","isCompany":true}]
+[13:41:44 INF] [Machine: MP-DT0KYVBJ] Request completed: GET /api/external/IvoRegistrants responded 200 in 257 ms
