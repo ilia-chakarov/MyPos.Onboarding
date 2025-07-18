@@ -22,5 +22,9 @@ namespace MyPos.Services.DTOs.Log
         // Meta
         public long ElapsedMilliseconds { get; set; }
         public DateTime Timestamp { get; set; } = DateTime.UtcNow;
+
+        // Exception
+        public string? ExceptionMessage { get; set; }
+        public string? ExceptionStackTrace { get; set; }
     }
 }
