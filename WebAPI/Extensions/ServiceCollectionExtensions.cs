@@ -1,17 +1,12 @@
 ﻿using ExternalApi;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
-using Microsoft.Identity.Client;
 using Microsoft.OpenApi.Models;
 using MyPos.Configuration.Options;
 using MyPos.WebAPI.External.ClientServices;
 using MyPos.WebAPI.External.ClientServices.Interfaces;
 using MyPos.WebAPI.External.Handler;
 using Serilog;
-using Swashbuckle.AspNetCore.SwaggerGen;
-using System.Net.Http.Headers;
 using WebAPI.Entities;
 using WebAPI.ExternalClients.Clients;
 using WebAPI.ExternalClients.Clients.Interfaces;
@@ -132,60 +127,12 @@ namespace WebAPI.Extensions
             .AddHttpMessageHandler<BearerTokenHandler>()
             .AddTypedClient((httpClient, sp) => new IvoApiClient(baseUrl, httpClient));
 
-            // Ilia example:
-            //var baseUrl = configuration.GetSection("").Value;
-            //var pass = "";
-
-            //services.AddHttpClient("IvoAPI",
-            //client =>
-            //{
-            //    // Set the base address of the named client.
-            //    client.BaseAddress = new Uri(baseUrl);
-            //    client.DefaultRequestHeaders.Authorization = GetAuth(pass);
-
-            //    // Add a user-agent default request header.
-            //})
-            //.ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
-            //{
-            //    ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true
-            //});
-
-            //services.AddHttpClient("Named.Client")
-            //    .SetHandlerLifetime(TimeSpan.FromMinutes(5));
-
-
-            // Working:
-            //services.AddHttpClient<IvoApiClient>((sp, cl) =>
-            //{
-            //    var options = sp.GetRequiredService<IOptions<IvoApiSettings>>().Value;
-            //    cl.BaseAddress = new Uri(options.BaseUrl);
-            //})
-            //    .ConfigurePrimaryHttpMessageHandler(() =>
-            //    {
-            //        return new HttpClientHandler
-            //        {
-            //            ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
-            //        };
-            //    })
-            //    .AddTypedClient((httpCl, sp) =>
-            //    {
-            //        var options = sp.GetRequiredService<IOptions<IvoApiSettings>>().Value;
-            //        var baseUrl = options.BaseUrl;
-            //        return new IvoApiClient(baseUrl, httpCl);
-            //    });
+           
 
             return services;
         }
 
 
-        //private static AuthenticationHeaderValue? GetAuth(string pass)
-        //{
-        //    HttpClient client = new HttpClient();
-        //    client.BaseAddress = new Uri("");
-        //    var token = client.GetAsync("");
-
-        //    return new AuthenticationHeaderValue("Bearer", token.Result.Content);
-        //}
 
 
         public static IHostBuilder ConfigureSerilog(this IHostBuilder hostBuilder)
