@@ -50,15 +50,10 @@ namespace WebAPI.Services
 
         public async Task<IEnumerable<WalletDto>> GetAll(int pageNumber, int pageSize, Func<IQueryable<WalletEntity>, IQueryable<WalletEntity>>? filter = null)
         {
-            var query = _unitOfWork.GetRepository<WalletEntity>().Query().Skip((pageNumber - 1) * pageSize).Take(pageSize);
+            var res = await _unitOfWork.GetRepository<WalletEntity>().GetAllAsync<WalletDto>(
+                mapper: _mapper, filter: filter, pageNumber: pageNumber, pageSize: pageSize, disableTracking: false);
 
-            if(filter != null)
-                query = filter(query);
-
-
-            var wallet = await query.ToListAsync();
-
-            return _mapper.Map<List<WalletDto>>(wallet);
+            return res;
         }
 
         public async Task<WalletDto> GetById(int id)

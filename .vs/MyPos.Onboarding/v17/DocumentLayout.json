@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8C4346B4-BC15-4ABB-8914-1F65170302A7}|MyPos.Services\\MyPos.Services.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\mypos.services\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C4346B4-BC15-4ABB-8914-1F65170302A7}|MyPos.Services\\MyPos.Services.csproj|solutionrelative:mypos.services\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8C4346B4-BC15-4ABB-8914-1F65170302A7}|MyPos.Services\\MyPos.Services.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\mypos.services\\services\\walletservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C4346B4-BC15-4ABB-8914-1F65170302A7}|MyPos.Services\\MyPos.Services.csproj|solutionrelative:mypos.services\\services\\walletservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4D3DDE55-9462-41ED-BFCF-F8896072C58C}|MyPos.Data\\MyPos.Data.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\mypos.data\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D3DDE55-9462-41ED-BFCF-F8896072C58C}|MyPos.Data\\MyPos.Data.csproj|solutionrelative:mypos.data\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C4346B4-BC15-4ABB-8914-1F65170302A7}|MyPos.Services\\MyPos.Services.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\mypos.services\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C4346B4-BC15-4ABB-8914-1F65170302A7}|MyPos.Services\\MyPos.Services.csproj|solutionrelative:mypos.services\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4D3DDE55-9462-41ED-BFCF-F8896072C58C}|MyPos.Data\\MyPos.Data.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\mypos.data\\repositories\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,19 +55,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "WalletService.cs",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\WalletService.cs",
+              "RelativeDocumentMoniker": "MyPos.Services\\Services\\WalletService.cs",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\WalletService.cs",
+              "RelativeToolTip": "MyPos.Services\\Services\\WalletService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAuwDMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T08:14:54.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "MyPos.Services\\Services\\UserService.cs",
               "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\UserService.cs",
               "RelativeToolTip": "MyPos.Services\\Services\\UserService.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAAADAAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAA1wDcAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-21T08:09:18.097Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "RegistrantService.cs",
               "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs",
               "RelativeDocumentMoniker": "MyPos.Services\\Services\\RegistrantService.cs",
@@ -76,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AccountService.cs",
               "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\AccountService.cs",
               "RelativeDocumentMoniker": "MyPos.Services\\Services\\AccountService.cs",
@@ -89,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "IRepository.cs",
               "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Data\\Repositories\\Interfaces\\IRepository.cs",
               "RelativeDocumentMoniker": "MyPos.Data\\Repositories\\Interfaces\\IRepository.cs",
@@ -108,7 +125,7 @@
               "RelativeDocumentMoniker": "MyPos.Data\\Repositories\\Repository.cs",
               "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Data\\Repositories\\Repository.cs",
               "RelativeToolTip": "MyPos.Data\\Repositories\\Repository.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAA2wCcAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAA8wCcAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-21T06:08:56.416Z",
               "EditorCaption": ""
