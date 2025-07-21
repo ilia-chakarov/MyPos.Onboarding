@@ -8,6 +8,7 @@ using Microsoft.OpenApi.Models;
 using MyPos.Configuration.Options;
 using MyPos.WebAPI.External.ClientServices;
 using MyPos.WebAPI.External.ClientServices.Interfaces;
+using MyPos.WebAPI.External.Handler;
 using Serilog;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Net.Http.Headers;
@@ -115,6 +116,23 @@ namespace WebAPI.Extensions
 
         public static IServiceCollection AddExternalHttpClients(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddTransient<BearerTokenHandler>();
+
+            var options = configuration.GetSection("IvoApi").Get<IvoApiSettings>();
+            var baseUrl = options.BaseUrl;
+
+            services.AddHttpClient<IvoApiClient>("IvoAPI", client =>
+            {
+                client.BaseAddress = new Uri(baseUrl);
+            })
+            .ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
+            {
+                ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+            })
+            .AddHttpMessageHandler<BearerTokenHandler>()
+            .AddTypedClient((httpClient, sp) => new IvoApiClient(baseUrl, httpClient));
+
+            // Ilia example:
             //var baseUrl = configuration.GetSection("").Value;
             //var pass = "";
 
@@ -135,24 +153,26 @@ namespace WebAPI.Extensions
             //services.AddHttpClient("Named.Client")
             //    .SetHandlerLifetime(TimeSpan.FromMinutes(5));
 
-            services.AddHttpClient<IvoApiClient>((sp, cl) =>
-            {
-                var options = sp.GetRequiredService<IOptions<IvoApiSettings>>().Value;
-                cl.BaseAddress = new Uri(options.BaseUrl);
-            })
-                .ConfigurePrimaryHttpMessageHandler(() =>
-                {
-                    return new HttpClientHandler
-                    {
-                        ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
-                    };
-                })
-                .AddTypedClient((httpCl, sp) =>
-                {
-                    var options = sp.GetRequiredService<IOptions<IvoApiSettings>>().Value;
-                    var baseUrl = options.BaseUrl;
-                    return new IvoApiClient(baseUrl, httpCl);
-                });
+
+            // Working:
+            //services.AddHttpClient<IvoApiClient>((sp, cl) =>
+            //{
+            //    var options = sp.GetRequiredService<IOptions<IvoApiSettings>>().Value;
+            //    cl.BaseAddress = new Uri(options.BaseUrl);
+            //})
+            //    .ConfigurePrimaryHttpMessageHandler(() =>
+            //    {
+            //        return new HttpClientHandler
+            //        {
+            //            ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+            //        };
+            //    })
+            //    .AddTypedClient((httpCl, sp) =>
+            //    {
+            //        var options = sp.GetRequiredService<IOptions<IvoApiSettings>>().Value;
+            //        var baseUrl = options.BaseUrl;
+            //        return new IvoApiClient(baseUrl, httpCl);
+            //    });
 
             return services;
         }
