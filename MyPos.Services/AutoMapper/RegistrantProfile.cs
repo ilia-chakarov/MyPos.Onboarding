@@ -11,6 +11,7 @@ namespace WebAPI.AutoMapper
             CreateMap<RegistrantEntity, RegistrantDto>();
             CreateMap<CreateRegistrantDto, RegistrantEntity>()
                 .ForMember(dst => dst.DateCreated, opt => opt.Ignore());
+            CreateMap<RegistrantEntity, RegistrantWithAllWalletsAndUsersDto>();
         }
     }
 }

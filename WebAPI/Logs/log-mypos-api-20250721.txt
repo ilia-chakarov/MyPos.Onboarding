@@ -296,3 +296,217 @@ OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
 }
 
 
+[10:43:33 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[10:43:33 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[10:43:33 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[10:43:33 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[10:43:33 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:43:42 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/registrants/with-realated-data",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 500,
+  "ResponseBody": "{\u0022title\u0022:\u0022Internal Server Error\u0022,\u0022status\u0022:500,\u0022detail\u0022:\u0022Missing map from WebAPI.Entities.RegistrantEntity to WebAPI.DTOs.RegistrantWithAllWalletsAndUsersDto. Create using CreateMap\u003CRegistrantEntity, RegistrantWithAllWalletsAndUsersDto\u003E.\u0022}",
+  "ElapsedMilliseconds": 612,
+  "Timestamp": "2025-07-21T07:43:42.5450074Z",
+  "ExceptionMessage": "Missing map from WebAPI.Entities.RegistrantEntity to WebAPI.DTOs.RegistrantWithAllWalletsAndUsersDto. Create using CreateMap\u003CRegistrantEntity, RegistrantWithAllWalletsAndUsersDto\u003E.",
+  "ExceptionStackTrace": "   at AutoMapper.QueryableExtensions.Impl.ProjectionBuilder.PolymorphicMaps(ProjectionRequest\u0026 request)\r\n   at AutoMapper.QueryableExtensions.Impl.ProjectionBuilder.CreateProjection(ProjectionRequest request)\r\n   at AutoMapper.Internal.LockingConcurrentDictionary\u00602.\u003C\u003Ec__DisplayClass0_1.\u003C.ctor\u003Eb__1()\r\n   at System.Lazy\u00601.ViaFactory(LazyThreadSafetyMode mode)\r\n   at System.Lazy\u00601.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)\r\n   at System.Lazy\u00601.CreateValue()\r\n   at System.Lazy\u00601.get_Value()\r\n   at AutoMapper.Internal.LockingConcurrentDictionary\u00602.GetOrAdd(TKey\u0026 key)\r\n   at AutoMapper.QueryableExtensions.Impl.ProjectionBuilder.GetProjection(Type sourceType, Type destinationType, Object parameters, MemberPath[] membersToExpand)\r\n   at AutoMapper.QueryableExtensions.Extensions.ToCore(IQueryable source, Type destinationType, IConfigurationProvider configuration, Object parameters, IEnumerable\u00601 memberPathsToExpand)\r\n   at AutoMapper.QueryableExtensions.Extensions.ToCore[TResult](IQueryable source, IConfigurationProvider configuration, Object parameters, IEnumerable\u00601 memberPathsToExpand)\r\n   at AutoMapper.QueryableExtensions.Extensions.ProjectTo[TDestination](IQueryable source, IConfigurationProvider configuration, Object parameters, Expression\u00601[] membersToExpand)\r\n   at AutoMapper.Mapper.ProjectTo[TDestination](IQueryable source, Object parameters, Expression\u00601[] membersToExpand)\r\n   at WebAPI.Repositories.Repository\u00601.GetAllAsync[TResult](IMapper mapper, Func\u00602 filter, Func\u00602 orderBy, Func\u00602 include, Nullable\u00601 pageNumber, Nullable\u00601 pageSize, Boolean disableTracking) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Data\\Repositories\\Repository.cs:line 65\r\n   at WebAPI.Services.RegistrantService.GetAllWithWalletsAndUsers(Int32 pageNumber, Int32 pageSize, Func\u00602 filter) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 62\r\n   at WebAPI.Controllers.RegistrantsController.GetAllWithWalletsAndUsers(Nullable\u00601 id, Int32 pageNumber, Int32 pageSize) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 38\r\n   at lambda_method5(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n--- End of stack trace from previous location ---\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 62"
+}
+
+
+[10:44:04 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[10:44:04 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[10:44:04 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[10:44:04 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[10:44:04 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[10:44:09 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[10:44:09 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[10:44:09 WRN] [Machine: MP-DT0KYVBJ] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[10:44:10 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (38ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[DateCreated], [t].[DisplayName], [t].[GSM], [t].[Country], [t].[Address], [t].[isCompany], [u].[Id], [u].[Username], [u].[RegistrantId], [w].[Id], [w].[DateCreated], [w].[Status], [w].[TarifaCode], [w].[LimitCode], [w].[RegistrantId]
+FROM (
+    SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+    FROM [Registrants] AS [r]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [Users] AS [u] ON [t].[Id] = [u].[RegistrantId]
+LEFT JOIN [Wallets] AS [w] ON [t].[Id] = [w].[RegistrantId]
+ORDER BY [t].[Id], [u].[Id]
+[10:44:10 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/registrants/with-realated-data",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false,\u0022users\u0022:[],\u0022wallets\u0022:[]},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false,\u0022users\u0022:[],\u0022wallets\u0022:[]},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false,\u0022users\u0022:[],\u0022wallets\u0022:[]},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true,\u0022users\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:18,\u0022username\u0022:\u0022external3\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:22,\u0022username\u0022:\u0022string\u0022,\u0022registrantId\u0022:8}],\u0022wallets\u0022:[{\u0022id\u0022:3,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022status\u0022:\u0022Active\u0022,\u0022tarifaCode\u0022:\u0022123\u0022,\u0022limitCode\u0022:\u0022123\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:4,\u0022dateCreated\u0022:\u00222025-07-08T17:52:51.0161846\u0022,\u0022status\u0022:\u0022Active\u0022,\u0022tarifaCode\u0022:\u0022555\u0022,\u0022limitCode\u0022:\u0022111\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-09T09:21:36.3457505\u0022,\u0022status\u0022:\u0022Active\u0022,\u0022tarifaCode\u0022:\u0022777\u0022,\u0022limitCode\u0022:\u0022111\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-11T10:57:17.7492821\u0022,\u0022status\u0022:\u0022pulen s mangizi (actually nqq nishto)\u0022,\u0022tarifaCode\u0022:\u0022nz brat\u0022,\u0022limitCode\u0022:\u0022bez limiti\u0022,\u0022registrantId\u0022:8}]},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true,\u0022users\u0022:[],\u0022wallets\u0022:[]}]",
+  "ElapsedMilliseconds": 1642,
+  "Timestamp": "2025-07-21T07:44:10.5297694Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[10:44:18 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[10:44:18 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[10:44:18 WRN] [Machine: MP-DT0KYVBJ] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[10:44:18 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__id_Value_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[DateCreated], [t].[DisplayName], [t].[GSM], [t].[Country], [t].[Address], [t].[isCompany], [u].[Id], [u].[Username], [u].[RegistrantId], [w].[Id], [w].[DateCreated], [w].[Status], [w].[TarifaCode], [w].[LimitCode], [w].[RegistrantId]
+FROM (
+    SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+    FROM [Registrants] AS [r]
+    WHERE [r].[Id] = @__id_Value_0
+    ORDER BY (SELECT 1)
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+LEFT JOIN [Users] AS [u] ON [t].[Id] = [u].[RegistrantId]
+LEFT JOIN [Wallets] AS [w] ON [t].[Id] = [w].[RegistrantId]
+ORDER BY [t].[Id], [u].[Id]
+[10:44:18 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/registrants/with-realated-data",
+  "QueryString": "?id=5\u0026pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false,\u0022users\u0022:[],\u0022wallets\u0022:[]}]",
+  "ElapsedMilliseconds": 52,
+  "Timestamp": "2025-07-21T07:44:18.1734802Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[10:44:24 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[DateCreated], [t].[DisplayName], [t].[GSM], [t].[Country], [t].[Address], [t].[isCompany], [u].[Id], [u].[Username], [u].[RegistrantId], [w].[Id], [w].[DateCreated], [w].[Status], [w].[TarifaCode], [w].[LimitCode], [w].[RegistrantId]
+FROM (
+    SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+    FROM [Registrants] AS [r]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+LEFT JOIN [Users] AS [u] ON [t].[Id] = [u].[RegistrantId]
+LEFT JOIN [Wallets] AS [w] ON [t].[Id] = [w].[RegistrantId]
+ORDER BY [t].[Id], [u].[Id]
+[10:44:24 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/registrants/with-realated-data",
+  "QueryString": "?pageNumber=1\u0026pageSize=2",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false,\u0022users\u0022:[],\u0022wallets\u0022:[]},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false,\u0022users\u0022:[],\u0022wallets\u0022:[]}]",
+  "ElapsedMilliseconds": 19,
+  "Timestamp": "2025-07-21T07:44:24.960008Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[10:44:27 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[10:44:27 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[10:44:27 WRN] [Machine: MP-DT0KYVBJ] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+[10:44:27 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[DateCreated], [t].[DisplayName], [t].[GSM], [t].[Country], [t].[Address], [t].[isCompany], [u].[Id], [u].[Username], [u].[RegistrantId], [w].[Id], [w].[DateCreated], [w].[Status], [w].[TarifaCode], [w].[LimitCode], [w].[RegistrantId]
+FROM (
+    SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+    FROM [Registrants] AS [r]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+LEFT JOIN [Users] AS [u] ON [t].[Id] = [u].[RegistrantId]
+LEFT JOIN [Wallets] AS [w] ON [t].[Id] = [w].[RegistrantId]
+ORDER BY [t].[Id], [u].[Id]
+[10:44:27 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/registrants/with-realated-data",
+  "QueryString": "?pageNumber=2\u0026pageSize=2",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false,\u0022users\u0022:[],\u0022wallets\u0022:[]},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true,\u0022users\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:18,\u0022username\u0022:\u0022external3\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:22,\u0022username\u0022:\u0022string\u0022,\u0022registrantId\u0022:8}],\u0022wallets\u0022:[{\u0022id\u0022:3,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022status\u0022:\u0022Active\u0022,\u0022tarifaCode\u0022:\u0022123\u0022,\u0022limitCode\u0022:\u0022123\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:4,\u0022dateCreated\u0022:\u00222025-07-08T17:52:51.0161846\u0022,\u0022status\u0022:\u0022Active\u0022,\u0022tarifaCode\u0022:\u0022555\u0022,\u0022limitCode\u0022:\u0022111\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-09T09:21:36.3457505\u0022,\u0022status\u0022:\u0022Active\u0022,\u0022tarifaCode\u0022:\u0022777\u0022,\u0022limitCode\u0022:\u0022111\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-11T10:57:17.7492821\u0022,\u0022status\u0022:\u0022pulen s mangizi (actually nqq nishto)\u0022,\u0022tarifaCode\u0022:\u0022nz brat\u0022,\u0022limitCode\u0022:\u0022bez limiti\u0022,\u0022registrantId\u0022:8}]}]",
+  "ElapsedMilliseconds": 14,
+  "Timestamp": "2025-07-21T07:44:27.6089765Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
