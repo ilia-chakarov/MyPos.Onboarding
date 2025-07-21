@@ -30,8 +30,6 @@ namespace WebAPI.Repositories
 
         public void Delete(TEntity entity) => _dbSet.Remove(entity);
 
-        public IQueryable<TEntity> Query() => _dbSet.AsQueryable();
-
         public async Task<TEntity?> GetSingleAsync(Func<IQueryable<TEntity>, IQueryable<TEntity>> filter)
         {
             return await filter(_dbSet).FirstOrDefaultAsync();

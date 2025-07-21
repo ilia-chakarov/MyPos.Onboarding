@@ -17,8 +17,6 @@ namespace WebAPI.Repositories.Interfaces
             int? pageNumber = null,
             int? pageSize = null,
             bool disableTracking = true);
-
-        IQueryable<TEntity> Query();
         Task<TEntity?> GetSingleAsync(Func<IQueryable<TEntity>, IQueryable<TEntity>> filter);
         Task<TEntity?> GetByIdAsync(int id);
         Task AddAsync(TEntity entity);
