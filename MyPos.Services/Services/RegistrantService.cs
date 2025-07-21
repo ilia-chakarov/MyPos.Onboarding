@@ -47,7 +47,6 @@ namespace WebAPI.Services
         public async Task<IEnumerable<RegistrantDto>> GetAll(int pageNumber, int pageSize, 
             Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>? filter = null)
         {
-
             var result = await _unitOfWork.GetRepository<RegistrantEntity>().GetAllAsync<RegistrantDto>(
                 mapper: _mapper,
                 filter: filter, pageNumber: pageNumber, pageSize: pageSize, disableTracking: false);
@@ -55,43 +54,16 @@ namespace WebAPI.Services
             return result;
         }
 
-        public async Task<IEnumerable<RegistrantWithAllWalletsAndUsersDto>> GetAllWithWalletsAndUsers(int pageNumber, int pageSize, Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>? filter = null)
+        public async Task<IEnumerable<RegistrantWithAllWalletsAndUsersDto>> GetAllWithWalletsAndUsers(int pageNumber, int pageSize, 
+            Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>? filter = null)
         {
-            var query = _unitOfWork.GetRepository<RegistrantEntity>().Query().Skip((pageNumber - 1) * pageSize).Take(pageSize);
+            
 
-            if (filter != null)
-                query = filter(query);
+            var res = await _unitOfWork.GetRepository<RegistrantEntity>().GetAllAsync<RegistrantWithAllWalletsAndUsersDto>(mapper: _mapper,
+                filter: filter,include: q => q.Include(r => r.Wallets).Include(r => r.Users), 
+                pageNumber: pageNumber, pageSize: pageSize, disableTracking: false);
 
-            query = query.Include(r => r.Wallets).Include(r => r.Users);
-
-            // Faster with no mapper
-            var regDtos = await query.Select(r => new RegistrantWithAllWalletsAndUsersDto
-            {
-                Id = r.Id,
-                DateCreated = r.DateCreated,
-                DisplayName = r.DisplayName,
-                GSM = r.GSM,
-                Country = r.Country,
-                Address = r.Address,
-                IsCompany = r.isCompany,
-                Wallets = r.Wallets.Select(w => new WalletDto
-                {
-                    Id = w.Id,
-                    DateCreated = w.DateCreated,
-                    Status = w.Status,
-                    TarifaCode = w.TarifaCode,
-                    LimitCode = w.LimitCode,
-                    RegistrantId = w.RegistrantId,
-                }).ToList(),
-                Users = r.Users.Select(u => new UserDto
-                {
-                    Id = u.Id,
-                    Username = u.Username,
-                    RegistrantId = u.RegistrantId
-                }).ToList()
-            }).ToListAsync();
-
-            return regDtos;
+            return res;
         }
 
         public async Task<RegistrantDto> GetById(int id)
