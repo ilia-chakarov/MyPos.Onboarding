@@ -57,8 +57,6 @@ namespace WebAPI.Services
         public async Task<IEnumerable<RegistrantWithAllWalletsAndUsersDto>> GetAllWithWalletsAndUsers(int pageNumber, int pageSize, 
             Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>? filter = null)
         {
-            
-
             var res = await _unitOfWork.GetRepository<RegistrantEntity>().GetAllAsync<RegistrantWithAllWalletsAndUsersDto>(mapper: _mapper,
                 filter: filter,include: q => q.Include(r => r.Wallets).Include(r => r.Users), 
                 pageNumber: pageNumber, pageSize: pageSize, disableTracking: false);

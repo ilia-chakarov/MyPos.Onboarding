@@ -46,18 +46,10 @@ namespace WebAPI.Services
 
         public async Task<IEnumerable<UserDto>> GetAll(int pageNumber, int pageSize, Func<IQueryable<UserEntity>, IQueryable<UserEntity>>? filter = null)
         {
-            var query = _unitOfWork.GetRepository<UserEntity>().Query().Skip((pageNumber - 1) * pageSize).Take(pageSize);
+            var res = await _unitOfWork.GetRepository<UserEntity>().GetAllAsync<UserDto>(
+                mapper: _mapper, filter: filter, pageNumber: pageNumber, pageSize: pageSize, disableTracking: false);
 
-            if(filter != null)
-                query = filter(query);
-
-            //No automapper here. Faster
-            return await query.Select(u => new UserDto
-            {
-                Id=u.Id,
-                Username = u.Username,
-                RegistrantId=u.RegistrantId,
-            }).ToListAsync();
+            return res;
 
         }
 
