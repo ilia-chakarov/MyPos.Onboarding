@@ -1068,3 +1068,94 @@ OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
 [14:02:54 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
 [14:02:54 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
 [14:02:54 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:33:46 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[14:33:46 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[14:33:46 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[14:33:46 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[14:33:46 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:39:04 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (26ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+[14:39:04 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Auth/Login",
+  "QueryString": "",
+  "Headers": {
+    "Host": "10.80.55.95:7168",
+    "Content-Type": "application/json; charset=utf-8",
+    "traceparent": "00-0ea1469a61e4c2fb23a5141d70a6dd83-bd490ac595b4310e-00",
+    "Transfer-Encoding": "chunked"
+  },
+  "RequestBody": "{\u0022username\u0022:\u0022string\u0022,\u0022password\u0022: \u0022[REDACTED]\u0022}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022token\u0022:\u0022eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MzEwMTU0NCwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.ZZamJerNKPqv7EfBsEtH5V6F91RK2XgTRynDq6TdAfA\u0022}",
+  "ElapsedMilliseconds": 1474,
+  "Timestamp": "2025-07-21T11:39:04.8059592Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[14:39:05 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[14:39:05 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[14:39:05 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[DateCreated], [w].[Status], [w].[TarifaCode], [w].[LimitCode], [w].[RegistrantId]
+FROM [Wallets] AS [w]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[14:39:05 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Wallets",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "10.80.55.95:7168",
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MzEwMTU0NCwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.ZZamJerNKPqv7EfBsEtH5V6F91RK2XgTRynDq6TdAfA",
+    "traceparent": "00-0ea1469a61e4c2fb23a5141d70a6dd83-700b5d95e26a9f5d-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:3,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022status\u0022:\u0022Active\u0022,\u0022tarifaCode\u0022:\u0022123\u0022,\u0022limitCode\u0022:\u0022123\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:4,\u0022dateCreated\u0022:\u00222025-07-08T17:52:51.0161846\u0022,\u0022status\u0022:\u0022Active\u0022,\u0022tarifaCode\u0022:\u0022555\u0022,\u0022limitCode\u0022:\u0022111\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-09T09:21:36.3457505\u0022,\u0022status\u0022:\u0022Active\u0022,\u0022tarifaCode\u0022:\u0022777\u0022,\u0022limitCode\u0022:\u0022111\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-11T10:57:17.7492821\u0022,\u0022status\u0022:\u0022pulen s mangizi (actually nqq nishto)\u0022,\u0022tarifaCode\u0022:\u0022nz brat\u0022,\u0022limitCode\u0022:\u0022bez limiti\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 125,
+  "Timestamp": "2025-07-21T11:39:05.0335372Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[14:41:49 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[14:41:49 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[14:41:49 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[14:41:49 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[14:41:49 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:41:59 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[14:41:59 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[14:41:59 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (24ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[DateCreated], [w].[Status], [w].[TarifaCode], [w].[LimitCode], [w].[RegistrantId]
+FROM [Wallets] AS [w]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[14:41:59 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Wallets",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "10.80.55.95:7168",
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMiIsInVuaXF1ZV9uYW1lIjoic3RyaW5nIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InN0cmluZyIsImV4cCI6MTc1MzEwMTU0NCwiaXNzIjoiTXlQb3NBUEkiLCJhdWQiOiJNeVBvc0NsaWVudCJ9.ZZamJerNKPqv7EfBsEtH5V6F91RK2XgTRynDq6TdAfA",
+    "traceparent": "00-3fe1c108d567cfbc57a8868fc0de02bb-272fb0177db8e405-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:3,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022status\u0022:\u0022Active\u0022,\u0022tarifaCode\u0022:\u0022123\u0022,\u0022limitCode\u0022:\u0022123\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:4,\u0022dateCreated\u0022:\u00222025-07-08T17:52:51.0161846\u0022,\u0022status\u0022:\u0022Active\u0022,\u0022tarifaCode\u0022:\u0022555\u0022,\u0022limitCode\u0022:\u0022111\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-09T09:21:36.3457505\u0022,\u0022status\u0022:\u0022Active\u0022,\u0022tarifaCode\u0022:\u0022777\u0022,\u0022limitCode\u0022:\u0022111\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-11T10:57:17.7492821\u0022,\u0022status\u0022:\u0022pulen s mangizi (actually nqq nishto)\u0022,\u0022tarifaCode\u0022:\u0022nz brat\u0022,\u0022limitCode\u0022:\u0022bez limiti\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 817,
+  "Timestamp": "2025-07-21T11:41:59.473526Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+

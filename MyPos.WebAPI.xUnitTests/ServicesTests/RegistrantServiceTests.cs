@@ -12,6 +12,8 @@ using WebAPI.Services;
 using WebAPI.UnitOfWork;
 using Xunit;
 using Microsoft.EntityFrameworkCore;
+using WebAPI.Exceptions;
+using Microsoft.AspNetCore.Http;
 
 namespace MyPos.WebAPI.XUnitTests.ServiceTests
 {
@@ -100,12 +102,54 @@ namespace MyPos.WebAPI.XUnitTests.ServiceTests
             _uowMock.Verify(u => u.SaveChangesAsync(), Times.Once);
         }
 
-        //[Fact]
-        //public async Task GetRegistrantById_ShouldReturnDto()
-        //{
-        //    _mapperServiceMock.Setup(m => m.Map<RegistrantDto>(It.IsAny<RegistrantEntity>())).Returns(registrantEntity);
-        //}
+        [Fact]
+        public async Task DeleteRegistrant_ShouldDeleteAndReturnDto_WhenExists()
+        {
+            var id = 1;
+            var entity = new RegistrantEntity { Id = id, DisplayName = "Test User" };
+            var dto = new RegistrantDto { Id = id, DisplayName = "Test User" };
 
+            _repoMock.Setup(r => r.GetByIdAsync(id)).ReturnsAsync(entity);
+            _mapperServiceMock.Setup(m => m.Map<RegistrantDto>(entity)).Returns(dto);
+            _uowMock.Setup(u => u.GetRepository<RegistrantEntity>()).Returns(_repoMock.Object);
+            _uowMock.Setup(u => u.SaveChangesAsync()).ReturnsAsync(1);
+
+            var result = await _registrantService.DeleteRegistrant(id);
+
+            Assert.Equal(id, result.Id);
+            _repoMock.Verify(r => r.Delete(entity), Times.Once);
+            _uowMock.Verify(u => u.SaveChangesAsync(), Times.Once);
+        }
+
+        [Fact]
+        public async Task DeleteRegistrant_ShouldThrow_WhenNotFound()
+        {
+            var id = 999;
+            _repoMock.Setup(r => r.GetByIdAsync(id)).ReturnsAsync((RegistrantEntity)null);
+            _uowMock.Setup(u => u.GetRepository<RegistrantEntity>()).Returns(_repoMock.Object);
+
+            var ex = await Assert.ThrowsAsync<MyPosApiException>(() => _registrantService.DeleteRegistrant(id));
+
+            Assert.Equal(StatusCodes.Status404NotFound, ex.StatusCode);
+        }
+
+        [Fact]
+        public async Task GetById_ShouldReturnDto_WhenExists()
+        {
+            var id = 1;
+            var entity = new RegistrantEntity { Id = id, DisplayName = "Test" };
+            var dto = new RegistrantDto { Id = id, DisplayName = "Test" };
+
+            _repoMock.Setup(r => r
+                .GetSingleAsync(It.IsAny<Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>>()))
+                .ReturnsAsync(entity);
+            _mapperServiceMock.Setup(m => m.Map<RegistrantDto>(entity)).Returns(dto);
+            _uowMock.Setup(u => u.GetRepository<RegistrantEntity>()).Returns(_repoMock.Object);
+
+            var result = await _registrantService.GetById(id);
+
+            Assert.Equal(id, result.Id);
+        }
 
     }
 }
