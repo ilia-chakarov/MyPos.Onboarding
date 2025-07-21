@@ -100,6 +100,12 @@ namespace MyPos.WebAPI.XUnitTests.ServiceTests
             _uowMock.Verify(u => u.SaveChangesAsync(), Times.Once);
         }
 
+        //[Fact]
+        //public async Task GetRegistrantById_ShouldReturnDto()
+        //{
+        //    _mapperServiceMock.Setup(m => m.Map<RegistrantDto>(It.IsAny<RegistrantEntity>())).Returns(registrantEntity);
+        //}
+
 
     }
 }

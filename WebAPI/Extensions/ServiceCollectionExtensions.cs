@@ -1,20 +1,23 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using ExternalApi;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using Microsoft.Identity.Client;
 using Microsoft.OpenApi.Models;
+using MyPos.Configuration.Options;
+using MyPos.WebAPI.External.ClientServices;
+using MyPos.WebAPI.External.ClientServices.Interfaces;
+using Serilog;
+using Swashbuckle.AspNetCore.SwaggerGen;
+using System.Net.Http.Headers;
 using WebAPI.Entities;
+using WebAPI.ExternalClients.Clients;
+using WebAPI.ExternalClients.Clients.Interfaces;
+using WebAPI.Options;
 using WebAPI.Services;
 using WebAPI.Services.Interfaces;
 using WebAPI.UnitOfWork;
-using Serilog;
-using Microsoft.Extensions.Options;
-using WebAPI.Options;
-using WebAPI.ExternalClients.Clients.Interfaces;
-using WebAPI.ExternalClients.Clients;
-using ExternalApi;
-using MyPos.Configuration.Options;
-using Swashbuckle.AspNetCore.SwaggerGen;
-using MyPos.WebAPI.External.ClientServices.Interfaces;
-using MyPos.WebAPI.External.ClientServices;
 
 namespace WebAPI.Extensions
 {
@@ -47,10 +50,11 @@ namespace WebAPI.Extensions
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc(swaggerOptions.Version, 
-                    new Microsoft.OpenApi.Models.OpenApiInfo 
-                    { 
-                        Title = swaggerOptions.Title, Version = swaggerOptions.Version 
+                c.SwaggerDoc(swaggerOptions.Version,
+                    new Microsoft.OpenApi.Models.OpenApiInfo
+                    {
+                        Title = swaggerOptions.Title,
+                        Version = swaggerOptions.Version
                     });
 
                 // JWT Bearer setup
@@ -109,8 +113,28 @@ namespace WebAPI.Extensions
             return services;
         }
 
-        public static IServiceCollection AddExternalHttpClients(this IServiceCollection services)
+        public static IServiceCollection AddExternalHttpClients(this IServiceCollection services, IConfiguration configuration)
         {
+            //var baseUrl = configuration.GetSection("").Value;
+            //var pass = "";
+
+            //services.AddHttpClient("IvoAPI",
+            //client =>
+            //{
+            //    // Set the base address of the named client.
+            //    client.BaseAddress = new Uri(baseUrl);
+            //    client.DefaultRequestHeaders.Authorization = GetAuth(pass);
+
+            //    // Add a user-agent default request header.
+            //})
+            //.ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
+            //{
+            //    ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true
+            //});
+
+            //services.AddHttpClient("Named.Client")
+            //    .SetHandlerLifetime(TimeSpan.FromMinutes(5));
+
             services.AddHttpClient<IvoApiClient>((sp, cl) =>
             {
                 var options = sp.GetRequiredService<IOptions<IvoApiSettings>>().Value;
@@ -132,6 +156,17 @@ namespace WebAPI.Extensions
 
             return services;
         }
+
+
+        //private static AuthenticationHeaderValue? GetAuth(string pass)
+        //{
+        //    HttpClient client = new HttpClient();
+        //    client.BaseAddress = new Uri("");
+        //    var token = client.GetAsync("");
+
+        //    return new AuthenticationHeaderValue("Bearer", token.Result.Content);
+        //}
+
 
         public static IHostBuilder ConfigureSerilog(this IHostBuilder hostBuilder)
         {

@@ -40,7 +40,7 @@ namespace WebAPI
 
 
             // Ivo client
-            builder.Services.AddExternalHttpClients();
+            builder.Services.AddExternalHttpClients(builder.Configuration);
             builder.Services.AddHttpContextAccessor();
 
             var app = builder.Build();
