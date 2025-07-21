@@ -12,8 +12,8 @@ namespace WebAPI.Repositories.Interfaces
         Task<IEnumerable<TResult>> GetAllAsync<TResult>(
             IMapper mapper,
             Func<IQueryable<TEntity>, IQueryable<TEntity>>? filter = null,
-            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
-            Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null,
+            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null!,
+            Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null!,
             int? pageNumber = null,
             int? pageSize = null,
             bool disableTracking = true);
