@@ -62,19 +62,10 @@ namespace WebAPI.Services
 
         public async Task<IEnumerable<CreateUserAccessControlDto>> GetAll(int pageNumber, int pageSize, Func<IQueryable<UserAccessControlEntity>, IQueryable<UserAccessControlEntity>>? filter = null)
         {
-            var query = _unitOfWork.GetRepository<UserAccessControlEntity>().Query().Skip((pageNumber - 1) * pageSize).Take(pageSize);
+            var res = await _unitOfWork.GetRepository<UserAccessControlEntity>().GetAllAsync<CreateUserAccessControlDto>(
+                mapper: _mapper, filter: filter, pageNumber: pageNumber, pageSize: pageSize, disableTracking: false);
 
-            if(filter != null)
-                query = filter(query);
-
-            // No mapper is faster
-            return await query.Select(x =>
-                new CreateUserAccessControlDto
-                {
-                    UserId = x.UserId,
-                    WalletId = x.WalletId,
-                    AccessLevel = x.AccessLevel,
-                }).ToListAsync();
+            return res;
         }
 
         public async Task<CreateUserAccessControlDto> GetById(int userId, int walletId)
