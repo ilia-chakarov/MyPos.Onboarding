@@ -34,14 +34,10 @@ namespace WebAPI.Services
 
         public async Task<IEnumerable<AccountDto>> GetAll(int pageNumber, int pageSize, Func<IQueryable<AccountEntity>, IQueryable<AccountEntity>>? filter = null)
         {
-            var query = _unitOfWork.GetRepository<AccountEntity>().Query().Skip((pageNumber - 1) * pageSize).Take(pageSize);
+            var res = await _unitOfWork.GetRepository<AccountEntity>().GetAllAsync<AccountDto>(
+                mapper: _mapper, filter: filter, pageNumber: pageNumber, pageSize: pageSize, disableTracking: false);
 
-            if (filter != null)
-                query = filter(query);
-
-            var accounts = await query.ToListAsync();
-
-            return _mapper.Map<List<AccountDto>>(accounts);
+            return res;
         }
 
         public async Task<AccountDto> CreateAccount(CreateAccountDto dto)

@@ -855,3 +855,120 @@ OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
 }
 
 
+[11:23:29 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[11:23:29 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[11:23:29 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[11:23:29 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[11:23:29 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[11:25:03 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[11:25:03 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[11:25:04 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (28ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateCreated], [a].[Currency], [a].[Balance], [a].[IBAN], [a].[AccountName], [a].[LastOperationDT], [a].[BalanceInEuro], [a].[WalletId]
+FROM [Accounts] AS [a]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[11:25:04 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Accounts",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "*/*",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNCIsInVuaXF1ZV9uYW1lIjoiaWxpYS1jaGFrYXJvdiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJpbGlhLWNoYWthcm92IiwiZXhwIjoxNzUzMDg5NDQxLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.jrmfFBFz9QpXQuC-HDv6sgTG5Qo5sTd0VoYek-Z2QV0",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:2,\u0022dateCreated\u0022:\u00222025-07-09T09:47:52.4600202\u0022,\u0022currency\u0022:\u0022BGN\u0022,\u0022balance\u0022:555.00,\u0022iban\u0022:\u0022BGSTSA123456\u0022,\u0022accountName\u0022:\u0022ilia-chakarov\u0022,\u0022lastOperationDT\u0022:\u00222025-07-09T09:47:52.4602967\u0022,\u0022balanceInEuro\u0022:275.00,\u0022walletId\u0022:6},{\u0022id\u0022:3,\u0022dateCreated\u0022:\u00222025-07-14T17:34:48.6794994\u0022,\u0022currency\u0022:\u0022BGN\u0022,\u0022balance\u0022:1000000.00,\u0022iban\u0022:\u0022123123123123\u0022,\u0022accountName\u0022:\u0022MyPos\u0022,\u0022lastOperationDT\u0022:\u00222025-07-14T17:34:48.6797867\u0022,\u0022balanceInEuro\u0022:500000.00,\u0022walletId\u0022:6}]",
+  "ElapsedMilliseconds": 888,
+  "Timestamp": "2025-07-21T08:25:04.2617304Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[11:25:07 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateCreated], [a].[Currency], [a].[Balance], [a].[IBAN], [a].[AccountName], [a].[LastOperationDT], [a].[BalanceInEuro], [a].[WalletId]
+FROM [Accounts] AS [a]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[11:25:07 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Accounts",
+  "QueryString": "?pageNumber=1\u0026pageSize=1",
+  "Headers": {
+    "Accept": "*/*",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNCIsInVuaXF1ZV9uYW1lIjoiaWxpYS1jaGFrYXJvdiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJpbGlhLWNoYWthcm92IiwiZXhwIjoxNzUzMDg5NDQxLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.jrmfFBFz9QpXQuC-HDv6sgTG5Qo5sTd0VoYek-Z2QV0",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:2,\u0022dateCreated\u0022:\u00222025-07-09T09:47:52.4600202\u0022,\u0022currency\u0022:\u0022BGN\u0022,\u0022balance\u0022:555.00,\u0022iban\u0022:\u0022BGSTSA123456\u0022,\u0022accountName\u0022:\u0022ilia-chakarov\u0022,\u0022lastOperationDT\u0022:\u00222025-07-09T09:47:52.4602967\u0022,\u0022balanceInEuro\u0022:275.00,\u0022walletId\u0022:6}]",
+  "ElapsedMilliseconds": 38,
+  "Timestamp": "2025-07-21T08:25:07.0310871Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[11:25:10 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[11:25:10 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[11:25:10 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateCreated], [a].[Currency], [a].[Balance], [a].[IBAN], [a].[AccountName], [a].[LastOperationDT], [a].[BalanceInEuro], [a].[WalletId]
+FROM [Accounts] AS [a]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+[11:25:10 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Accounts",
+  "QueryString": "?pageNumber=2\u0026pageSize=1",
+  "Headers": {
+    "Accept": "*/*",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNCIsInVuaXF1ZV9uYW1lIjoiaWxpYS1jaGFrYXJvdiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJpbGlhLWNoYWthcm92IiwiZXhwIjoxNzUzMDg5NDQxLCJpc3MiOiJNeVBvc0FQSSIsImF1ZCI6Ik15UG9zQ2xpZW50In0.jrmfFBFz9QpXQuC-HDv6sgTG5Qo5sTd0VoYek-Z2QV0",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:3,\u0022dateCreated\u0022:\u00222025-07-14T17:34:48.6794994\u0022,\u0022currency\u0022:\u0022BGN\u0022,\u0022balance\u0022:1000000.00,\u0022iban\u0022:\u0022123123123123\u0022,\u0022accountName\u0022:\u0022MyPos\u0022,\u0022lastOperationDT\u0022:\u00222025-07-14T17:34:48.6797867\u0022,\u0022balanceInEuro\u0022:500000.00,\u0022walletId\u0022:6}]",
+  "ElapsedMilliseconds": 18,
+  "Timestamp": "2025-07-21T08:25:10.8997723Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
