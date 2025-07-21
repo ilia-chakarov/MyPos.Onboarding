@@ -1,13 +1,28 @@
-﻿namespace WebAPI.Repositories.Interfaces
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+using Microsoft.EntityFrameworkCore.Query;
+using System.Linq.Expressions;
+using WebAPI.Entities;
+
+namespace WebAPI.Repositories.Interfaces
 {
-    public interface IRepository<T> where T : class
+    public interface IRepository<TEntity> where TEntity : class
     {
-        Task<IEnumerable<T>> GetAllAsync();
-        IQueryable<T> Query();
-        Task<T?> GetSingleAsync(Func<IQueryable<T>, IQueryable<T>> filter);
-        Task<T?> GetByIdAsync(int id);
-        Task AddAsync(T entity);
-        void Update(T entity);
-        void Delete(T entity);
+        Task<IEnumerable<TEntity>> GetAllAsync();
+        Task<IEnumerable<TResult>> GetAllAsync<TResult>(
+            IMapper mapper,
+            Func<IQueryable<TEntity>, IQueryable<TEntity>>? filter = null,
+            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
+            Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null,
+            int? pageNumber = null,
+            int? pageSize = null,
+            bool disableTracking = true);
+
+        IQueryable<TEntity> Query();
+        Task<TEntity?> GetSingleAsync(Func<IQueryable<TEntity>, IQueryable<TEntity>> filter);
+        Task<TEntity?> GetByIdAsync(int id);
+        Task AddAsync(TEntity entity);
+        void Update(TEntity entity);
+        void Delete(TEntity entity);
     }
 }

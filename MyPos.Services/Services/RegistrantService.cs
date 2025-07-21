@@ -44,25 +44,15 @@ namespace WebAPI.Services
             return _mapper.Map<RegistrantDto>(registrant);
         }
 
-        public async Task<IEnumerable<RegistrantDto>> GetAll(int pageNumber, int pageSize, Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>? filter = null)
+        public async Task<IEnumerable<RegistrantDto>> GetAll(int pageNumber, int pageSize, 
+            Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>? filter = null)
         {
-            var query = _unitOfWork.GetRepository<RegistrantEntity>().Query().Skip((pageNumber - 1) * pageSize).Take(pageSize);
 
-            if (filter != null)
-                query = filter(query);
+            var result = await _unitOfWork.GetRepository<RegistrantEntity>().GetAllAsync<RegistrantDto>(
+                mapper: _mapper,
+                filter: filter, pageNumber: pageNumber, pageSize: pageSize, disableTracking: false);
 
-            // Faster with no mapper
-            return await query.Select(r => new RegistrantDto
-            {
-                Id = r.Id,
-                DateCreated = r.DateCreated,
-                DisplayName = r.DisplayName,
-                GSM = r.GSM,
-                Country = r.Country,
-                Address = r.Address,
-                IsCompany = r.isCompany,
-
-            }).ToListAsync();
+            return result;
         }
 
         public async Task<IEnumerable<RegistrantWithAllWalletsAndUsersDto>> GetAllWithWalletsAndUsers(int pageNumber, int pageSize, Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>? filter = null)
