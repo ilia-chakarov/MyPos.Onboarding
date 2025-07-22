@@ -1,11 +1,7 @@
 ﻿using MyPos.TCPWokrers.XmlModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace MyPos.TCPWokrers.Workers
@@ -16,37 +12,60 @@ namespace MyPos.TCPWokrers.Workers
         {
             int portNr = 6969;
             string address = "10.80.55.157";
-            //int portNr = 9999;
-            //string address = "127.0.0.1";
-
             var ipAddress = IPAddress.Parse(address);
             var endpoint = new IPEndPoint(ipAddress, portNr);
 
-            using TcpClient client = new TcpClient();
-
-            await client.ConnectAsync(endpoint);
-            await using NetworkStream stream = client.GetStream();
-
-            var buffer = new byte[1024];
-            while (true)
+            while (!stoppingToken.IsCancellationRequested)
             {
-                string message = Console.ReadLine()?.ToString();
+                try
+                {
+                    using TcpClient client = new TcpClient();
+                    Console.WriteLine("Connecting to server...");
 
-                if (message != null)
-                    buffer = Encoding.UTF8.GetBytes(message);
-                else
-                    Console.WriteLine("Message is null");
+                    await client.ConnectAsync(endpoint, stoppingToken);
+                    Console.WriteLine("Connected to server.");
 
-                XmlSerializer serializer = new XmlSerializer(typeof(ChatMessage));
-                ChatMessage msg = new ChatMessage { Message = message! };
+                    await using NetworkStream stream = client.GetStream();
+                    var serializer = new XmlSerializer(typeof(ChatMessage));
 
-                serializer.Serialize(stream, msg);
+                    while (!stoppingToken.IsCancellationRequested)
+                    {
+                        string? message = Console.ReadLine();
 
-                //stream.BeginWrite(buffer, 0, buffer.Length, null, null);
-                stream.Flush();
+                        if (!string.IsNullOrWhiteSpace(message))
+                        {
+                            var msg = new ChatMessage
+                            {
+                                Message = message,
+                                Timestamp = DateTime.Now
+                            };
+
+                            serializer.Serialize(stream, msg);
+                            await stream.FlushAsync(stoppingToken);
+                        }
+                    }
+                }
+                catch (OperationCanceledException)
+                {
+                    Console.WriteLine("Cancellation requested. Exiting...");
+                    break;
+                }
+                catch (SocketException se)
+                {
+                    Console.WriteLine($"Socket error: {se.Message}. Reconnecting in 5 seconds...");
+                    await Task.Delay(5000, stoppingToken);
+                }
+                catch (IOException ioe)
+                {
+                    Console.WriteLine($"Connection lost: {ioe.Message}. Reconnecting in 5 seconds...");
+                    await Task.Delay(5000, stoppingToken);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Unexpected error: {ex.Message}. Reconnecting in 5 seconds...");
+                    await Task.Delay(5000, stoppingToken);
+                }
             }
-            
-            client.Close();
         }
     }
 }

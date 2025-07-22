@@ -7,9 +7,12 @@ using System.Xml.Serialization;
 
 namespace MyPos.TCPWokrers.XmlModel
 {
-
+    [XmlRoot]
     public class ChatMessage
     {
-        public string Message { get; set; }
+        [XmlElement]
+        public string Message { get; set; } = null!;
+        [XmlElement]
+        public DateTime Timestamp { get; set; }
     }
 }

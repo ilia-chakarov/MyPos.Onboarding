@@ -1,20 +1,16 @@
+using MyPos.TCPWokrers.XmlModel;
 using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace MyPos.TCPWokrers.Workers
 {
     public class TCPServerWorker : BackgroundService
     {
-        private readonly ILogger<TCPServerWorker> _logger;
-
-        public TCPServerWorker(ILogger<TCPServerWorker> logger)
-        {
-            _logger = logger;
-        }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
@@ -52,6 +48,8 @@ namespace MyPos.TCPWokrers.Workers
                 var buffer = new StringBuilder();
                 char[] charBuf = new char[1024];
 
+                XmlSerializer serializer = new XmlSerializer(typeof(ChatMessage));
+
                 while (client.Connected)
                 {
                     int bytesRead = await reader.ReadAsync(charBuf, 0, charBuf.Length);
@@ -65,7 +63,12 @@ namespace MyPos.TCPWokrers.Workers
                     if (content.Contains("</ChatMessage>"))
                     {
                         string fullMessage = content.Substring(0, content.IndexOf("</ChatMessage>") + "</ChatMessage>".Length);
+
+                        using var stringReader = new StringReader(fullMessage);
+                        var desMes = (ChatMessage) serializer.Deserialize(stringReader);
+
                         Console.WriteLine($"Received message:\n{fullMessage}");
+                        Console.WriteLine($"Deserialized message:\n{desMes?.Message} at {desMes?.Timestamp}");
 
                         //await SaveToFile(buffer, content, fullMessage);
                         buffer.Clear();
