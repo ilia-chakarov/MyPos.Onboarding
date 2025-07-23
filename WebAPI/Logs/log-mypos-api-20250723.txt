@@ -1478,3 +1478,265 @@ OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
 }
 
 
+[16:21:19 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[16:21:19 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[16:21:19 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[16:21:19 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[16:21:19 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:21:49 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[16:21:49 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[16:21:49 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (53ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[16:21:49 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 1666,
+  "Timestamp": "2025-07-23T13:21:49.6632904Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[16:21:52 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[16:21:52 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 59,
+  "Timestamp": "2025-07-23T13:21:52.195303Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[16:21:52 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[16:21:52 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 16,
+  "Timestamp": "2025-07-23T13:21:52.3156631Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[16:21:52 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[16:21:52 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 7,
+  "Timestamp": "2025-07-23T13:21:52.5112448Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[16:21:52 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[16:21:52 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 5,
+  "Timestamp": "2025-07-23T13:21:52.6810403Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[16:21:52 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[16:21:52 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-23T13:21:52.8297687Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[16:21:52 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[16:21:52 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-23T13:21:52.9773674Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[16:24:41 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[16:24:41 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[16:24:41 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[16:24:41 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[16:24:41 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[16:25:06 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[16:25:06 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[16:25:06 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[16:25:06 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[16:25:06 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI

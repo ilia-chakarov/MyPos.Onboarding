@@ -15,11 +15,13 @@ namespace MyPos.WebAPI.BackgroundServices
 
             while (!stoppingToken.IsCancellationRequested)
             {
+                long gcMem = GC.GetTotalMemory(true);
+
                 float usg = cpuCounter.NextValue();
 
                 Console.WriteLine($"CPU Usage: {usg}%");
 
-                _logger.LogInformation("{@LogType} CPU Usage: {Usage}%", "CPU", usg);
+                _logger.LogInformation("{@LogType} Usage: {Usage}%", "CPU", usg);
 
                 await Task.Delay(1000, stoppingToken);
             }

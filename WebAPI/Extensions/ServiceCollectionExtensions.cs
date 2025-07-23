@@ -174,7 +174,7 @@ namespace WebAPI.Extensions
                     ).WriteTo.File(
                         "Logs/Metrics/cpu-metrix-.txt",
                         rollingInterval: RollingInterval.Day,
-                        outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] CPU: {Message:lj}{NewLine}{Exception}"
+                        outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}"
                     )
                 )
                 .CreateLogger();
