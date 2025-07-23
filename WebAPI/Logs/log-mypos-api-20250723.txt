@@ -995,3 +995,486 @@
 }
 
 
+[14:30:25 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:30:25 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[14:30:25 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[14:30:25 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[14:30:25 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[14:30:25 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:30:26 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 100%
+[14:30:27 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 100%
+[14:30:28 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:30:29 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:30:30 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:30:31 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:30:32 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 100%
+[14:30:33 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 100%
+[14:30:34 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 100%
+[14:30:35 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 34.900757%
+[14:30:36 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 100%
+[14:33:40 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 87.41738%
+[14:33:40 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[14:33:40 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[14:33:40 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[14:33:40 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[14:33:40 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:33:41 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 100%
+[14:33:42 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 100%
+[14:33:43 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:33:44 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 100%
+[14:33:45 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 100%
+[14:33:46 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:33:47 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 100%
+[14:33:48 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 34.605724%
+[14:33:49 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 34.88523%
+[14:33:50 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:33:51 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:33:52 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 100%
+[14:33:53 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 34.493862%
+[14:33:54 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 34.909527%
+[14:33:55 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:33:56 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:33:57 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:33:58 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:33:59 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:00 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:01 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:02 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:03 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 100%
+[14:34:04 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:05 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:06 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:07 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 100%
+[14:34:08 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:09 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 67.419044%
+[14:34:10 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:11 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:12 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 100%
+[14:34:13 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:14 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:15 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:16 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:17 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:18 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 34.89349%
+[14:34:19 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:20 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 100%
+[14:34:21 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:22 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:23 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:24 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:25 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:26 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 100%
+[14:34:27 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:28 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:29 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:30 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:31 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:33 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:34 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:35 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:36 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:37 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:38 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 100%
+[14:34:39 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:40 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:41 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:42 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:43 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:44 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:45 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:46 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:47 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:48 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:49 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:50 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:51 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:52 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 35.135002%
+[14:34:53 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:34:54 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:35:38 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:35:38 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[14:35:38 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[14:35:38 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[14:35:38 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[14:35:38 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:35:39 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 16.970093%
+[14:35:40 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 13.799279%
+[14:35:41 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 11.4831085%
+[14:35:42 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 14.373392%
+[14:35:43 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:35:44 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 7.357854%
+[14:35:45 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0.78776824%
+[14:35:46 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 18.008661%
+[14:35:47 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 1.6307701%
+[14:35:48 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:35:49 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 2.3265994%
+[14:35:50 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 1.4577775%
+[14:35:51 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 2.5860393%
+[14:35:52 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 6.0509195%
+[14:35:53 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:35:54 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 7.3731885%
+[14:35:55 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0.10337828%
+[14:35:56 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 6.706659%
+[14:35:57 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 14.438737%
+[14:35:58 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:35:59 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 1.3445244%
+[14:36:00 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 3.2568035%
+[14:36:01 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 10.473651%
+[14:36:02 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:36:03 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:36:04 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 1.3358922%
+[14:36:05 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 7.2135334%
+[14:36:06 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 2.1466677%
+[14:36:28 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:36:28 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[14:36:28 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[14:36:28 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[14:36:28 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[14:36:28 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:36:29 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 21.142653%
+[14:36:30 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 15.17536%
+[14:36:31 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 5.2872458%
+[14:36:32 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 5.3314347%
+[14:36:33 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 9.173359%
+[14:36:34 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0.25040826%
+[14:36:35 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 3.6270807%
+[14:36:36 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0.9352649%
+[14:36:37 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 1.6216542%
+[14:36:38 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0.74529284%
+[14:36:39 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 2.3328784%
+[14:36:40 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 1.9865408%
+[14:36:41 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:36:42 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 3.9394677%
+[14:36:43 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 5.8445435%
+[14:36:44 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 5.53705%
+[14:36:45 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 1.5766618%
+[14:36:46 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 2.9096444%
+[14:36:47 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:36:48 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 7.5474744%
+[14:36:49 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 2.347806%
+[14:36:50 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 5.3836107%
+[14:36:51 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:36:52 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 6.150804%
+[14:36:53 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 4.24117%
+[14:36:54 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 4.389738%
+[14:36:55 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:36:56 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0.26672095%
+[14:36:57 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 3.6128645%
+[14:36:58 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 3.690227%
+[14:36:59 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:37:00 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0.5122041%
+[14:37:01 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 6.27695%
+[14:37:02 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 4.4181867%
+[14:37:03 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 2.5726724%
+[14:37:04 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 3.2219505%
+[14:37:05 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 1.8135915%
+[14:37:06 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 4.0651116%
+[14:37:07 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 2.939593%
+[14:37:08 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 15.349635%
+[14:37:09 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:37:10 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 2.0879679%
+[14:37:11 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:37:12 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 7.9099145%
+[14:37:13 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:37:14 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 1.403228%
+[14:37:15 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 1.4752262%
+[14:37:16 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 5.6816225%
+[14:37:17 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:37:18 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 2.229744%
+[14:37:19 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 7.204436%
+[14:37:20 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:37:21 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 12.8701105%
+[14:37:22 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:37:23 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 9.184339%
+[14:37:24 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 8.68177%
+[14:37:25 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 1.3484764%
+[14:37:26 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[14:37:26 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[14:37:26 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (31ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[14:37:26 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 938,
+  "Timestamp": "2025-07-23T11:37:26.3659666Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[14:37:26 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 8.312602%
+[14:37:27 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:37:28 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 17.411264%
+[14:37:29 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:37:30 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 9.463859%
+[14:37:31 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 3.923052%
+[14:37:32 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 5.6980705%
+[14:37:33 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 6.079674%
+[14:37:34 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 5.9655247%
+[14:37:35 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 5.2027097%
+[14:37:36 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 6.8107486%
+[14:37:37 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 5.7359405%
+[14:37:38 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 11.146632%
+[14:37:40 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 15.397246%
+[14:37:41 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:37:42 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 1.5036659%
+[14:37:43 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 6.9096513%
+[14:37:44 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 3.807369%
+[14:37:45 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:37:46 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 8.82826%
+[14:37:47 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:37:48 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 6.1787357%
+[14:37:49 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:37:50 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 7.8489733%
+[14:37:51 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:37:52 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 15.105119%
+[14:37:53 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:37:54 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 5.250493%
+[14:37:55 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:37:56 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 3.005537%
+[14:37:57 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 5.804679%
+[14:37:58 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 15.440701%
+[14:37:59 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:38:00 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 6.3566213%
+[14:38:01 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 5.2773614%
+[14:38:02 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0.37227276%
+[14:38:03 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0.81833243%
+[14:38:04 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 5.5581255%
+[14:38:05 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:38:06 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 9.296266%
+[14:38:07 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 16.890203%
+[14:38:08 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:38:09 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 6.597674%
+[14:38:10 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0.5054729%
+[14:38:11 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 20.18081%
+[14:38:12 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:38:13 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:38:14 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 2.75295%
+[14:38:15 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 3.4114122%
+[14:38:16 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 2.368366%
+[14:38:17 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[14:38:17 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 55,
+  "Timestamp": "2025-07-23T11:38:17.0448057Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[14:38:17 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 7.9452085%
+[14:38:18 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 2.3192573%
+[14:38:19 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 5.734141%
+[14:38:20 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:38:21 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 4.187015%
+[14:38:22 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 2.214174%
+[14:38:23 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 7.593007%
+[14:38:24 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[14:38:24 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 25,
+  "Timestamp": "2025-07-23T11:38:24.2287276Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[14:38:24 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 8.915497%
+[14:38:25 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 10.953145%
+[14:38:26 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 5.6331153%
+[14:38:27 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 1.770735%
+[14:38:28 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:38:29 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 9.725294%
+[14:38:30 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0.7145022%
+[14:38:31 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 4.04865%
+[14:41:27 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:41:27 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[14:41:27 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[14:41:27 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[14:41:27 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[14:41:27 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:41:28 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 12.565489%
+[14:41:29 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 17.04049%
+[14:41:30 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 3.0877151%
+[14:41:31 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 4.204824%
+[14:41:32 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:41:33 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 3.6834645%
+[14:41:34 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 6.580067%
+[14:41:35 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 2.647762%
+[14:41:36 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 4.4427075%
+[14:41:37 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 1.1700186%
+[14:41:38 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0.92767674%
+[14:41:39 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 2.9123278%
+[14:41:40 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 3.7960463%
+[14:41:41 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 2.5693417%
+[14:41:42 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0.23662163%
+[14:41:43 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 7.413885%
+[14:41:44 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 8.018629%
+[14:41:45 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 9.573203%
+[14:41:46 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 2.2082198%
+[14:41:47 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:41:48 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 1.3743463%
+[14:41:49 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 18.378458%
+[14:41:50 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:41:51 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 14.7218%
+[14:41:52 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:41:53 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 6.060701%
+[14:41:54 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 3.6727324%
+[14:41:55 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 8.254501%
+[14:41:56 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 7.273577%
+[14:41:57 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[14:41:57 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[14:41:57 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 15.868284%
+[14:41:58 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (44ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[14:41:58 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 1669,
+  "Timestamp": "2025-07-23T11:41:58.0678612Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[14:41:59 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 5.0030527%
+[14:42:00 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0.4615895%
+[14:42:01 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0.1431614%
+[14:42:02 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 4.778942%
+[14:42:03 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 6.395415%
+[14:42:04 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 5.5228767%
+[14:42:05 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 9.297153%
+[14:42:06 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 0%
+[14:42:07 INF] [Machine: MP-DT0KYVBJ] CPU CPU Usage: 7.6106224%
+[14:43:26 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[14:43:26 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[14:43:26 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[14:43:26 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[14:43:26 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[14:43:37 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.157:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[14:43:40 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/external/IvoRegistrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "*/*",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 500,
+  "ResponseBody": "{\u0022title\u0022:\u0022Internal Server Error\u0022,\u0022status\u0022:500,\u0022detail\u0022:\u0022No connection could be made because the target machine actively refused it. (10.80.55.157:7191)\u0022}",
+  "ElapsedMilliseconds": 2510,
+  "Timestamp": "2025-07-23T11:43:40.1088321Z",
+  "ExceptionMessage": "No connection could be made because the target machine actively refused it. (10.80.55.157:7191)",
+  "ExceptionStackTrace": "   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)\r\n   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)\r\n   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)\r\n   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)\r\n   at System.Threading.Tasks.TaskCompletionSourceWithCancellation\u00601.WaitWithCancellationAsync(CancellationToken cancellationToken)\r\n   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter\u00601.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)\r\n   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)\r\n   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)\r\n   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)\r\n   at System.Net.Http.HttpClient.\u003CSendAsync\u003Eg__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)\r\n   at MyPos.WebAPI.External.Handler.BearerTokenHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\Handler\\BearerTokenHandler.cs:line 38\r\n   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.\u003CSendCoreAsync\u003Eg__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)\r\n   at System.Net.Http.HttpClient.\u003CSendAsync\u003Eg__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)\r\n   at ExternalApi.IvoApiClient.AllAllAsync(Nullable\u00601 pageNumber, Nullable\u00601 pageSize, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Generated\\IvoApiClient.cs:line 1956\r\n   at WebAPI.ExternalClients.Clients.RegistrantsExtClientService.GetAllAsync(Nullable\u00601 pageNumber, Nullable\u00601 pageSize) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\ClientServices\\RegistrantsExtClientService.cs:line 57\r\n   at WebAPI.External.Controllers.IvoRegistrantsController.GetAll(Int32 pageNumber, Int32 pageSize) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\Controllers\\IvoRegistrantsController.cs:line 34\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 62"
+}
+
+
