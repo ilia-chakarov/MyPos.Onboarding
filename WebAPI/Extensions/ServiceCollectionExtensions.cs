@@ -154,11 +154,24 @@ namespace WebAPI.Extensions
                 .Enrich.WithMachineName()
                 .Enrich.WithThreadId()
                 .Enrich.WithProperty("Application", "MyPos.Onboarding.WebAPI")
+                // Main API Logs
                 .WriteTo.File(
                     "Logs/log-mypos-api-.txt",
                     rollingInterval: RollingInterval.Day,
                     outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] [Machine: {MachineName}] {Message:lj}{NewLine}{Exception}"
-                ).CreateLogger();
+                )
+                // CPU Logs
+                .WriteTo.Logger(lc => lc
+                    .Filter.ByIncludingOnly(logEvent => 
+                        logEvent.Properties.ContainsKey("LogType") &&
+                        logEvent.Properties["LogType"].ToString() == "\"CPU\""
+                    ).WriteTo.File(
+                        "Logs/Metrics/cpu-metrix-.txt",
+                        rollingInterval: RollingInterval.Day,
+                        outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] CPU: {Message:lj}{NewLine}{Exception}"
+                    )
+                )
+                .CreateLogger();
 
             hostBuilder.UseSerilog();
 
