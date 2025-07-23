@@ -34,6 +34,17 @@ namespace WebAPI.Middleware
             var queryString = request.QueryString.HasValue ? request.QueryString.Value : string.Empty;
             var headers = request.Headers.ToDictionary(h => h.Key, h => h.Value.ToString());
 
+            foreach (var h in headers)
+            {
+                if (h.Key.Equals("Authorization"))
+                {
+                    string sanitized = SanitizeRequestHeader(h.Value);
+                    headers[h.Key] = sanitized;
+                }
+                    
+                
+            }
+
             context.Request.EnableBuffering();
 
             string requestBody = string.Empty;
@@ -114,6 +125,28 @@ namespace WebAPI.Middleware
             }
         }
 
+        private string SanitizeRequestHeader(string requestHeader)
+        {
+            
+            try
+            {
+                if (requestHeader.StartsWith("Basic ", StringComparison.OrdinalIgnoreCase))
+                {
+                    return "Basic [REDACTED]";
+                }
+                if (requestHeader.StartsWith("Bearer ", StringComparison.OrdinalIgnoreCase))
+                {
+                    return "Bearer [REDACTED]";
+                }
+                return requestHeader;
+            }
+            catch
+            {
+                return "[REDACTED]";
+            }
+            
+            return requestHeader;
+        }
         private string SanitizeRequestBody(string path, string requestBody)
         {
             if (path.Equals("/api/Auth/login", StringComparison.OrdinalIgnoreCase))
