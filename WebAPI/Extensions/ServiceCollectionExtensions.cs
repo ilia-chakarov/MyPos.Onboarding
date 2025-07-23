@@ -158,7 +158,7 @@ namespace WebAPI.Extensions
                 .WriteTo.Logger(
                 lc => lc.Filter.ByExcluding(logEvent => 
                     logEvent.Properties.ContainsKey("LogType") &&
-                    logEvent.Properties["LogType"].ToString() == "\"CPU\""
+                    logEvent.Properties["LogType"].ToString() == "\"Usage\""
                     )
                 .WriteTo.File(
                     "Logs/log-mypos-api-.txt",
@@ -170,7 +170,7 @@ namespace WebAPI.Extensions
                 .WriteTo.Logger(lc => lc
                     .Filter.ByIncludingOnly(logEvent => 
                         logEvent.Properties.ContainsKey("LogType") &&
-                        logEvent.Properties["LogType"].ToString() == "\"CPU\""
+                        logEvent.Properties["LogType"].ToString() == "\"Usage\""
                     ).WriteTo.File(
                         "Logs/Metrics/cpu-metrix-.txt",
                         rollingInterval: RollingInterval.Day,
