@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{02AAB4E9-AD89-6ED3-3A14-03412373CEC4}|MyPos.TCPWorkers\\MyPos.TCPWokrers.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\mypos.tcpworkers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02AAB4E9-AD89-6ED3-3A14-03412373CEC4}|MyPos.TCPWorkers\\MyPos.TCPWokrers.csproj|solutionrelative:mypos.tcpworkers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{02AAB4E9-AD89-6ED3-3A14-03412373CEC4}|MyPos.TCPWorkers\\MyPos.TCPWokrers.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\mypos.tcpworkers\\workers\\tcpclientworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{02AAB4E9-AD89-6ED3-3A14-03412373CEC4}|MyPos.TCPWorkers\\MyPos.TCPWokrers.csproj|solutionrelative:mypos.tcpworkers\\workers\\tcpclientworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{02AAB4E9-AD89-6ED3-3A14-03412373CEC4}|MyPos.TCPWorkers\\MyPos.TCPWokrers.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\mypos.tcpworkers\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{02AAB4E9-AD89-6ED3-3A14-03412373CEC4}|MyPos.TCPWorkers\\MyPos.TCPWokrers.csproj|solutionrelative:mypos.tcpworkers\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02AAB4E9-AD89-6ED3-3A14-03412373CEC4}|MyPos.TCPWorkers\\MyPos.TCPWokrers.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\mypos.tcpworkers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02AAB4E9-AD89-6ED3-3A14-03412373CEC4}|MyPos.TCPWorkers\\MyPos.TCPWokrers.csproj|solutionrelative:mypos.tcpworkers\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.TCPWorkers\\appsettings.json",
               "RelativeDocumentMoniker": "MyPos.TCPWorkers\\appsettings.json",
@@ -67,39 +67,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TCPClientWorker.cs",
               "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.TCPWorkers\\Workers\\TCPClientWorker.cs",
               "RelativeDocumentMoniker": "MyPos.TCPWorkers\\Workers\\TCPClientWorker.cs",
               "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.TCPWorkers\\Workers\\TCPClientWorker.cs",
               "RelativeToolTip": "MyPos.TCPWorkers\\Workers\\TCPClientWorker.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAuwCIAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAACcAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-22T12:19:39.838Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.TCPWorkers\\Program.cs",
               "RelativeDocumentMoniker": "MyPos.TCPWorkers\\Program.cs",
               "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.TCPWorkers\\Program.cs",
               "RelativeToolTip": "MyPos.TCPWorkers\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-22T11:08:21.24Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TCPServerWorker.cs",
               "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.TCPWorkers\\Workers\\TCPServerWorker.cs",
               "RelativeDocumentMoniker": "MyPos.TCPWorkers\\Workers\\TCPServerWorker.cs",
               "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.TCPWorkers\\Workers\\TCPServerWorker.cs",
               "RelativeToolTip": "MyPos.TCPWorkers\\Workers\\TCPServerWorker.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBYAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAuwFsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-22T10:57:24.633Z",
               "EditorCaption": ""

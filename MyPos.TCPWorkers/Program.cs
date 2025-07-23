@@ -8,6 +8,9 @@ namespace MyPos.TCPServer
         {
             var builder = Host.CreateApplicationBuilder(args);
 
+            builder.Logging.ClearProviders();
+            builder.Logging.SetMinimumLevel(LogLevel.Warning);
+
             if(ConfigurationBinder.GetValue<bool>(builder.Configuration, "RunServer"))
                 builder.Services.AddHostedService<TCPServerWorker>();
 

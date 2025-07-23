@@ -38,6 +38,7 @@ namespace WebAPI
            
             builder.Host.ConfigureSerilog();
 
+            builder.Services.ConfigureBacgroundServices(builder.Configuration);
 
             // Ivo client
             builder.Services.AddExternalHttpClients(builder.Configuration);

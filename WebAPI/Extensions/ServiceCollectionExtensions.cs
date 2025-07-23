@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.OpenApi.Models;
 using MyPos.Configuration.Options;
+using MyPos.WebAPI.BackgroundServices;
 using MyPos.WebAPI.External.ClientServices;
 using MyPos.WebAPI.External.ClientServices.Interfaces;
 using MyPos.WebAPI.External.Handler;
@@ -19,6 +20,14 @@ namespace WebAPI.Extensions
 {
     public static class ServiceCollectionExtensions
     {
+        public static IServiceCollection ConfigureBacgroundServices(this IServiceCollection services, IConfiguration conf)
+        {
+            if (ConfigurationBinder.GetValue<bool>(conf, "CPUMeter"))
+                services.AddHostedService<CPUMeterBacgroundService>();
+
+            return services;
+        }
+
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
             services.AddScoped<IUserService, UserService>();
