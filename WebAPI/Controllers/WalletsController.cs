@@ -19,9 +19,9 @@ namespace WebAPI.Controllers
         [HttpPost]
         [ProducesResponseType(typeof(WalletDto), StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> Create([FromBody] CreateWalletDto dto)
+        public async Task<IActionResult> Create([FromBody] CreateWalletDto dto, CancellationToken cancellationToken = default)
         {
-            var createdWalletDto = await _walletService.CreateWallet(dto);
+            var createdWalletDto = await _walletService.CreateWallet(dto, cancellationToken);
 
             return Ok(createdWalletDto);
 
@@ -31,9 +31,9 @@ namespace WebAPI.Controllers
         [ProducesResponseType(typeof(WalletDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById(int id, CancellationToken cancellationToken = default)
         {
-            var walletDto = await _walletService.GetById(id);
+            var walletDto = await _walletService.GetById(id, cancellationToken);
 
             return Ok(walletDto);
         }
@@ -41,9 +41,9 @@ namespace WebAPI.Controllers
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<WalletDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> GetAll(int pageNumber = 1, int pageSize = 10)
+        public async Task<IActionResult> GetAll(int pageNumber = 1, int pageSize = 10, CancellationToken cancellationToken = default)
         {
-            var walletDtos = await _walletService.GetAll(pageNumber, pageSize);
+            var walletDtos = await _walletService.GetAll(pageNumber, pageSize, cancellationToken: cancellationToken);
 
             return Ok(walletDtos);
         }
@@ -52,9 +52,9 @@ namespace WebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> Update(int id, [FromBody] CreateWalletDto dto)
+        public async Task<IActionResult> Update(int id, [FromBody] CreateWalletDto dto, CancellationToken cancellationToken = default)
         {
-            var updatedWallet = await _walletService.UpdateWallet(id, dto);
+            var updatedWallet = await _walletService.UpdateWallet(id, dto, cancellationToken);
 
             return Ok(updatedWallet);
         }
@@ -62,9 +62,9 @@ namespace WebAPI.Controllers
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(int id, CancellationToken cancellationToken = default)
         {
-            var deletedWAllet = await _walletService.DeleteWallet(id);
+            var deletedWAllet = await _walletService.DeleteWallet(id, cancellationToken);
 
             return Ok(deletedWAllet);
         }

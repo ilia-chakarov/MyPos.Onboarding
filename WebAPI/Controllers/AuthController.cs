@@ -21,16 +21,16 @@ namespace WebAPI.Controllers
         [HttpPost("login")]
         [ProducesResponseType(typeof(object), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> Login([FromBody] LoginDto dto)
+        public async Task<IActionResult> Login([FromBody] LoginDto dto, CancellationToken cancellationToken = default)
         {
-            var token = await _authService.Login(dto);
+            var token = await _authService.Login(dto, cancellationToken);
             return Ok(new { token });
         }
 
         [HttpPost("basic-auth-login")]
         [ProducesResponseType(typeof(object), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> LoginBasicAuth()
+        public async Task<IActionResult> LoginBasicAuth(CancellationToken cancellationToken = default)
         {
             if(!Request.Headers.TryGetValue("Authorization", out var authHeader) || !authHeader.ToString().StartsWith("Basic "))
             {
@@ -48,7 +48,7 @@ namespace WebAPI.Controllers
             var username = parts[0];
             var password = parts[1];
 
-            var token = await _authService.Login(new LoginDto {Username = username, Password = password});
+            var token = await _authService.Login(new LoginDto {Username = username, Password = password}, cancellationToken);
 
 
             return Ok(new {token});

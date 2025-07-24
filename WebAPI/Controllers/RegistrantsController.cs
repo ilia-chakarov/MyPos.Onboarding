@@ -19,9 +19,10 @@ namespace WebAPI.Controllers
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<RegistrantDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<IEnumerable<RegistrantDto>>> GetAll(int pageNumber = 1, int pageSize = 10)
+        public async Task<ActionResult<IEnumerable<RegistrantDto>>> GetAll(int pageNumber = 1, int pageSize = 10
+            , CancellationToken cancellationToken = default)
         {
-            var result = await _registrantService.GetAll(pageNumber, pageSize);
+            var result = await _registrantService.GetAll(pageNumber, pageSize, cancellationToken: cancellationToken);
 
             return Ok(result);
         }
@@ -33,14 +34,16 @@ namespace WebAPI.Controllers
         [HttpGet("registrants/with-realated-data")]
         [ProducesResponseType(typeof(IEnumerable<RegistrantWithAllWalletsAndUsersDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<IEnumerable<RegistrantWithAllWalletsAndUsersDto>>> GetAllWithWalletsAndUsers([FromQuery]int? id, int pageNumber = 1, int pageSize = 10)
+        public async Task<ActionResult<IEnumerable<RegistrantWithAllWalletsAndUsersDto>>> 
+            GetAllWithWalletsAndUsers([FromQuery]int? id, int pageNumber = 1, int pageSize = 10,
+            CancellationToken cancellationToken = default)
         {
             var dtos = await _registrantService.GetAllWithWalletsAndUsers(pageNumber, pageSize, query =>
             {
                 if(id.HasValue)
                     return query.Where(r => r.Id == id.Value);
                 return query;
-            });
+            }, cancellationToken);
 
             return Ok(dtos);
         }
@@ -49,9 +52,9 @@ namespace WebAPI.Controllers
         [ProducesResponseType(typeof(RegistrantEntity), StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Create([FromBody] CreateRegistrantDto dto)
+        public async Task<IActionResult> Create([FromBody] CreateRegistrantDto dto, CancellationToken cancellationToken = default)
         {
-            var registrantDto = await _registrantService.CreateRegistrant(dto);
+            var registrantDto = await _registrantService.CreateRegistrant(dto,cancellationToken);
 
             return Ok(registrantDto);
         }
@@ -60,9 +63,9 @@ namespace WebAPI.Controllers
         [ProducesResponseType(typeof(RegistrantDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<RegistrantDto>> GetById(int id)
+        public async Task<ActionResult<RegistrantDto>> GetById(int id, CancellationToken cancellationToken = default)
         {
-            var registrantDto = await _registrantService.GetById(id);
+            var registrantDto = await _registrantService.GetById(id, cancellationToken);
 
             return Ok(registrantDto);
         }
@@ -71,9 +74,10 @@ namespace WebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Update(int id, [FromBody] CreateRegistrantDto dto)
+        public async Task<IActionResult> Update(int id, [FromBody] CreateRegistrantDto dto, 
+            CancellationToken cancellationToken = default)
         {
-           var registrantDto = await _registrantService.UpdateRegistrant(id, dto);
+           var registrantDto = await _registrantService.UpdateRegistrant(id, dto, cancellationToken);
             return Ok(registrantDto); // 204
         }
 
@@ -81,9 +85,9 @@ namespace WebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(int id, CancellationToken cancellationToken = default)
         {
-            var regDto = await _registrantService.DeleteRegistrant(id);
+            var regDto = await _registrantService.DeleteRegistrant(id, cancellationToken);
 
             return Ok(regDto);
         }
