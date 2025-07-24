@@ -20,19 +20,25 @@ namespace WebAPI.Repositories
             _context = context;
             _dbSet = context.Set<TEntity>();
         }
-        public async Task<IEnumerable<TEntity>> GetAllAsync() => await _dbSet.ToListAsync();
+        public async Task<IEnumerable<TEntity>> GetAllAsync(CancellationToken cancellationToken = default) 
+            => await _dbSet.ToListAsync(cancellationToken);
 
-        public async Task<TEntity?> GetByIdAsync(int id) => await _dbSet.FindAsync(id);
+        public async Task<TEntity?> GetByIdAsync(int id, CancellationToken cancellationToken = default) 
+            => await _dbSet.FindAsync(id, cancellationToken);
 
-        public async Task AddAsync(TEntity entity) => await _dbSet.AddAsync(entity);
+        public async Task AddAsync(TEntity entity, CancellationToken cancellationToken = default) 
+            => await _dbSet.AddAsync(entity, cancellationToken);
 
-        public void Update(TEntity entity) => _dbSet.Update(entity);
+        public void Update(TEntity entity) 
+            => _dbSet.Update(entity);
 
-        public void Delete(TEntity entity) => _dbSet.Remove(entity);
+        public void Delete(TEntity entity) 
+            => _dbSet.Remove(entity);
 
-        public async Task<TEntity?> GetSingleAsync(Func<IQueryable<TEntity>, IQueryable<TEntity>> filter)
+        public async Task<TEntity?> GetSingleAsync(Func<IQueryable<TEntity>, IQueryable<TEntity>> filter,
+            CancellationToken cancellationToken = default)
         {
-            return await filter(_dbSet).FirstOrDefaultAsync();
+            return await filter(_dbSet).FirstOrDefaultAsync(cancellationToken);
         }
 
         public async Task<IEnumerable<TResult>> GetAllAsync<TResult>(
@@ -42,7 +48,8 @@ namespace WebAPI.Repositories
             Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null!, 
             int? pageNumber = null,
             int? pageSize = null,
-            bool disableTracking = true)
+            bool disableTracking = true,
+            CancellationToken cancellationToken = default)
         {
             var query = _dbSet.AsQueryable();
 
@@ -65,7 +72,8 @@ namespace WebAPI.Repositories
             if(pageNumber.HasValue && pageSize.HasValue)
                 projected = projected.Skip((pageNumber.Value - 1) * pageSize.Value).Take(pageSize.Value);
 
-            return await projected.ToListAsync();
+
+            return await projected.ToListAsync(cancellationToken);
         }
 
     }
