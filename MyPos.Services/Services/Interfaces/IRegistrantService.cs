@@ -5,16 +5,20 @@ namespace WebAPI.Services.Interfaces
 {
     public interface IRegistrantService
     {
-        Task<IEnumerable<RegistrantDto>> GetAll(int pageNumber, int pageSize, Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>? filter = null);
+        Task<IEnumerable<RegistrantDto>> GetAll(int pageNumber, int pageSize, 
+            Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>? filter = null,
+            CancellationToken cancellationToken = default);
 
-        Task<RegistrantDto> CreateRegistrant(CreateRegistrantDto dto);
+        Task<RegistrantDto> CreateRegistrant(CreateRegistrantDto dto, CancellationToken cancellationToken = default);
 
-        Task<RegistrantDto> GetById(int id);
+        Task<RegistrantDto> GetById(int id, CancellationToken cancellationToken = default);
 
-        Task<RegistrantDto> UpdateRegistrant(int id, CreateRegistrantDto dto);
-        Task<RegistrantDto> DeleteRegistrant(int id);
+        Task<RegistrantDto> UpdateRegistrant(int id, CreateRegistrantDto dto, CancellationToken cancellationToken = default);
+        Task<RegistrantDto> DeleteRegistrant(int id, CancellationToken cancellationToken = default);
 
-        public Task<IEnumerable<RegistrantWithAllWalletsAndUsersDto>> GetAllWithWalletsAndUsers(int pageNumber, int pageSize, Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>? filter = null);
+        public Task<IEnumerable<RegistrantWithAllWalletsAndUsersDto>> GetAllWithWalletsAndUsers(int pageNumber, int pageSize, 
+            Func<IQueryable<RegistrantEntity>, IQueryable<RegistrantEntity>>? filter = null,
+            CancellationToken cancellationToken = default);
 
     }
 }
