@@ -56,7 +56,7 @@ namespace WebAPI.Services
             account.LastOperationDT = DateTime.Now;
 
             await _unitOfWork.GetRepository<AccountEntity>().AddAsync(account, cancellationToken);
-            await _unitOfWork.SaveChangesAsync();
+            await _unitOfWork.SaveChangesAsync(cancellationToken);
 
             return _mapper.Map<AccountDto>(account);
         }
@@ -72,7 +72,7 @@ namespace WebAPI.Services
                 throw new MyPosApiException($"Account with id {id} not found", StatusCodes.Status404NotFound);
 
             _unitOfWork.GetRepository<AccountEntity>().Delete(account);
-            await _unitOfWork.SaveChangesAsync();
+            await _unitOfWork.SaveChangesAsync(cancellationToken);
 
             return _mapper.Map<AccountDto>(account);
         }
@@ -98,7 +98,7 @@ namespace WebAPI.Services
             _mapper.Map(dto, account);
 
             _unitOfWork.GetRepository<AccountEntity>().Update(account);
-            await _unitOfWork.SaveChangesAsync();
+            await _unitOfWork.SaveChangesAsync(cancellationToken);
 
             return _mapper.Map<AccountDto>(account);
         }
