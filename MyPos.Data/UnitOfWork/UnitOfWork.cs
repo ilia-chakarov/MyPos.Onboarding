@@ -31,7 +31,8 @@ namespace WebAPI.UnitOfWork
         }
 
 
-        public async Task<int> SaveChangesAsync() => await _context.SaveChangesAsync();
+        public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+            => await _context.SaveChangesAsync(cancellationToken);
 
         
     }

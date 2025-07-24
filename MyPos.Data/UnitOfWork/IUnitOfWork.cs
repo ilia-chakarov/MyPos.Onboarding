@@ -8,7 +8,7 @@ namespace WebAPI.UnitOfWork
         IRepository<T> GetRepository<T>() where T : class;
 
 
-        Task<int> SaveChangesAsync();
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 
     }
 }
