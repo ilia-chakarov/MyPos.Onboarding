@@ -12,11 +12,11 @@ namespace MyPos.WebAPI.External.ClientServices
         {
             _client = cl;
         }
-        public async Task<UserDisplayDTO> CreateUser(UserFormDTO dto)
+        public async Task<UserDisplayDTO> CreateUser(UserFormDTO dto, CancellationToken cancellationToken = default)
         {
             try
             {
-                var res = await _client.Register2Async(dto);
+                var res = await _client.Register2Async(dto, cancellationToken);
 
                 if (res == null)
                     throw new MyPosApiException($"User could not be created", StatusCodes.Status400BadRequest);
@@ -29,11 +29,11 @@ namespace MyPos.WebAPI.External.ClientServices
             }
         }
 
-        public async Task<object> LoginUser(UserFormDTO dto)
+        public async Task<object> LoginUser(UserFormDTO dto, CancellationToken cancellationToken = default)
         {
             try
             {
-                object token = await _client.Login2Async(dto);
+                object token = await _client.Login2Async(dto, cancellationToken);
                 var tokenDeserialized = JsonSerializer.Deserialize<object>(token.ToString());
 
                 if(tokenDeserialized == null)

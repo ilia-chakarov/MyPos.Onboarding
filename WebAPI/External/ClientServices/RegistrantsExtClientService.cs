@@ -17,12 +17,12 @@ namespace WebAPI.ExternalClients.Clients
 
        
 
-        public async Task<RegistrantDisplayDTO> CreateRegistrant(RegistrantFormDTO dto)
+        public async Task<RegistrantDisplayDTO> CreateRegistrant(RegistrantFormDTO dto, CancellationToken cancellationToken = default)
         {
 
             try
             {
-                var res = await _apiClient.RegistrantPOSTAsync(dto);
+                var res = await _apiClient.RegistrantPOSTAsync(dto, cancellationToken);
 
                 if (res == null)
                     throw new MyPosApiException($"Registrant could not be created", StatusCodes.Status400BadRequest);
@@ -36,12 +36,12 @@ namespace WebAPI.ExternalClients.Clients
 
         }
 
-        public async Task Delete(string id)
+        public async Task Delete(string id, CancellationToken cancellationToken = default)
         {
             try
             {
 
-                await _apiClient.RegistrantDELETEAsync(id);
+                await _apiClient.RegistrantDELETEAsync(id, cancellationToken);
             }
             catch (ApiException ex)
             {
@@ -49,12 +49,13 @@ namespace WebAPI.ExternalClients.Clients
             }
         }
 
-        public async Task<ICollection<RegistrantDisplayDTO>> GetAllAsync(int? pageNumber, int? pageSize)
+        public async Task<ICollection<RegistrantDisplayDTO>> GetAllAsync(int? pageNumber, int? pageSize
+            , CancellationToken cancellationToken = default)
         {
             try
             {
 
-                var res = await _apiClient.AllAllAsync(pageNumber, pageSize);
+                var res = await _apiClient.AllAllAsync(pageNumber, pageSize, cancellationToken);
                 return res;
             }
             catch (ApiException ex)
@@ -63,12 +64,12 @@ namespace WebAPI.ExternalClients.Clients
             }
         }
 
-        public async Task<RegistrantDisplayDTO> GetById(string id)
+        public async Task<RegistrantDisplayDTO> GetById(string id, CancellationToken cancellationToken = default)
         {
 
             try
             {
-                var res = await _apiClient.RegistrantGETAsync(id);
+                var res = await _apiClient.RegistrantGETAsync(id, cancellationToken);
 
                 if (res == null)
                     throw new MyPosApiException($"Registrant with id {id} not found", StatusCodes.Status404NotFound);
@@ -81,14 +82,14 @@ namespace WebAPI.ExternalClients.Clients
             }
         }
 
-        public async Task<RegistrantDisplayDTO> Update(string id, RegistrantFormDTO dto)
+        public async Task<RegistrantDisplayDTO> Update(string id, RegistrantFormDTO dto, CancellationToken cancellationToken = default)
         {
 
             try
             {
 
 
-                var res = await _apiClient.RegistrantPUTAsync(id, dto);
+                var res = await _apiClient.RegistrantPUTAsync(id, dto, cancellationToken);
 
                 if (res == null)
                     throw new MyPosApiException($"Registrant with id {id} not found", StatusCodes.Status404NotFound);

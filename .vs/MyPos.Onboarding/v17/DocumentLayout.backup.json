@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8C4346B4-BC15-4ABB-8914-1F65170302A7}|MyPos.Services\\MyPos.Services.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\mypos.services\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C4346B4-BC15-4ABB-8914-1F65170302A7}|MyPos.Services\\MyPos.Services.csproj|solutionrelative:mypos.services\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\external\\clientservices\\registrantsextclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|solutionrelative:webapi\\external\\clientservices\\registrantsextclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\external\\clientservices\\interfaces\\iregistrantsextclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|solutionrelative:webapi\\external\\clientservices\\interfaces\\iregistrantsextclientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IRegistrantsExtClientService.cs",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\ClientServices\\Interfaces\\IRegistrantsExtClientService.cs",
+              "RelativeDocumentMoniker": "WebAPI\\External\\ClientServices\\Interfaces\\IRegistrantsExtClientService.cs",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\ClientServices\\Interfaces\\IRegistrantsExtClientService.cs",
+              "RelativeToolTip": "WebAPI\\External\\ClientServices\\Interfaces\\IRegistrantsExtClientService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T07:46:08.442Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -43,14 +60,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "MyPos.Services\\Services\\Interfaces\\IUserService.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\Interfaces\\IUserService.cs*",
-              "RelativeToolTip": "MyPos.Services\\Services\\Interfaces\\IUserService.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA8AAAAAAAAAA==",
+              "Title": "RegistrantsExtClientService.cs",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\ClientServices\\RegistrantsExtClientService.cs",
+              "RelativeDocumentMoniker": "WebAPI\\External\\ClientServices\\RegistrantsExtClientService.cs",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\ClientServices\\RegistrantsExtClientService.cs",
+              "RelativeToolTip": "WebAPI\\External\\ClientServices\\RegistrantsExtClientService.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAowFsAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T07:08:26.083Z",
+              "WhenOpened": "2025-07-24T07:45:41.569Z",
               "EditorCaption": ""
             }
           ]
