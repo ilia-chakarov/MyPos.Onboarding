@@ -575,3 +575,193 @@ OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
 }
 
 
+[15:44:19 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[15:44:19 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[15:44:19 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[15:44:19 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[15:44:19 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:13:55 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:13:55 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:13:55 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:13:55 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:13:55 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:14:04 INF] [Machine: MP-DT0KYVBJ] Start processing HTTP request GET https://10.80.55.157:7191/api/Registrant/all?pageNumber=1&pageSize=10
+[17:14:07 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/external/IvoRegistrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "*/*",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 500,
+  "ResponseBody": "{\u0022title\u0022:\u0022Internal Server Error\u0022,\u0022status\u0022:500,\u0022detail\u0022:\u0022No connection could be made because the target machine actively refused it. (10.80.55.157:7191)\u0022}",
+  "ElapsedMilliseconds": 2302,
+  "Timestamp": "2025-07-24T14:14:07.2047193Z",
+  "ExceptionMessage": "No connection could be made because the target machine actively refused it. (10.80.55.157:7191)",
+  "ExceptionStackTrace": "   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)\r\n   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)\r\n   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)\r\n   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)\r\n   at System.Threading.Tasks.TaskCompletionSourceWithCancellation\u00601.WaitWithCancellationAsync(CancellationToken cancellationToken)\r\n   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter\u00601.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)\r\n   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)\r\n   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)\r\n   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)\r\n   at System.Net.Http.HttpClient.\u003CSendAsync\u003Eg__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)\r\n   at MyPos.WebAPI.External.Handler.BearerTokenHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\Handler\\BearerTokenHandler.cs:line 38\r\n   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.\u003CSendCoreAsync\u003Eg__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)\r\n   at System.Net.Http.HttpClient.\u003CSendAsync\u003Eg__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)\r\n   at ExternalApi.IvoApiClient.AllAllAsync(Nullable\u00601 pageNumber, Nullable\u00601 pageSize, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Generated\\IvoApiClient.cs:line 1956\r\n   at WebAPI.ExternalClients.Clients.RegistrantsExtClientService.GetAllAsync(Nullable\u00601 pageNumber, Nullable\u00601 pageSize, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\ClientServices\\RegistrantsExtClientService.cs:line 58\r\n   at WebAPI.External.Controllers.IvoRegistrantsController.GetAll(Int32 pageNumber, Int32 pageSize, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\Controllers\\IvoRegistrantsController.cs:line 34\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[17:14:13 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[17:14:13 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[17:14:14 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (35ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[17:14:14 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 2097,
+  "Timestamp": "2025-07-24T14:14:14.4961266Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:14:22 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[17:14:22 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 58,
+  "Timestamp": "2025-07-24T14:14:22.5718465Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:41:30 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:41:30 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:41:30 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:41:30 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:41:30 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:41:38 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[17:41:38 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[17:41:39 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (29ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[17:41:39 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 1500,
+  "Timestamp": "2025-07-24T14:41:39.0660578Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:45:19 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:45:19 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:45:19 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:45:19 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:45:19 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:45:25 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Accounts",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "*/*",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 401,
+  "ResponseBody": "",
+  "ElapsedMilliseconds": 51,
+  "Timestamp": "2025-07-24T14:45:25.8219813Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+

@@ -1,6 +1,9 @@
-﻿using ExternalApi;
+﻿using Elastic.Serilog.Sinks;
+using Elastic.Transport;
+using ExternalApi;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.CodeAnalysis.FlowAnalysis;
 using Microsoft.OpenApi.Models;
 using MyPos.Configuration.Options;
 using MyPos.WebAPI.BackgroundServices;
@@ -154,6 +157,32 @@ namespace WebAPI.Extensions
                 .Enrich.WithMachineName()
                 .Enrich.WithThreadId()
                 .Enrich.WithProperty("Application", "MyPos.Onboarding.WebAPI")
+                // Elasticsearch Sink (for all logs except "Usage")
+                .WriteTo.Logger(lc => lc
+                    .Filter.ByExcluding(logEvent =>
+                        logEvent.Properties.ContainsKey("LogType") &&
+                        logEvent.Properties["LogType"].ToString() == "\"Usage\""
+                    )
+                    .WriteTo.Elasticsearch(
+                        new[] { new Uri("https://10.80.128.185:9200") },
+                        configureOptions =>
+                        {
+                            configureOptions.DataStream = new Elastic.Ingest.Elasticsearch.DataStreams.DataStreamName("logs", "chakarov", "onboarding");
+                            configureOptions.BootstrapMethod = Elastic.Ingest.Elasticsearch.BootstrapMethod.None;
+                            configureOptions.ConfigureChannel = channelOpts =>
+                            {
+                                channelOpts.BufferOptions = new Elastic.Channels.BufferOptions
+                                {
+                                    ExportMaxConcurrency = 10
+                                };
+                            };
+                        },
+                        configureTransport =>
+                        {
+                            configureTransport.Authentication(new BasicAuthentication("viewer_user", "7tFa7g7x"));
+                        }
+                    )
+                )
                 // Main API Logs
                 .WriteTo.Logger(
                 lc => lc.Filter.ByExcluding(logEvent => 
@@ -178,6 +207,8 @@ namespace WebAPI.Extensions
                     )
                 )
                 .CreateLogger();
+
+            Serilog.Debugging.SelfLog.Enable(msg => { Console.WriteLine(msg + Environment.NewLine); });
 
             hostBuilder.UseSerilog();
 
