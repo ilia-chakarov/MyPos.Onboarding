@@ -18,9 +18,9 @@ namespace WebAPI.External.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Microsoft.AspNetCore.Mvc.ProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Microsoft.AspNetCore.Mvc.ProblemDetails), StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> CreateRegistrant([FromBody]RegistrantFormDTO dto)
+        public async Task<IActionResult> CreateRegistrant([FromBody]RegistrantFormDTO dto, CancellationToken cancellationToken = default)
         {
-            var res = await _registrantsExtClientService.CreateRegistrant(dto);
+            var res = await _registrantsExtClientService.CreateRegistrant(dto, cancellationToken);
 
             return Ok(res);
         }
@@ -29,9 +29,9 @@ namespace WebAPI.External.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Microsoft.AspNetCore.Mvc.ProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Microsoft.AspNetCore.Mvc.ProblemDetails), StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> GetAll(int pageNumber = 1, int pageSize = 10)
+        public async Task<IActionResult> GetAll(int pageNumber = 1, int pageSize = 10, CancellationToken cancellationToken = default)
         {
-            var res = await _registrantsExtClientService.GetAllAsync(pageNumber, pageSize);
+            var res = await _registrantsExtClientService.GetAllAsync(pageNumber, pageSize, cancellationToken);
 
             return Ok(res);
         }
@@ -40,9 +40,9 @@ namespace WebAPI.External.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Microsoft.AspNetCore.Mvc.ProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Microsoft.AspNetCore.Mvc.ProblemDetails), StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> GetById(string id)
+        public async Task<IActionResult> GetById(string id, CancellationToken cancellationToken = default)
         {
-            var res = await _registrantsExtClientService.GetById(id);
+            var res = await _registrantsExtClientService.GetById(id, cancellationToken);
 
             return Ok(res);
         }
@@ -52,9 +52,9 @@ namespace WebAPI.External.Controllers
         [ProducesResponseType(typeof(Microsoft.AspNetCore.Mvc.ProblemDetails), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(Microsoft.AspNetCore.Mvc.ProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Microsoft.AspNetCore.Mvc.ProblemDetails), StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> Update(string id, [FromBody] RegistrantFormDTO dto)
+        public async Task<IActionResult> Update(string id, [FromBody] RegistrantFormDTO dto, CancellationToken cancellationToken = default)
         {
-            var res = await _registrantsExtClientService.Update(id, dto);
+            var res = await _registrantsExtClientService.Update(id, dto, cancellationToken);
 
             return Ok(res);
         }
@@ -64,9 +64,9 @@ namespace WebAPI.External.Controllers
         [ProducesResponseType(typeof(Microsoft.AspNetCore.Mvc.ProblemDetails), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(Microsoft.AspNetCore.Mvc.ProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Microsoft.AspNetCore.Mvc.ProblemDetails), StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> Delete(string id)
+        public async Task<IActionResult> Delete(string id, CancellationToken cancellationToken = default)
         {
-            await _registrantsExtClientService.Delete(id);
+            await _registrantsExtClientService.Delete(id, cancellationToken);
             return Ok();
         }
 

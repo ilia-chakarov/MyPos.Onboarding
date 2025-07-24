@@ -21,16 +21,16 @@ namespace WebAPI.External.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> CreateUser([FromBody] UserFormDTO dto)
+        public async Task<IActionResult> CreateUser([FromBody] UserFormDTO dto, CancellationToken cancellationToken = default)
         {
-            var res = await _authExtClientService.CreateUser(dto);
+            var res = await _authExtClientService.CreateUser(dto, cancellationToken);
 
             return Ok(res);
         }
         [HttpPost("login-user")]
-        public async Task<IActionResult> LoginUser([FromBody]UserFormDTO dto)
+        public async Task<IActionResult> LoginUser([FromBody]UserFormDTO dto, CancellationToken cancellationToken = default)
         {
-            var res = await _authExtClientService.LoginUser(dto);
+            var res = await _authExtClientService.LoginUser(dto, cancellationToken);
 
             return Ok(res);
         }
