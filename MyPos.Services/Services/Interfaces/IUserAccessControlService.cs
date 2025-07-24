@@ -5,14 +5,17 @@ namespace WebAPI.Services.Interfaces
 {
     public interface IUserAccessControlService
     {
-        Task<IEnumerable<CreateUserAccessControlDto>> GetAll(int pageNumber, int pageSize, Func<IQueryable<UserAccessControlEntity>, IQueryable<UserAccessControlEntity>>? filter = null);
+        Task<IEnumerable<CreateUserAccessControlDto>> GetAll(int pageNumber, int pageSize, 
+            Func<IQueryable<UserAccessControlEntity>, IQueryable<UserAccessControlEntity>>? filter = null,
+            CancellationToken cancellationToken = default);
 
-        Task<CreateUserAccessControlDto> CreateUAC(CreateUserAccessControlDto dto);
+        Task<CreateUserAccessControlDto> CreateUAC(CreateUserAccessControlDto dto, CancellationToken cancellationToken = default);
 
-        Task<CreateUserAccessControlDto> GetById(int userId, int walletId);
+        Task<CreateUserAccessControlDto> GetById(int userId, int walletId, CancellationToken cancellationToken = default);
 
-        Task<CreateUserAccessControlDto> UpdateUAC(int userId, int walletId, CreateUserAccessControlDto dto);
-        Task<CreateUserAccessControlDto> DeleteUAC(int userId, int walletId);
+        Task<CreateUserAccessControlDto> UpdateUAC(int userId, int walletId, CreateUserAccessControlDto dto, 
+            CancellationToken cancellationToken = default);
+        Task<CreateUserAccessControlDto> DeleteUAC(int userId, int walletId, CancellationToken cancellationToken = default);
 
     }
 }
