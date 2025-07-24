@@ -83,6 +83,14 @@ namespace WebAPI.Middleware
                 await context.Response.WriteProblemDetailsAsync(StatusCodes.Status401Unauthorized,
                     "Unauthorized", ex.Message);
             }
+            catch(OperationCanceledException ex) when (context.RequestAborted.IsCancellationRequested)
+            {
+                caughtException = ex;
+                _logger.LogWarning("Request was cancelled by the client: {Path}", path);
+
+                context.Response.StatusCode = 499;
+                await context.Response.WriteAsync("Request was cancelled by the client");
+            }
             catch (Exception ex)
             {
                 caughtException = ex;
