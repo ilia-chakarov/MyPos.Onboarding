@@ -19,12 +19,12 @@ namespace WebAPI.Services
             _unitOfWork = uow;
             _mapper = mapper;
         }
-        public async Task<AccountDto> GetById(int id)
+        public async Task<AccountDto> GetById(int id, CancellationToken cancellationToken = default)
         {
             var account = await _unitOfWork.GetRepository<AccountEntity>().GetSingleAsync(query =>
                 query.Where(
                     a => a.Id == id
-                    ));
+                    ), cancellationToken);
 
             if (account == null)
                 throw new MyPosApiException($"Account with id {id} not found", StatusCodes.Status404NotFound);
@@ -32,19 +32,22 @@ namespace WebAPI.Services
             return _mapper.Map<AccountDto>(account);
         }
 
-        public async Task<IEnumerable<AccountDto>> GetAll(int pageNumber, int pageSize, Func<IQueryable<AccountEntity>, IQueryable<AccountEntity>>? filter = null)
+        public async Task<IEnumerable<AccountDto>> GetAll(int pageNumber, int pageSize,
+            Func<IQueryable<AccountEntity>, IQueryable<AccountEntity>>? filter = null,
+            CancellationToken cancellationToken = default)
         {
             var res = await _unitOfWork.GetRepository<AccountEntity>().GetAllAsync<AccountDto>(
-                mapper: _mapper, filter: filter, pageNumber: pageNumber, pageSize: pageSize, disableTracking: false);
+                mapper: _mapper, filter: filter, pageNumber: pageNumber, pageSize: pageSize, disableTracking: false,
+                cancellationToken: cancellationToken);
 
             return res;
         }
 
-        public async Task<AccountDto> CreateAccount(CreateAccountDto dto)
+        public async Task<AccountDto> CreateAccount(CreateAccountDto dto, CancellationToken cancellationToken = default)
         {
             var wallet = await _unitOfWork.GetRepository<WalletEntity>().GetSingleAsync(query =>
                 query.Where(w => w.Id == dto.WalletId
-            ));
+            ), cancellationToken);
             if (wallet == null)
                 throw new MyPosApiException($"Wallet with id {dto.WalletId} does not exist", StatusCodes.Status404NotFound);
 
@@ -52,18 +55,18 @@ namespace WebAPI.Services
             account.DateCreated = DateTime.Now;
             account.LastOperationDT = DateTime.Now;
 
-            await _unitOfWork.GetRepository<AccountEntity>().AddAsync(account);
+            await _unitOfWork.GetRepository<AccountEntity>().AddAsync(account, cancellationToken);
             await _unitOfWork.SaveChangesAsync();
 
             return _mapper.Map<AccountDto>(account);
         }
 
-        public async Task<AccountDto> DeleteAccount(int id)
+        public async Task<AccountDto> DeleteAccount(int id, CancellationToken cancellationToken = default)
         {
             var account = await _unitOfWork.GetRepository<AccountEntity>().GetSingleAsync(query =>
                 query.Where(
                     a => a.Id == id
-                    ));
+                    ), cancellationToken);
 
             if (account == null)
                 throw new MyPosApiException($"Account with id {id} not found", StatusCodes.Status404NotFound);
@@ -74,12 +77,12 @@ namespace WebAPI.Services
             return _mapper.Map<AccountDto>(account);
         }
 
-        public async Task<AccountDto> UpdateAccount(int id, CreateAccountDto dto)
+        public async Task<AccountDto> UpdateAccount(int id, CreateAccountDto dto, CancellationToken cancellationToken = default)
         {
             var account = await _unitOfWork.GetRepository<AccountEntity>().GetSingleAsync(query =>
                 query.Where(
                     a => a.Id == id
-                    ));
+                    ), cancellationToken);
 
             if (account == null)
                 throw new MyPosApiException($"Account with id {id} not found",
@@ -87,7 +90,7 @@ namespace WebAPI.Services
 
             var wallet = await _unitOfWork.GetRepository<WalletEntity>().GetSingleAsync(query =>
                 query.Where(w => w.Id == dto.WalletId
-            ));
+            ), cancellationToken);
             if (wallet == null)
                 throw new MyPosApiException($"Wallet with id {dto.WalletId} does not exist",
                     StatusCodes.Status404NotFound);

@@ -1,0 +1,12 @@
+[09:43:30 INF] Usage: Total CPU 0.00% | App CPU 0.00% | App Heap 3.90MB
+[09:43:31 INF] Usage: Total CPU 20.97% | App CPU 2.74% | App Heap 4.59MB
+[09:43:33 INF] Usage: Total CPU 34.18% | App CPU 3.91% | App Heap 5.34MB
+[09:43:34 INF] Usage: Total CPU 9.71% | App CPU 1.92% | App Heap 5.41MB
+[09:43:35 INF] Usage: Total CPU 13.69% | App CPU 1.55% | App Heap 5.47MB
+[09:43:36 INF] Usage: Total CPU 7.47% | App CPU 0.06% | App Heap 5.47MB
+[09:43:37 INF] Usage: Total CPU 6.85% | App CPU 0.06% | App Heap 5.47MB
+[09:43:38 INF] Usage: Total CPU 5.97% | App CPU 0.00% | App Heap 5.46MB
+[09:43:39 INF] Usage: Total CPU 10.71% | App CPU 3.50% | App Heap 6.68MB
+[09:43:40 INF] Usage: Total CPU 12.07% | App CPU 1.92% | App Heap 7.36MB
+[09:43:41 INF] Usage: Total CPU 10.30% | App CPU 0.58% | App Heap 7.44MB
+[09:43:42 INF] Usage: Total CPU 6.59% | App CPU 1.04% | App Heap 7.49MB
