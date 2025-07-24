@@ -20,9 +20,9 @@ namespace WebAPI.Services
             _mapper = mapper;
         }
 
-        public async Task<WalletDto> CreateWallet(CreateWalletDto dto)
+        public async Task<WalletDto> CreateWallet(CreateWalletDto dto, CancellationToken cancellationToken = default)
         {
-            var registrant = await _unitOfWork.GetRepository<RegistrantEntity>().GetByIdAsync(dto.RegistrantId);
+            var registrant = await _unitOfWork.GetRepository<RegistrantEntity>().GetByIdAsync(dto.RegistrantId, cancellationToken);
             if (registrant == null) 
                 throw new MyPosApiException($"Registrant with id {dto.RegistrantId} not found",
                     StatusCodes.Status404NotFound);
@@ -30,48 +30,51 @@ namespace WebAPI.Services
             var wallet = _mapper.Map<WalletEntity>(dto);
             wallet.DateCreated = DateTime.Now;
 
-            await _unitOfWork.GetRepository<WalletEntity>().AddAsync(wallet);
-            await _unitOfWork.SaveChangesAsync();
+            await _unitOfWork.GetRepository<WalletEntity>().AddAsync(wallet, cancellationToken);
+            await _unitOfWork.SaveChangesAsync(cancellationToken);
 
             return _mapper.Map<WalletDto>(wallet);
         }
 
-        public async Task<WalletDto> DeleteWallet(int id)
+        public async Task<WalletDto> DeleteWallet(int id, CancellationToken cancellationToken = default)
         {
-            var wallet = await _unitOfWork.GetRepository<WalletEntity>().GetByIdAsync(id);
+            var wallet = await _unitOfWork.GetRepository<WalletEntity>().GetByIdAsync(id, cancellationToken);
             if (wallet == null) 
                 throw new MyPosApiException($"Wallet with id {id} not found", StatusCodes.Status404NotFound);
 
             _unitOfWork.GetRepository<WalletEntity>().Delete(wallet);
-            await _unitOfWork.SaveChangesAsync();
+            await _unitOfWork.SaveChangesAsync(cancellationToken);
 
             return _mapper.Map<WalletDto>(wallet);
         }
 
-        public async Task<IEnumerable<WalletDto>> GetAll(int pageNumber, int pageSize, Func<IQueryable<WalletEntity>, IQueryable<WalletEntity>>? filter = null)
+        public async Task<IEnumerable<WalletDto>> GetAll(int pageNumber, int pageSize, 
+            Func<IQueryable<WalletEntity>, IQueryable<WalletEntity>>? filter = null,
+            CancellationToken cancellationToken = default)
         {
             var res = await _unitOfWork.GetRepository<WalletEntity>().GetAllAsync<WalletDto>(
-                mapper: _mapper, filter: filter, pageNumber: pageNumber, pageSize: pageSize, disableTracking: false);
+                mapper: _mapper, filter: filter, pageNumber: pageNumber, pageSize: pageSize, disableTracking: false, 
+                cancellationToken: cancellationToken);
 
             return res;
         }
 
-        public async Task<WalletDto> GetById(int id)
+        public async Task<WalletDto> GetById(int id, CancellationToken cancellationToken = default)
         {
-            var wallet = await _unitOfWork.GetRepository<WalletEntity>().GetByIdAsync(id);
+            var wallet = await _unitOfWork.GetRepository<WalletEntity>().GetByIdAsync(id, cancellationToken);
             if (wallet == null)
                 throw new MyPosApiException($"Wallet with id {id} not found", StatusCodes.Status404NotFound);
 
             return _mapper.Map<WalletDto>(wallet);
         }
 
-        public async Task<WalletDto> UpdateWallet(int id, CreateWalletDto dto)
+        public async Task<WalletDto> UpdateWallet(int id, CreateWalletDto dto, CancellationToken cancellationToken = default)
         {
-            var wallet = await _unitOfWork.GetRepository<WalletEntity>().GetByIdAsync(id);
+            var wallet = await _unitOfWork.GetRepository<WalletEntity>().GetByIdAsync(id, cancellationToken);
             if (wallet == null) 
                 throw new MyPosApiException($"Wallet with id {id} not found", StatusCodes.Status404NotFound);
 
-            var registrant = await _unitOfWork.GetRepository<RegistrantEntity>().GetByIdAsync(dto.RegistrantId);
+            var registrant = await _unitOfWork.GetRepository<RegistrantEntity>().GetByIdAsync(dto.RegistrantId, cancellationToken);
 
             if (registrant == null) 
                 throw new MyPosApiException($"Registrant with id {dto.RegistrantId} not found", StatusCodes.Status404NotFound);
@@ -79,7 +82,7 @@ namespace WebAPI.Services
             _mapper.Map(dto, wallet);
 
             _unitOfWork.GetRepository<WalletEntity>().Update(wallet);
-            await _unitOfWork.SaveChangesAsync();
+            await _unitOfWork.SaveChangesAsync(cancellationToken);
 
             return _mapper.Map<WalletDto>(wallet);
         }
