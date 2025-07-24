@@ -28,10 +28,10 @@ namespace WebAPI.Services
             _passwordHasher = passwordHasher;
             _jwtSettings = jwtOptions.Value;
         }
-        public async Task<string> Login([FromBody] LoginDto dto)
+        public async Task<string> Login([FromBody] LoginDto dto, CancellationToken cancellationToken = default)
         {
             var user = await _unitOfWork.GetRepository<UserEntity>().GetSingleAsync(query => 
-            query.Where(u => u.Username == dto.Username));
+            query.Where(u => u.Username == dto.Username), cancellationToken: cancellationToken);
 
             if (user == null)
                 throw new UnauthorizedAccessException("Invalid credentials");

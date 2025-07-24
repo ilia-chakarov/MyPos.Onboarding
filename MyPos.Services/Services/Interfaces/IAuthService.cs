@@ -5,7 +5,7 @@ namespace WebAPI.Services.Interfaces
 {
     public interface IAuthService
     {
-        public Task<string> Login([FromBody] LoginDto dto);
+        public Task<string> Login([FromBody] LoginDto dto, CancellationToken cancellationToken = default);
 
     }
 }
