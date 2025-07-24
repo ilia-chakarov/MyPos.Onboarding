@@ -2,10 +2,10 @@
 
 namespace MyPos.WebAPI.BackgroundServices
 {
-    public class CPUMeterBacgroundService : BackgroundService
+    public class CPUMeterBackgroundService : BackgroundService
     {
-        private readonly ILogger<CPUMeterBacgroundService> _logger;
-        public CPUMeterBacgroundService(ILogger<CPUMeterBacgroundService> logger)
+        private readonly ILogger<CPUMeterBackgroundService> _logger;
+        public CPUMeterBackgroundService(ILogger<CPUMeterBackgroundService> logger)
         {
             _logger = logger;
         }

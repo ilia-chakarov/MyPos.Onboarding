@@ -23,7 +23,7 @@ namespace WebAPI.Extensions
         public static IServiceCollection ConfigureBacgroundServices(this IServiceCollection services, IConfiguration conf)
         {
             if (ConfigurationBinder.GetValue<bool>(conf, "CPUMeter"))
-                services.AddHostedService<CPUMeterBacgroundService>();
+                services.AddHostedService<CPUMeterBackgroundService>();
 
             return services;
         }
