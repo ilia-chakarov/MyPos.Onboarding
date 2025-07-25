@@ -63,146 +63,20 @@
           }
         }
       },
-      "Ben.Demystifier/0.4.1": {
+      "Elasticsearch.Net/7.17.5": {
         "type": "package",
         "dependencies": {
-          "System.Reflection.Metadata": "5.0.0"
+          "Microsoft.CSharp": "4.6.0",
+          "System.Buffers": "4.5.1",
+          "System.Diagnostics.DiagnosticSource": "5.0.0"
         },
         "compile": {
-          "lib/netstandard2.1/Ben.Demystifier.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.1/Ben.Demystifier.dll": {}
-        }
-      },
-      "Elastic.Channels/0.7.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Threading.Channels": "4.7.1"
-        },
-        "compile": {
-          "lib/netstandard2.1/Elastic.Channels.dll": {
+          "lib/netstandard2.1/Elasticsearch.Net.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/Elastic.Channels.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
-      "Elastic.CommonSchema/8.11.0": {
-        "type": "package",
-        "dependencies": {
-          "Ben.Demystifier": "0.4.1"
-        },
-        "compile": {
-          "lib/net6.0/Elastic.CommonSchema.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Elastic.CommonSchema.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
-      "Elastic.CommonSchema.Serilog/8.11.0": {
-        "type": "package",
-        "dependencies": {
-          "Elastic.CommonSchema": "8.11.0",
-          "Microsoft.AspNetCore.Http.Abstractions": "2.1.0",
-          "Microsoft.AspNetCore.Http.Extensions": "2.1.0",
-          "Serilog": "2.9.0"
-        },
-        "compile": {
-          "lib/netstandard2.1/Elastic.CommonSchema.Serilog.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/Elastic.CommonSchema.Serilog.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
-      "Elastic.Ingest.Elasticsearch/0.7.0": {
-        "type": "package",
-        "dependencies": {
-          "Elastic.Ingest.Transport": "0.7.0"
-        },
-        "compile": {
-          "lib/netstandard2.1/Elastic.Ingest.Elasticsearch.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/Elastic.Ingest.Elasticsearch.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
-      "Elastic.Ingest.Elasticsearch.CommonSchema/8.11.0": {
-        "type": "package",
-        "dependencies": {
-          "Elastic.CommonSchema": "8.11.0",
-          "Elastic.Ingest.Elasticsearch": "0.7.0"
-        },
-        "compile": {
-          "lib/netstandard2.1/Elastic.Ingest.Elasticsearch.CommonSchema.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/Elastic.Ingest.Elasticsearch.CommonSchema.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
-      "Elastic.Ingest.Transport/0.7.0": {
-        "type": "package",
-        "dependencies": {
-          "Elastic.Channels": "0.7.0",
-          "Elastic.Transport": "0.4.18",
-          "System.Threading.Channels": "4.7.1"
-        },
-        "compile": {
-          "lib/netstandard2.1/Elastic.Ingest.Transport.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/Elastic.Ingest.Transport.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
-      "Elastic.Serilog.Sinks/8.11.0": {
-        "type": "package",
-        "dependencies": {
-          "Elastic.CommonSchema.Serilog": "8.11.0",
-          "Elastic.Ingest.Elasticsearch.CommonSchema": "8.11.0"
-        },
-        "compile": {
-          "lib/netstandard2.1/Elastic.Serilog.Sinks.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/Elastic.Serilog.Sinks.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
-      "Elastic.Transport/0.4.18": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/Elastic.Transport.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/Elastic.Transport.dll": {
+          "lib/netstandard2.1/Elasticsearch.Net.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -1288,7 +1162,7 @@
           }
         }
       },
-      "Microsoft.CSharp/4.5.0": {
+      "Microsoft.CSharp/4.6.0": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -2462,6 +2336,22 @@
           }
         }
       },
+      "Serilog.Formatting.Elasticsearch/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Serilog": "2.12.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.Formatting.Elasticsearch.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.Formatting.Elasticsearch.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Serilog.Settings.Configuration/8.0.4": {
         "type": "package",
         "dependencies": {
@@ -2512,6 +2402,28 @@
           }
         }
       },
+      "Serilog.Sinks.Elasticsearch/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Elasticsearch.Net": "7.17.5",
+          "Serilog": "3.1.1",
+          "Serilog.Formatting.Compact": "2.0.0",
+          "Serilog.Formatting.Elasticsearch": "10.0.0",
+          "Serilog.Sinks.File": "5.0.0",
+          "Serilog.Sinks.PeriodicBatching": "4.0.0",
+          "System.Diagnostics.DiagnosticSource": "7.0.2"
+        },
+        "compile": {
+          "lib/net6.0/Serilog.Sinks.Elasticsearch.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Serilog.Sinks.Elasticsearch.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Serilog.Sinks.File/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -2524,6 +2436,23 @@
         },
         "runtime": {
           "lib/net8.0/Serilog.Sinks.File.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Serilog.Sinks.PeriodicBatching/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Serilog": "3.1.1",
+          "System.Threading.Channels": "8.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Serilog.Sinks.PeriodicBatching.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Serilog.Sinks.PeriodicBatching.dll": {
             "related": ".xml"
           }
         }
@@ -3178,20 +3107,20 @@
           }
         }
       },
-      "System.Threading.Channels/6.0.0": {
+      "System.Threading.Channels/8.0.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/System.Threading.Channels.dll": {
+          "lib/net8.0/System.Threading.Channels.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/System.Threading.Channels.dll": {
+          "lib/net8.0/System.Threading.Channels.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/netcoreapp3.1/_._": {}
+          "buildTransitive/net6.0/_._": {}
         }
       },
       "System.Threading.Tasks.Extensions/4.6.0": {
@@ -3342,195 +3271,24 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
-    "Ben.Demystifier/0.4.1": {
-      "sha512": "axFeEMfmEORy3ipAzOXG/lE+KcNptRbei3F0C4kQCdeiQtW+qJW90K5iIovITGrdLt8AjhNCwk5qLSX9/rFpoA==",
+    "Elasticsearch.Net/7.17.5": {
+      "sha512": "orChsQi1Ceho/NyIylNOn6y4vuGcsbCfMZnCueNN0fzqYEGQmQdPfcVmsR5+3fwpXTgxCdjTUVmqOwvHpCSB+Q==",
       "type": "package",
-      "path": "ben.demystifier/0.4.1",
+      "path": "elasticsearch.net/7.17.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "ben.demystifier.0.4.1.nupkg.sha512",
-        "ben.demystifier.nuspec",
-        "icon.png",
-        "lib/net45/Ben.Demystifier.dll",
-        "lib/netstandard2.0/Ben.Demystifier.dll",
-        "lib/netstandard2.1/Ben.Demystifier.dll",
-        "readme.md"
-      ]
-    },
-    "Elastic.Channels/0.7.0": {
-      "sha512": "IcL3NteG4QU6FlqMbUw05UGtZcHG7RgTGqiFotV/4kIua79l0WTXpSWTaN0WkRs2C7nyjW2QdITIEJRDHFYgsA==",
-      "type": "package",
-      "path": "elastic.channels/0.7.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "elastic.channels.0.7.0.nupkg.sha512",
-        "elastic.channels.nuspec",
-        "lib/netstandard2.0/Elastic.Channels.dll",
-        "lib/netstandard2.0/Elastic.Channels.pdb",
-        "lib/netstandard2.0/Elastic.Channels.xml",
-        "lib/netstandard2.1/Elastic.Channels.dll",
-        "lib/netstandard2.1/Elastic.Channels.pdb",
-        "lib/netstandard2.1/Elastic.Channels.xml",
-        "license.txt",
-        "nuget-icon.png"
-      ]
-    },
-    "Elastic.CommonSchema/8.11.0": {
-      "sha512": "lZe2KF8RxSQcEe26gwWN2MNQG3ZHGq2UdlBdMzhmgccrb3SE/jlOP78Dl5wh4wLVYZ2QwtqssC9QffCgPW2Naw==",
-      "type": "package",
-      "path": "elastic.commonschema/8.11.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "elastic.commonschema.8.11.0.nupkg.sha512",
-        "elastic.commonschema.nuspec",
-        "lib/net461/Elastic.CommonSchema.dll",
-        "lib/net461/Elastic.CommonSchema.pdb",
-        "lib/net461/Elastic.CommonSchema.xml",
-        "lib/net6.0/Elastic.CommonSchema.dll",
-        "lib/net6.0/Elastic.CommonSchema.pdb",
-        "lib/net6.0/Elastic.CommonSchema.xml",
-        "lib/netstandard2.0/Elastic.CommonSchema.dll",
-        "lib/netstandard2.0/Elastic.CommonSchema.pdb",
-        "lib/netstandard2.0/Elastic.CommonSchema.xml",
-        "lib/netstandard2.1/Elastic.CommonSchema.dll",
-        "lib/netstandard2.1/Elastic.CommonSchema.pdb",
-        "lib/netstandard2.1/Elastic.CommonSchema.xml",
-        "license.txt",
-        "nuget-icon.png"
-      ]
-    },
-    "Elastic.CommonSchema.Serilog/8.11.0": {
-      "sha512": "pfJ4NX+QytaT6fMbeMtcI0dhkbgoApjCfJu7Th+oja70EZP7mtqXdWOhDwxiazfPfkiEdProEZ9mMjOO47r9oQ==",
-      "type": "package",
-      "path": "elastic.commonschema.serilog/8.11.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "elastic.commonschema.serilog.8.11.0.nupkg.sha512",
-        "elastic.commonschema.serilog.nuspec",
-        "lib/net461/Elastic.CommonSchema.Serilog.dll",
-        "lib/net461/Elastic.CommonSchema.Serilog.pdb",
-        "lib/net461/Elastic.CommonSchema.Serilog.xml",
-        "lib/netstandard2.0/Elastic.CommonSchema.Serilog.dll",
-        "lib/netstandard2.0/Elastic.CommonSchema.Serilog.pdb",
-        "lib/netstandard2.0/Elastic.CommonSchema.Serilog.xml",
-        "lib/netstandard2.1/Elastic.CommonSchema.Serilog.dll",
-        "lib/netstandard2.1/Elastic.CommonSchema.Serilog.pdb",
-        "lib/netstandard2.1/Elastic.CommonSchema.Serilog.xml",
-        "license.txt",
-        "nuget-icon.png"
-      ]
-    },
-    "Elastic.Ingest.Elasticsearch/0.7.0": {
-      "sha512": "7MmRkwVYphGhXAVXyrQxhnNpiyrkwVIzNuOJy/MXjPZPc0Tc6bwXLThqyCxR1JFE/hugHeoMFEAdb/TABHaJ6g==",
-      "type": "package",
-      "path": "elastic.ingest.elasticsearch/0.7.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "elastic.ingest.elasticsearch.0.7.0.nupkg.sha512",
-        "elastic.ingest.elasticsearch.nuspec",
-        "lib/netstandard2.0/Elastic.Ingest.Elasticsearch.dll",
-        "lib/netstandard2.0/Elastic.Ingest.Elasticsearch.pdb",
-        "lib/netstandard2.0/Elastic.Ingest.Elasticsearch.xml",
-        "lib/netstandard2.1/Elastic.Ingest.Elasticsearch.dll",
-        "lib/netstandard2.1/Elastic.Ingest.Elasticsearch.pdb",
-        "lib/netstandard2.1/Elastic.Ingest.Elasticsearch.xml",
-        "license.txt",
-        "nuget-icon.png"
-      ]
-    },
-    "Elastic.Ingest.Elasticsearch.CommonSchema/8.11.0": {
-      "sha512": "u46UZjwK/OhkNuOaIlqJ0IsJSodzuzbIQeIJGWge4ao816VNAVsVx9E/3DSCktf5ez4lz/pmYPraZESJ+0ng0g==",
-      "type": "package",
-      "path": "elastic.ingest.elasticsearch.commonschema/8.11.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "elastic.ingest.elasticsearch.commonschema.8.11.0.nupkg.sha512",
-        "elastic.ingest.elasticsearch.commonschema.nuspec",
-        "lib/netstandard2.0/Elastic.Ingest.Elasticsearch.CommonSchema.dll",
-        "lib/netstandard2.0/Elastic.Ingest.Elasticsearch.CommonSchema.pdb",
-        "lib/netstandard2.0/Elastic.Ingest.Elasticsearch.CommonSchema.xml",
-        "lib/netstandard2.1/Elastic.Ingest.Elasticsearch.CommonSchema.dll",
-        "lib/netstandard2.1/Elastic.Ingest.Elasticsearch.CommonSchema.pdb",
-        "lib/netstandard2.1/Elastic.Ingest.Elasticsearch.CommonSchema.xml",
-        "license.txt",
-        "nuget-icon.png"
-      ]
-    },
-    "Elastic.Ingest.Transport/0.7.0": {
-      "sha512": "ury3crl3KPMe8TCluusrq0+hzloYp0/kslhEdtXdnQ0qhHmI1CCJCYfDKK/tE7VSjnuEA9tFkdoUp2M+PqrmFg==",
-      "type": "package",
-      "path": "elastic.ingest.transport/0.7.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "elastic.ingest.transport.0.7.0.nupkg.sha512",
-        "elastic.ingest.transport.nuspec",
-        "lib/netstandard2.0/Elastic.Ingest.Transport.dll",
-        "lib/netstandard2.0/Elastic.Ingest.Transport.pdb",
-        "lib/netstandard2.0/Elastic.Ingest.Transport.xml",
-        "lib/netstandard2.1/Elastic.Ingest.Transport.dll",
-        "lib/netstandard2.1/Elastic.Ingest.Transport.pdb",
-        "lib/netstandard2.1/Elastic.Ingest.Transport.xml",
-        "license.txt",
-        "nuget-icon.png"
-      ]
-    },
-    "Elastic.Serilog.Sinks/8.11.0": {
-      "sha512": "tjIhTXdnG0+1iNqxwTfOH1+nbDNeMc941rXB8Hfasc6Zho+mtdUaA2GNdEd2YuNn7v2cphhG1jri5NLtXPFPgA==",
-      "type": "package",
-      "path": "elastic.serilog.sinks/8.11.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "elastic.serilog.sinks.8.11.0.nupkg.sha512",
-        "elastic.serilog.sinks.nuspec",
-        "lib/netstandard2.0/Elastic.Serilog.Sinks.dll",
-        "lib/netstandard2.0/Elastic.Serilog.Sinks.pdb",
-        "lib/netstandard2.0/Elastic.Serilog.Sinks.xml",
-        "lib/netstandard2.1/Elastic.Serilog.Sinks.dll",
-        "lib/netstandard2.1/Elastic.Serilog.Sinks.pdb",
-        "lib/netstandard2.1/Elastic.Serilog.Sinks.xml",
-        "license.txt",
-        "nuget-icon.png"
-      ]
-    },
-    "Elastic.Transport/0.4.18": {
-      "sha512": "Q9nGgYxB0r1jTkUf8zWbFKLk5JHliZhVU6vukdMLHLH/1EBKQvHzPahkrnV8KsvGOPFFqFAVOhQvaxpjXuS3TA==",
-      "type": "package",
-      "path": "elastic.transport/0.4.18",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "elastic.transport.0.4.18.nupkg.sha512",
-        "elastic.transport.nuspec",
-        "lib/net462/Elastic.Transport.dll",
-        "lib/net462/Elastic.Transport.pdb",
-        "lib/net462/Elastic.Transport.xml",
-        "lib/net6.0/Elastic.Transport.dll",
-        "lib/net6.0/Elastic.Transport.pdb",
-        "lib/net6.0/Elastic.Transport.xml",
-        "lib/net8.0/Elastic.Transport.dll",
-        "lib/net8.0/Elastic.Transport.pdb",
-        "lib/net8.0/Elastic.Transport.xml",
-        "lib/netstandard2.0/Elastic.Transport.dll",
-        "lib/netstandard2.0/Elastic.Transport.pdb",
-        "lib/netstandard2.0/Elastic.Transport.xml",
-        "lib/netstandard2.1/Elastic.Transport.dll",
-        "lib/netstandard2.1/Elastic.Transport.pdb",
-        "lib/netstandard2.1/Elastic.Transport.xml",
+        "elasticsearch.net.7.17.5.nupkg.sha512",
+        "elasticsearch.net.nuspec",
+        "lib/net461/Elasticsearch.Net.dll",
+        "lib/net461/Elasticsearch.Net.pdb",
+        "lib/net461/Elasticsearch.Net.xml",
+        "lib/netstandard2.0/Elasticsearch.Net.dll",
+        "lib/netstandard2.0/Elasticsearch.Net.pdb",
+        "lib/netstandard2.0/Elasticsearch.Net.xml",
+        "lib/netstandard2.1/Elasticsearch.Net.dll",
+        "lib/netstandard2.1/Elasticsearch.Net.pdb",
+        "lib/netstandard2.1/Elasticsearch.Net.xml",
         "license.txt",
         "nuget-icon.png"
       ]
@@ -4631,10 +4389,10 @@
         "microsoft.codeanalysis.workspaces.common.nuspec"
       ]
     },
-    "Microsoft.CSharp/4.5.0": {
-      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+    "Microsoft.CSharp/4.6.0": {
+      "sha512": "kxn3M2rnAGy5N5DgcIwcE8QTePWU/XiYcQVzn9HqTls2NKluVzVSmVWRjK7OUPWbljCXuZxHyhEz9kPRIQeXow==",
       "type": "package",
-      "path": "microsoft.csharp/4.5.0",
+      "path": "microsoft.csharp/4.6.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4647,6 +4405,7 @@
         "lib/netcoreapp2.0/_._",
         "lib/netstandard1.3/Microsoft.CSharp.dll",
         "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.xml",
         "lib/portable-net45+win8+wp8+wpa81/_._",
         "lib/uap10.0.16299/_._",
         "lib/win8/_._",
@@ -4656,7 +4415,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "microsoft.csharp.4.5.0.nupkg.sha512",
+        "microsoft.csharp.4.6.0.nupkg.sha512",
         "microsoft.csharp.nuspec",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
@@ -6939,6 +6698,20 @@
         "serilog.formatting.compact.nuspec"
       ]
     },
+    "Serilog.Formatting.Elasticsearch/10.0.0": {
+      "sha512": "N9FsqRnl+rQOD2ldJMbEgPySwFDkUB8s6PCj5e92ryektgyZNFze3R2c1nwGOz6jhJ2aIzBIBNDM69CCzdHO0w==",
+      "type": "package",
+      "path": "serilog.formatting.elasticsearch/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Serilog.Formatting.Elasticsearch.dll",
+        "lib/netstandard2.0/Serilog.Formatting.Elasticsearch.xml",
+        "serilog-sink-nuget.png",
+        "serilog.formatting.elasticsearch.10.0.0.nupkg.sha512",
+        "serilog.formatting.elasticsearch.nuspec"
+      ]
+    },
     "Serilog.Settings.Configuration/8.0.4": {
       "sha512": "pkxvq0umBKK8IKFJc1aV5S/HGRG/NIxJ6FV42KaTPLfDmBOAbBUB1m5gqqlGxzEa1MgDDWtQlWJdHTSxVWNx+Q==",
       "type": "package",
@@ -7011,6 +6784,23 @@
         "serilog.sinks.debug.nuspec"
       ]
     },
+    "Serilog.Sinks.Elasticsearch/10.0.0": {
+      "sha512": "9MzR3UeQ/ZBu21K0gYHry4GFWeHFvizRwXnnDvoYc/ComnIzkrfkMNmiAzcMsyx3pHTVLuQSgHs209jM6opSjQ==",
+      "type": "package",
+      "path": "serilog.sinks.elasticsearch/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net6.0/Serilog.Sinks.Elasticsearch.dll",
+        "lib/net6.0/Serilog.Sinks.Elasticsearch.xml",
+        "lib/netstandard2.0/Serilog.Sinks.Elasticsearch.dll",
+        "lib/netstandard2.0/Serilog.Sinks.Elasticsearch.xml",
+        "serilog-sink-nuget.png",
+        "serilog.sinks.elasticsearch.10.0.0.nupkg.sha512",
+        "serilog.sinks.elasticsearch.nuspec"
+      ]
+    },
     "Serilog.Sinks.File/7.0.0": {
       "sha512": "fKL7mXv7qaiNBUC71ssvn/dU0k9t0o45+qm2XgKAlSt19xF+ijjxyA3R6HmCgfKEKwfcfkwWjayuQtRueZFkYw==",
       "type": "package",
@@ -7034,6 +6824,25 @@
         "serilog-sink-nuget.png",
         "serilog.sinks.file.7.0.0.nupkg.sha512",
         "serilog.sinks.file.nuspec"
+      ]
+    },
+    "Serilog.Sinks.PeriodicBatching/4.0.0": {
+      "sha512": "kxg6QLNA1sDVqYEE7/6hCr/Ur3imS+qaoEqriQh07WTU1/b6jknnuVN1rWQpj67JpwAXXTmgI3Js9IGGktgumQ==",
+      "type": "package",
+      "path": "serilog.sinks.periodicbatching/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net462/Serilog.Sinks.PeriodicBatching.dll",
+        "lib/net462/Serilog.Sinks.PeriodicBatching.xml",
+        "lib/net6.0/Serilog.Sinks.PeriodicBatching.dll",
+        "lib/net6.0/Serilog.Sinks.PeriodicBatching.xml",
+        "lib/netstandard2.0/Serilog.Sinks.PeriodicBatching.dll",
+        "lib/netstandard2.0/Serilog.Sinks.PeriodicBatching.xml",
+        "serilog.sinks.periodicbatching.4.0.0.nupkg.sha512",
+        "serilog.sinks.periodicbatching.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore/6.6.2": {
@@ -8201,29 +8010,34 @@
         "version.txt"
       ]
     },
-    "System.Threading.Channels/6.0.0": {
-      "sha512": "TY8/9+tI0mNaUMgntOxxaq2ndTkdXqLSxvPmas7XEqOlv9lQtB7wLjYGd756lOaO7Dvb5r/WXhluM+0Xe87v5Q==",
+    "System.Threading.Channels/8.0.0": {
+      "sha512": "CMaFr7v+57RW7uZfZkPExsPB6ljwzhjACWW1gfU35Y56rk72B/Wu+sTqxVmGSk4SFUlPc3cjeKND0zktziyjBA==",
       "type": "package",
-      "path": "system.threading.channels/6.0.0",
+      "path": "system.threading.channels/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
+        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Threading.Channels.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
         "buildTransitive/netcoreapp2.0/System.Threading.Channels.targets",
-        "buildTransitive/netcoreapp3.1/_._",
-        "lib/net461/System.Threading.Channels.dll",
-        "lib/net461/System.Threading.Channels.xml",
+        "lib/net462/System.Threading.Channels.dll",
+        "lib/net462/System.Threading.Channels.xml",
         "lib/net6.0/System.Threading.Channels.dll",
         "lib/net6.0/System.Threading.Channels.xml",
-        "lib/netcoreapp3.1/System.Threading.Channels.dll",
-        "lib/netcoreapp3.1/System.Threading.Channels.xml",
+        "lib/net7.0/System.Threading.Channels.dll",
+        "lib/net7.0/System.Threading.Channels.xml",
+        "lib/net8.0/System.Threading.Channels.dll",
+        "lib/net8.0/System.Threading.Channels.xml",
         "lib/netstandard2.0/System.Threading.Channels.dll",
         "lib/netstandard2.0/System.Threading.Channels.xml",
         "lib/netstandard2.1/System.Threading.Channels.dll",
         "lib/netstandard2.1/System.Threading.Channels.xml",
-        "system.threading.channels.6.0.0.nupkg.sha512",
+        "system.threading.channels.8.0.0.nupkg.sha512",
         "system.threading.channels.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -8300,7 +8114,6 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "AutoMapper >= 14.0.0",
-      "Elastic.Serilog.Sinks >= 8.11.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.17",
       "Microsoft.EntityFrameworkCore >= 8.0.17",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.17",
@@ -8317,7 +8130,9 @@
       "Serilog.AspNetCore >= 8.0.3",
       "Serilog.Enrichers.Environment >= 3.0.1",
       "Serilog.Enrichers.Thread >= 4.0.0",
+      "Serilog.Formatting.Elasticsearch >= 10.0.0",
       "Serilog.Settings.Configuration >= 8.0.4",
+      "Serilog.Sinks.Elasticsearch >= 10.0.0",
       "Serilog.Sinks.File >= 7.0.0",
       "Swashbuckle.AspNetCore >= 6.6.2",
       "System.Diagnostics.PerformanceCounter >= 8.0.1",
@@ -8392,10 +8207,6 @@
             "target": "Package",
             "version": "[14.0.0, )"
           },
-          "Elastic.Serilog.Sinks": {
-            "target": "Package",
-            "version": "[8.11.0, )"
-          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[8.0.17, )"
@@ -8450,9 +8261,17 @@
             "target": "Package",
             "version": "[4.0.0, )"
           },
+          "Serilog.Formatting.Elasticsearch": {
+            "target": "Package",
+            "version": "[10.0.0, )"
+          },
           "Serilog.Settings.Configuration": {
             "target": "Package",
             "version": "[8.0.4, )"
+          },
+          "Serilog.Sinks.Elasticsearch": {
+            "target": "Package",
+            "version": "[10.0.0, )"
           },
           "Serilog.Sinks.File": {
             "target": "Package",

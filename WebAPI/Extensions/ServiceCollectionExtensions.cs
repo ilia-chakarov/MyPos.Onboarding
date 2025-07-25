@@ -1,5 +1,4 @@
-﻿using Elastic.Serilog.Sinks;
-using Elastic.Transport;
+﻿using Elasticsearch.Net;
 using ExternalApi;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -11,6 +10,7 @@ using MyPos.WebAPI.External.ClientServices;
 using MyPos.WebAPI.External.ClientServices.Interfaces;
 using MyPos.WebAPI.External.Handler;
 using Serilog;
+using Serilog.Formatting.Elasticsearch;
 using WebAPI.Entities;
 using WebAPI.ExternalClients.Clients;
 using WebAPI.ExternalClients.Clients.Interfaces;
@@ -164,22 +164,12 @@ namespace WebAPI.Extensions
                         logEvent.Properties["LogType"].ToString() == "\"Usage\""
                     )
                     .WriteTo.Elasticsearch(
-                        new[] { new Uri("https://10.80.128.185:9200") },
-                        configureOptions =>
+                        new Serilog.Sinks.Elasticsearch.ElasticsearchSinkOptions(new Uri("https://10.80.128.112:9200/"))
                         {
-                            configureOptions.DataStream = new Elastic.Ingest.Elasticsearch.DataStreams.DataStreamName("logs", "chakarov", "onboarding");
-                            configureOptions.BootstrapMethod = Elastic.Ingest.Elasticsearch.BootstrapMethod.None;
-                            configureOptions.ConfigureChannel = channelOpts =>
-                            {
-                                channelOpts.BufferOptions = new Elastic.Channels.BufferOptions
-                                {
-                                    ExportMaxConcurrency = 10
-                                };
-                            };
-                        },
-                        configureTransport =>
-                        {
-                            configureTransport.Authentication(new BasicAuthentication("viewer_user", "7tFa7g7x"));
+                            AutoRegisterTemplate = false,
+                            IndexFormat = "test-country-api",
+                            CustomFormatter = new ExceptionAsObjectJsonFormatter(renderMessage: true),
+                            ModifyConnectionSettings = conn => conn.BasicAuthentication("dev", "OYa4LbS#xV10")
                         }
                     )
                 )
