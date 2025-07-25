@@ -11,6 +11,7 @@ using MyPos.WebAPI.External.ClientServices.Interfaces;
 using MyPos.WebAPI.External.Handler;
 using Serilog;
 using Serilog.Formatting.Elasticsearch;
+using System.Configuration;
 using WebAPI.Entities;
 using WebAPI.ExternalClients.Clients;
 using WebAPI.ExternalClients.Clients.Interfaces;
@@ -147,8 +148,9 @@ namespace WebAPI.Extensions
 
 
 
-        public static IHostBuilder ConfigureSerilog(this IHostBuilder hostBuilder)
+        public static IHostBuilder ConfigureSerilog(this IHostBuilder hostBuilder, IConfiguration configuration)
         {
+            var elasticConfig = configuration.GetSection("ElasticConfig").Get<ElasticConfig>();
             // Hardcoded here so that IT has freedom to use appsettings.json
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Information()
@@ -164,12 +166,12 @@ namespace WebAPI.Extensions
                         logEvent.Properties["LogType"].ToString() == "\"Usage\""
                     )
                     .WriteTo.Elasticsearch(
-                        new Serilog.Sinks.Elasticsearch.ElasticsearchSinkOptions(new Uri("https://10.80.128.112:9200/"))
+                        new Serilog.Sinks.Elasticsearch.ElasticsearchSinkOptions(new Uri(elasticConfig.Url))
                         {
                             AutoRegisterTemplate = false,
-                            IndexFormat = "test-country-api",
+                            IndexFormat = elasticConfig.IndexFormat,
                             CustomFormatter = new ExceptionAsObjectJsonFormatter(renderMessage: true),
-                            ModifyConnectionSettings = conn => conn.BasicAuthentication("dev", "OYa4LbS#xV10")
+                            ModifyConnectionSettings = conn => conn.BasicAuthentication(elasticConfig.Username, elasticConfig.Password)
                         }
                     )
                 )
@@ -210,6 +212,7 @@ namespace WebAPI.Extensions
             services.Configure<SwaggerOptions>(configuration.GetSection("SwaggerOptions"));
             services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));
             services.Configure<IvoApiSettings>(configuration.GetSection("IvoApi"));
+            services.Configure<ElasticConfig>(configuration.GetSection("ElasticConfig"));
 
             return services;
         }

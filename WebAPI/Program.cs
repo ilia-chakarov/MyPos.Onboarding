@@ -36,7 +36,7 @@ namespace WebAPI
             builder.Services.AddJwtAuthentication(builder.Configuration);
             
            
-            builder.Host.ConfigureSerilog();
+            builder.Host.ConfigureSerilog(builder.Configuration);
 
             builder.Services.ConfigureBacgroundServices(builder.Configuration);
 
