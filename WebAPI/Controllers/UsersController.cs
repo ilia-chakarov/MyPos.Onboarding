@@ -17,10 +17,13 @@ namespace WebAPI.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<UserDto>>> GetAll(int pageNumber = 1, int pageSize = 10, CancellationToken cancellationToken = default)
+        public async Task<ActionResult<IEnumerable<UserDto>>> GetAll(string? username = null, int pageNumber = 1, int pageSize = 10, 
+            CancellationToken cancellationToken = default )
         {
-            var usrDtos = await _usersService.GetAll(pageNumber, pageSize, cancellationToken: cancellationToken);
-            return Ok(usrDtos);
+            var usrDtos = await _usersService.GetAll(pageNumber, pageSize,
+                filter: username == null ? null : u =>  u.Where(us => us.Username.Contains(username)) ,
+                cancellationToken: cancellationToken);
+            return Ok(usrDtos); 
         }
 
         [HttpGet("{id}")]
