@@ -17,7 +17,7 @@ namespace WebAPI.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> GetAll(int pageNumber = 1, int pageSize = 10, CancellationToken cancellationToken = default)
+        public async Task<ActionResult<IEnumerable<UserDto>>> GetAll(int pageNumber = 1, int pageSize = 10, CancellationToken cancellationToken = default)
         {
             var usrDtos = await _usersService.GetAll(pageNumber, pageSize, cancellationToken: cancellationToken);
             return Ok(usrDtos);
