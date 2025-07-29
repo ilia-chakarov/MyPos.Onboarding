@@ -2573,3 +2573,8 @@ OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
 }
 
 
+[17:33:31 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:33:31 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:33:31 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:33:31 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:33:31 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI

@@ -3,3 +3,11 @@ nswag openapi2csclient /input:Nswag/nswag.json /output:Generated/IvoApiClient.cs
 nswag openapi2csclient /input:Nswag/ivo.swagger.json /output:Generated/IvoApiClient.cs /namespace:ExternalApi
 
 nswag run Nswag/nswag.config.json
+
+/input: Your OpenAPI (Swagger) spec file.
+
+/output: Destination file for the generated code.
+
+/namespace: The namespace used in the generated file.
+
+/classname: The actual C# class name for the client, instead of the default Client.
