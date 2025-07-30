@@ -90,9 +90,9 @@
               "Title": "Repository.cs",
               "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Data\\Repositories\\Repository.cs",
               "RelativeDocumentMoniker": "MyPos.Data\\Repositories\\Repository.cs",
-              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Data\\Repositories\\Repository.cs*",
-              "RelativeToolTip": "MyPos.Data\\Repositories\\Repository.cs*",
-              "ViewState": "AgIAACgAAAAAAAAAAAAqwDUAAAAMAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Data\\Repositories\\Repository.cs",
+              "RelativeToolTip": "MyPos.Data\\Repositories\\Repository.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAqwEUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-29T14:22:18.817Z",
               "EditorCaption": ""
@@ -107,8 +107,7 @@
               "RelativeToolTip": "WebAPI\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-29T07:26:35.908Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-29T07:26:35.908Z"
             },
             {
               "$type": "Document",
@@ -120,8 +119,7 @@
               "RelativeToolTip": "WebAPI\\Generated\\IvoApiClient.cs",
               "ViewState": "AgIAADQAAAAAAAAAAAAvwB4AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-29T07:21:54.274Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-29T07:21:54.274Z"
             },
             {
               "$type": "Document",
@@ -133,8 +131,7 @@
               "RelativeToolTip": "WebAPI\\Extensions\\ServiceCollectionExtensions.cs",
               "ViewState": "AgIAAG4AAAAAAAAAAAAewIwAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-29T07:21:02Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-29T07:21:02Z"
             },
             {
               "$type": "Document",
@@ -146,8 +143,7 @@
               "RelativeToolTip": "WebAPI\\Extensions\\AuthenticationExtensions.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-29T07:21:21.24Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-29T07:21:21.24Z"
             },
             {
               "$type": "Document",
@@ -159,8 +155,7 @@
               "RelativeToolTip": "WebAPI\\Extensions\\HttpResponseExtensions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-29T07:21:19.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-29T07:21:19.46Z"
             },
             {
               "$type": "Document",
@@ -172,8 +167,7 @@
               "RelativeToolTip": "WebAPI\\Program.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAQwCEAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-29T07:20:57.962Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-29T07:20:57.962Z"
             },
             {
               "$type": "Document",
@@ -185,8 +179,7 @@
               "RelativeToolTip": "WebAPI\\Controllers\\RegistrantsController.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-29T06:55:39.071Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-29T06:55:39.071Z"
             },
             {
               "$type": "Document",
@@ -198,8 +191,7 @@
               "RelativeToolTip": "WebAPI\\Controllers\\UsersController.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAswBcAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-29T06:52:40.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-29T06:52:40.307Z"
             },
             {
               "$type": "Document",
@@ -211,8 +203,7 @@
               "RelativeToolTip": "WebAPI\\External\\ClientServices\\RegistrantsExtClientService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-29T06:34:17.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-29T06:34:17.538Z"
             },
             {
               "$type": "Document",
@@ -224,8 +215,7 @@
               "RelativeToolTip": "WebAPI\\External\\ClientServices\\AuthExtClientService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-29T06:34:17.007Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-29T06:34:17.007Z"
             },
             {
               "$type": "Document",
@@ -237,8 +227,7 @@
               "RelativeToolTip": "WebAPI\\External\\ClientServices\\Interfaces\\IRegistrantsExtClientService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-29T06:26:53.27Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-29T06:26:53.27Z"
             }
           ]
         }

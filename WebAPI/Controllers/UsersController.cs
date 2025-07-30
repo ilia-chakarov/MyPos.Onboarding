@@ -27,7 +27,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id, CancellationToken cancellationToken = default)
+        public async Task<ActionResult<UserDto>> GetById(int id, CancellationToken cancellationToken = default)
         {
             var userDto = await _usersService.GetById(id, cancellationToken);
 

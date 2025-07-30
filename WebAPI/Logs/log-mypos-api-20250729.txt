@@ -2954,3 +2954,2403 @@ OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
 }
 
 
+[17:33:33 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[17:33:33 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[17:33:33 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[17:33:33 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[17:33:33 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[17:34:14 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[17:34:14 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[17:34:15 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (29ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[17:34:15 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-5b31e8fa4ce002d41c977fd5392ec0bb-d56a50e0d6f69d28-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:18,\u0022username\u0022:\u0022external3\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 884,
+  "Timestamp": "2025-07-29T14:34:15.1105169Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:34:17 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[17:34:17 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[17:34:17 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+[17:34:17 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?username=v\u0026pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-148c788b36255537f70d4267abc9b3d8-c4004ea243b2ca81-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 55,
+  "Timestamp": "2025-07-29T14:34:17.1227165Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:34:20 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+[17:34:20 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?username=v\u0026pageNumber=1\u0026pageSize=2",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15f77ab35d2fbf361c7ac38e45f14139-ba54a4d7a1668bf4-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 17,
+  "Timestamp": "2025-07-29T14:34:20.5028804Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:34:22 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[17:34:22 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[17:34:22 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[17:34:22 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?username=v\u0026pageNumber=2\u0026pageSize=2",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-12b131dd62c830ae914a7523645efe06-86daf2349fe9df57-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 5,
+  "Timestamp": "2025-07-29T14:34:22.0047057Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:34:23 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+[17:34:23 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?username=v\u0026pageNumber=3\u0026pageSize=2",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-803073d62e3272ee8dde68b681fa49e6-0dd1f634a1b7ef54-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-29T14:34:23.7707086Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:34:25 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+[17:34:25 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?username=v\u0026pageNumber=4\u0026pageSize=2",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-156fbce55f6fb8ab74911fd089120d25-b0764da26fc7af12-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[]",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-29T14:34:25.5369432Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:34:29 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+[17:34:29 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?username=1\u0026pageNumber=4\u0026pageSize=2",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-d6ab87154581318725c91874e2d3cbc2-26882d35f75c499e-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[]",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-29T14:34:29.5181026Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:34:32 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+[17:34:32 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?username=1\u0026pageNumber=1\u0026pageSize=100",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-71aa22bc7b0f09c2777805be892d1f60-caf7e548c920bddd-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:31,\u0022username\u0022:\u0022pants11\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:33,\u0022username\u0022:\u0022bigpants11\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:34,\u0022username\u0022:\u0022string12\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:35,\u0022username\u0022:\u0022string1234\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-29T14:34:32.587848Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:34:35 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[17:34:35 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=100",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-03582f5111313bb90966b31a1e03b774-88add4a8ee452551-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:18,\u0022username\u0022:\u0022external3\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:26,\u0022username\u0022:\u0022pants\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:27,\u0022username\u0022:\u0022pants2\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:28,\u0022username\u0022:\u0022pants5\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:29,\u0022username\u0022:\u0022pants7\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:30,\u0022username\u0022:\u0022pants9\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:31,\u0022username\u0022:\u0022pants11\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:32,\u0022username\u0022:\u0022bigpants\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:33,\u0022username\u0022:\u0022bigpants11\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:34,\u0022username\u0022:\u0022string12\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:35,\u0022username\u0022:\u0022string1234\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 6,
+  "Timestamp": "2025-07-29T14:34:35.995964Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:34:40 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[17:34:40 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=12",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-74ddd4524410269e56aa76c8b8702fe6-1dfd7f04b9636f25-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:18,\u0022username\u0022:\u0022external3\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:26,\u0022username\u0022:\u0022pants\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:27,\u0022username\u0022:\u0022pants2\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 11,
+  "Timestamp": "2025-07-29T14:34:40.2479088Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:34:41 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[17:34:41 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=1",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-ac52c99534feffae153f0f11cebe4972-34ae19fb431effa6-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-29T14:34:41.6339634Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:34:43 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[17:34:43 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[17:34:43 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+[17:34:43 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=2\u0026pageSize=1",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-9c59ea306f3518bbbce59b1cb3cece1d-1fefc222366c1add-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 5,
+  "Timestamp": "2025-07-29T14:34:43.1193697Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[17:34:48 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[17:34:48 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-145e081779578a91fde7000850df0ecd-480ad510a8704c33-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:18,\u0022username\u0022:\u0022external3\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-29T14:34:48.8081457Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:09:38 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+[18:09:38 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?username=vi\u0026pageNumber=1\u0026pageSize=2",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-9baa7d3ccf123aec610c8b5961b726e5-c233d3aedfc67ba1-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 55,
+  "Timestamp": "2025-07-29T15:09:38.499514Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:09:41 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+[18:09:41 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?username=v\u0026pageNumber=1\u0026pageSize=2",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-f7cead3249998a3540e90c6a69f80836-5ccf7ef9f7620a79-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-29T15:09:41.5730616Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:09:43 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[18:09:43 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?username=v\u0026pageNumber=2\u0026pageSize=2",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-d91bf26536644c8ac6e63d153f9e8f2e-f71bddf4eb0498c1-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 5,
+  "Timestamp": "2025-07-29T15:09:43.4089215Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:09:44 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+[18:09:44 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?username=v\u0026pageNumber=3\u0026pageSize=2",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-4466d8e99ec048f8a0f7e7094b273176-93fa2a6075dac4e4-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-29T15:09:44.991857Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:09:46 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+[18:09:46 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?username=v\u0026pageNumber=4\u0026pageSize=2",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-aa845d8eda3d22df03fc685d04c1eaf1-a20af59433f53698-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[]",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-29T15:09:46.2929737Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:33:33 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[18:33:33 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-ac3e875bdb069f66f32d83f434aa2121-61648c0dfc197cec-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:18,\u0022username\u0022:\u0022external3\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 57,
+  "Timestamp": "2025-07-29T15:33:33.4693121Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:33:33 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:33:33 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/10",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-ac3e875bdb069f66f32d83f434aa2121-484570e2c1ea0277-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 10 not found\u0022}",
+  "ElapsedMilliseconds": 208,
+  "Timestamp": "2025-07-29T15:33:33.6979361Z",
+  "ExceptionMessage": "Registrant with id 10 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:33:33 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:33:33 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/12",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-ac3e875bdb069f66f32d83f434aa2121-0bd73f52205fcff9-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 12 not found\u0022}",
+  "ElapsedMilliseconds": 134,
+  "Timestamp": "2025-07-29T15:33:33.8576402Z",
+  "ExceptionMessage": "Registrant with id 12 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:33:33 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:33:34 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/13",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-ac3e875bdb069f66f32d83f434aa2121-6615c72abf3959a6-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 13 not found\u0022}",
+  "ElapsedMilliseconds": 142,
+  "Timestamp": "2025-07-29T15:33:34.0029337Z",
+  "ExceptionMessage": "Registrant with id 13 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:33:34 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:33:34 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/14",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-ac3e875bdb069f66f32d83f434aa2121-d8134c96288d0b76-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 14 not found\u0022}",
+  "ElapsedMilliseconds": 157,
+  "Timestamp": "2025-07-29T15:33:34.1628623Z",
+  "ExceptionMessage": "Registrant with id 14 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:33:34 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:33:34 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/15",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-ac3e875bdb069f66f32d83f434aa2121-469687322b800665-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 15 not found\u0022}",
+  "ElapsedMilliseconds": 159,
+  "Timestamp": "2025-07-29T15:33:34.3282349Z",
+  "ExceptionMessage": "Registrant with id 15 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:33:34 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:33:34 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/16",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-ac3e875bdb069f66f32d83f434aa2121-021c490ec6637d40-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 16 not found\u0022}",
+  "ElapsedMilliseconds": 159,
+  "Timestamp": "2025-07-29T15:33:34.4933281Z",
+  "ExceptionMessage": "Registrant with id 16 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:33:34 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:33:34 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/18",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-ac3e875bdb069f66f32d83f434aa2121-32e0d61d0909ff36-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 18 not found\u0022}",
+  "ElapsedMilliseconds": 129,
+  "Timestamp": "2025-07-29T15:33:34.6249456Z",
+  "ExceptionMessage": "Registrant with id 18 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:33:34 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:33:34 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/19",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-ac3e875bdb069f66f32d83f434aa2121-809790fa173ccbde-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 19 not found\u0022}",
+  "ElapsedMilliseconds": 64,
+  "Timestamp": "2025-07-29T15:33:34.7077544Z",
+  "ExceptionMessage": "Registrant with id 19 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:33:34 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:33:34 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/20",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-ac3e875bdb069f66f32d83f434aa2121-430543bf5056b6eb-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 20 not found\u0022}",
+  "ElapsedMilliseconds": 172,
+  "Timestamp": "2025-07-29T15:33:34.884471Z",
+  "ExceptionMessage": "Registrant with id 20 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:33:34 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:33:35 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/21",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-ac3e875bdb069f66f32d83f434aa2121-60b6dba4ea50821e-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 21 not found\u0022}",
+  "ElapsedMilliseconds": 131,
+  "Timestamp": "2025-07-29T15:33:35.0228248Z",
+  "ExceptionMessage": "Registrant with id 21 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:33:55 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[18:33:55 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-022026069e402ba32c09d1dfac5450d5-948f0de687866741-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:18,\u0022username\u0022:\u0022external3\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 5,
+  "Timestamp": "2025-07-29T15:33:55.4076075Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:34:07 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:34:07 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/10",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-022026069e402ba32c09d1dfac5450d5-a906bf37b86c2935-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 10 not found\u0022}",
+  "ElapsedMilliseconds": 84,
+  "Timestamp": "2025-07-29T15:34:07.907839Z",
+  "ExceptionMessage": "Registrant with id 10 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:34:10 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:34:11 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/12",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-022026069e402ba32c09d1dfac5450d5-61ea2e257bcb9146-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 12 not found\u0022}",
+  "ElapsedMilliseconds": 144,
+  "Timestamp": "2025-07-29T15:34:11.0447727Z",
+  "ExceptionMessage": "Registrant with id 12 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:34:11 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:34:11 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/13",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-022026069e402ba32c09d1dfac5450d5-d2799afa102e6f9a-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 13 not found\u0022}",
+  "ElapsedMilliseconds": 146,
+  "Timestamp": "2025-07-29T15:34:11.6881516Z",
+  "ExceptionMessage": "Registrant with id 13 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:34:12 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:34:12 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/14",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-022026069e402ba32c09d1dfac5450d5-d283a77676fa5f48-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 14 not found\u0022}",
+  "ElapsedMilliseconds": 120,
+  "Timestamp": "2025-07-29T15:34:12.1301745Z",
+  "ExceptionMessage": "Registrant with id 14 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:34:12 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:34:12 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/15",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-022026069e402ba32c09d1dfac5450d5-2b28c5336f80120b-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 15 not found\u0022}",
+  "ElapsedMilliseconds": 162,
+  "Timestamp": "2025-07-29T15:34:12.6369968Z",
+  "ExceptionMessage": "Registrant with id 15 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:34:12 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:34:13 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/16",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-022026069e402ba32c09d1dfac5450d5-a66acee1427ea48c-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 16 not found\u0022}",
+  "ElapsedMilliseconds": 106,
+  "Timestamp": "2025-07-29T15:34:13.0585886Z",
+  "ExceptionMessage": "Registrant with id 16 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:34:13 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:34:13 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/18",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-022026069e402ba32c09d1dfac5450d5-71412e934e54c66c-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 18 not found\u0022}",
+  "ElapsedMilliseconds": 127,
+  "Timestamp": "2025-07-29T15:34:13.5024736Z",
+  "ExceptionMessage": "Registrant with id 18 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:34:14 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:34:14 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/19",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-022026069e402ba32c09d1dfac5450d5-07c5bcedcf953fbe-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 19 not found\u0022}",
+  "ElapsedMilliseconds": 84,
+  "Timestamp": "2025-07-29T15:34:14.8223809Z",
+  "ExceptionMessage": "Registrant with id 19 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:34:14 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:34:15 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/20",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-022026069e402ba32c09d1dfac5450d5-a00baabf61ce711a-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 20 not found\u0022}",
+  "ElapsedMilliseconds": 118,
+  "Timestamp": "2025-07-29T15:34:15.019304Z",
+  "ExceptionMessage": "Registrant with id 20 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:34:15 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:34:15 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/21",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-022026069e402ba32c09d1dfac5450d5-6c82d8c1fbc5e3e1-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 21 not found\u0022}",
+  "ElapsedMilliseconds": 125,
+  "Timestamp": "2025-07-29T15:34:15.1699003Z",
+  "ExceptionMessage": "Registrant with id 21 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:43:10 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[18:43:10 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-9373e7465bc41df6a5dcff2a8fe3305e-6aacdc0516b87b08-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:18,\u0022username\u0022:\u0022external3\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 627,
+  "Timestamp": "2025-07-29T15:43:10.9193272Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:43:15 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[18:43:15 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=2",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-812d0d3357af869b0f03c51fe23452dc-85e9fdd7417ee3e4-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-29T15:43:15.789217Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:43:17 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+[18:43:17 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=2\u0026pageSize=2",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-3938f57dc3205a4387791c392f0f3dea-12af323f01d92e8b-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 5,
+  "Timestamp": "2025-07-29T15:43:17.4271211Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:43:18 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[18:43:18 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=3\u0026pageSize=2",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-5306e2b7a1c9c8a02b6049d6557a46af-85bf9f36398e46b4-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-29T15:43:18.9366736Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:43:22 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[18:43:22 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-dc1d53b9009552e4f46af2e5f81cc9be-4ecff94ebc7929f9-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:18,\u0022username\u0022:\u0022external3\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-29T15:43:22.2401887Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:45:42 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (22ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[18:45:42 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-617eb93fc30b5eb966bf80c1e7d65508-caf10d9e3cdd8214-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:18,\u0022username\u0022:\u0022external3\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 27,
+  "Timestamp": "2025-07-29T15:45:42.47241Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:45:42 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:45:42 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/10",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-617eb93fc30b5eb966bf80c1e7d65508-c24f96060a454874-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 10 not found\u0022}",
+  "ElapsedMilliseconds": 119,
+  "Timestamp": "2025-07-29T15:45:42.6095377Z",
+  "ExceptionMessage": "Registrant with id 10 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:46:04 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:46:04 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Cookie": "bot.cookie=CfDJ8NooojJvfs9Jvs5T1ZwLTavyPsZOcqWfH2q3xVaEXaWKJxnc6GDXsoHO0dLGZcVa14R1aKjrxs73XnFDyyx1HehHrIkUtWJKvI3qDyg%2Fix1LkXUeJflts3efirbJfG14DhWGFZZcp%2BjY9nv80CyzmBQ1yQHNH%2F4BSh2V9rwBJphl; username=; .AspNetCore.Cookies=CfDJ8NooojJvfs9Jvs5T1ZwLTauev2HePmWG1X_JywSY4Xuy3gIeX0o_130yKq9PzF32Qa7tiE-qalodNKAewJGmWV4tC1nDUSKe-Er2ljudTmvBDhZbQnS7-NLpKVsUcvdRpPzldOtPF37aaoHZdTYj6mn24tXzCyywrzJ5DiMUh6c3Wod8ZJoD7ypCiHYWX52528yWZ1gYYj0SoJ-anp5huk0m5BPImiEnbv69J7WEUgsOso40RHBWC93w2lii84RHUAvjOJRMVFhZ56zLTSbAEjdpSObWiki3DiXgjoP05L6scxxFdrcI2zcCoPFBoAOdIcKu0TfFsfN-2AtWMOW0gjOO57ZIMo9LRXIQNZDYUoZnBfUW3UO4HOFW608sSMj76FueORQErq_8YHJlqfVVl3EtgApSc74sYOaJ4HVc2pRb4QXmCTZgSeJFExNP5YD-1WsLjmQVl1PT50jEZjH7h5zttzg8L_ZxpCGMea7Syr3O9KET_kWUl-odR_BSkEf4MD0FIg2bvUEanRb_PiFgrDVfwcqJE0N4VRY4krWWvgvYq2xgl2ocnn0X7hWms6U7uj5M5hjCndKM7kuYx4oHdbYhPIfQh3fJd3Ty33SncbenCsZ4yJo9bzHGdBU9KCxsszczmdxKvZrPMDmx2sTO5jXyG7l2vGe6X4uV-Z7jzYUB6CoKPr2NiPHjLvy_E2-2LKkfA5p9Jxebo5qfHsoR1yNenh3f9sODg0GhZLqtNklngF3eR7hnj3x3F7pxWOQWqzAo-cFT-TDvLRu2kENR8qwITkJ5YDi9aOtuChoi3URoE18uSDj_nbaixUE7jK2v2eUBOfY3pXpAqJZRkP79603JE36trU8_lGxDa22bs3DaGhIyzStFvOL4SEs0SNXfjLI-yfKbTiLFRBKwW4aHsOkpYCG5KQ9NfbH_syZ06x-XSXWmzJnDp9DXGlYR0uOW7a43QBh_r-SbYmeubixPck7zAbj3YIAC9FxEcJUFVDl-pfW8S6FBFVaSrPEPkBpGPIgux-jMWkrs6SjdFrmljfAA8EBKbN08l75kalxdwb2oEcJ9urlCQmGbRs9d1rUwutm9RYWnKn-t_rz2L8o6lnx9-TjRcGicpGRYtMVaf56O3fLgT66FBk72rloKOLPB7_uHDrHaT40A5dC_GXkos-ElThw0LjhRWq9LXwSM6EKoD3JXkNJUtO-TqiHAvBCveFWW3SY8sv40OMfAc446bNHTxGknhnJIgmKoJ5_S2FwbtNe9XoZZPi2UEvEYuzEg3qp8N3_VYd4PkmdiBLAdcLDrWYj7QHHjKHFKqeJvFQKL2FKSUBJL2eZhfa9yedMzB2g0qVyyn8Sl_w2PRRvBJqngm7FrM9UMlFmyEJJZcStT4Oq5zOvuAcQ44-3ceFnXxeqsXJsSonRQAhaAw_X8aMt6EO9uXxFZSa4RayV6wcFRTXMGTs7yMn7VeP5koByEpsXieHVc1MakfpVTRN-gEy6xIFal4Z6-LaDj90PmS-nTf26LWS2jKuXGFKYBs84GJT2i1KKND5x2SCV-s48-v7mYbP-XZdUAn6Ex1n0r7ahJLKx7BjB2Oj37s2QIcz0GNpGWI5ptd-QqPeOS8CllTSB2rNcp9aykSn-xuFA2oLJKzrMoD-vAvAu7s4mjESskYGxH8i_mcE80Gsp5qBGCqm36bmkpkAWuNtKDqFaugFnDaGp7m-lyfJX1BuSxWTJo7r8PquKri3N9h_O3HXf9eAsxhZVzToFExC0-ETEEWdmoffmGRpt1y354PIX3SPWS8C1A2nXRIi_13ngD87oVjEq3yc3OuY-bBHVKmc93syQDZb8kwq_Z5EY3ZDhAbZSV5R4OddV5dxQuM91TDvUmLC87nbenKtyd8pVEw90DVJL-EtuxylipWlpap_WUd3PXtCVdELz_DkUZfCm0t5DyjsKFo-NKbHfS9DjXga-3g5P8AVKXWtD-z0BIRm-LYgJ6nVlB1QiwIDygDEsSlsGoLp3Kunv-ilZRUxBLPFR7m70Oc6OmL3OS_4SYeqGorwV-Nmywktg3Dboc3p19xQyhyJKcQzffTqiXtb_fXQtJ-DoMqOneOEVM7hliw2WXD5YdlnY7R5s5kLIAw-2GU3nh76B1-HHRf3Iluo56en-F4NYjoN1RJEBWzu6Vk5zPZhQwK7VogDTaXgjUdtXLmaRLHPiqbXKgFfKibU1-Xa-3KY-ZxcC_UFRepczrLhqmMF1nyuPwyT1o_v7TXlMNRkp1bnm190iiZSgvAt0OzRNyX9wrL6Wbf9xr0vfYoQKRDOWaIjkOc3Xjd-YS5D1NDYdzj67g53hnNGlFcEn9jqVPc4bh84tGX9y9L6w19Oq5Q3R8bYD-CvAr6jT71hIcYicA3JlVSewxhVkd0QCKTOMSno_KWDLz3OhFijXCQxEUo0YY_FjdsxFCk4GutTPOIdOwao0KsTKioBf8tzz1s6wdKYEUJyH_eDtJ-eXwntEUWHZ4TuoL5LofpXSWeQQEN5P7nhTith8Jc0feDM9bCZXC2-9oIFSdxAOTi0BVofOlAuzhx8v_optR5WHEY0WXOibrDB6BKd51Aw0p-5wTJ6R6kEXoeXlyFAm43_9HDzpqYoBSxhVAGBTeJkbl16OwK3-cfSKnOIdghFYlvS0vwf-nJ97MFWJJubZaVByTqyi4lBe_LMJPVTJfiL--Q4-fS9pqgS_E0Y2qWt0g7mCPVuUFwHscTrsnUuHpudQYyWbS71BqvBlecTXph8m4uK4mYWcggbcv_pguQeOiSDkLkJDhBMwQCIl7z0Bn16NfS9K8Tp6AxD3UWojsBxdfbUGgZYeSa7D6d-XR4gIwZvYhxfnWfewVDjpSponlOMaa5ySaK9WFWotgoOsd5zEEdGMJRzduC0qoG3TQV7CppM7tfym75nXrtlI4K3PRulT2xYMj0dK7YbMIpItleXPaAKQc0B4sfyVq7S1n9daJCp7gBrzYWrprBP77cSUAprAVtIrP5dXUY7yWccHyNwAWa2ZUXCOGtE5IrCbBueatZ2wRFg9R-huAEsOj8NJuLWHj7DuvgFdft8qSgqwKiGObA2CXfGQEIT00iSHRXRGQAcWOtqI7VQRc80PMX3IV0uJPJeEWrA1nYL-dyj-EvWqLUU1UfFjFIwzVLUbukFRFZGJ0rEiQUXnW2IhbN1a1mm-q2xmkBdAplPjy7O3jMOnGCVunSF_Dkdk; .AspNetCore.Antiforgery.VasT3a6ESD8=CfDJ8NooojJvfs9Jvs5T1ZwLTavQXEckb0hfFKpXtJ5wcW5UwEOHW4bo8jYTGKGSbnfXdwa9dfABey9B4mGa8s2i9Xua-BAOZyLDOAhjoMUflijIP7z1kKD9P8uf4He7AfLp_XwDywD-XdfPiFVZg9CQXJo; .AspNetCore.Identity.Application=CfDJ8NooojJvfs9Jvs5T1ZwLTatc6dYVqpslIB7OsB0O9VIGeFj_leIy7BYr_yz4skr2hN5Hh7joAcCwqexV8mcewN4F_FMaKKHLBX3ZNNvQ4SLqqg4DspClwVviXGN779vyoMaC7ckpiUdTWhIw6hvzJ1j5wwCXM_ZohVtwBpBMqjmAvpqOAqW3sXeErEsppBSwyWm-GfJlLxLzRByjKsaFEwPN7CO86rA5E3e3cWYpPFiLh_YC1itUYWst4qkXxlkeFBb_zU05sr60IcarzQdYCO-so1bSQ5WN8pBXZmuYxjohQN8t3vCIHrqeezULcr0zg9i3IS7Y8DPPq1p73WDLVaql8w56PoVDt89MZDgVIpcPo9EYfoNADVAsfXknaa_88Jy_jEtcX47-4nRf3Qss5vHUKSjuKQ8isc2G5LfDZdGaf2aPrtc538PCymBTx_WsR6LWb6ZirifhGq3sxP0hpeeZFKt92ICPkEKKVHQZKq7mY6C_RDmRP3QctjX8u-0vPcwL8cNy1jJ4DP1XTnHlMjCd1Ib8sy5yOzjaGXv1B46nnsvaGo1-SBlmYvkLbBPziAF7FM8Dz_68CCZHHabQKrtz7FQp_2dFBAH2oUnpqHaAStiJivq52V8hSk0oKs28bB2Fy3ePAkvgZvODifGHxG6HVGBRuu--eXZOav5AxaSZR3evYLs0nLT8exeRwSdp45-g0LLVcsKxmguoD6x5_oEXZabWX5Xr-Cx-WvWHNHGf57Zk3ZEczB1FPQoSWbAfceCfmEhwE0aOGBJsiNR5GMC8AkjsONNfoEqaS7ySJY8AhhWbZv6SSwDA7pSrgVwh6uR9zmazFk6JjF63ovsu_iTsXdkEbEpJWIGbP68OlQ5fXCCUd4_RTLFjkx_aZfVfqSdUFR7lQwqVt5XZyJYH4OdMtTL6d-s3jKlQriJ2iHCOMT_sNmzZ_RWpCWI858PKEGR2iqCo0k2l21ueHTM1jgK8W6_5Tl-uICFzaNIN1lrE7LZpmpfmTYewW5MWQLcZfmuH2Lu9KwXeKVzBnr9WykLYLArZt6ERlH5q6likvdeuflT1V7T7ee22AIjgTsEnCxyNGbR5QDKO6ckKqgKRu9xym5iXKmhDtcwWALh5EhFpIDCvsIW4zaae2sAmlvjil2setfoR4iyy1qRCo8zFtH9za3oUvF_yKE9ckqFXau_-BNqSvhZQpRFmHEKWTi-XkE-faNfnIK-ITN95bta7k7CS7EOdx4nq3pPLYxttOdEf9qPGqHK8gq93Tz4aISsmnNfhNrGar5izJrxG5v4guRDb5RiglK837LXIwaMpf-P-B0R_TfExLEUQQto363BA1xtdYLXpi65Uxx7BjgMhjG9kLPKOI0ZEaU9LdxbvVmits_pZIo4KCJ1w1pCqZCOakieCFMXQPFSy9vuU7IppOANNLPPEdC8re6KzvXeSG908AFXeRlxbFgsEeemiC2WygiHcS3_EB8DSURjGsW_0IBIjIeG5mxIR_Re9PqtVKYRmaFBJ9fHX8jCpFhdWylaCyyORmJWvdXUcBDLIbaDz3vGZ4G6_zRzrNatZ9EIafApYc1vODvb3V_l9Bw1_A9sH-cFxEJfiuuhK11B21ag4wWhxqyVXzLKTwUj5wEKNeVmWe2RJlIbVAF_G-JltcyuozTXNmvML_jTPFhwAD9sx2z9_nzVqLNnrkN3ghJkoL7x83Xc44YnxsPb6_kNLzLiDOy1NqLyAEV-db--G6Ou6I80CQ7KmuVpvAzcaZg9KNNQ4TIrJJsmdpW0tmUZ8Y5dF-idrenh9Ua_eoQXvby_BB9YcvKfHB7OQI6LySAA_6DyROLljW-lC4cvnZ8K5AXgRHs7aBnh7wMq1S3wC8FMqDgKqusHC46nnNgoGMAts6BpKg3dM4D6Ld_FcZMHQpXI905wYHtjfr8vmpZTpQ0_7-WuvhGiR5dhTUfekLO3KGzTiNI3iEe_tYJuMD0aOVTxDbNRb6wOENcqPw9gQaRkWJ5YBi5oGp762SvYyP5nl0Sg5ho4j9n-FqLIf0dj8O1TeXHkCyKfSRqHz3AdeH-MmnucGa1ZeotklXHNTlM_V4Qitdn7HpXgffahhh3OvzPTkKAxtk8950Ksr_4Mv3nHc5uBmKnhzNZIX4D21z6iC5q4-2TBcVSBcST-aMtXAqx7MUHIQW-FMuv-Y-BuvJPAKmJplYRkHDQTk9ICrlvSZ7aLEezcjY2GYIcpFtsaZEU3kOuyZeVVjDGeQbq67vIfzWgcdwp5PAxUAdkypNPJfuLqq2TCL83SAiPMEtNDlKKu3qk1bB49EH__fLWx98P4_EJWDuP4PuXrKQVEfG6C2PXJDrPEyMIzHY42kAXXMlnPMLbEYZUuBjRlHnNHbSjbv1rChz4jSAOgtx6f_aDJwlHLVkjTA15TKIJtSnOVuVj38HDOY4OJTL_wwoae8hNJjF1wjN4vONXZ5rSGKp69uG5Kr0RTSagZAsD06su2hu4iOxEE2P0HGxH7iMwx4fDAk7vUHQQMhyI2CiiC3gCzORyMiTF9jrFx_QF8Rzd7x39sJAbPieeXhNvJ6wwlTuTLm9GYqazV0jvdoL-dOclvlhA5yMm3_YnLGkp4rMhOB9I3n5IJ6IN077djZdPcZPLFp_OUG2SrleYdliO-6QmUDjukkRKUp-hxxYrFzFjy1bDKMEpipa9uXeJRA47dWETG5EM94WxfPvpd4pgKqbuW6TIqUcW-N-ndfD-QUrWK-ypIRxRlnIz0t21blNSqCB0BIee8gI5uEKyqYLoT0PyYQK7AC35SuyRgqaI9NJmxgID525Fq_cRFfIvlgGm_1LtMerjm9b0EUGJ96LDKBhvrZMm26MiIur9zDrAxELYyFtlEFrs9AZrroEJUPkXC5oNY8_cQ_M9eg1sMaKi7RgVwXP1w-cLXt3oRwO9fI0RFLEfz9ATGnggr6iC442s0g4-M9BruE4ZnEm0J1nQ__mbBPwxDher9WwjfzXl9iybXpq_ThIJSFWKaGOmpjfu67Dn54YvYoLeQdrENRnJhxSm7yovDKbcBbOP9v6neluSVQpBtAkjnFYnrsE5F4X-6QvtqEl9fGh6TuhC5UST2_N1xVlpPdji5H6IkFUP31H3Z8WMFUEjktaYa_hY1-sqv3Wi5VsU_1jpS-MbrRf6VkBr7ryu1OCY9eF0LjmvoyuUilmosZv1XvCwT68jtCcGYmKH9W6Z2zHWLVhEhrwzAQxcp8MCRM2JwDgBvn-rK6lpAaO4kpwOjU-UGZ5_VZ9UKWsGHx-4tl4R6pQR8Tzu5TAusCizKEi0cZJ2UKTJmo_jF-ODQMUe7aPLYm7JQ4pNYPUAWTrP_A4vNGK4RUDPzFEX0N0exHGdvMJn0hDASeCWSjMnz4O1EDE0-aYUvLgRAvJzX2XtV8QlH3VH78kRbqogueZmmp5mW-g3JJiJmcocAsT0NHbltuynJF59N_55Gcr0-I--tpm3dtXfl3wGjoZsqWV3x7K9XN8bi-N9j4PMZ_gg72dOZuxtfAZY81MLqkC6olrMN7RolpbbJlaii5otbQhOtaamGnYwtI13ovgrX44-_cgebhl-ZNB8UtMac-ob8Fc34; csrfToken=CfDJ8NooojJvfs9Jvs5T1ZwLTauzbdWt4ZAgw_n1wqGzf3gIbT6U4b0SZkR5tJXBs-Kmg-wRXhXluzvDYHna62WEq8TSMYvlPpXIt6mi6lpYQ6WbnDs0lMwWXaKcci_dqwN8DfFyZoclNKpSTo-IDqvFLpSSUlfz6AOavu9l5L_GuDQtCDeAcUxLvc_Mr8HwCzI_SQ",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 65,
+  "Timestamp": "2025-07-29T15:46:04.9833521Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:46:13 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[18:46:13 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-951c38b5ce26f27970caf40aeaca4cb8-e2fc9ed69fb6cde3-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:18,\u0022username\u0022:\u0022external3\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-29T15:46:13.1189829Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:46:33 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:46:33 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/10",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-951c38b5ce26f27970caf40aeaca4cb8-c29584bbf3977c14-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 10 not found\u0022}",
+  "ElapsedMilliseconds": 121,
+  "Timestamp": "2025-07-29T15:46:33.9087608Z",
+  "ExceptionMessage": "Registrant with id 10 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:46:47 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[18:46:47 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-f7669bdc1985062c64bdc09e98cc370a-76b5301304d83902-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:18,\u0022username\u0022:\u0022external3\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-29T15:46:47.3808252Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:46:55 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:46:55 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/10",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-f7669bdc1985062c64bdc09e98cc370a-f51101f9f514c225-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 10 not found\u0022}",
+  "ElapsedMilliseconds": 119,
+  "Timestamp": "2025-07-29T15:46:55.2906942Z",
+  "ExceptionMessage": "Registrant with id 10 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:47:02 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[18:47:02 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-242fa2bec30b92061e704555c984ab6f-7315b8e250200b6d-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:18,\u0022username\u0022:\u0022external3\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 5,
+  "Timestamp": "2025-07-29T15:47:02.2516355Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:48:11 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[18:48:11 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-630b4e187f0e396591cc11172304f53c-5838ef0e0871aef4-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:18,\u0022username\u0022:\u0022external3\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 5,
+  "Timestamp": "2025-07-29T15:48:11.3906121Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:48:13 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:48:13 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-630b4e187f0e396591cc11172304f53c-267cba916593a31a-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 6,
+  "Timestamp": "2025-07-29T15:48:13.1598209Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:48:15 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:48:15 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-630b4e187f0e396591cc11172304f53c-f62cae486ced1a2c-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 5,
+  "Timestamp": "2025-07-29T15:48:15.3376769Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:48:16 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:48:16 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-630b4e187f0e396591cc11172304f53c-207005448b78453a-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-29T15:48:16.6551354Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:48:18 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:48:18 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-630b4e187f0e396591cc11172304f53c-3fd4eafea624ad89-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-29T15:48:18.9600601Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-99c3fa58d09f756c779211b47fa48b25-6eafde85175eaa5d-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:18,\u0022username\u0022:\u0022external3\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-29T15:48:58.2917133Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-99c3fa58d09f756c779211b47fa48b25-45447ae36e7fa6d8-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 8,
+  "Timestamp": "2025-07-29T15:48:58.3306468Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-99c3fa58d09f756c779211b47fa48b25-3540c54ac661f1cf-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-29T15:48:58.3411046Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-99c3fa58d09f756c779211b47fa48b25-378800dbf2083df1-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 2,
+  "Timestamp": "2025-07-29T15:48:58.3463157Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-99c3fa58d09f756c779211b47fa48b25-a21c5eaa5d8c2760-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 5,
+  "Timestamp": "2025-07-29T15:48:58.3584752Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-99c3fa58d09f756c779211b47fa48b25-f99753dc661bcb14-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 7,
+  "Timestamp": "2025-07-29T15:48:58.3699393Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-99c3fa58d09f756c779211b47fa48b25-d33d458beacff385-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 6,
+  "Timestamp": "2025-07-29T15:48:58.3781842Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-99c3fa58d09f756c779211b47fa48b25-e8750357959a8e42-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 2,
+  "Timestamp": "2025-07-29T15:48:58.3842903Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-99c3fa58d09f756c779211b47fa48b25-031578bafa3568ce-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 2,
+  "Timestamp": "2025-07-29T15:48:58.3897195Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-99c3fa58d09f756c779211b47fa48b25-2c63216487478e8a-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 5,
+  "Timestamp": "2025-07-29T15:48:58.3979476Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:48:58 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-99c3fa58d09f756c779211b47fa48b25-a0e34908396f9f60-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-29T15:48:58.4029635Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=100",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-2a936b7d495627e5-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:18,\u0022username\u0022:\u0022external3\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:26,\u0022username\u0022:\u0022pants\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:27,\u0022username\u0022:\u0022pants2\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:28,\u0022username\u0022:\u0022pants5\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:29,\u0022username\u0022:\u0022pants7\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:30,\u0022username\u0022:\u0022pants9\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:31,\u0022username\u0022:\u0022pants11\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:32,\u0022username\u0022:\u0022bigpants\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:33,\u0022username\u0022:\u0022bigpants11\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:34,\u0022username\u0022:\u0022string12\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:35,\u0022username\u0022:\u0022string1234\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 5,
+  "Timestamp": "2025-07-29T15:49:03.4148744Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-6076134bb3ea056e-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 5,
+  "Timestamp": "2025-07-29T15:49:03.4253004Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-9e9322f54b374827-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 2,
+  "Timestamp": "2025-07-29T15:49:03.4298656Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-e44ebd3c1b8929ef-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-29T15:49:03.4354096Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-549bc72fe0a4082a-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-29T15:49:03.4399188Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-118dee2935a30e40-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-29T15:49:03.4444805Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-97587d6978441f28-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-29T15:49:03.4508763Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-bc25b71f2a6db991-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-29T15:49:03.4549648Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-0f13fef050ba4a50-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-29T15:49:03.4594848Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-8739b0f167d0c9b0-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 2,
+  "Timestamp": "2025-07-29T15:49:03.4637488Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-6b5630bd7770a61b-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 2,
+  "Timestamp": "2025-07-29T15:49:03.4672188Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-786f1608b608043c-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 1,
+  "Timestamp": "2025-07-29T15:49:03.4699416Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-b96312a467044961-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 2,
+  "Timestamp": "2025-07-29T15:49:03.4727339Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-9e511627c65e5227-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 2,
+  "Timestamp": "2025-07-29T15:49:03.4755933Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-8df693162ce47a9a-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 2,
+  "Timestamp": "2025-07-29T15:49:03.478545Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-1006625409ab082e-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 2,
+  "Timestamp": "2025-07-29T15:49:03.4820459Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-50143ed55327a4ca-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 2,
+  "Timestamp": "2025-07-29T15:49:03.4849748Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-0bbceca2a9816da5-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-29T15:49:03.4887449Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-22cbfce9a0b1286a-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-29T15:49:03.5010797Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-1dc40898dd7675af-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-29T15:49:03.5062714Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:49:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-15ac9efe81453a5dbb20439df6d8147c-ed5d782441fa0fe3-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-29T15:49:03.5297701Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:53:39 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[18:53:39 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-c0a32fe8d88150d155eaa3603584e3a5-5f7dcdfaac227884-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:18,\u0022username\u0022:\u0022external3\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 6,
+  "Timestamp": "2025-07-29T15:53:39.192548Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:53:39 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:53:39 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/10",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-c0a32fe8d88150d155eaa3603584e3a5-d72073ce3088547a-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "{\u0022title\u0022:\u0022Request failed\u0022,\u0022status\u0022:404,\u0022detail\u0022:\u0022Registrant with id 10 not found\u0022}",
+  "ElapsedMilliseconds": 111,
+  "Timestamp": "2025-07-29T15:53:39.3200929Z",
+  "ExceptionMessage": "Registrant with id 10 not found",
+  "ExceptionStackTrace": "   at WebAPI.Services.RegistrantService.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\RegistrantService.cs:line 76\r\n   at WebAPI.Controllers.RegistrantsController.GetById(Int32 id, CancellationToken cancellationToken) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs:line 68\r\n   at lambda_method25(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeActionMethodAsync\u003Eg__Awaited|12_0(ControllerActionInvoker invoker, ValueTask\u00601 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeNextActionFilterAsync\u003Eg__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State\u0026 next, Scope\u0026 scope, Object\u0026 state, Boolean\u0026 isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.\u003CInvokeInnerFilterAsync\u003Eg__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeFilterPipelineAsync\u003Eg__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.\u003CInvokeAsync\u003Eg__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at WebAPI.Middleware.HttpAndExceptionLoggingMiddleware.Invoke(HttpContext context) in C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Middleware\\HttpAndExceptionLoggingMiddleware.cs:line 73"
+}
+
+
+[18:54:57 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[18:54:57 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-2aaed04fbfd9e5ee52ae58c339c318e6-fc6500df4987f33f-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022georgi-marinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:18,\u0022username\u0022:\u0022external3\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 6,
+  "Timestamp": "2025-07-29T15:54:57.9825927Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:54:58 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:54:58 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-2aaed04fbfd9e5ee52ae58c339c318e6-be33fa43803dd342-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 8,
+  "Timestamp": "2025-07-29T15:54:58.0058065Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:55:01 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+[18:55:01 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=2\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-7be417a3aaa9a4bdce5871ccbaf9b134-fb0b92e8b30fd8d5-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:26,\u0022username\u0022:\u0022pants\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:27,\u0022username\u0022:\u0022pants2\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:28,\u0022username\u0022:\u0022pants5\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:29,\u0022username\u0022:\u0022pants7\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:30,\u0022username\u0022:\u0022pants9\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:31,\u0022username\u0022:\u0022pants11\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:32,\u0022username\u0022:\u0022bigpants\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:33,\u0022username\u0022:\u0022bigpants11\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:34,\u0022username\u0022:\u0022string12\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:35,\u0022username\u0022:\u0022string1234\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-29T15:55:01.0979245Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:55:01 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[18:55:01 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-7be417a3aaa9a4bdce5871ccbaf9b134-c987fc7139b83f3e-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022mMyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-29T15:55:01.1086155Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[18:55:02 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[18:55:02 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=3\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-43dc188c505f07d935e765186f60b904-6d6a5ba6534afa0a-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[]",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-29T15:55:02.6294235Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+

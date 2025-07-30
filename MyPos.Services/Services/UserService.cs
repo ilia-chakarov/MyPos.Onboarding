@@ -83,8 +83,11 @@ namespace WebAPI.Services
             if (registrant == null)
                 throw new MyPosApiException($"Registrant with ID {dto.RegistrantId} not found", StatusCodes.Status404NotFound);
 
-            _mapper.Map(dto, user);
-            user.Password = _passwordHasher.HashPassword(user, dto.Password);
+            if(!string.IsNullOrEmpty(user.Username))
+                _mapper.Map(dto, user);
+
+            if(!string.IsNullOrEmpty(user.Password))
+                user.Password = _passwordHasher.HashPassword(user, dto.Password);
 
             _unitOfWork.GetRepository<UserEntity>().Update(user);
             await _unitOfWork.SaveChangesAsync(cancellationToken);
