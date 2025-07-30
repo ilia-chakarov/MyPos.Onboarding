@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4D3DDE55-9462-41ED-BFCF-F8896072C58C}|MyPos.Data\\MyPos.Data.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\mypos.data\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D3DDE55-9462-41ED-BFCF-F8896072C58C}|MyPos.Data\\MyPos.Data.csproj|solutionrelative:mypos.data\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8C4346B4-BC15-4ABB-8914-1F65170302A7}|MyPos.Services\\MyPos.Services.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\mypos.services\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C4346B4-BC15-4ABB-8914-1F65170302A7}|MyPos.Services\\MyPos.Services.csproj|solutionrelative:mypos.services\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|solutionrelative:webapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D3DDE55-9462-41ED-BFCF-F8896072C58C}|MyPos.Data\\MyPos.Data.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\mypos.data\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D3DDE55-9462-41ED-BFCF-F8896072C58C}|MyPos.Data\\MyPos.Data.csproj|solutionrelative:mypos.data\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\MyPos.WebAPI.csproj|c:\\users\\ilia.chakarov\\documents\\repos\\ilia-chakarov\\mypos.onboarding\\webapi\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,6 +91,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "MyPos.Services\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Services\\Services\\UserService.cs*",
+              "RelativeToolTip": "MyPos.Services\\Services\\UserService.cs*",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAUwFgAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T11:02:19.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Repository.cs",
               "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\MyPos.Data\\Repositories\\Repository.cs",
               "RelativeDocumentMoniker": "MyPos.Data\\Repositories\\Repository.cs",
@@ -99,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\appsettings.json",
               "RelativeDocumentMoniker": "WebAPI\\appsettings.json",
@@ -111,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IvoApiClient.cs",
               "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Generated\\IvoApiClient.cs",
               "RelativeDocumentMoniker": "WebAPI\\Generated\\IvoApiClient.cs",
@@ -123,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ServiceCollectionExtensions.cs",
               "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Extensions\\ServiceCollectionExtensions.cs",
               "RelativeDocumentMoniker": "WebAPI\\Extensions\\ServiceCollectionExtensions.cs",
@@ -135,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "AuthenticationExtensions.cs",
               "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Extensions\\AuthenticationExtensions.cs",
               "RelativeDocumentMoniker": "WebAPI\\Extensions\\AuthenticationExtensions.cs",
@@ -147,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "HttpResponseExtensions.cs",
               "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Extensions\\HttpResponseExtensions.cs",
               "RelativeDocumentMoniker": "WebAPI\\Extensions\\HttpResponseExtensions.cs",
@@ -159,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Program.cs",
               "RelativeDocumentMoniker": "WebAPI\\Program.cs",
@@ -171,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "RegistrantsController.cs",
               "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\RegistrantsController.cs",
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\RegistrantsController.cs",
@@ -189,13 +206,14 @@
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\UsersController.cs",
               "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\UsersController.cs",
               "RelativeToolTip": "WebAPI\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAswBcAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAUwDIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-29T06:52:40.307Z"
+              "WhenOpened": "2025-07-29T06:52:40.307Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "RegistrantsExtClientService.cs",
               "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\ClientServices\\RegistrantsExtClientService.cs",
               "RelativeDocumentMoniker": "WebAPI\\External\\ClientServices\\RegistrantsExtClientService.cs",
@@ -207,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "AuthExtClientService.cs",
               "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\ClientServices\\AuthExtClientService.cs",
               "RelativeDocumentMoniker": "WebAPI\\External\\ClientServices\\AuthExtClientService.cs",
@@ -219,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "IRegistrantsExtClientService.cs",
               "DocumentMoniker": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\External\\ClientServices\\Interfaces\\IRegistrantsExtClientService.cs",
               "RelativeDocumentMoniker": "WebAPI\\External\\ClientServices\\Interfaces\\IRegistrantsExtClientService.cs",
