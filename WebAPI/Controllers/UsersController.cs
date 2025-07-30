@@ -46,7 +46,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] CreateUserDto dto, CancellationToken cancellationToken = default)
+        public async Task<ActionResult<UserDto>> Update(int id, [FromBody] CreateUserDto dto, CancellationToken cancellationToken = default)
         {
             var usr = await _usersService.UpdateUser(id, dto, cancellationToken);
 
