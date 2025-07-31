@@ -1,0 +1,1108 @@
+[09:11:39 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (27ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[09:11:39 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-f9dbc0a3712a2a0d2d9caf3f33bfd02e-bc81ba739cb23ebf-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaaff\u0022,\u0022registrantId\u0022:9},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:5},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:5},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 111,
+  "Timestamp": "2025-07-31T06:11:39.9131873Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:11:39 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:11:39 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-f9dbc0a3712a2a0d2d9caf3f33bfd02e-df4ce6bbf5c28d4e-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 13,
+  "Timestamp": "2025-07-31T06:11:39.9502207Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:11:39 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:11:39 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/9",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-f9dbc0a3712a2a0d2d9caf3f33bfd02e-434a4da24ba8ab3f-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 9,
+  "Timestamp": "2025-07-31T06:11:39.9606822Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:11:39 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:11:39 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/5",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-f9dbc0a3712a2a0d2d9caf3f33bfd02e-118fe63db1fef6e6-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-31T06:11:39.9673425Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:11:47 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+[09:11:47 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/14",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-df3f0386f555c76796587fa9f7bdabf7-340ec3ea6e6b93da-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8}",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-31T06:11:47.76341Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:11:47 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:11:47 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-df3f0386f555c76796587fa9f7bdabf7-4f1034d5ece08263-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 2,
+  "Timestamp": "2025-07-31T06:11:47.769967Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:11:47 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[09:11:47 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=1000",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-e2035b92cace5a1ab74874aaac844503-5762b2c48ca300c0-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-31T06:11:47.7925773Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:13 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[09:12:13 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-c507d14aecd11b1d7e16d391d59d2ee2-87069cf3823579a4-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaaff\u0022,\u0022registrantId\u0022:9},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:5},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:5},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 5,
+  "Timestamp": "2025-07-31T06:12:13.9810959Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:13 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:12:13 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-c507d14aecd11b1d7e16d391d59d2ee2-fe91b98434979bc8-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-31T06:12:13.99428Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:14 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:12:14 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/9",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-c507d14aecd11b1d7e16d391d59d2ee2-2f3f82fda093c62a-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 8,
+  "Timestamp": "2025-07-31T06:12:14.0044179Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:14 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:12:14 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/5",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-c507d14aecd11b1d7e16d391d59d2ee2-117e7b4fcc7c367a-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-31T06:12:14.0117587Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:17 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (6ms) [Parameters=[@__username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+[09:12:17 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?username=vi\u0026pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-f0ee22f8fc0b1ee89b3b2a9922694221-3f4cb0c128d954bf-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 9,
+  "Timestamp": "2025-07-31T06:12:17.002745Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:17 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:12:17 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-f0ee22f8fc0b1ee89b3b2a9922694221-4e5029d27b1d4d51-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-31T06:12:17.0105131Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:19 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[09:12:19 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-12bd7d890b475736ef61dce05093e32c-590a6fd91d4a4520-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaaff\u0022,\u0022registrantId\u0022:9},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:5},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:5},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-31T06:12:19.5156287Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:19 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:12:19 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-12bd7d890b475736ef61dce05093e32c-50cbfdbb524be0aa-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-31T06:12:19.525019Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:19 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:12:19 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/9",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-12bd7d890b475736ef61dce05093e32c-3692194961ef8d0d-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-31T06:12:19.5303691Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:19 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:12:19 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/5",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-12bd7d890b475736ef61dce05093e32c-a4735e0326b037dd-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-31T06:12:19.5362501Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:22 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[09:12:22 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?pageNumber=1\u0026pageSize=100",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-bd974abf13cc1377b43e979057420354-e76f1be31726b471-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2222\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaaff\u0022,\u0022registrantId\u0022:9},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr\u0022,\u0022registrantId\u0022:5},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrantId\u0022:5},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:26,\u0022username\u0022:\u0022pants\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:27,\u0022username\u0022:\u0022pants2\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:28,\u0022username\u0022:\u0022pants5\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:29,\u0022username\u0022:\u0022pants7\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:30,\u0022username\u0022:\u0022pants9\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:31,\u0022username\u0022:\u0022pants11\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:32,\u0022username\u0022:\u0022bigpants\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:33,\u0022username\u0022:\u0022bigpants11\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:34,\u0022username\u0022:\u0022string12\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:35,\u0022username\u0022:\u0022string1234\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-31T06:12:22.8485757Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:22 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:12:22 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-bd974abf13cc1377b43e979057420354-d9700b7e2ea73e08-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-31T06:12:22.8572718Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:22 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:12:22 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/9",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-bd974abf13cc1377b43e979057420354-c7457928e370d272-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-31T06:12:22.8621514Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:22 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:12:22 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/5",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-bd974abf13cc1377b43e979057420354-d94d23685f651f2c-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}",
+  "ElapsedMilliseconds": 2,
+  "Timestamp": "2025-07-31T06:12:22.8659958Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:24 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+[09:12:24 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?username=v\u0026pageNumber=1\u0026pageSize=100",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-300f8a2372f1d0fe588d572f471e6789-4d0294491593d7c8-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-31T06:12:24.3002872Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:24 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:12:24 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-300f8a2372f1d0fe588d572f471e6789-c728a4cc49532bdc-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 5,
+  "Timestamp": "2025-07-31T06:12:24.3127847Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:26 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+[09:12:26 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/10",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-6f509edcc77bed4ec7431ddb9821479b-0ba699c6bb90caa6-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:8}",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-31T06:12:26.4164727Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:26 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:12:26 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-6f509edcc77bed4ec7431ddb9821479b-d61692fcefb45215-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 2,
+  "Timestamp": "2025-07-31T06:12:26.4222093Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:26 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[09:12:26 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=1000",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-7f9b9f48e98a1bb8d782cf5e5ae434b7-81afdfb254dd30f0-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-31T06:12:26.4437388Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:30 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+[09:12:30 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__dto_RegistrantId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__dto_RegistrantId_0
+[09:12:30 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (13ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Password] = @p0, [RegistrantId] = @p1, [Username] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;
+[09:12:30 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "PUT",
+  "Path": "/api/Users/10",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-de86fc24812f459e9736e60b4438d3af-7c49595c91b71506-00",
+    "Content-Length": "61"
+  },
+  "RequestBody": "{\u0022username\u0022:\u0022victor-martinov\u0022,\u0022password\u0022:\u0022\u0022,\u0022registrantId\u0022:5}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:5}",
+  "ElapsedMilliseconds": 25,
+  "Timestamp": "2025-07-31T06:12:30.4678795Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:33 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+[09:12:33 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__dto_RegistrantId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__dto_RegistrantId_0
+[09:12:33 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Password] = @p0, [RegistrantId] = @p1, [Username] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;
+[09:12:33 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "PUT",
+  "Path": "/api/Users/10",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-6112c9546a5be2fb146619a0248489b2-8012c5ea370d02db-00",
+    "Content-Length": "64"
+  },
+  "RequestBody": "{\u0022username\u0022:\u0022victor-martinov123\u0022,\u0022password\u0022:\u0022\u0022,\u0022registrantId\u0022:5}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov123\u0022,\u0022registrantId\u0022:5}",
+  "ElapsedMilliseconds": 11,
+  "Timestamp": "2025-07-31T06:12:33.7985001Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:35 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], [u].[RegistrantId]
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+[09:12:35 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users",
+  "QueryString": "?username=v\u0026pageNumber=1\u0026pageSize=100",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-857229f52c45d70055f4916e1a780a6e-1dae1bab4e1bdd35-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov123\u0022,\u0022registrantId\u0022:5},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrantId\u0022:8}]",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-31T06:12:35.1826636Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:35 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:12:35 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/5",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-857229f52c45d70055f4916e1a780a6e-c108f9acf61258a6-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-31T06:12:35.1888487Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:35 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:12:35 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-857229f52c45d70055f4916e1a780a6e-347416ef4e06059a-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-31T06:12:35.193798Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:37 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+[09:12:37 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/10",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-c641c092680048930574abc34a7403fe-f1a65388e47c3064-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov123\u0022,\u0022registrantId\u0022:5}",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-31T06:12:37.100534Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:37 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:12:37 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/5",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-c641c092680048930574abc34a7403fe-96e77e738ee66dee-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-31T06:12:37.1066075Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:37 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[09:12:37 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=1000",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-507e5aba7d2c884526462e76ae1c6adc-2f4f3b756e54fe93-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-07-31T06:12:37.1325537Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:38 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+[09:12:38 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/10",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-5ed057c1f842f9e39687ea6e8e2f8d88-00d1077d78cdbc59-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov123\u0022,\u0022registrantId\u0022:5}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-31T06:12:38.4067163Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:38 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:12:38 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/5",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-5ed057c1f842f9e39687ea6e8e2f8d88-8c0aef614b0ebd08-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}",
+  "ElapsedMilliseconds": 2,
+  "Timestamp": "2025-07-31T06:12:38.4121923Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:38 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[09:12:38 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=1000",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-2b537729437167705576e46244f10e0d-445705bd93070019-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-31T06:12:38.4331534Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:38 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+[09:12:38 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/10",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-8b27e2115dc5f73dc334e080c207eaf7-b130dbce17cf0756-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov123\u0022,\u0022registrantId\u0022:5}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-31T06:12:38.8129508Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:38 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:12:38 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/5",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-8b27e2115dc5f73dc334e080c207eaf7-17c9ca04aa85926d-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}",
+  "ElapsedMilliseconds": 2,
+  "Timestamp": "2025-07-31T06:12:38.817587Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:38 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[09:12:38 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=1000",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-a556dbb5f3dcb8e670021b1c8d1e6440-18bb02283d0032e7-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 5,
+  "Timestamp": "2025-07-31T06:12:38.8403031Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:39 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+[09:12:39 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/10",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-b14d97667d14cc451bac89f433f141fe-72a6d7eb92823391-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov123\u0022,\u0022registrantId\u0022:5}",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-31T06:12:39.4061195Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:39 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:12:39 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/5",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-b14d97667d14cc451bac89f433f141fe-e68d108311a98700-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}",
+  "ElapsedMilliseconds": 2,
+  "Timestamp": "2025-07-31T06:12:39.4099684Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:39 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[09:12:39 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=1000",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-9798297555ca766a45ada44e37d3e018-10b5a9891e11c33a-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-07-31T06:12:39.4328522Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:12:42 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+[09:12:42 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__dto_RegistrantId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__dto_RegistrantId_0
+[09:12:42 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [Password] = @p0, [RegistrantId] = @p1, [Username] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;
+[09:12:42 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "PUT",
+  "Path": "/api/Users/10",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-152b21e179ab0f40cc5c1350e6cda4d5-fe6fecaf3b8d0a70-00",
+    "Content-Length": "61"
+  },
+  "RequestBody": "{\u0022username\u0022:\u0022victor-martinov\u0022,\u0022password\u0022:\u0022\u0022,\u0022registrantId\u0022:5}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:5}",
+  "ElapsedMilliseconds": 8,
+  "Timestamp": "2025-07-31T06:12:42.7330075Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
