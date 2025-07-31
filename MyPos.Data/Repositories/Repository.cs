@@ -76,5 +76,42 @@ namespace WebAPI.Repositories
             return await projected.ToListAsync(cancellationToken);
         }
 
+        public async Task<(IEnumerable<TResult> items, int totalCount)> GetAllCountedAsync<TResult>(IMapper mapper,
+            Func<IQueryable<TEntity>, IQueryable<TEntity>>? filter = null,
+            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null, 
+            Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null,
+            int? pageNumber = null, int? pageSize = null, bool disableTracking = true, 
+            CancellationToken cancellationToken = default)
+        {
+            int totalCount = 0;
+
+            var query = _dbSet.AsQueryable();
+
+            if (disableTracking)
+                query = query.AsNoTracking();
+            else
+                query = query.AsTracking();
+
+            if (include != null)
+                query = include(query);
+
+            if (filter != null)
+                query = filter(query);
+
+            if (orderBy != null)
+                query = orderBy(query);
+
+            var projected = mapper.ProjectTo<TResult>(query);
+
+            totalCount = projected.Count();
+
+            if (pageNumber.HasValue && pageSize.HasValue)
+                projected = projected.Skip((pageNumber.Value - 1) * pageSize.Value).Take(pageSize.Value);
+
+            var items = await projected.ToListAsync(cancellationToken);
+
+            return (items, totalCount);
+        }
+
     }
 }

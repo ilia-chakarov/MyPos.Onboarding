@@ -439,6 +439,42 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WebAPI.Controllers.UsersController",
+    "Method": "GetAllCounted",
+    "RelativePath": "api/getall/counted",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[MyPos.Services.DTOs.CountedDto\u00601[[MyPos.Services.DTOs.UserDetailedDto, MyPos.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], MyPos.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "WebAPI.Controllers.RegistrantsController",
     "Method": "GetAll",
     "RelativePath": "api/Registrants",

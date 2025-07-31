@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MyPos.Services.DTOs;
 using WebAPI.DTOs;
 using WebAPI.Entities;
 
@@ -12,7 +13,7 @@ namespace WebAPI.AutoMapper
             CreateMap<CreateUserDto, UserEntity>();
             CreateMap<UserEntity, CreateUserDto>()
                 .ForMember(dst => dst.Password, opt => opt.Ignore());
-            
+            CreateMap<UserEntity, UserDetailedDto>();
         }
     }
 }

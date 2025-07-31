@@ -18,6 +18,15 @@ namespace WebAPI.Repositories.Interfaces
             int? pageSize = null,
             bool disableTracking = true,
             CancellationToken cancellationToken = default);
+        Task<(IEnumerable<TResult> items, int totalCount)> GetAllCountedAsync<TResult>(
+            IMapper mapper,
+            Func<IQueryable<TEntity>, IQueryable<TEntity>>? filter = null,
+            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null!,
+            Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null!,
+            int? pageNumber = null,
+            int? pageSize = null,
+            bool disableTracking = true,
+            CancellationToken cancellationToken = default);
         Task<TEntity?> GetSingleAsync(Func<IQueryable<TEntity>, IQueryable<TEntity>> filter, CancellationToken cancellationToken = default);
         Task<TEntity?> GetByIdAsync(int id, CancellationToken cancellationToken = default);
         Task AddAsync(TEntity entity, CancellationToken cancellationToken = default);

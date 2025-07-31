@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MyPos.Services.DTOs;
 using WebAPI.DTOs;
 using WebAPI.Services.Interfaces;
 
@@ -24,6 +25,17 @@ namespace WebAPI.Controllers
                 filter: username == null ? null : u =>  u.Where(us => us.Username.Contains(username)) ,
                 cancellationToken: cancellationToken);
             return Ok(usrDtos); 
+        }
+
+        [HttpGet("/api/getall/counted")]
+        public async Task<ActionResult<IEnumerable<CountedDto<UserDetailedDto>>>> GetAllCounted(string? username = null, int pageNumber = 1, int pageSize = 10,
+            CancellationToken cancellationToken = default)
+        {
+            var usrDtos = await _usersService.GetAllCounted(pageNumber, pageSize,
+                filter: username == null ? null : u => u.Where(us => us.Username.Contains(username)),
+                cancellationToken: cancellationToken);
+
+            return Ok(usrDtos);
         }
 
         [HttpGet("{id}")]

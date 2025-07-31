@@ -7,6 +7,7 @@ using WebAPI.Exceptions;
 using WebAPI.Services.Interfaces;
 using WebAPI.UnitOfWork;
 using Microsoft.AspNetCore.Http;
+using MyPos.Services.DTOs;
 
 namespace WebAPI.Services
 {
@@ -54,6 +55,26 @@ namespace WebAPI.Services
 
             return res;
 
+        }
+
+        public async Task<CountedDto<UserDetailedDto>> GetAllCounted(int pageNumber, int pageSize, Func<IQueryable<UserEntity>, IQueryable<UserEntity>>? filter = null, CancellationToken cancellationToken = default)
+        {
+            var detailedUsers = await _unitOfWork.GetRepository<UserEntity>().GetAllCountedAsync<UserDetailedDto>(
+                mapper: _mapper, filter: filter, pageNumber: pageNumber, pageSize: pageSize, disableTracking: false,
+                cancellationToken: cancellationToken, include: i => i.Include(r => r.Registrant));
+
+            var result = new CountedDto<UserDetailedDto>
+            {
+                CountDto = new CountDto
+                {
+                    PageNumber = pageNumber,
+                    PageSize = pageSize,
+                    TotalCount = detailedUsers.totalCount
+                },
+                Items = detailedUsers.items
+            };
+
+            return result;
         }
 
         public async Task<UserDto> GetById(int id, CancellationToken cancellationToken = default)
@@ -111,5 +132,7 @@ namespace WebAPI.Services
 
             return _mapper.Map<UserDto>(user);
         }
+
+        
     }
 }
