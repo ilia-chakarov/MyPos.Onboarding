@@ -1,0 +1,871 @@
+[09:26:12 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[09:26:12 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[09:26:12 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[09:26:12 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[09:26:12 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[09:32:09 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:32:09 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:32:09 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:32:09 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (22ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:32:09 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-86ef1c8efe86880a8af4a8446e654a71-66ec4248133af9e8-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:20},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2121\u0022,\u0022registrant\u0022:{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 1820,
+  "Timestamp": "2025-08-04T06:32:09.9485443Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:32:12 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:32:12 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:32:12 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:32:12 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:32:12 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=2\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-9d340b46627c4c6ce5bd7a8c859b9ff2-6592ff8fd1282ef3-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:2,\u0022pageSize\u0022:10,\u0022totalCount\u0022:20},\u0022items\u0022:[{\u0022id\u0022:26,\u0022username\u0022:\u0022pants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:27,\u0022username\u0022:\u0022pants2\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:28,\u0022username\u0022:\u0022pants5\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:29,\u0022username\u0022:\u0022pants7\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:30,\u0022username\u0022:\u0022pants9\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:31,\u0022username\u0022:\u0022pants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:32,\u0022username\u0022:\u0022bigpants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:33,\u0022username\u0022:\u0022bigpants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:34,\u0022username\u0022:\u0022string12\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:35,\u0022username\u0022:\u0022string1234\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 40,
+  "Timestamp": "2025-08-04T06:32:12.1719044Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:32:13 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:32:13 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:32:13 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-e3020371d3e295e4513c8e3a6044c121-845407d4a24503ba-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:20},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2121\u0022,\u0022registrant\u0022:{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 16,
+  "Timestamp": "2025-08-04T06:32:13.3888959Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:32:14 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:32:14 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:32:14 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=2\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-e7c73fde4adfb78a051e964f381feaca-6c436508f7a21e7e-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:2,\u0022pageSize\u0022:10,\u0022totalCount\u0022:20},\u0022items\u0022:[{\u0022id\u0022:26,\u0022username\u0022:\u0022pants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:27,\u0022username\u0022:\u0022pants2\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:28,\u0022username\u0022:\u0022pants5\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:29,\u0022username\u0022:\u0022pants7\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:30,\u0022username\u0022:\u0022pants9\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:31,\u0022username\u0022:\u0022pants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:32,\u0022username\u0022:\u0022bigpants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:33,\u0022username\u0022:\u0022bigpants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:34,\u0022username\u0022:\u0022string12\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:35,\u0022username\u0022:\u0022string1234\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 7,
+  "Timestamp": "2025-08-04T06:32:14.1629976Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:32:14 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:32:14 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:32:14 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-c8258ac68abaa215aa73010fdf8131a7-6404aa882356593c-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:20},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2121\u0022,\u0022registrant\u0022:{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 7,
+  "Timestamp": "2025-08-04T06:32:14.7348153Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:32:15 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:32:15 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:32:15 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=2\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-0dd5a584e9203c30e29108293a54ae0e-d8a5cdcb4e91d2a2-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:2,\u0022pageSize\u0022:10,\u0022totalCount\u0022:20},\u0022items\u0022:[{\u0022id\u0022:26,\u0022username\u0022:\u0022pants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:27,\u0022username\u0022:\u0022pants2\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:28,\u0022username\u0022:\u0022pants5\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:29,\u0022username\u0022:\u0022pants7\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:30,\u0022username\u0022:\u0022pants9\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:31,\u0022username\u0022:\u0022pants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:32,\u0022username\u0022:\u0022bigpants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:33,\u0022username\u0022:\u0022bigpants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:34,\u0022username\u0022:\u0022string12\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:35,\u0022username\u0022:\u0022string1234\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 5,
+  "Timestamp": "2025-08-04T06:32:15.2098729Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:32:15 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:32:15 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:32:15 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-a6b5459b361e00c167ba8b11ff73ccce-9bd7f152897cb0c5-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:20},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2121\u0022,\u0022registrant\u0022:{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 7,
+  "Timestamp": "2025-08-04T06:32:15.9667069Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:32:18 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+[09:32:19 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/15",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-7b84932ad7fd55538d824e1331c7355d-39bc7d28725f37a8-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrantId\u0022:8}",
+  "ElapsedMilliseconds": 50,
+  "Timestamp": "2025-08-04T06:32:19.018836Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:32:19 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:32:19 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/8",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-7b84932ad7fd55538d824e1331c7355d-60c3b88aaa2b9ead-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}",
+  "ElapsedMilliseconds": 15,
+  "Timestamp": "2025-08-04T06:32:19.0386396Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:32:19 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:32:19 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:32:19 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[09:32:19 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=1000",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-547256090cb0f9af97247f46044e4553-13b50cb69317ad9e-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 11,
+  "Timestamp": "2025-08-04T06:32:19.2188443Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:32:26 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:32:26 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:32:26 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=20",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-476e036057cbbfeb481a12327c409aba-45fd379615c77868-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:20,\u0022totalCount\u0022:20},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2121\u0022,\u0022registrant\u0022:{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:26,\u0022username\u0022:\u0022pants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:27,\u0022username\u0022:\u0022pants2\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:28,\u0022username\u0022:\u0022pants5\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:29,\u0022username\u0022:\u0022pants7\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:30,\u0022username\u0022:\u0022pants9\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:31,\u0022username\u0022:\u0022pants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:32,\u0022username\u0022:\u0022bigpants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:33,\u0022username\u0022:\u0022bigpants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:34,\u0022username\u0022:\u0022string12\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:35,\u0022username\u0022:\u0022string1234\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 7,
+  "Timestamp": "2025-08-04T06:32:26.0842293Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:32:28 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:32:28 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:32:28 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-876d8e975f56108ed432eb7d7c1f7b15-dd802b0d817e930e-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:20},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2121\u0022,\u0022registrant\u0022:{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 7,
+  "Timestamp": "2025-08-04T06:32:28.443063Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:32:32 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__username_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+[09:32:32 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:32:32 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:32:32 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+    ORDER BY (SELECT 1)
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:32:32 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?username=v\u0026pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-7cc15ec6282b833d608ae116c05f19d1-f9c1995c3a47b3d1-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:4},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 19,
+  "Timestamp": "2025-08-04T06:32:32.4152415Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:32:34 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:32:34 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:32:34 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-ae4643480ae235ed2067fe839ec66760-03a488f1ce02d2b7-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:20},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2121\u0022,\u0022registrant\u0022:{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 6,
+  "Timestamp": "2025-08-04T06:32:34.8091198Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:32:41 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__username_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+[09:32:41 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+    ORDER BY (SELECT 1)
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:32:41 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?username=v\u0026pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-234cc77a9dff3f164b33d479ad3cae24-0d529b23bfe634a7-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:4},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 8,
+  "Timestamp": "2025-08-04T06:32:41.7867303Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:32:54 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__username_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+[09:32:54 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+    ORDER BY (SELECT 1)
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:32:54 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?username=i\u0026pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-705155720b66ea653f9e0743ab704bbb-617a4614e87d9ce8-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:8},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:32,\u0022username\u0022:\u0022bigpants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:33,\u0022username\u0022:\u0022bigpants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:34,\u0022username\u0022:\u0022string12\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:35,\u0022username\u0022:\u0022string1234\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 5,
+  "Timestamp": "2025-08-04T06:32:54.2951853Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:32:56 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:32:56 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:32:56 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-6bbd8081e250c38c23072419e011425d-611619a3e8bde054-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:20},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2121\u0022,\u0022registrant\u0022:{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 6,
+  "Timestamp": "2025-08-04T06:32:56.9814914Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:32:59 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:32:59 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:32:59 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=2\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-5b9ffa22dd4bcab3d8ee3bd212c52930-32323ac30c640657-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:2,\u0022pageSize\u0022:10,\u0022totalCount\u0022:20},\u0022items\u0022:[{\u0022id\u0022:26,\u0022username\u0022:\u0022pants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:27,\u0022username\u0022:\u0022pants2\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:28,\u0022username\u0022:\u0022pants5\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:29,\u0022username\u0022:\u0022pants7\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:30,\u0022username\u0022:\u0022pants9\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:31,\u0022username\u0022:\u0022pants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:32,\u0022username\u0022:\u0022bigpants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:33,\u0022username\u0022:\u0022bigpants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:34,\u0022username\u0022:\u0022string12\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:35,\u0022username\u0022:\u0022string1234\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-08-04T06:32:59.4422754Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:33:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:33:03 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:33:03 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-dfd35206147c0f8167cfbf5411908de4-e3c5c20f3fc6abeb-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:20},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2121\u0022,\u0022registrant\u0022:{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 7,
+  "Timestamp": "2025-08-04T06:33:03.3338157Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:33:06 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__username_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+[09:33:06 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    WHERE [u].[Username] LIKE @__username_0_contains ESCAPE N'\'
+    ORDER BY (SELECT 1)
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:33:06 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?username=pan\u0026pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-9dcfa9747cbd2bdf7ca5735a6e04db22-9575fc6cbcf92fb9-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:8},\u0022items\u0022:[{\u0022id\u0022:26,\u0022username\u0022:\u0022pants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:27,\u0022username\u0022:\u0022pants2\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:28,\u0022username\u0022:\u0022pants5\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:29,\u0022username\u0022:\u0022pants7\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:30,\u0022username\u0022:\u0022pants9\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:31,\u0022username\u0022:\u0022pants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:32,\u0022username\u0022:\u0022bigpants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:33,\u0022username\u0022:\u0022bigpants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 5,
+  "Timestamp": "2025-08-04T06:33:06.8202525Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:33:09 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:33:09 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:33:09 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-6da956d8b18b08a71447ef6431a8ef86-5091f8b306dc9cc5-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:20},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2121\u0022,\u0022registrant\u0022:{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 6,
+  "Timestamp": "2025-08-04T06:33:09.0840355Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:33:11 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:33:11 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:33:11 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=2\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-ee9e0b2f01c0edb76fe3b7bab196ceff-0b9376b18155ad7a-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:2,\u0022pageSize\u0022:10,\u0022totalCount\u0022:20},\u0022items\u0022:[{\u0022id\u0022:26,\u0022username\u0022:\u0022pants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:27,\u0022username\u0022:\u0022pants2\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:28,\u0022username\u0022:\u0022pants5\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:29,\u0022username\u0022:\u0022pants7\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:30,\u0022username\u0022:\u0022pants9\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:31,\u0022username\u0022:\u0022pants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:32,\u0022username\u0022:\u0022bigpants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:33,\u0022username\u0022:\u0022bigpants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:34,\u0022username\u0022:\u0022string12\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:35,\u0022username\u0022:\u0022string1234\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 7,
+  "Timestamp": "2025-08-04T06:33:11.2216707Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:33:12 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:33:12 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:33:12 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-84b6d73b24c5721093551c1b6f817f9a-97816d0921cf98c0-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:20},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2121\u0022,\u0022registrant\u0022:{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 6,
+  "Timestamp": "2025-08-04T06:33:12.3664766Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:33:12 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:33:12 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:33:12 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=2\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-3ea1080d8f1e93c4a28c2d003fa76436-3217edf36839111e-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:2,\u0022pageSize\u0022:10,\u0022totalCount\u0022:20},\u0022items\u0022:[{\u0022id\u0022:26,\u0022username\u0022:\u0022pants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:27,\u0022username\u0022:\u0022pants2\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:28,\u0022username\u0022:\u0022pants5\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:29,\u0022username\u0022:\u0022pants7\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:30,\u0022username\u0022:\u0022pants9\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:31,\u0022username\u0022:\u0022pants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:32,\u0022username\u0022:\u0022bigpants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:33,\u0022username\u0022:\u0022bigpants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:34,\u0022username\u0022:\u0022string12\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:35,\u0022username\u0022:\u0022string1234\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 7,
+  "Timestamp": "2025-08-04T06:33:12.8408845Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:33:13 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:33:13 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:33:13 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-0768c69ea9df1156fe0ff1a6b378ca33-f7d2a83c80cc5f28-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:20},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest2121\u0022,\u0022registrant\u0022:{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 6,
+  "Timestamp": "2025-08-04T06:33:13.3361617Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:34:41 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RegistrantId], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__id_0
+[09:34:41 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/10",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-4f0bd9867d8683e71d0b8ef14aadf8bf-10bf5674add43644-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrantId\u0022:5}",
+  "ElapsedMilliseconds": 2,
+  "Timestamp": "2025-08-04T06:34:41.6802828Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:34:41 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Address], [r].[Country], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[isCompany]
+FROM [Registrants] AS [r]
+WHERE [r].[Id] = @__id_0
+[09:34:41 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants/5",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-4f0bd9867d8683e71d0b8ef14aadf8bf-b3e83b2d927c6621-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}",
+  "ElapsedMilliseconds": 2,
+  "Timestamp": "2025-08-04T06:34:41.6890853Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:34:41 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[09:34:41 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=1000",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-cc25028e8a9c3e7577361c26a50172d9-f2b3044299e9a5e8-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 3,
+  "Timestamp": "2025-08-04T06:34:41.7123603Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+

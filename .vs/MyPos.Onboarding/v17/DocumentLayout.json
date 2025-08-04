@@ -134,8 +134,7 @@
               "RelativeToolTip": "MyPos.Services\\AutoMapper\\RegistrantProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T08:28:51.857Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T08:28:51.857Z"
             },
             {
               "$type": "Document",
@@ -147,8 +146,7 @@
               "RelativeToolTip": "MyPos.Domain\\Entities\\UserEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T08:27:19.319Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T08:27:19.319Z"
             },
             {
               "$type": "Document",
@@ -160,8 +158,7 @@
               "RelativeToolTip": "MyPos.Services\\AutoMapper\\UserProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T08:22:58.658Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T08:22:58.658Z"
             },
             {
               "$type": "Document",
@@ -173,8 +170,7 @@
               "RelativeToolTip": "MyPos.Services\\AutoMapper\\AccountProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T08:22:56.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T08:22:56.482Z"
             },
             {
               "$type": "Document",
@@ -186,8 +182,7 @@
               "RelativeToolTip": "MyPos.Services\\DTOs\\UserDetailedDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T08:12:38.722Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T08:12:38.722Z"
             },
             {
               "$type": "Document",
@@ -199,8 +194,7 @@
               "RelativeToolTip": "MyPos.Data\\Repositories\\Interfaces\\IRepository.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAD4vxQAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T07:52:08.489Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T07:52:08.489Z"
             },
             {
               "$type": "Document",
@@ -212,8 +206,7 @@
               "RelativeToolTip": "MyPos.Services\\Services\\Interfaces\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T07:50:59.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T07:50:59.237Z"
             },
             {
               "$type": "Document",
@@ -225,8 +218,7 @@
               "RelativeToolTip": "MyPos.Services\\DTOs\\CountedDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T07:38:59.343Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T07:38:59.343Z"
             },
             {
               "$type": "Document",
@@ -238,8 +230,7 @@
               "RelativeToolTip": "MyPos.Services\\DTOs\\UserDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T07:19:31.38Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T07:19:31.38Z"
             },
             {
               "$type": "Document",
@@ -251,8 +242,7 @@
               "RelativeToolTip": "MyPos.Services\\Services\\UserService.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAgwEEAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T11:02:19.196Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T11:02:19.196Z"
             },
             {
               "$type": "Document",
@@ -264,8 +254,7 @@
               "RelativeToolTip": "MyPos.Data\\Repositories\\Repository.cs",
               "ViewState": "AgIAAFUAAAAAAAAAAADwv2MAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-29T14:22:18.817Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-29T14:22:18.817Z"
             },
             {
               "$type": "Document",
@@ -349,8 +338,7 @@
               "RelativeToolTip": "WebAPI\\Controllers\\RegistrantsController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAuwA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-29T06:55:39.071Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-29T06:55:39.071Z"
             },
             {
               "$type": "Document",
@@ -360,7 +348,7 @@
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\UsersController.cs",
               "ToolTip": "C:\\Users\\ilia.chakarov\\Documents\\Repos\\ilia-chakarov\\MyPos.Onboarding\\WebAPI\\Controllers\\UsersController.cs",
               "RelativeToolTip": "WebAPI\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwB0AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwB0AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-29T06:52:40.307Z",
               "EditorCaption": ""
