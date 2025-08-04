@@ -869,3 +869,127 @@ OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
 }
 
 
+[09:41:30 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[09:41:30 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[09:41:30 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[09:41:30 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[09:41:30 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[09:41:33 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/favicon.ico",
+  "QueryString": "",
+  "Headers": {
+    "Accept": "image/avif,image/webp,image/apng,image/svg\u002Bxml,image/*,*/*;q=0.8",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Cookie": "bot.cookie=CfDJ8NooojJvfs9Jvs5T1ZwLTat84uQg8eLa4%2FlRMHBRhyHnR8T7Xm8CABoUi%2Fso6YmZEXoUMgzX6cc0nYReUksgBTTyiTh5LPqIDd5kpU4VPMiOyMWVK4jTSD%2BwUqpUnWYYw99z5guNe98PpgatuvQIc5vFxLsapPp%2FH%2FeNowdGSkqC; username=ilia.chakarov; .AspNetCore.Cookies=CfDJ8NooojJvfs9Jvs5T1ZwLTavGmdOzaiAj2mEEGVi10q4g78lmJ_CbrVmiEtm0OvhKrodBBjBvyvfkrQGC1O7ECgyzwjJ8CB-NxHSqnpxR5rN-xH89T7UqosXIUT3iAqsaXuPb6Yjwkr8PlO2e392Q_uzc2IA6evULw-QAV-iYOjzsFBLGvAv4mjBOH50u6G_CnFvgyncMQIlpiQnXp34jsqRPQrFGlIiAeBCQ26w0XZpvwaZElmpk24wCeE9r6GJz2piWiYW6m98OtylMYPxOzx6LBAPK_U6FXyp3_UZVVh57x4Y-Dvc05jvv29xFgabBE29eobl7aubzJ85XkdfvLpJhM9Ontmgo1IxNagr09OMjiecM_m0tvsh6kQOP0GRXN6KxNRDFLLpLOfM7QvKQh1pNFu-IaT7hj9ckkfQJZDq97K7e_SvNiHkmNCQ2ljXm6j3zpUJzFWuRyjodvr9wxrHlYV79dli_pBatYt54QjyGZY8t4PWm_Bt93C97a-wsDzypPQQFv-za2iCPbn_Uh--whXh5iZoGW8JG1HHRSJtrYWLt2CB01zzXowDmyVh6VoAPt-1GNnF3dM5m5itr0bIFCmhCTrkm1bPtez7NnOaquxFHnF4hdjOJVj0rs0cyMXjmBLx_xcD0Morj5J7EsEIPd65DrD68lSVh7cQFNSqmqNU0NYlsyqusHeM4yB3-Wtcj3ohWna5OwnBnffOn8GQvtSkN_SeCtnMs6Fe8XyKKupVi_R8cq5nAAkiJldQxhSp_vQXSr8vue4YZZ92l93eVfHUgM-VHMlaBiqudpG4Mltm0t88ZGMhk6YYOvhYSW0sRLDmf7no93jSf9pjkc73WuW8IyZB_uIDkBskCAYYpV9Ul9LDQWF7y3fIIzO_q8MZGdopoteU1nvo8b0MIhWmFHstj-N6NYEkt_XvqFM11DleaGf6w0FWGEDThxb5CnILT8nZVFewfM5euL2-AZWu7SEZbIBFHRsVHk8K9_9Cu0E1N9tV3Wcm8LApFogek9anfKoNQfO51-SirvAGOuFK3dhj3YCk7NDhZA6ADud2Yd4NvdmgoYB37lh8JRb26MQ5OwOieUnh_lmaedCYSfg-F18I9-LtUUIr4tmQoG_mX52WvSkbymRF8V5zwEys8T2jtm3amg7M59pnr270A2KcGZ3mybZoQ2jBw52z-kYsdAhoVQ0ZOkIdqBFOpgbaPrMO9QgOcZDcIeMyuLmcvab0KeuhgtHvgqMdXdgklRqVpUVpsJDNxke7eHIc2eUzA5YbA9aFaJ_xiWUwQA2HekZ5YyifFfRJ-dxlWtdW30g64YXvb5TNeyPURG4Kys_Rh3-fG6UMP3_EJ7MVirx6SF_33xvsgSQdLbpa5TGvKNiCnblHd_7ivxol4pqoCKeE_8jo6YyifRTb8AyyPh9ImQPCk71gPBtA9M9SnJeVDx5LJ4ibiiJ_EQPHgYjDWs0eSmBi8XDiUfF6ALQpTDRqi7YVJGAQKMRZgU2hN0m7xWTiyGeMO_Rz3bRoCiK_wFIEyILKhsida-lDacWL4UMvIkbJ9CposC7XCwFwq9_vnqeZYZ2iwn43j2ctLYb2DPl2pr9IuMZ-SvcRbk8ZYqiZTxOl7kEzQ4KekfWv9kxpSTwroiCuhQxbHNANdQVFb3JPnXNiXGYahPf4yNQ1nYpCe67jSW3RIhDEwSr8IyBUjl3j5qKeilNpEZh1FBwT_ozrNA1Ou7YtAhT2O3gqrVnpW3oEPoajlrB8G9-rUgiEQq1nOhGFc_2Ax29zt5tnv8VD7OKIhsVoWSlM3aN6oW-OPZfba3ttwuKKdBEbhHB9t9c6d6TwxZz5QiqnHvAChWipze7Y_rpJVTgdMxXhElOo8nDvnlYpcYNgA2ME__DodtfHWPGMPvoMNtdECu4WvZ5raGtpZlWxzjpS04dPG2nUttTgYPDCd0hYfno1SzpcQfIawmJ514QsZ6nU5rz4zj2wROdP3Xq3Q-IEQ8bnwjZGa3monwuny2jPB3FC0NyvySGwR3ieelgS_HzIlpT3POf29O78t2EVZmofkb8ahIEn4HHVMRjxpFgYDW2e3wmMgcvrkIdUmPpq3NYpj6gz9WhBDqxUOw1c9gA334xr2jARD8r5OqzuMZ6wkU404z8HF0ZP2nXITjpQaf38zsiVboSpLg9B31PcmYcGQizbeaMbVQMxUiNGIfX2rULVcHjxJCuWqtJyY7bfH3d7DvUIHFGR6jxKDu5-QO4UOYCE6RlBwvE8JqwYMa_ysPnkbf93IKH1nSvs9H5hWoax4GQ2nsGBLdHsFCKQnSZCI52gXyhLq2Oh0zW1H6c_6o0-5FkqVoLqCtQBZxRwcIwgl6v1FMfr_VtclWHsE7gSB4lyRS4vabr_XeeAO41Yz-avXYq5RnN8V87YtYPxFTjK3OFKNBO3G83dRRdNCCJUZDC3sT04Apk7rdjKlZ1TPvlV5y45AL1dtMjULCoKx14kbSpKTrYAfLorKcWLBWK4nFsgMs60exT8O_c2qR2JoIvDTu-yLPDwe6dbzlzqKEs0foy4tRa4W-4XO3BdS3OdW6hjm2SdKzG7RqZl0b7lXneJyv8sW5sSBRerORhyPu3qTzesiGxnjB6VaQMvg1HO0iSTH864_XH-0cQ31u9EG3M0NjqyRh6QXt83hvIplZ6BdX7KkoA7g0XfowPZ1N5hXG0FLkn8phWIeaeCL2pRwA7l7jmKI1eFDViX63x5z46oMqelRTUX_ONWwNu1U2FOyMqT8pm2PAzR_q8NmAlB6clnE_MJCUZ-Lf3XJsmMdQZTJdh_D9mEDMi5jKF4OyrDIG1DBoT_JJfGQK3ZanxHjvXXaX9e_Mwsw1GBhzg2ME4zb4gOaSvoOr5u2wx3nUkyOHLRDC6W9EAxzDhZWsngfQxDTT-YNfTfDHDT0W52EJr1z97cfPxjzT1pGIxrJOeDOEptQOkeVQy71KHrTsP1hpr_XPMiCQ4NXAkimJyUHINPnJThWQIKc817Enq2SEfxMKAIDcbIO9BttcMRS94dEjEq5TIeJqszS7qcOJznVUAU9HhBSP7MmiLR76r3ZKpRC7SlVIqUlMN7QBwWOA8QFkkxC-PvsiumAk_q4Ne1akv_yk4z-19yMss1_JZV07cgyf7SukbR189pUT4TBkLmwi3wVicNYgumQZL6dGmU7SnrqO67THa8haPsXbfSENGQNsSbLdLk6HlZ6KDEJCofpHPnBAGOTuYP2cmyxsGzqNsRaeXIglr0bPB4RA9mUKw73LqWQBhTA056mJMkNADal3TwB-ZxjKKKlW5FKcHwA8Bexk7WCwOKapx39ngWeyr5xuBJEkfDG22Pk98VCGLvdtj0fkWzLWAfto7QWh6J0KbRJ9bi-8bJFIQ-d2h9xJVZQ40OIxVD5Te01jQ3fKsdBqP8fpwOpm3J4; .AspNetCore.Identity.Application=CfDJ8NooojJvfs9Jvs5T1ZwLTas5vA8Co9jzMA6-_m5n8tBeVkfNcKHi4dIhkExeeEW-FWpZqdSep2jZzyH16SaPMOjtM9TAQWxHEXB7wpBk4z8CW078uvQJx2ZkaVLcK2HErALJhBpebwIzALV2ISaDNW72rIeD4rpHVj3Nw4cfZlrzXQthmLW7E1P7qgFlCh4aOL2Mz_sPlpyksTlP3T3A7nLlpDeFgWZL0Uo8rvrIiRv0XxtQ62AcJnMwb0bfb9knG1DoIS9DlLlzEVgXQZSSCB7KcaZkJXRqgNndWR8zyTSzGqj5pFGT0S5PtVkHX3C6l81Eq29zDD5fLHKcTtF6jwFTvHgUuqwZA6Hmefgq8-NDyLrNfoFl0ySi5ewfQdaS4XPsLY0GdampSB9r8BiU7k6-IrTzx0i2nD5bUaHVa0wlVQZIUrmp61H50ddU371BKUT7JWl5576YAsKAuiv9ZnZ2WpY9fDJbKuxWgwgRDjIX-1Xv2wPu5JpEEowlCOGBNg29gtAyh2WurjH3fjGo2oLrI7SWtzYSK51jV0LhSqUSmdAJncEvv49qz6RQkcYkxsV8iCAt3FzHEP0ZkGOWEJ1NLR-nR_eZi21-Hq0RPoVwkoWgAK2An_AffuWnRwGERhNdz2qh6hzdq3emk4cy7EppzQT7HvHk2vfO8oAzimjrVdSxTXScTPlhCQMZdFtNuqs282ixvZrqT9F2KC96_EI5saaIo6inG1ym76FGWapKRxNdjdS00zhOjyk1X9UTxD50kTVNBYnT_m-L3J762rKwqzZ-faU26nn7G6YPCwf6hw8sO9Ac-GP20iv1xnLXBPBqgnO60_7GZ00GKLqBdYeXvSSCbOP8IBsBekK9T-qyfldTwm7qCWG-x-rcmcXWg5MW10KqWog52gNo43ZG5hf4Nx_Qotx99U4AP6WNjI6rMYUISH95kRShYtFs12gQc8-NB5unJRLPhsHqPGHKimn85h_AQIUpYRu_y1icyVvLzZ13p0pDOJ589Pb27dFo3FU8Q1Y62_2SiH2tx84VaO_adwFMjIjPF-W4v3yqVOdnV07jRI1iC-Nv0rT5wevU7pBzaTMGhIv4Cg8S-Z1Zyi_8vR3rQtnXYDOvOVJPwV_rRrSj9GchfPawksRnE2uJ6XmaUiglXNCChBvwSQadBlTud3tnsOUbkYBwGAetQSzWyFMMd_FtnkQJFC8W-t-dx4ccOen8p2Y5C6dBF0qQ7_PqHXCyJ5LHZDebanbyp2ov8JIDGbQ93aLqrXgonvVIDkgmvznTeIBouTiqmeUx7BsoOj1v-eV0KmPmM-c9TWnvcMpmsilpMPk8fybf3F21dhNhlrdmX-Ti25pkpEHdwNMGQCuozgftEUtRhl98l787iM5OS6O5oA7nggD5vxoU1Poq89x7y3efDMyfOr1Yi9aYxGq10rdIoJrUgfzU0bf0owy8Rs-Ror_APV3R4XCm-e83gfLsNKLyd0t4e11lOxs8GE6YbCnUXpTcghZaWyCKfONRwIeqU0EwvZDoVe2nE87waIg3Wwfx0zJ2_--Eq6mukHjHfQaO7znktiZlIiXJu6-88jj45umqKOKMQOQJVn2DyCz1XPOfDWGNi8BAUU3iRD7c5vUoJkrCt-PozDB1sNBEyxqwr920LsBm8ot-emTstP1uh_t9ckRpQjtsvOTNzCrKj0kCTQD20Gqo4CZ0D6unYqc5ysVoK2EtTpqJRxNlQE3a_qBMaw0bacLGxwPTL30S07hHGgAp8I_vWx9-ic0EBM5GDhoeYhv53HQP6zvm38eKTZoZoPVkEO_Sk3QzP-sD6Q4TN86WTSLCxISyGO30vaOihHK71FxBY139Fjv9z5A17IkvcHbkWSOaqo0P4RPSBf9gIgB5HK0mrMVKT99QUuPHTHLg_rbzJv0ZA0gc_ot5zR7YajxchP2GwRFQWLTt9fZWQBB2HMAhJobs2nuhVldlpVE91YfNp0Ia2Eh9o5AYaOPPutUyXaJPKoMhFbazfzVpBNCs_2ERb_APm_RHaQpfnUv1QD8FAp_VTeLnwLJdiO9zkOpwzuKikuLrVMfe44qzW6oCXPeRLXcudLbCdrPAsDK04vHw-IwlbjmJ2QU7Qa8QazL_g01JBGXL55dwayDhJPgSpn-JF950_VpZTDnckib7_sAuHa2sa9e6u2VCHi67VuzKtsJQ9-bspftFhQtvbbckU97uFXd293YJqHXij2aRBVNbVZld6sHyhaNACzLr44GJp7tMtjFS3boCDUvy4YUOemiJmL41s8eIetc2VZgZmpG4CaTZiv3ApzCEkUu56nGkIsbRGeXpaKym-daRlpLXdwl5SUYtF474aWt3a1Rsw6sPmaTk9XXc5nWetdlcSnbkC6tNq1uWEDIBbIgyH2Pw0spL-fnfmTBVUDBfLFgXKOYl2oeKeCOTqNmH4zn6C0oOsFu0SA7CJvaN_wMWkj8R7iEqLI53TsTKd_VN_DLgfV4CEK6u6oGUIoGQ7bOJFxg5hHagTS0MHtrO_q6OBxjHJl-CEZrhPiB0xE5a8zAHw73nJt9YP8d66GcI_6Suq5IkMq8D9-G2VvMFIcQLr1nuVBWAnswXyJoG7WuMkhCVMvnQR4mYCZ6Dn2HRgsgtISiXfCc6phonyExgO398dd9QA1ufJjW5zBoov3jyZ36mjbJwXJhN6OvRlVAZsSJsG_iJGNDv8y3dtUvrNu3cG6NXcwxw9wraopuVwe5_4IcdEUcIUs9M68n7q5NupT4ubj7JxeT9FJFJlPCL2p7zkKzkPKfQmBAckiSnp4GxVq3SGqUF0LpWlWZFKEtR3LKllHh5B7p4zgsm8A1I5_cWgzCMvboGDwD-lFXpFcsXPR7AJeuncAuqKVLDZniwX2bFiXLWMBgjS80R2wQ2KTTELxiskjwu5-3hp2HpIqvOPxFD78BlSjf67ROEceD-zlRBtdmruSGgsCGIWinaYrrWYxU9PINa7CmYgb60YIz4Lq551jmD8kOzTN3sBNY9SCY2inGZzaj8FS2wPZuNloElr19uoK9GIjDigQJoZ1-WzTOxCtyGlj0DM4ima9oKDAv0hQGZZJXLZv_tW42yby7yqkODWdxeJsdhDjOeh7mQ_aeLIb2Ft5iTxRp7lKv3rSmTCy4aK-XuiKXmP5dB3GE_3QkXu9HzB39zh6r-8C5b7O5V9aKXLUroo070MPo7EB6BTCiGTt-wY50MFxO_VFUsjEjD63-HolJJdfBYXSQbRacTGV19RhihBvFM5_fMUprGbzWatoKdBi32kSNGyDDff16KbaaS_3CZIeriwOEAuYUkyvJOwidUbbuArjWnWmt9PInFFKCcCIZ4okAmKQ9LwPe7VsRW6ydFdU0vKkqtvq89liGH2wiCh9kgDxKQlAHRvn3RWwkup69wz-w7HNbX0pdW6SV2FXF7uKHY8h2IeMCWWv8N63I7_qijEq39xvH9kHlwpaRUeHuJAYG6P8IgI8bkpBhUEZTrdj63bffdMpxpAWc2wkx9GCd4XdDx6KICOqTf5ILRLbFWcHU3uALOQhFsBxqPLyaoBA-LemhQVTd7HFuh39I6v5hF2Rtsa-b8yHP8P-TCO8A; .AspNetCore.Antiforgery.VasT3a6ESD8=CfDJ8NooojJvfs9Jvs5T1ZwLTau3dODuqi9LgmVQpq6vDKPPXUZdCafut51lXPLbagy8JtQHM0reSv7-zd5-QBP0GWmAMRfeABKNXO8749j7KaEnsRN3_dVYgImFdHjzAiLtuJZE9udQO9OWa92WRSj2z6g; csrfToken=CfDJ8NooojJvfs9Jvs5T1ZwLTau5aDZ6MHRNNOyWVucuHC0yqbORfRc4LMZQeSc2OmY8h1FwKXaCsVRtfGuyy9nZmFPPsNJc3gPV_XVJy0Gi-eJk68-VSmsAUmzIPrgEHkwHlRRNRcMbi3nkWpgGClY3REF7_C-hNZi96tTL9xgcB6iZz6DgXdRXXwVOnpx0LU25VA",
+    "Referer": "https://localhost:7168/swagger/v1/swagger.json",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "no-cors",
+    "sec-fetch-dest": "image",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "",
+  "StatusCode": 404,
+  "ResponseBody": "",
+  "ElapsedMilliseconds": 60,
+  "Timestamp": "2025-08-04T06:41:33.9563908Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:51:32 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-826d15a5fb9ec8fc3bc2fb9bf8e0c793-e5b344311acb5f7e-00",
+    "Content-Length": "12"
+  },
+  "RequestBody": "{\u0022userId\u0022:0}",
+  "StatusCode": 400,
+  "ResponseBody": "{\u0022type\u0022:\u0022https://tools.ietf.org/html/rfc9110#section-15.5.1\u0022,\u0022title\u0022:\u0022One or more validation errors occurred.\u0022,\u0022status\u0022:400,\u0022errors\u0022:{\u0022Username\u0022:[\u0022The Username field is required.\u0022],\u0022RegistrantName\u0022:[\u0022The RegistrantName field is required.\u0022]},\u0022traceId\u0022:\u002200-826d15a5fb9ec8fc3bc2fb9bf8e0c793-af218dd3f0a42300-00\u0022}",
+  "ElapsedMilliseconds": 208,
+  "Timestamp": "2025-08-04T06:51:32.5695885Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:52:38 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-2e0bce955106df7a44d6faf03ebc88e8-86c26e55f50b93b0-00",
+    "Content-Length": "12"
+  },
+  "RequestBody": "{\u0022userId\u0022:0}",
+  "StatusCode": 400,
+  "ResponseBody": "{\u0022type\u0022:\u0022https://tools.ietf.org/html/rfc9110#section-15.5.1\u0022,\u0022title\u0022:\u0022One or more validation errors occurred.\u0022,\u0022status\u0022:400,\u0022errors\u0022:{\u0022Username\u0022:[\u0022The Username field is required.\u0022],\u0022RegistrantName\u0022:[\u0022The RegistrantName field is required.\u0022]},\u0022traceId\u0022:\u002200-2e0bce955106df7a44d6faf03ebc88e8-a1595568fc44a8c7-00\u0022}",
+  "ElapsedMilliseconds": 10,
+  "Timestamp": "2025-08-04T06:52:38.9537155Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:52:50 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-bd2893c264f8d60a2d251a9254b60b25-686904d3becaac5d-00",
+    "Content-Length": "27"
+  },
+  "RequestBody": "{\u0022username\u0022:\u0022v\u0022,\u0022userId\u0022:0}",
+  "StatusCode": 400,
+  "ResponseBody": "{\u0022type\u0022:\u0022https://tools.ietf.org/html/rfc9110#section-15.5.1\u0022,\u0022title\u0022:\u0022One or more validation errors occurred.\u0022,\u0022status\u0022:400,\u0022errors\u0022:{\u0022RegistrantName\u0022:[\u0022The RegistrantName field is required.\u0022]},\u0022traceId\u0022:\u002200-bd2893c264f8d60a2d251a9254b60b25-936690a2c1b947c5-00\u0022}",
+  "ElapsedMilliseconds": 6,
+  "Timestamp": "2025-08-04T06:52:50.2788398Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:56:04 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-91f48b439bb0da26bfec46ed6e6e31e7-b6313bb3ed060a14-00",
+    "Content-Length": "12"
+  },
+  "RequestBody": "{\u0022userId\u0022:0}",
+  "StatusCode": 400,
+  "ResponseBody": "{\u0022type\u0022:\u0022https://tools.ietf.org/html/rfc9110#section-15.5.1\u0022,\u0022title\u0022:\u0022One or more validation errors occurred.\u0022,\u0022status\u0022:400,\u0022errors\u0022:{\u0022Username\u0022:[\u0022The Username field is required.\u0022],\u0022RegistrantName\u0022:[\u0022The RegistrantName field is required.\u0022]},\u0022traceId\u0022:\u002200-91f48b439bb0da26bfec46ed6e6e31e7-649117f6b1fb3e52-00\u0022}",
+  "ElapsedMilliseconds": 0,
+  "Timestamp": "2025-08-04T06:56:04.3503294Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+

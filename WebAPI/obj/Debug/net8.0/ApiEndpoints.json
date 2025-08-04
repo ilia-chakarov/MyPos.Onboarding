@@ -963,8 +963,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "username",
-        "Type": "System.String",
+        "Name": "filter",
+        "Type": "MyPos.Services.DTOs.FilterDTOs.UserFilterDto",
         "IsRequired": false
       },
       {

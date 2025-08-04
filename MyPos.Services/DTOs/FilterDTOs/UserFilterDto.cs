@@ -8,8 +8,8 @@ namespace MyPos.Services.DTOs.FilterDTOs
 {
     public class UserFilterDto
     {
-        public string Username { get; set; }
-        public string RegistrantName { get; set; }
-        public int UserId { get; set; }
+        public string? Username { get; set; }
+        public string? RegistrantName { get; set; }
+        public int? UserId { get; set; }
     }
 }
