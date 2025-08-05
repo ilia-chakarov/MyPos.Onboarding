@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyPos.Services.DTOs;
+using MyPos.Services.DTOs.FilterDTOs;
 using WebAPI.DTOs;
 using WebAPI.Entities;
 
@@ -11,7 +12,7 @@ namespace WebAPI.Services.Interfaces
             Func<IQueryable<UserEntity>, IQueryable<UserEntity>>? filter = null,
             CancellationToken cancellationToken = default);
         Task<CountedDto<UserDetailedDto>> GetAllCounted(int pageNumber, int pageSize,
-            Func<IQueryable<UserEntity>, IQueryable<UserEntity>>? filter = null,
+            UserFilterDto? filter = null,
             CancellationToken cancellationToken = default);
 
         Task<UserDto> CreateUser(CreateUserDto dto, CancellationToken cancellationToken = default);

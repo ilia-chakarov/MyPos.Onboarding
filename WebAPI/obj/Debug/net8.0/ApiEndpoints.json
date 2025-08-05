@@ -958,7 +958,7 @@
     "ContainingType": "WebAPI.Controllers.UsersController",
     "Method": "GetAllCounted",
     "RelativePath": "api/Users/getall/counted",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [

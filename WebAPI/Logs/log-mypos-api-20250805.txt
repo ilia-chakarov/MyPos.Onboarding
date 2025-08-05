@@ -1,0 +1,1174 @@
+[09:28:33 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[09:28:33 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[09:28:33 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[09:28:33 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[09:28:33 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[09:28:50 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-0d862bc5af010bfcb730fcf5d8f81eb3-cdbae38ab771fb10-00",
+    "Content-Length": "2"
+  },
+  "RequestBody": "{}",
+  "StatusCode": 405,
+  "ResponseBody": "",
+  "ElapsedMilliseconds": 71,
+  "Timestamp": "2025-08-05T06:28:50.1787013Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:31:34 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (56ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\'
+[09:31:34 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:31:34 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:31:34 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (34ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\'
+    ORDER BY (SELECT 1)
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:31:34 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Content-Type": "application/json",
+    "Cookie": "bot.cookie=CfDJ8NooojJvfs9Jvs5T1ZwLTat84uQg8eLa4%2FlRMHBRhyHnR8T7Xm8CABoUi%2Fso6YmZEXoUMgzX6cc0nYReUksgBTTyiTh5LPqIDd5kpU4VPMiOyMWVK4jTSD%2BwUqpUnWYYw99z5guNe98PpgatuvQIc5vFxLsapPp%2FH%2FeNowdGSkqC; username=ilia.chakarov; .AspNetCore.Cookies=CfDJ8NooojJvfs9Jvs5T1ZwLTauQYXuy--gH61xSUPR72Q5K4zoETLArxcxL-9-NcL8cpKMwroZFJJLrOTLOaHQbumNF3frMUqno8RdsPbjR50_vEFuE3vnBQTx9yxYpB_dnU22XXoXwG-udv9vGL7eq7X1OOzueUH0wZTKvYA3BBKBhmzcuhZ7G7VBxBS--vNqZy2BbPUMj_Gv0NzRDngR-3yqI7FThN54DoUtAKeuUyxiVFxP54s5hcgbZSGnPBzynZu9qCux2CkgGuec_bjnUtXvnSevzvhlx9UyoVKxjm-e5aC-j1Iduc5L_irTGj6kg0fWz-BgXe3YSxzP6a1G-pTanr9d2vWU9dUSrph0LitkJZuIKPXS0vLwOGJ1k_zYSNLN4fnk1qZ6hE0pGPtloAopJVpsGVCYzphaXTEGrLpTEaROhaei4I2ax4XPxJBKD0tpZrqHuY529OH-HnZaLZag-nABbj23nnfc0dOaiRXuf5gBzxud-SiXXd94NaUwtZOrdP0D0f6nqDwgeaJgE-ILbxxSa0NJhs44PiA1viNmVXMUiXKBA8LJvuoOxjNA18aqJa0xRqon_ag3tfSWfy1RyBPe1qFdCwUxkLpe-U4jITAZJ2vBdCwcXQgwg9TLLzaZY3dafF_JhDLy8l0KkO0jXCL08kr6W8wA_crILAAHZ3GT2rk0gm59c-HqWZcjJ0qVJJNy2Qe3hd6Xz_vPEZm7SVlZRzcyU6KYJFeSd3I4ljyTe4T29ILCzog7IKHo5YozmEPw_kjbD4pAK2FOa74cqk7QGudoISyzPRogrhFx-LjQ-b-wQBfTigBH6Ow73emQE_fga3EctbZrzhvgUOtrVYqCk7prBxy9KRDhU3v2zNr_PQAr1Kc9GJlmC4fN3afMXmsapr0wCH5OfNc4FS9LAf0DFxGMyqUrniItWaGFia1AeWcLCX0PhM8R47YbEs8cMetfeTO-Yhm80TVN9dfwXdAjrqdGQKRs35RvhITu4LDHi451mloOz1OLBAeqfkgI7j9Tu-W9RSj1MgalvgyuBRU9aSIo4H59SdIkyFcxXkvP4Jb-hVAV_VTS3LdYAE-QODRBpICWbNazTO4LNbqkukIsIRF4Jry0m-JwjwVoiyhWJXhjIhePmPx59rhPUThUtOH1ejn-mIncft1djrJ0o3FPKHeVX5ruyY6Zfz6LWoMNo5_ZqXM6Wu4VvMS5N4Uac1pGPMPe4FCMQwzY1krS2SRn-QM29-Le_ZKybj4rsFMcRKGcADY6RoW0o449V0PRrU3skHtiEoT8jY-Vt89gHKAa_cIUUN3-NfNiHL9umozvFYCqTYIookkCnYIt8FgAhaVwdOyQXeXXP24kS8Md0ACvckdpEFpFNqDrvcgLoorySmy31FxKz7mJJoEkkpj7ZHbnU4oOYRgULZOA10OvrLyFez6j9SE3T99hJntnWvMSv_4vhnoGxdZuoyghJvlAUJ9vC_gdWMYUetANQ-rw75uT6b1rGTANgdHRqbCmlrQkcwMf8mar0zTx-YRcFqxg0Ts7SVNA9Q3KcEnw_x92F9RDlODJh8TyACTcMWHtmUsG4RxvmyqmNucZ0FlsJnX28uColvFYaVM2WAIEYvdiFJ3njrKzZUCrx27LKPFLGskknqn0im6YyOOwC1CVB-sn9dQAuEkQu1sHCpVoCAZLJAmEq0TKCZ9Uf19zaeJlbYTQGbsQjhGFaeBqsjpccUW12ctN1WRTViNNm8AmwpFkHzxz-A2fRIOCekEXymBD_x1xnAoGRrz2l2PewAKZNEZ_d_Km1aNHe3XnFYBXAxTsRSht02DdR9Vl3Oq8YJ-oPG9IAD0o2RZ4L3XvH86TezoHiV4-ZzdGbk7fFJbI8yl2QKS7Wl-k37R8DHlqjPZ3Cnwe7T1akyK2clgXAjkHIslcqHd4_mjXUrlbXsNp64eouMo6vyGLDimfh0NCyMGoy56mXsa-FXjUl1nsIo2r9tG432uU0hqSh5ASGMcX2X8qmcDcdC-mF6A1mI-CSPYHi7DbSVBE93aZ0dFgUNsz0GHpFS-v5qHNi_AzOWN0FTqX5KyAhoa4yk0fLErrAJ2WYqUQ_6yTqGV-H8-0u821Q2IfmDfUYUMlOTZDkeSUKS0dxMUKOHdIYeilWaqBytKpfVLmsaf_G81uNY9PNmLc7lKkHsDXBV4iA0xGzIk5rtx980bnbenWcfBydvw9e20n9Ekhpm5Usj9vdDdgWF3L5Hr5mgU2plGYNStmO3-gURdWO2mjlYAwdqvn86JIJU_3C26EWKxhWrl5KtrFXcIChc9WDeaZRzPSKxMGllCsN_j9ZsDbX2ZWVODmGC_-b5pLo-Vbe8Fz7NS6DsAA0u6cE2mutHH74vVVaodGc37ynBIBtg6Vs-INkP0wdzN7oWqxetw7vnPXN0iPVUX6NeYvQf1jl4KI6xc-R5G2CNYSuqDi0MuUz5wXkBS53i5LANC8XGl2aDKOZlMeB2cdKnWeVvMtZq3iCoFboXfg-elhrBb1qgXYqIrPTJEVLoY9SvU0WKsdsiPbTc4CecwViV2A20t4C1xgKrQt5eTBkoy8QU45ZPOkA36PCzPur8WFGQACPXcsKSVi4hKVCuulPH6FMrZLjnwbk9MtilVJVObHyeQiq7pKbUBRt9L3liBsys4Y9kaaxM0wCKfy_ThMXFzqA_VqeoTc6Er_lnG6YcsyUfc3NA-HiHOYyaItMH8coigUP6TzUKfc_WACpgywchZCyHjk6kmevk9K965dAxsYBNpL1PfoXw10eNeeBGnqa9Y0teacF8WXNpvrBYUdXvvDK4lMQEW9dPcZHJ9OEWRdSBDH4ndN1n0p1DAWZ5xqJmjrog-IpmwX_N4ZJ9adW52RuzcU190butvJhXvJqKkfj1S6EuBcWQiHcqnAvFm-V9CjTdOuSLfIds8uz8G2JmV7ka3WA5nuwdEVxfDqE63J-9cza7Btv7x782UK7F-PVs4vepTTLstfUtqIbtSWn5zvN85f01z-QeyI2uyjIX4SSNDzicCrahhGWYLunUPJKX4nfTmdEIdEy3llKpa1ix_47H7NFpEy6cM_hslWcsxXBJd4O9yqK9PdMlXCXQ-EpzNw1zRnZh3uJOBlNLkfKgMHMRJxndpdgclF7GoiGERdGlaD33Wc58wjidMDKmxxPdY0xi3_u12meImB-kzZiWvS4YXEmzF-41jWPwIeHnZchhj4; .AspNetCore.Identity.Application=CfDJ8NooojJvfs9Jvs5T1ZwLTas2EbFXRsGLa3cu25avsROF3m7CvgoKGS8J_pXR6MBMI_WD12lfDuDT7VqeZgBerCHdd_ZLl7asWcA1CW3qhWu2766TzQq1c8pnMaHTl9y8le9zVdgDa4D7mMZH64Hhosnl3fPHbgzHqXRhNwS6MefpzhXl87ZcqiBRpiJYnn-pcoyv6Qz18z9viEZ95Qz3djJkLdllIbfNM7-wl_oZNEQP4QTZ68m3SUkAb5801gJT5tnKN4c8xszPvNfU4HZoBkF2d_3C5xwL4paBAdjcRK0VXyP1lc3e3RZ0i3Vi_v_RN__ZKpaIWbNk42Qm8sj1ZwwfIO5NrBTjyUDnf5pliMD5xCW6k_fZMwwmY5oW1_qRLsU7rTrpE0eJd3r5KXmwEuLkvQpv08IG9qj8EIv8HhN1jld63RR3VcCPycUn1fhxvEvuiK3FPE7XSbnbJNQLqcimCPE4CcpVTDbsitJ9dmrrJ12mm6ywsakcooyIR0pDm02ELFsmpt7WHL4hkKt0EQ_70EKwo73UTZ2um-A9bSoZYReUZ_17ddodH-FRatz1VDaXyTS8Hxo95Dj-N-Rusrh7rERcpLvpRSHZIQz8v6CtLaEdIPsLTqVngNkOg9rMtu4EOorDQjDGOWshjEPkYm0b-UhGFnA6P8guq7bazkzLQSMGknYzDCmhXezlUND-kstnfdo87uTZdZOaatXO0QM7ExIIShRDiAxuprNQV4ztcj5p8PFVjzWbfPGrv8j6EhE_3QVLUhiDwtz7L5Ovt9PwWVL98YhYuwwipjHM74dDPU6vgY66TMjHB2RcfoFc3UXoeT6P8bjj_dkvFZ2zuzQc3_NMIdNQPNb-lQznW_ZbbW2JVtwoe7grL_vj_NRf7ZjPfXp812N-DTAbYV-0AYgsE9h2BQyKyHBMdSoapzubaqu_DH_0ItanZgGpTe0N-8J2saGb16mDgVUtQNpwkhwDqCWuiyJbVuVBWF6MCH4YUC6lA3vEpQfBXeIuU9JFeibsonQVw9Fq5LhK93OEre3yKG568L7dUCAyXoABJmnV2xakns-W7BhJ_9CwyK2q1DiQlmWkro-6uHqs31eZgxasbj4V3X43C4BB31rtrju42zjJWOGPz4RjGZ-3IMW_ATxapBAF-VXxvQ1p-V4-n7hkTXRer0NozPq3_UaHCIVt5jE47EsbjCssTTr1nJpR856JmATvhWPIZV3upSnRYUVFagfgAXjzerIhJQ1fk65f5hYcRyQzH-mAm5jPYs6SxFdGTVaFtkqDF15Glmx95tVStY4ObzHJNNP3e39ksUn2d0q_1V3dB6o0Dr-38uABB4xFO-XyTZOFCiEQv2VoNRnLFPAjI-GK1uEuJ6q3OgxI6fcAcX5w06U741pz5WJzE1qk2IyJmtr6X4nkd01SQlcLeBcesHzdwkF5fXcn3w9tjwyjYMPH-MusUP-ys0e14obrWf63AC6SDDtxFqJiKbEzzrMTg2RvW5d7Q92kguDhfR2ZUxTzxPc-uZHe36Kd9LJDAqgjv4UJll6glTvMracEA5NBGCL0VLx7elFq-6NXlAsVdCyoPfo84pyaR849DcLIblHS69DQPgLY3F84TyzqG3w5FrLBG4TMbOTQVGZH4Pp6kepVWF6jZFoZOMWteJ4X519BQc2oMm96-Yoh1T7kQiZ9Y1k-PKSBgocjbU5GJ4GBkTE0ZLUXsP8GKlmsdFdrfv2-UjnfF9akfEf5ZP3cDR02b0DX1WfUE3eOSATnssJFyVZTT-3BQVR855mroXLxZQNqC9uw0zwNDU5me51x4ze0dzhceE4mZxrqU1V672IcBevPoh6sbsbO_I3xhjF8FFFqffXPolL2me64se73K3Bw7DVKCvirmnMS10RRlE7hddiDjavSipAWPpJ5qkfAFZUXQck_hloGM_cZ3PN0uHRqID4Tazc8RgeEgeg09h3agjL83F8n2j4d7HLJPE5aGJ9i3yuEgyN0IayGIqJiq47NItB-U1fg88OHNnSEFFjz245unpe3cNfWQBOYGZpTIlx2vjrcb3SM6V2kVxlidh8NhqjwEWBm72VkxaNlG2UnkzbpHRv-WS--5rrZOaqcqgOgdhtQ6jGUmQcJMB6n-3kBP_FaYDHOGIWkzMZkpVnYQHnYzvi08XJP1OEJCO3k6nZRMbTmNJaMLW8sf-AEEt3pY92jDliTEedo2htUaTS-R81ws5KpQI87R4cqERezICg9dAEi1gr4v1QtIFYeFDm5hzYWrESmSenSCPm6LTN8NJwllEGf502ckgYVYycw4c3wHXhux3KncAy_Dw4DMVHu0cuiajhpIzuykY_Z8mDcgeuWZoXUcKt6wA_3_6S0LEfZE5MM4CU9qNOzUMZJOpqc_bwjmhHhqcRIeTH5TH320JEL_RhB1RdZMFR_Ci_3fqb86JULpDNQTwQSdzcMf38kZqhoT3pWwbSKLOah_Kb6YDbRZVAYFi_oEnU4FYGBqYYllFL-59_A3ZzJp5Zg_Y8lln14ZJllqsYviIycHzkrwAsRBzNVuBlrmHOa1DdlEeGT5nl0G_mqBVRbbGfOdZYjmTaL98eGx0odM3ruBxrbSJ3v2-vL0buDJw8oIQwNHpzDChAzwa2-xaAdd8goWyTqEegX828zhDjPND3IMWl_KixEjP_dGcT7J6uaK4dQVN6ssKLQptBDKs6e4MniIHWygKpcKTM6rFIBN1fQPQ0ob5W6LDH_EAVpMXvBe0ea3L3Z6SYsAclDD-CdvuNdyk58Nvhe5oOm0HO8-woLPQL3Df44l_tB2fJVRi3UdiXjhNE305abFf9HQCL79R68sRXb-7xpK-eJYwCz7FHu2qwYRjfdy4kOT8_r044R8OJ4xl4Apcv7syDcdYTUEYYdfdF88Ox-1n_N8l0vsC5Ibm2-4Xw6glm-boTEhQP858DIK5AKgIFLXQ9is_sjVgP8Jf2SfO0o_DxxNNNCYm-iRhK_SwYeUWc8GptZH6tYky66nGajXs-qroLkY0rzrPU5ioyH6XyR1i5jjtXejWycVYCMZceB3kxRmkffCl6pYw-0oTi5kJn8hzg1Jc3qwNOqkP7x25w6bqUsqNAjm7oqczqAkIfGeoEAfowF5ZJVGHcRhh16ofqNUnzKsGOKvY8uDViDBwxoMBozHlu3ynMh2lt6WVRe0DeetnHi0jqBfEWrdbpa8IabiGcoV3VkW0xdxRwucyvRIYWEYarlWM0i4zRPh5Me0Jm_rgQV8jWFls3gsMf7QPzziMc5s46MJ2G3GLW-Y2f_i8Fb9hPGPSyzt0adPQ0usYyYZVIVx2Mv5IPRVxRN85E1kQAkEbNjl0sdWmApLv6y2I4aGvW3CaDynEdswzzjfkg7q1yhYdEAyYgYq-s0oxfGv77_bv3TK4VBLLOICBO02KwZ3CZbtoTMZK4rDiO5N7DLVDJehNDh3U4n0ZuO3y5Qp84XexuTlAtRWOdooxAkcr2Ztlsx1LKW2rH1L_vduGNWdkFQuU8rE6fM6Ac3_Gjqpi1VXhDcg6CE7VJvtqFtBuCIKGO4brJKa6_LQerT_luGMOmT1IVhv0Fac3pnIgkFyD_XtxRyGxo; .AspNetCore.Antiforgery.VasT3a6ESD8=CfDJ8NooojJvfs9Jvs5T1ZwLTask-CL5ANYSH4ere0_kVBtUXd2cfZVQg9ouWM20BQjXC4dofM-jXxQAa6PIIrZU0K5r8VXz284qsfuoIO0kYhK_ud7bM1S7--tWFNYIn9K9db7mtGz94UzkBB_-vjj2efQ; csrfToken=CfDJ8NooojJvfs9Jvs5T1ZwLTatdw_5YW4Mze8EUK7EQLJJOSYA2CUrpMu7ECClXhWG3WqXMZh9I2bEEit759CorGO9wMO8q8ZoArcOiCOpULVSMgb1qtX31h29CAjbfCs-c_1qYhHhlAP490fI7GHgZd-HSQr-kPR1XBOtIFHFvTPuVJc0gKYS2Bm1MoCI2axALsw",
+    "Origin": "https://localhost:7168",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "Content-Length": "71",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "{\n  \u0022username\u0022: \u0022string\u0022,\n  \u0022registrantName\u0022: \u0022string\u0022,\n  \u0022userId\u0022: 0\n}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:2},\u0022items\u0022:[{\u0022id\u0022:34,\u0022username\u0022:\u0022string12\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:35,\u0022username\u0022:\u0022string1234\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 3123,
+  "Timestamp": "2025-08-05T06:31:34.6285554Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:31:43 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\'
+[09:31:43 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\'
+    ORDER BY (SELECT 1)
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:31:43 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Content-Type": "application/json",
+    "Cookie": "bot.cookie=CfDJ8NooojJvfs9Jvs5T1ZwLTat84uQg8eLa4%2FlRMHBRhyHnR8T7Xm8CABoUi%2Fso6YmZEXoUMgzX6cc0nYReUksgBTTyiTh5LPqIDd5kpU4VPMiOyMWVK4jTSD%2BwUqpUnWYYw99z5guNe98PpgatuvQIc5vFxLsapPp%2FH%2FeNowdGSkqC; username=ilia.chakarov; .AspNetCore.Cookies=CfDJ8NooojJvfs9Jvs5T1ZwLTauQYXuy--gH61xSUPR72Q5K4zoETLArxcxL-9-NcL8cpKMwroZFJJLrOTLOaHQbumNF3frMUqno8RdsPbjR50_vEFuE3vnBQTx9yxYpB_dnU22XXoXwG-udv9vGL7eq7X1OOzueUH0wZTKvYA3BBKBhmzcuhZ7G7VBxBS--vNqZy2BbPUMj_Gv0NzRDngR-3yqI7FThN54DoUtAKeuUyxiVFxP54s5hcgbZSGnPBzynZu9qCux2CkgGuec_bjnUtXvnSevzvhlx9UyoVKxjm-e5aC-j1Iduc5L_irTGj6kg0fWz-BgXe3YSxzP6a1G-pTanr9d2vWU9dUSrph0LitkJZuIKPXS0vLwOGJ1k_zYSNLN4fnk1qZ6hE0pGPtloAopJVpsGVCYzphaXTEGrLpTEaROhaei4I2ax4XPxJBKD0tpZrqHuY529OH-HnZaLZag-nABbj23nnfc0dOaiRXuf5gBzxud-SiXXd94NaUwtZOrdP0D0f6nqDwgeaJgE-ILbxxSa0NJhs44PiA1viNmVXMUiXKBA8LJvuoOxjNA18aqJa0xRqon_ag3tfSWfy1RyBPe1qFdCwUxkLpe-U4jITAZJ2vBdCwcXQgwg9TLLzaZY3dafF_JhDLy8l0KkO0jXCL08kr6W8wA_crILAAHZ3GT2rk0gm59c-HqWZcjJ0qVJJNy2Qe3hd6Xz_vPEZm7SVlZRzcyU6KYJFeSd3I4ljyTe4T29ILCzog7IKHo5YozmEPw_kjbD4pAK2FOa74cqk7QGudoISyzPRogrhFx-LjQ-b-wQBfTigBH6Ow73emQE_fga3EctbZrzhvgUOtrVYqCk7prBxy9KRDhU3v2zNr_PQAr1Kc9GJlmC4fN3afMXmsapr0wCH5OfNc4FS9LAf0DFxGMyqUrniItWaGFia1AeWcLCX0PhM8R47YbEs8cMetfeTO-Yhm80TVN9dfwXdAjrqdGQKRs35RvhITu4LDHi451mloOz1OLBAeqfkgI7j9Tu-W9RSj1MgalvgyuBRU9aSIo4H59SdIkyFcxXkvP4Jb-hVAV_VTS3LdYAE-QODRBpICWbNazTO4LNbqkukIsIRF4Jry0m-JwjwVoiyhWJXhjIhePmPx59rhPUThUtOH1ejn-mIncft1djrJ0o3FPKHeVX5ruyY6Zfz6LWoMNo5_ZqXM6Wu4VvMS5N4Uac1pGPMPe4FCMQwzY1krS2SRn-QM29-Le_ZKybj4rsFMcRKGcADY6RoW0o449V0PRrU3skHtiEoT8jY-Vt89gHKAa_cIUUN3-NfNiHL9umozvFYCqTYIookkCnYIt8FgAhaVwdOyQXeXXP24kS8Md0ACvckdpEFpFNqDrvcgLoorySmy31FxKz7mJJoEkkpj7ZHbnU4oOYRgULZOA10OvrLyFez6j9SE3T99hJntnWvMSv_4vhnoGxdZuoyghJvlAUJ9vC_gdWMYUetANQ-rw75uT6b1rGTANgdHRqbCmlrQkcwMf8mar0zTx-YRcFqxg0Ts7SVNA9Q3KcEnw_x92F9RDlODJh8TyACTcMWHtmUsG4RxvmyqmNucZ0FlsJnX28uColvFYaVM2WAIEYvdiFJ3njrKzZUCrx27LKPFLGskknqn0im6YyOOwC1CVB-sn9dQAuEkQu1sHCpVoCAZLJAmEq0TKCZ9Uf19zaeJlbYTQGbsQjhGFaeBqsjpccUW12ctN1WRTViNNm8AmwpFkHzxz-A2fRIOCekEXymBD_x1xnAoGRrz2l2PewAKZNEZ_d_Km1aNHe3XnFYBXAxTsRSht02DdR9Vl3Oq8YJ-oPG9IAD0o2RZ4L3XvH86TezoHiV4-ZzdGbk7fFJbI8yl2QKS7Wl-k37R8DHlqjPZ3Cnwe7T1akyK2clgXAjkHIslcqHd4_mjXUrlbXsNp64eouMo6vyGLDimfh0NCyMGoy56mXsa-FXjUl1nsIo2r9tG432uU0hqSh5ASGMcX2X8qmcDcdC-mF6A1mI-CSPYHi7DbSVBE93aZ0dFgUNsz0GHpFS-v5qHNi_AzOWN0FTqX5KyAhoa4yk0fLErrAJ2WYqUQ_6yTqGV-H8-0u821Q2IfmDfUYUMlOTZDkeSUKS0dxMUKOHdIYeilWaqBytKpfVLmsaf_G81uNY9PNmLc7lKkHsDXBV4iA0xGzIk5rtx980bnbenWcfBydvw9e20n9Ekhpm5Usj9vdDdgWF3L5Hr5mgU2plGYNStmO3-gURdWO2mjlYAwdqvn86JIJU_3C26EWKxhWrl5KtrFXcIChc9WDeaZRzPSKxMGllCsN_j9ZsDbX2ZWVODmGC_-b5pLo-Vbe8Fz7NS6DsAA0u6cE2mutHH74vVVaodGc37ynBIBtg6Vs-INkP0wdzN7oWqxetw7vnPXN0iPVUX6NeYvQf1jl4KI6xc-R5G2CNYSuqDi0MuUz5wXkBS53i5LANC8XGl2aDKOZlMeB2cdKnWeVvMtZq3iCoFboXfg-elhrBb1qgXYqIrPTJEVLoY9SvU0WKsdsiPbTc4CecwViV2A20t4C1xgKrQt5eTBkoy8QU45ZPOkA36PCzPur8WFGQACPXcsKSVi4hKVCuulPH6FMrZLjnwbk9MtilVJVObHyeQiq7pKbUBRt9L3liBsys4Y9kaaxM0wCKfy_ThMXFzqA_VqeoTc6Er_lnG6YcsyUfc3NA-HiHOYyaItMH8coigUP6TzUKfc_WACpgywchZCyHjk6kmevk9K965dAxsYBNpL1PfoXw10eNeeBGnqa9Y0teacF8WXNpvrBYUdXvvDK4lMQEW9dPcZHJ9OEWRdSBDH4ndN1n0p1DAWZ5xqJmjrog-IpmwX_N4ZJ9adW52RuzcU190butvJhXvJqKkfj1S6EuBcWQiHcqnAvFm-V9CjTdOuSLfIds8uz8G2JmV7ka3WA5nuwdEVxfDqE63J-9cza7Btv7x782UK7F-PVs4vepTTLstfUtqIbtSWn5zvN85f01z-QeyI2uyjIX4SSNDzicCrahhGWYLunUPJKX4nfTmdEIdEy3llKpa1ix_47H7NFpEy6cM_hslWcsxXBJd4O9yqK9PdMlXCXQ-EpzNw1zRnZh3uJOBlNLkfKgMHMRJxndpdgclF7GoiGERdGlaD33Wc58wjidMDKmxxPdY0xi3_u12meImB-kzZiWvS4YXEmzF-41jWPwIeHnZchhj4; .AspNetCore.Identity.Application=CfDJ8NooojJvfs9Jvs5T1ZwLTas2EbFXRsGLa3cu25avsROF3m7CvgoKGS8J_pXR6MBMI_WD12lfDuDT7VqeZgBerCHdd_ZLl7asWcA1CW3qhWu2766TzQq1c8pnMaHTl9y8le9zVdgDa4D7mMZH64Hhosnl3fPHbgzHqXRhNwS6MefpzhXl87ZcqiBRpiJYnn-pcoyv6Qz18z9viEZ95Qz3djJkLdllIbfNM7-wl_oZNEQP4QTZ68m3SUkAb5801gJT5tnKN4c8xszPvNfU4HZoBkF2d_3C5xwL4paBAdjcRK0VXyP1lc3e3RZ0i3Vi_v_RN__ZKpaIWbNk42Qm8sj1ZwwfIO5NrBTjyUDnf5pliMD5xCW6k_fZMwwmY5oW1_qRLsU7rTrpE0eJd3r5KXmwEuLkvQpv08IG9qj8EIv8HhN1jld63RR3VcCPycUn1fhxvEvuiK3FPE7XSbnbJNQLqcimCPE4CcpVTDbsitJ9dmrrJ12mm6ywsakcooyIR0pDm02ELFsmpt7WHL4hkKt0EQ_70EKwo73UTZ2um-A9bSoZYReUZ_17ddodH-FRatz1VDaXyTS8Hxo95Dj-N-Rusrh7rERcpLvpRSHZIQz8v6CtLaEdIPsLTqVngNkOg9rMtu4EOorDQjDGOWshjEPkYm0b-UhGFnA6P8guq7bazkzLQSMGknYzDCmhXezlUND-kstnfdo87uTZdZOaatXO0QM7ExIIShRDiAxuprNQV4ztcj5p8PFVjzWbfPGrv8j6EhE_3QVLUhiDwtz7L5Ovt9PwWVL98YhYuwwipjHM74dDPU6vgY66TMjHB2RcfoFc3UXoeT6P8bjj_dkvFZ2zuzQc3_NMIdNQPNb-lQznW_ZbbW2JVtwoe7grL_vj_NRf7ZjPfXp812N-DTAbYV-0AYgsE9h2BQyKyHBMdSoapzubaqu_DH_0ItanZgGpTe0N-8J2saGb16mDgVUtQNpwkhwDqCWuiyJbVuVBWF6MCH4YUC6lA3vEpQfBXeIuU9JFeibsonQVw9Fq5LhK93OEre3yKG568L7dUCAyXoABJmnV2xakns-W7BhJ_9CwyK2q1DiQlmWkro-6uHqs31eZgxasbj4V3X43C4BB31rtrju42zjJWOGPz4RjGZ-3IMW_ATxapBAF-VXxvQ1p-V4-n7hkTXRer0NozPq3_UaHCIVt5jE47EsbjCssTTr1nJpR856JmATvhWPIZV3upSnRYUVFagfgAXjzerIhJQ1fk65f5hYcRyQzH-mAm5jPYs6SxFdGTVaFtkqDF15Glmx95tVStY4ObzHJNNP3e39ksUn2d0q_1V3dB6o0Dr-38uABB4xFO-XyTZOFCiEQv2VoNRnLFPAjI-GK1uEuJ6q3OgxI6fcAcX5w06U741pz5WJzE1qk2IyJmtr6X4nkd01SQlcLeBcesHzdwkF5fXcn3w9tjwyjYMPH-MusUP-ys0e14obrWf63AC6SDDtxFqJiKbEzzrMTg2RvW5d7Q92kguDhfR2ZUxTzxPc-uZHe36Kd9LJDAqgjv4UJll6glTvMracEA5NBGCL0VLx7elFq-6NXlAsVdCyoPfo84pyaR849DcLIblHS69DQPgLY3F84TyzqG3w5FrLBG4TMbOTQVGZH4Pp6kepVWF6jZFoZOMWteJ4X519BQc2oMm96-Yoh1T7kQiZ9Y1k-PKSBgocjbU5GJ4GBkTE0ZLUXsP8GKlmsdFdrfv2-UjnfF9akfEf5ZP3cDR02b0DX1WfUE3eOSATnssJFyVZTT-3BQVR855mroXLxZQNqC9uw0zwNDU5me51x4ze0dzhceE4mZxrqU1V672IcBevPoh6sbsbO_I3xhjF8FFFqffXPolL2me64se73K3Bw7DVKCvirmnMS10RRlE7hddiDjavSipAWPpJ5qkfAFZUXQck_hloGM_cZ3PN0uHRqID4Tazc8RgeEgeg09h3agjL83F8n2j4d7HLJPE5aGJ9i3yuEgyN0IayGIqJiq47NItB-U1fg88OHNnSEFFjz245unpe3cNfWQBOYGZpTIlx2vjrcb3SM6V2kVxlidh8NhqjwEWBm72VkxaNlG2UnkzbpHRv-WS--5rrZOaqcqgOgdhtQ6jGUmQcJMB6n-3kBP_FaYDHOGIWkzMZkpVnYQHnYzvi08XJP1OEJCO3k6nZRMbTmNJaMLW8sf-AEEt3pY92jDliTEedo2htUaTS-R81ws5KpQI87R4cqERezICg9dAEi1gr4v1QtIFYeFDm5hzYWrESmSenSCPm6LTN8NJwllEGf502ckgYVYycw4c3wHXhux3KncAy_Dw4DMVHu0cuiajhpIzuykY_Z8mDcgeuWZoXUcKt6wA_3_6S0LEfZE5MM4CU9qNOzUMZJOpqc_bwjmhHhqcRIeTH5TH320JEL_RhB1RdZMFR_Ci_3fqb86JULpDNQTwQSdzcMf38kZqhoT3pWwbSKLOah_Kb6YDbRZVAYFi_oEnU4FYGBqYYllFL-59_A3ZzJp5Zg_Y8lln14ZJllqsYviIycHzkrwAsRBzNVuBlrmHOa1DdlEeGT5nl0G_mqBVRbbGfOdZYjmTaL98eGx0odM3ruBxrbSJ3v2-vL0buDJw8oIQwNHpzDChAzwa2-xaAdd8goWyTqEegX828zhDjPND3IMWl_KixEjP_dGcT7J6uaK4dQVN6ssKLQptBDKs6e4MniIHWygKpcKTM6rFIBN1fQPQ0ob5W6LDH_EAVpMXvBe0ea3L3Z6SYsAclDD-CdvuNdyk58Nvhe5oOm0HO8-woLPQL3Df44l_tB2fJVRi3UdiXjhNE305abFf9HQCL79R68sRXb-7xpK-eJYwCz7FHu2qwYRjfdy4kOT8_r044R8OJ4xl4Apcv7syDcdYTUEYYdfdF88Ox-1n_N8l0vsC5Ibm2-4Xw6glm-boTEhQP858DIK5AKgIFLXQ9is_sjVgP8Jf2SfO0o_DxxNNNCYm-iRhK_SwYeUWc8GptZH6tYky66nGajXs-qroLkY0rzrPU5ioyH6XyR1i5jjtXejWycVYCMZceB3kxRmkffCl6pYw-0oTi5kJn8hzg1Jc3qwNOqkP7x25w6bqUsqNAjm7oqczqAkIfGeoEAfowF5ZJVGHcRhh16ofqNUnzKsGOKvY8uDViDBwxoMBozHlu3ynMh2lt6WVRe0DeetnHi0jqBfEWrdbpa8IabiGcoV3VkW0xdxRwucyvRIYWEYarlWM0i4zRPh5Me0Jm_rgQV8jWFls3gsMf7QPzziMc5s46MJ2G3GLW-Y2f_i8Fb9hPGPSyzt0adPQ0usYyYZVIVx2Mv5IPRVxRN85E1kQAkEbNjl0sdWmApLv6y2I4aGvW3CaDynEdswzzjfkg7q1yhYdEAyYgYq-s0oxfGv77_bv3TK4VBLLOICBO02KwZ3CZbtoTMZK4rDiO5N7DLVDJehNDh3U4n0ZuO3y5Qp84XexuTlAtRWOdooxAkcr2Ztlsx1LKW2rH1L_vduGNWdkFQuU8rE6fM6Ac3_Gjqpi1VXhDcg6CE7VJvtqFtBuCIKGO4brJKa6_LQerT_luGMOmT1IVhv0Fac3pnIgkFyD_XtxRyGxo; .AspNetCore.Antiforgery.VasT3a6ESD8=CfDJ8NooojJvfs9Jvs5T1ZwLTask-CL5ANYSH4ere0_kVBtUXd2cfZVQg9ouWM20BQjXC4dofM-jXxQAa6PIIrZU0K5r8VXz284qsfuoIO0kYhK_ud7bM1S7--tWFNYIn9K9db7mtGz94UzkBB_-vjj2efQ; csrfToken=CfDJ8NooojJvfs9Jvs5T1ZwLTatdw_5YW4Mze8EUK7EQLJJOSYA2CUrpMu7ECClXhWG3WqXMZh9I2bEEit759CorGO9wMO8q8ZoArcOiCOpULVSMgb1qtX31h29CAjbfCs-c_1qYhHhlAP490fI7GHgZd-HSQr-kPR1XBOtIFHFvTPuVJc0gKYS2Bm1MoCI2axALsw",
+    "Origin": "https://localhost:7168",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "Content-Length": "73",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "{\n  \u0022username\u0022: \u0022string\u0022,\n  \u0022registrantName\u0022: \u0022string\u0022,\n  \u0022userId\u0022: 123\n}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:2},\u0022items\u0022:[{\u0022id\u0022:34,\u0022username\u0022:\u0022string12\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:35,\u0022username\u0022:\u0022string1234\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 75,
+  "Timestamp": "2025-08-05T06:31:43.9916163Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:31:49 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\'
+[09:31:49 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\'
+    ORDER BY (SELECT 1)
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:31:49 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Content-Type": "application/json",
+    "Cookie": "bot.cookie=CfDJ8NooojJvfs9Jvs5T1ZwLTat84uQg8eLa4%2FlRMHBRhyHnR8T7Xm8CABoUi%2Fso6YmZEXoUMgzX6cc0nYReUksgBTTyiTh5LPqIDd5kpU4VPMiOyMWVK4jTSD%2BwUqpUnWYYw99z5guNe98PpgatuvQIc5vFxLsapPp%2FH%2FeNowdGSkqC; username=ilia.chakarov; .AspNetCore.Cookies=CfDJ8NooojJvfs9Jvs5T1ZwLTauQYXuy--gH61xSUPR72Q5K4zoETLArxcxL-9-NcL8cpKMwroZFJJLrOTLOaHQbumNF3frMUqno8RdsPbjR50_vEFuE3vnBQTx9yxYpB_dnU22XXoXwG-udv9vGL7eq7X1OOzueUH0wZTKvYA3BBKBhmzcuhZ7G7VBxBS--vNqZy2BbPUMj_Gv0NzRDngR-3yqI7FThN54DoUtAKeuUyxiVFxP54s5hcgbZSGnPBzynZu9qCux2CkgGuec_bjnUtXvnSevzvhlx9UyoVKxjm-e5aC-j1Iduc5L_irTGj6kg0fWz-BgXe3YSxzP6a1G-pTanr9d2vWU9dUSrph0LitkJZuIKPXS0vLwOGJ1k_zYSNLN4fnk1qZ6hE0pGPtloAopJVpsGVCYzphaXTEGrLpTEaROhaei4I2ax4XPxJBKD0tpZrqHuY529OH-HnZaLZag-nABbj23nnfc0dOaiRXuf5gBzxud-SiXXd94NaUwtZOrdP0D0f6nqDwgeaJgE-ILbxxSa0NJhs44PiA1viNmVXMUiXKBA8LJvuoOxjNA18aqJa0xRqon_ag3tfSWfy1RyBPe1qFdCwUxkLpe-U4jITAZJ2vBdCwcXQgwg9TLLzaZY3dafF_JhDLy8l0KkO0jXCL08kr6W8wA_crILAAHZ3GT2rk0gm59c-HqWZcjJ0qVJJNy2Qe3hd6Xz_vPEZm7SVlZRzcyU6KYJFeSd3I4ljyTe4T29ILCzog7IKHo5YozmEPw_kjbD4pAK2FOa74cqk7QGudoISyzPRogrhFx-LjQ-b-wQBfTigBH6Ow73emQE_fga3EctbZrzhvgUOtrVYqCk7prBxy9KRDhU3v2zNr_PQAr1Kc9GJlmC4fN3afMXmsapr0wCH5OfNc4FS9LAf0DFxGMyqUrniItWaGFia1AeWcLCX0PhM8R47YbEs8cMetfeTO-Yhm80TVN9dfwXdAjrqdGQKRs35RvhITu4LDHi451mloOz1OLBAeqfkgI7j9Tu-W9RSj1MgalvgyuBRU9aSIo4H59SdIkyFcxXkvP4Jb-hVAV_VTS3LdYAE-QODRBpICWbNazTO4LNbqkukIsIRF4Jry0m-JwjwVoiyhWJXhjIhePmPx59rhPUThUtOH1ejn-mIncft1djrJ0o3FPKHeVX5ruyY6Zfz6LWoMNo5_ZqXM6Wu4VvMS5N4Uac1pGPMPe4FCMQwzY1krS2SRn-QM29-Le_ZKybj4rsFMcRKGcADY6RoW0o449V0PRrU3skHtiEoT8jY-Vt89gHKAa_cIUUN3-NfNiHL9umozvFYCqTYIookkCnYIt8FgAhaVwdOyQXeXXP24kS8Md0ACvckdpEFpFNqDrvcgLoorySmy31FxKz7mJJoEkkpj7ZHbnU4oOYRgULZOA10OvrLyFez6j9SE3T99hJntnWvMSv_4vhnoGxdZuoyghJvlAUJ9vC_gdWMYUetANQ-rw75uT6b1rGTANgdHRqbCmlrQkcwMf8mar0zTx-YRcFqxg0Ts7SVNA9Q3KcEnw_x92F9RDlODJh8TyACTcMWHtmUsG4RxvmyqmNucZ0FlsJnX28uColvFYaVM2WAIEYvdiFJ3njrKzZUCrx27LKPFLGskknqn0im6YyOOwC1CVB-sn9dQAuEkQu1sHCpVoCAZLJAmEq0TKCZ9Uf19zaeJlbYTQGbsQjhGFaeBqsjpccUW12ctN1WRTViNNm8AmwpFkHzxz-A2fRIOCekEXymBD_x1xnAoGRrz2l2PewAKZNEZ_d_Km1aNHe3XnFYBXAxTsRSht02DdR9Vl3Oq8YJ-oPG9IAD0o2RZ4L3XvH86TezoHiV4-ZzdGbk7fFJbI8yl2QKS7Wl-k37R8DHlqjPZ3Cnwe7T1akyK2clgXAjkHIslcqHd4_mjXUrlbXsNp64eouMo6vyGLDimfh0NCyMGoy56mXsa-FXjUl1nsIo2r9tG432uU0hqSh5ASGMcX2X8qmcDcdC-mF6A1mI-CSPYHi7DbSVBE93aZ0dFgUNsz0GHpFS-v5qHNi_AzOWN0FTqX5KyAhoa4yk0fLErrAJ2WYqUQ_6yTqGV-H8-0u821Q2IfmDfUYUMlOTZDkeSUKS0dxMUKOHdIYeilWaqBytKpfVLmsaf_G81uNY9PNmLc7lKkHsDXBV4iA0xGzIk5rtx980bnbenWcfBydvw9e20n9Ekhpm5Usj9vdDdgWF3L5Hr5mgU2plGYNStmO3-gURdWO2mjlYAwdqvn86JIJU_3C26EWKxhWrl5KtrFXcIChc9WDeaZRzPSKxMGllCsN_j9ZsDbX2ZWVODmGC_-b5pLo-Vbe8Fz7NS6DsAA0u6cE2mutHH74vVVaodGc37ynBIBtg6Vs-INkP0wdzN7oWqxetw7vnPXN0iPVUX6NeYvQf1jl4KI6xc-R5G2CNYSuqDi0MuUz5wXkBS53i5LANC8XGl2aDKOZlMeB2cdKnWeVvMtZq3iCoFboXfg-elhrBb1qgXYqIrPTJEVLoY9SvU0WKsdsiPbTc4CecwViV2A20t4C1xgKrQt5eTBkoy8QU45ZPOkA36PCzPur8WFGQACPXcsKSVi4hKVCuulPH6FMrZLjnwbk9MtilVJVObHyeQiq7pKbUBRt9L3liBsys4Y9kaaxM0wCKfy_ThMXFzqA_VqeoTc6Er_lnG6YcsyUfc3NA-HiHOYyaItMH8coigUP6TzUKfc_WACpgywchZCyHjk6kmevk9K965dAxsYBNpL1PfoXw10eNeeBGnqa9Y0teacF8WXNpvrBYUdXvvDK4lMQEW9dPcZHJ9OEWRdSBDH4ndN1n0p1DAWZ5xqJmjrog-IpmwX_N4ZJ9adW52RuzcU190butvJhXvJqKkfj1S6EuBcWQiHcqnAvFm-V9CjTdOuSLfIds8uz8G2JmV7ka3WA5nuwdEVxfDqE63J-9cza7Btv7x782UK7F-PVs4vepTTLstfUtqIbtSWn5zvN85f01z-QeyI2uyjIX4SSNDzicCrahhGWYLunUPJKX4nfTmdEIdEy3llKpa1ix_47H7NFpEy6cM_hslWcsxXBJd4O9yqK9PdMlXCXQ-EpzNw1zRnZh3uJOBlNLkfKgMHMRJxndpdgclF7GoiGERdGlaD33Wc58wjidMDKmxxPdY0xi3_u12meImB-kzZiWvS4YXEmzF-41jWPwIeHnZchhj4; .AspNetCore.Identity.Application=CfDJ8NooojJvfs9Jvs5T1ZwLTas2EbFXRsGLa3cu25avsROF3m7CvgoKGS8J_pXR6MBMI_WD12lfDuDT7VqeZgBerCHdd_ZLl7asWcA1CW3qhWu2766TzQq1c8pnMaHTl9y8le9zVdgDa4D7mMZH64Hhosnl3fPHbgzHqXRhNwS6MefpzhXl87ZcqiBRpiJYnn-pcoyv6Qz18z9viEZ95Qz3djJkLdllIbfNM7-wl_oZNEQP4QTZ68m3SUkAb5801gJT5tnKN4c8xszPvNfU4HZoBkF2d_3C5xwL4paBAdjcRK0VXyP1lc3e3RZ0i3Vi_v_RN__ZKpaIWbNk42Qm8sj1ZwwfIO5NrBTjyUDnf5pliMD5xCW6k_fZMwwmY5oW1_qRLsU7rTrpE0eJd3r5KXmwEuLkvQpv08IG9qj8EIv8HhN1jld63RR3VcCPycUn1fhxvEvuiK3FPE7XSbnbJNQLqcimCPE4CcpVTDbsitJ9dmrrJ12mm6ywsakcooyIR0pDm02ELFsmpt7WHL4hkKt0EQ_70EKwo73UTZ2um-A9bSoZYReUZ_17ddodH-FRatz1VDaXyTS8Hxo95Dj-N-Rusrh7rERcpLvpRSHZIQz8v6CtLaEdIPsLTqVngNkOg9rMtu4EOorDQjDGOWshjEPkYm0b-UhGFnA6P8guq7bazkzLQSMGknYzDCmhXezlUND-kstnfdo87uTZdZOaatXO0QM7ExIIShRDiAxuprNQV4ztcj5p8PFVjzWbfPGrv8j6EhE_3QVLUhiDwtz7L5Ovt9PwWVL98YhYuwwipjHM74dDPU6vgY66TMjHB2RcfoFc3UXoeT6P8bjj_dkvFZ2zuzQc3_NMIdNQPNb-lQznW_ZbbW2JVtwoe7grL_vj_NRf7ZjPfXp812N-DTAbYV-0AYgsE9h2BQyKyHBMdSoapzubaqu_DH_0ItanZgGpTe0N-8J2saGb16mDgVUtQNpwkhwDqCWuiyJbVuVBWF6MCH4YUC6lA3vEpQfBXeIuU9JFeibsonQVw9Fq5LhK93OEre3yKG568L7dUCAyXoABJmnV2xakns-W7BhJ_9CwyK2q1DiQlmWkro-6uHqs31eZgxasbj4V3X43C4BB31rtrju42zjJWOGPz4RjGZ-3IMW_ATxapBAF-VXxvQ1p-V4-n7hkTXRer0NozPq3_UaHCIVt5jE47EsbjCssTTr1nJpR856JmATvhWPIZV3upSnRYUVFagfgAXjzerIhJQ1fk65f5hYcRyQzH-mAm5jPYs6SxFdGTVaFtkqDF15Glmx95tVStY4ObzHJNNP3e39ksUn2d0q_1V3dB6o0Dr-38uABB4xFO-XyTZOFCiEQv2VoNRnLFPAjI-GK1uEuJ6q3OgxI6fcAcX5w06U741pz5WJzE1qk2IyJmtr6X4nkd01SQlcLeBcesHzdwkF5fXcn3w9tjwyjYMPH-MusUP-ys0e14obrWf63AC6SDDtxFqJiKbEzzrMTg2RvW5d7Q92kguDhfR2ZUxTzxPc-uZHe36Kd9LJDAqgjv4UJll6glTvMracEA5NBGCL0VLx7elFq-6NXlAsVdCyoPfo84pyaR849DcLIblHS69DQPgLY3F84TyzqG3w5FrLBG4TMbOTQVGZH4Pp6kepVWF6jZFoZOMWteJ4X519BQc2oMm96-Yoh1T7kQiZ9Y1k-PKSBgocjbU5GJ4GBkTE0ZLUXsP8GKlmsdFdrfv2-UjnfF9akfEf5ZP3cDR02b0DX1WfUE3eOSATnssJFyVZTT-3BQVR855mroXLxZQNqC9uw0zwNDU5me51x4ze0dzhceE4mZxrqU1V672IcBevPoh6sbsbO_I3xhjF8FFFqffXPolL2me64se73K3Bw7DVKCvirmnMS10RRlE7hddiDjavSipAWPpJ5qkfAFZUXQck_hloGM_cZ3PN0uHRqID4Tazc8RgeEgeg09h3agjL83F8n2j4d7HLJPE5aGJ9i3yuEgyN0IayGIqJiq47NItB-U1fg88OHNnSEFFjz245unpe3cNfWQBOYGZpTIlx2vjrcb3SM6V2kVxlidh8NhqjwEWBm72VkxaNlG2UnkzbpHRv-WS--5rrZOaqcqgOgdhtQ6jGUmQcJMB6n-3kBP_FaYDHOGIWkzMZkpVnYQHnYzvi08XJP1OEJCO3k6nZRMbTmNJaMLW8sf-AEEt3pY92jDliTEedo2htUaTS-R81ws5KpQI87R4cqERezICg9dAEi1gr4v1QtIFYeFDm5hzYWrESmSenSCPm6LTN8NJwllEGf502ckgYVYycw4c3wHXhux3KncAy_Dw4DMVHu0cuiajhpIzuykY_Z8mDcgeuWZoXUcKt6wA_3_6S0LEfZE5MM4CU9qNOzUMZJOpqc_bwjmhHhqcRIeTH5TH320JEL_RhB1RdZMFR_Ci_3fqb86JULpDNQTwQSdzcMf38kZqhoT3pWwbSKLOah_Kb6YDbRZVAYFi_oEnU4FYGBqYYllFL-59_A3ZzJp5Zg_Y8lln14ZJllqsYviIycHzkrwAsRBzNVuBlrmHOa1DdlEeGT5nl0G_mqBVRbbGfOdZYjmTaL98eGx0odM3ruBxrbSJ3v2-vL0buDJw8oIQwNHpzDChAzwa2-xaAdd8goWyTqEegX828zhDjPND3IMWl_KixEjP_dGcT7J6uaK4dQVN6ssKLQptBDKs6e4MniIHWygKpcKTM6rFIBN1fQPQ0ob5W6LDH_EAVpMXvBe0ea3L3Z6SYsAclDD-CdvuNdyk58Nvhe5oOm0HO8-woLPQL3Df44l_tB2fJVRi3UdiXjhNE305abFf9HQCL79R68sRXb-7xpK-eJYwCz7FHu2qwYRjfdy4kOT8_r044R8OJ4xl4Apcv7syDcdYTUEYYdfdF88Ox-1n_N8l0vsC5Ibm2-4Xw6glm-boTEhQP858DIK5AKgIFLXQ9is_sjVgP8Jf2SfO0o_DxxNNNCYm-iRhK_SwYeUWc8GptZH6tYky66nGajXs-qroLkY0rzrPU5ioyH6XyR1i5jjtXejWycVYCMZceB3kxRmkffCl6pYw-0oTi5kJn8hzg1Jc3qwNOqkP7x25w6bqUsqNAjm7oqczqAkIfGeoEAfowF5ZJVGHcRhh16ofqNUnzKsGOKvY8uDViDBwxoMBozHlu3ynMh2lt6WVRe0DeetnHi0jqBfEWrdbpa8IabiGcoV3VkW0xdxRwucyvRIYWEYarlWM0i4zRPh5Me0Jm_rgQV8jWFls3gsMf7QPzziMc5s46MJ2G3GLW-Y2f_i8Fb9hPGPSyzt0adPQ0usYyYZVIVx2Mv5IPRVxRN85E1kQAkEbNjl0sdWmApLv6y2I4aGvW3CaDynEdswzzjfkg7q1yhYdEAyYgYq-s0oxfGv77_bv3TK4VBLLOICBO02KwZ3CZbtoTMZK4rDiO5N7DLVDJehNDh3U4n0ZuO3y5Qp84XexuTlAtRWOdooxAkcr2Ztlsx1LKW2rH1L_vduGNWdkFQuU8rE6fM6Ac3_Gjqpi1VXhDcg6CE7VJvtqFtBuCIKGO4brJKa6_LQerT_luGMOmT1IVhv0Fac3pnIgkFyD_XtxRyGxo; .AspNetCore.Antiforgery.VasT3a6ESD8=CfDJ8NooojJvfs9Jvs5T1ZwLTask-CL5ANYSH4ere0_kVBtUXd2cfZVQg9ouWM20BQjXC4dofM-jXxQAa6PIIrZU0K5r8VXz284qsfuoIO0kYhK_ud7bM1S7--tWFNYIn9K9db7mtGz94UzkBB_-vjj2efQ; csrfToken=CfDJ8NooojJvfs9Jvs5T1ZwLTatdw_5YW4Mze8EUK7EQLJJOSYA2CUrpMu7ECClXhWG3WqXMZh9I2bEEit759CorGO9wMO8q8ZoArcOiCOpULVSMgb1qtX31h29CAjbfCs-c_1qYhHhlAP490fI7GHgZd-HSQr-kPR1XBOtIFHFvTPuVJc0gKYS2Bm1MoCI2axALsw",
+    "Origin": "https://localhost:7168",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "Content-Length": "67",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "{\n  \u0022username\u0022: \u0022\u0022,\n  \u0022registrantName\u0022: \u0022string\u0022,\n  \u0022userId\u0022: 123\n}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:29},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest1221\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 28,
+  "Timestamp": "2025-08-05T06:31:49.2798797Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:31:58 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\'
+[09:31:58 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\'
+    ORDER BY (SELECT 1)
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:31:58 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Content-Type": "application/json",
+    "Cookie": "bot.cookie=CfDJ8NooojJvfs9Jvs5T1ZwLTat84uQg8eLa4%2FlRMHBRhyHnR8T7Xm8CABoUi%2Fso6YmZEXoUMgzX6cc0nYReUksgBTTyiTh5LPqIDd5kpU4VPMiOyMWVK4jTSD%2BwUqpUnWYYw99z5guNe98PpgatuvQIc5vFxLsapPp%2FH%2FeNowdGSkqC; username=ilia.chakarov; .AspNetCore.Cookies=CfDJ8NooojJvfs9Jvs5T1ZwLTauQYXuy--gH61xSUPR72Q5K4zoETLArxcxL-9-NcL8cpKMwroZFJJLrOTLOaHQbumNF3frMUqno8RdsPbjR50_vEFuE3vnBQTx9yxYpB_dnU22XXoXwG-udv9vGL7eq7X1OOzueUH0wZTKvYA3BBKBhmzcuhZ7G7VBxBS--vNqZy2BbPUMj_Gv0NzRDngR-3yqI7FThN54DoUtAKeuUyxiVFxP54s5hcgbZSGnPBzynZu9qCux2CkgGuec_bjnUtXvnSevzvhlx9UyoVKxjm-e5aC-j1Iduc5L_irTGj6kg0fWz-BgXe3YSxzP6a1G-pTanr9d2vWU9dUSrph0LitkJZuIKPXS0vLwOGJ1k_zYSNLN4fnk1qZ6hE0pGPtloAopJVpsGVCYzphaXTEGrLpTEaROhaei4I2ax4XPxJBKD0tpZrqHuY529OH-HnZaLZag-nABbj23nnfc0dOaiRXuf5gBzxud-SiXXd94NaUwtZOrdP0D0f6nqDwgeaJgE-ILbxxSa0NJhs44PiA1viNmVXMUiXKBA8LJvuoOxjNA18aqJa0xRqon_ag3tfSWfy1RyBPe1qFdCwUxkLpe-U4jITAZJ2vBdCwcXQgwg9TLLzaZY3dafF_JhDLy8l0KkO0jXCL08kr6W8wA_crILAAHZ3GT2rk0gm59c-HqWZcjJ0qVJJNy2Qe3hd6Xz_vPEZm7SVlZRzcyU6KYJFeSd3I4ljyTe4T29ILCzog7IKHo5YozmEPw_kjbD4pAK2FOa74cqk7QGudoISyzPRogrhFx-LjQ-b-wQBfTigBH6Ow73emQE_fga3EctbZrzhvgUOtrVYqCk7prBxy9KRDhU3v2zNr_PQAr1Kc9GJlmC4fN3afMXmsapr0wCH5OfNc4FS9LAf0DFxGMyqUrniItWaGFia1AeWcLCX0PhM8R47YbEs8cMetfeTO-Yhm80TVN9dfwXdAjrqdGQKRs35RvhITu4LDHi451mloOz1OLBAeqfkgI7j9Tu-W9RSj1MgalvgyuBRU9aSIo4H59SdIkyFcxXkvP4Jb-hVAV_VTS3LdYAE-QODRBpICWbNazTO4LNbqkukIsIRF4Jry0m-JwjwVoiyhWJXhjIhePmPx59rhPUThUtOH1ejn-mIncft1djrJ0o3FPKHeVX5ruyY6Zfz6LWoMNo5_ZqXM6Wu4VvMS5N4Uac1pGPMPe4FCMQwzY1krS2SRn-QM29-Le_ZKybj4rsFMcRKGcADY6RoW0o449V0PRrU3skHtiEoT8jY-Vt89gHKAa_cIUUN3-NfNiHL9umozvFYCqTYIookkCnYIt8FgAhaVwdOyQXeXXP24kS8Md0ACvckdpEFpFNqDrvcgLoorySmy31FxKz7mJJoEkkpj7ZHbnU4oOYRgULZOA10OvrLyFez6j9SE3T99hJntnWvMSv_4vhnoGxdZuoyghJvlAUJ9vC_gdWMYUetANQ-rw75uT6b1rGTANgdHRqbCmlrQkcwMf8mar0zTx-YRcFqxg0Ts7SVNA9Q3KcEnw_x92F9RDlODJh8TyACTcMWHtmUsG4RxvmyqmNucZ0FlsJnX28uColvFYaVM2WAIEYvdiFJ3njrKzZUCrx27LKPFLGskknqn0im6YyOOwC1CVB-sn9dQAuEkQu1sHCpVoCAZLJAmEq0TKCZ9Uf19zaeJlbYTQGbsQjhGFaeBqsjpccUW12ctN1WRTViNNm8AmwpFkHzxz-A2fRIOCekEXymBD_x1xnAoGRrz2l2PewAKZNEZ_d_Km1aNHe3XnFYBXAxTsRSht02DdR9Vl3Oq8YJ-oPG9IAD0o2RZ4L3XvH86TezoHiV4-ZzdGbk7fFJbI8yl2QKS7Wl-k37R8DHlqjPZ3Cnwe7T1akyK2clgXAjkHIslcqHd4_mjXUrlbXsNp64eouMo6vyGLDimfh0NCyMGoy56mXsa-FXjUl1nsIo2r9tG432uU0hqSh5ASGMcX2X8qmcDcdC-mF6A1mI-CSPYHi7DbSVBE93aZ0dFgUNsz0GHpFS-v5qHNi_AzOWN0FTqX5KyAhoa4yk0fLErrAJ2WYqUQ_6yTqGV-H8-0u821Q2IfmDfUYUMlOTZDkeSUKS0dxMUKOHdIYeilWaqBytKpfVLmsaf_G81uNY9PNmLc7lKkHsDXBV4iA0xGzIk5rtx980bnbenWcfBydvw9e20n9Ekhpm5Usj9vdDdgWF3L5Hr5mgU2plGYNStmO3-gURdWO2mjlYAwdqvn86JIJU_3C26EWKxhWrl5KtrFXcIChc9WDeaZRzPSKxMGllCsN_j9ZsDbX2ZWVODmGC_-b5pLo-Vbe8Fz7NS6DsAA0u6cE2mutHH74vVVaodGc37ynBIBtg6Vs-INkP0wdzN7oWqxetw7vnPXN0iPVUX6NeYvQf1jl4KI6xc-R5G2CNYSuqDi0MuUz5wXkBS53i5LANC8XGl2aDKOZlMeB2cdKnWeVvMtZq3iCoFboXfg-elhrBb1qgXYqIrPTJEVLoY9SvU0WKsdsiPbTc4CecwViV2A20t4C1xgKrQt5eTBkoy8QU45ZPOkA36PCzPur8WFGQACPXcsKSVi4hKVCuulPH6FMrZLjnwbk9MtilVJVObHyeQiq7pKbUBRt9L3liBsys4Y9kaaxM0wCKfy_ThMXFzqA_VqeoTc6Er_lnG6YcsyUfc3NA-HiHOYyaItMH8coigUP6TzUKfc_WACpgywchZCyHjk6kmevk9K965dAxsYBNpL1PfoXw10eNeeBGnqa9Y0teacF8WXNpvrBYUdXvvDK4lMQEW9dPcZHJ9OEWRdSBDH4ndN1n0p1DAWZ5xqJmjrog-IpmwX_N4ZJ9adW52RuzcU190butvJhXvJqKkfj1S6EuBcWQiHcqnAvFm-V9CjTdOuSLfIds8uz8G2JmV7ka3WA5nuwdEVxfDqE63J-9cza7Btv7x782UK7F-PVs4vepTTLstfUtqIbtSWn5zvN85f01z-QeyI2uyjIX4SSNDzicCrahhGWYLunUPJKX4nfTmdEIdEy3llKpa1ix_47H7NFpEy6cM_hslWcsxXBJd4O9yqK9PdMlXCXQ-EpzNw1zRnZh3uJOBlNLkfKgMHMRJxndpdgclF7GoiGERdGlaD33Wc58wjidMDKmxxPdY0xi3_u12meImB-kzZiWvS4YXEmzF-41jWPwIeHnZchhj4; .AspNetCore.Identity.Application=CfDJ8NooojJvfs9Jvs5T1ZwLTas2EbFXRsGLa3cu25avsROF3m7CvgoKGS8J_pXR6MBMI_WD12lfDuDT7VqeZgBerCHdd_ZLl7asWcA1CW3qhWu2766TzQq1c8pnMaHTl9y8le9zVdgDa4D7mMZH64Hhosnl3fPHbgzHqXRhNwS6MefpzhXl87ZcqiBRpiJYnn-pcoyv6Qz18z9viEZ95Qz3djJkLdllIbfNM7-wl_oZNEQP4QTZ68m3SUkAb5801gJT5tnKN4c8xszPvNfU4HZoBkF2d_3C5xwL4paBAdjcRK0VXyP1lc3e3RZ0i3Vi_v_RN__ZKpaIWbNk42Qm8sj1ZwwfIO5NrBTjyUDnf5pliMD5xCW6k_fZMwwmY5oW1_qRLsU7rTrpE0eJd3r5KXmwEuLkvQpv08IG9qj8EIv8HhN1jld63RR3VcCPycUn1fhxvEvuiK3FPE7XSbnbJNQLqcimCPE4CcpVTDbsitJ9dmrrJ12mm6ywsakcooyIR0pDm02ELFsmpt7WHL4hkKt0EQ_70EKwo73UTZ2um-A9bSoZYReUZ_17ddodH-FRatz1VDaXyTS8Hxo95Dj-N-Rusrh7rERcpLvpRSHZIQz8v6CtLaEdIPsLTqVngNkOg9rMtu4EOorDQjDGOWshjEPkYm0b-UhGFnA6P8guq7bazkzLQSMGknYzDCmhXezlUND-kstnfdo87uTZdZOaatXO0QM7ExIIShRDiAxuprNQV4ztcj5p8PFVjzWbfPGrv8j6EhE_3QVLUhiDwtz7L5Ovt9PwWVL98YhYuwwipjHM74dDPU6vgY66TMjHB2RcfoFc3UXoeT6P8bjj_dkvFZ2zuzQc3_NMIdNQPNb-lQznW_ZbbW2JVtwoe7grL_vj_NRf7ZjPfXp812N-DTAbYV-0AYgsE9h2BQyKyHBMdSoapzubaqu_DH_0ItanZgGpTe0N-8J2saGb16mDgVUtQNpwkhwDqCWuiyJbVuVBWF6MCH4YUC6lA3vEpQfBXeIuU9JFeibsonQVw9Fq5LhK93OEre3yKG568L7dUCAyXoABJmnV2xakns-W7BhJ_9CwyK2q1DiQlmWkro-6uHqs31eZgxasbj4V3X43C4BB31rtrju42zjJWOGPz4RjGZ-3IMW_ATxapBAF-VXxvQ1p-V4-n7hkTXRer0NozPq3_UaHCIVt5jE47EsbjCssTTr1nJpR856JmATvhWPIZV3upSnRYUVFagfgAXjzerIhJQ1fk65f5hYcRyQzH-mAm5jPYs6SxFdGTVaFtkqDF15Glmx95tVStY4ObzHJNNP3e39ksUn2d0q_1V3dB6o0Dr-38uABB4xFO-XyTZOFCiEQv2VoNRnLFPAjI-GK1uEuJ6q3OgxI6fcAcX5w06U741pz5WJzE1qk2IyJmtr6X4nkd01SQlcLeBcesHzdwkF5fXcn3w9tjwyjYMPH-MusUP-ys0e14obrWf63AC6SDDtxFqJiKbEzzrMTg2RvW5d7Q92kguDhfR2ZUxTzxPc-uZHe36Kd9LJDAqgjv4UJll6glTvMracEA5NBGCL0VLx7elFq-6NXlAsVdCyoPfo84pyaR849DcLIblHS69DQPgLY3F84TyzqG3w5FrLBG4TMbOTQVGZH4Pp6kepVWF6jZFoZOMWteJ4X519BQc2oMm96-Yoh1T7kQiZ9Y1k-PKSBgocjbU5GJ4GBkTE0ZLUXsP8GKlmsdFdrfv2-UjnfF9akfEf5ZP3cDR02b0DX1WfUE3eOSATnssJFyVZTT-3BQVR855mroXLxZQNqC9uw0zwNDU5me51x4ze0dzhceE4mZxrqU1V672IcBevPoh6sbsbO_I3xhjF8FFFqffXPolL2me64se73K3Bw7DVKCvirmnMS10RRlE7hddiDjavSipAWPpJ5qkfAFZUXQck_hloGM_cZ3PN0uHRqID4Tazc8RgeEgeg09h3agjL83F8n2j4d7HLJPE5aGJ9i3yuEgyN0IayGIqJiq47NItB-U1fg88OHNnSEFFjz245unpe3cNfWQBOYGZpTIlx2vjrcb3SM6V2kVxlidh8NhqjwEWBm72VkxaNlG2UnkzbpHRv-WS--5rrZOaqcqgOgdhtQ6jGUmQcJMB6n-3kBP_FaYDHOGIWkzMZkpVnYQHnYzvi08XJP1OEJCO3k6nZRMbTmNJaMLW8sf-AEEt3pY92jDliTEedo2htUaTS-R81ws5KpQI87R4cqERezICg9dAEi1gr4v1QtIFYeFDm5hzYWrESmSenSCPm6LTN8NJwllEGf502ckgYVYycw4c3wHXhux3KncAy_Dw4DMVHu0cuiajhpIzuykY_Z8mDcgeuWZoXUcKt6wA_3_6S0LEfZE5MM4CU9qNOzUMZJOpqc_bwjmhHhqcRIeTH5TH320JEL_RhB1RdZMFR_Ci_3fqb86JULpDNQTwQSdzcMf38kZqhoT3pWwbSKLOah_Kb6YDbRZVAYFi_oEnU4FYGBqYYllFL-59_A3ZzJp5Zg_Y8lln14ZJllqsYviIycHzkrwAsRBzNVuBlrmHOa1DdlEeGT5nl0G_mqBVRbbGfOdZYjmTaL98eGx0odM3ruBxrbSJ3v2-vL0buDJw8oIQwNHpzDChAzwa2-xaAdd8goWyTqEegX828zhDjPND3IMWl_KixEjP_dGcT7J6uaK4dQVN6ssKLQptBDKs6e4MniIHWygKpcKTM6rFIBN1fQPQ0ob5W6LDH_EAVpMXvBe0ea3L3Z6SYsAclDD-CdvuNdyk58Nvhe5oOm0HO8-woLPQL3Df44l_tB2fJVRi3UdiXjhNE305abFf9HQCL79R68sRXb-7xpK-eJYwCz7FHu2qwYRjfdy4kOT8_r044R8OJ4xl4Apcv7syDcdYTUEYYdfdF88Ox-1n_N8l0vsC5Ibm2-4Xw6glm-boTEhQP858DIK5AKgIFLXQ9is_sjVgP8Jf2SfO0o_DxxNNNCYm-iRhK_SwYeUWc8GptZH6tYky66nGajXs-qroLkY0rzrPU5ioyH6XyR1i5jjtXejWycVYCMZceB3kxRmkffCl6pYw-0oTi5kJn8hzg1Jc3qwNOqkP7x25w6bqUsqNAjm7oqczqAkIfGeoEAfowF5ZJVGHcRhh16ofqNUnzKsGOKvY8uDViDBwxoMBozHlu3ynMh2lt6WVRe0DeetnHi0jqBfEWrdbpa8IabiGcoV3VkW0xdxRwucyvRIYWEYarlWM0i4zRPh5Me0Jm_rgQV8jWFls3gsMf7QPzziMc5s46MJ2G3GLW-Y2f_i8Fb9hPGPSyzt0adPQ0usYyYZVIVx2Mv5IPRVxRN85E1kQAkEbNjl0sdWmApLv6y2I4aGvW3CaDynEdswzzjfkg7q1yhYdEAyYgYq-s0oxfGv77_bv3TK4VBLLOICBO02KwZ3CZbtoTMZK4rDiO5N7DLVDJehNDh3U4n0ZuO3y5Qp84XexuTlAtRWOdooxAkcr2Ztlsx1LKW2rH1L_vduGNWdkFQuU8rE6fM6Ac3_Gjqpi1VXhDcg6CE7VJvtqFtBuCIKGO4brJKa6_LQerT_luGMOmT1IVhv0Fac3pnIgkFyD_XtxRyGxo; .AspNetCore.Antiforgery.VasT3a6ESD8=CfDJ8NooojJvfs9Jvs5T1ZwLTask-CL5ANYSH4ere0_kVBtUXd2cfZVQg9ouWM20BQjXC4dofM-jXxQAa6PIIrZU0K5r8VXz284qsfuoIO0kYhK_ud7bM1S7--tWFNYIn9K9db7mtGz94UzkBB_-vjj2efQ; csrfToken=CfDJ8NooojJvfs9Jvs5T1ZwLTatdw_5YW4Mze8EUK7EQLJJOSYA2CUrpMu7ECClXhWG3WqXMZh9I2bEEit759CorGO9wMO8q8ZoArcOiCOpULVSMgb1qtX31h29CAjbfCs-c_1qYhHhlAP490fI7GHgZd-HSQr-kPR1XBOtIFHFvTPuVJc0gKYS2Bm1MoCI2axALsw",
+    "Origin": "https://localhost:7168",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "Content-Length": "61",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "{\n  \u0022username\u0022: \u0022\u0022,\n  \u0022registrantName\u0022: \u0022\u0022,\n  \u0022userId\u0022: 123\n}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:29},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest1221\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 10,
+  "Timestamp": "2025-08-05T06:31:58.103472Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:32:05 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\'
+[09:32:05 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\'
+    ORDER BY (SELECT 1)
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:32:05 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Content-Type": "application/json",
+    "Cookie": "bot.cookie=CfDJ8NooojJvfs9Jvs5T1ZwLTat84uQg8eLa4%2FlRMHBRhyHnR8T7Xm8CABoUi%2Fso6YmZEXoUMgzX6cc0nYReUksgBTTyiTh5LPqIDd5kpU4VPMiOyMWVK4jTSD%2BwUqpUnWYYw99z5guNe98PpgatuvQIc5vFxLsapPp%2FH%2FeNowdGSkqC; username=ilia.chakarov; .AspNetCore.Cookies=CfDJ8NooojJvfs9Jvs5T1ZwLTauQYXuy--gH61xSUPR72Q5K4zoETLArxcxL-9-NcL8cpKMwroZFJJLrOTLOaHQbumNF3frMUqno8RdsPbjR50_vEFuE3vnBQTx9yxYpB_dnU22XXoXwG-udv9vGL7eq7X1OOzueUH0wZTKvYA3BBKBhmzcuhZ7G7VBxBS--vNqZy2BbPUMj_Gv0NzRDngR-3yqI7FThN54DoUtAKeuUyxiVFxP54s5hcgbZSGnPBzynZu9qCux2CkgGuec_bjnUtXvnSevzvhlx9UyoVKxjm-e5aC-j1Iduc5L_irTGj6kg0fWz-BgXe3YSxzP6a1G-pTanr9d2vWU9dUSrph0LitkJZuIKPXS0vLwOGJ1k_zYSNLN4fnk1qZ6hE0pGPtloAopJVpsGVCYzphaXTEGrLpTEaROhaei4I2ax4XPxJBKD0tpZrqHuY529OH-HnZaLZag-nABbj23nnfc0dOaiRXuf5gBzxud-SiXXd94NaUwtZOrdP0D0f6nqDwgeaJgE-ILbxxSa0NJhs44PiA1viNmVXMUiXKBA8LJvuoOxjNA18aqJa0xRqon_ag3tfSWfy1RyBPe1qFdCwUxkLpe-U4jITAZJ2vBdCwcXQgwg9TLLzaZY3dafF_JhDLy8l0KkO0jXCL08kr6W8wA_crILAAHZ3GT2rk0gm59c-HqWZcjJ0qVJJNy2Qe3hd6Xz_vPEZm7SVlZRzcyU6KYJFeSd3I4ljyTe4T29ILCzog7IKHo5YozmEPw_kjbD4pAK2FOa74cqk7QGudoISyzPRogrhFx-LjQ-b-wQBfTigBH6Ow73emQE_fga3EctbZrzhvgUOtrVYqCk7prBxy9KRDhU3v2zNr_PQAr1Kc9GJlmC4fN3afMXmsapr0wCH5OfNc4FS9LAf0DFxGMyqUrniItWaGFia1AeWcLCX0PhM8R47YbEs8cMetfeTO-Yhm80TVN9dfwXdAjrqdGQKRs35RvhITu4LDHi451mloOz1OLBAeqfkgI7j9Tu-W9RSj1MgalvgyuBRU9aSIo4H59SdIkyFcxXkvP4Jb-hVAV_VTS3LdYAE-QODRBpICWbNazTO4LNbqkukIsIRF4Jry0m-JwjwVoiyhWJXhjIhePmPx59rhPUThUtOH1ejn-mIncft1djrJ0o3FPKHeVX5ruyY6Zfz6LWoMNo5_ZqXM6Wu4VvMS5N4Uac1pGPMPe4FCMQwzY1krS2SRn-QM29-Le_ZKybj4rsFMcRKGcADY6RoW0o449V0PRrU3skHtiEoT8jY-Vt89gHKAa_cIUUN3-NfNiHL9umozvFYCqTYIookkCnYIt8FgAhaVwdOyQXeXXP24kS8Md0ACvckdpEFpFNqDrvcgLoorySmy31FxKz7mJJoEkkpj7ZHbnU4oOYRgULZOA10OvrLyFez6j9SE3T99hJntnWvMSv_4vhnoGxdZuoyghJvlAUJ9vC_gdWMYUetANQ-rw75uT6b1rGTANgdHRqbCmlrQkcwMf8mar0zTx-YRcFqxg0Ts7SVNA9Q3KcEnw_x92F9RDlODJh8TyACTcMWHtmUsG4RxvmyqmNucZ0FlsJnX28uColvFYaVM2WAIEYvdiFJ3njrKzZUCrx27LKPFLGskknqn0im6YyOOwC1CVB-sn9dQAuEkQu1sHCpVoCAZLJAmEq0TKCZ9Uf19zaeJlbYTQGbsQjhGFaeBqsjpccUW12ctN1WRTViNNm8AmwpFkHzxz-A2fRIOCekEXymBD_x1xnAoGRrz2l2PewAKZNEZ_d_Km1aNHe3XnFYBXAxTsRSht02DdR9Vl3Oq8YJ-oPG9IAD0o2RZ4L3XvH86TezoHiV4-ZzdGbk7fFJbI8yl2QKS7Wl-k37R8DHlqjPZ3Cnwe7T1akyK2clgXAjkHIslcqHd4_mjXUrlbXsNp64eouMo6vyGLDimfh0NCyMGoy56mXsa-FXjUl1nsIo2r9tG432uU0hqSh5ASGMcX2X8qmcDcdC-mF6A1mI-CSPYHi7DbSVBE93aZ0dFgUNsz0GHpFS-v5qHNi_AzOWN0FTqX5KyAhoa4yk0fLErrAJ2WYqUQ_6yTqGV-H8-0u821Q2IfmDfUYUMlOTZDkeSUKS0dxMUKOHdIYeilWaqBytKpfVLmsaf_G81uNY9PNmLc7lKkHsDXBV4iA0xGzIk5rtx980bnbenWcfBydvw9e20n9Ekhpm5Usj9vdDdgWF3L5Hr5mgU2plGYNStmO3-gURdWO2mjlYAwdqvn86JIJU_3C26EWKxhWrl5KtrFXcIChc9WDeaZRzPSKxMGllCsN_j9ZsDbX2ZWVODmGC_-b5pLo-Vbe8Fz7NS6DsAA0u6cE2mutHH74vVVaodGc37ynBIBtg6Vs-INkP0wdzN7oWqxetw7vnPXN0iPVUX6NeYvQf1jl4KI6xc-R5G2CNYSuqDi0MuUz5wXkBS53i5LANC8XGl2aDKOZlMeB2cdKnWeVvMtZq3iCoFboXfg-elhrBb1qgXYqIrPTJEVLoY9SvU0WKsdsiPbTc4CecwViV2A20t4C1xgKrQt5eTBkoy8QU45ZPOkA36PCzPur8WFGQACPXcsKSVi4hKVCuulPH6FMrZLjnwbk9MtilVJVObHyeQiq7pKbUBRt9L3liBsys4Y9kaaxM0wCKfy_ThMXFzqA_VqeoTc6Er_lnG6YcsyUfc3NA-HiHOYyaItMH8coigUP6TzUKfc_WACpgywchZCyHjk6kmevk9K965dAxsYBNpL1PfoXw10eNeeBGnqa9Y0teacF8WXNpvrBYUdXvvDK4lMQEW9dPcZHJ9OEWRdSBDH4ndN1n0p1DAWZ5xqJmjrog-IpmwX_N4ZJ9adW52RuzcU190butvJhXvJqKkfj1S6EuBcWQiHcqnAvFm-V9CjTdOuSLfIds8uz8G2JmV7ka3WA5nuwdEVxfDqE63J-9cza7Btv7x782UK7F-PVs4vepTTLstfUtqIbtSWn5zvN85f01z-QeyI2uyjIX4SSNDzicCrahhGWYLunUPJKX4nfTmdEIdEy3llKpa1ix_47H7NFpEy6cM_hslWcsxXBJd4O9yqK9PdMlXCXQ-EpzNw1zRnZh3uJOBlNLkfKgMHMRJxndpdgclF7GoiGERdGlaD33Wc58wjidMDKmxxPdY0xi3_u12meImB-kzZiWvS4YXEmzF-41jWPwIeHnZchhj4; .AspNetCore.Identity.Application=CfDJ8NooojJvfs9Jvs5T1ZwLTas2EbFXRsGLa3cu25avsROF3m7CvgoKGS8J_pXR6MBMI_WD12lfDuDT7VqeZgBerCHdd_ZLl7asWcA1CW3qhWu2766TzQq1c8pnMaHTl9y8le9zVdgDa4D7mMZH64Hhosnl3fPHbgzHqXRhNwS6MefpzhXl87ZcqiBRpiJYnn-pcoyv6Qz18z9viEZ95Qz3djJkLdllIbfNM7-wl_oZNEQP4QTZ68m3SUkAb5801gJT5tnKN4c8xszPvNfU4HZoBkF2d_3C5xwL4paBAdjcRK0VXyP1lc3e3RZ0i3Vi_v_RN__ZKpaIWbNk42Qm8sj1ZwwfIO5NrBTjyUDnf5pliMD5xCW6k_fZMwwmY5oW1_qRLsU7rTrpE0eJd3r5KXmwEuLkvQpv08IG9qj8EIv8HhN1jld63RR3VcCPycUn1fhxvEvuiK3FPE7XSbnbJNQLqcimCPE4CcpVTDbsitJ9dmrrJ12mm6ywsakcooyIR0pDm02ELFsmpt7WHL4hkKt0EQ_70EKwo73UTZ2um-A9bSoZYReUZ_17ddodH-FRatz1VDaXyTS8Hxo95Dj-N-Rusrh7rERcpLvpRSHZIQz8v6CtLaEdIPsLTqVngNkOg9rMtu4EOorDQjDGOWshjEPkYm0b-UhGFnA6P8guq7bazkzLQSMGknYzDCmhXezlUND-kstnfdo87uTZdZOaatXO0QM7ExIIShRDiAxuprNQV4ztcj5p8PFVjzWbfPGrv8j6EhE_3QVLUhiDwtz7L5Ovt9PwWVL98YhYuwwipjHM74dDPU6vgY66TMjHB2RcfoFc3UXoeT6P8bjj_dkvFZ2zuzQc3_NMIdNQPNb-lQznW_ZbbW2JVtwoe7grL_vj_NRf7ZjPfXp812N-DTAbYV-0AYgsE9h2BQyKyHBMdSoapzubaqu_DH_0ItanZgGpTe0N-8J2saGb16mDgVUtQNpwkhwDqCWuiyJbVuVBWF6MCH4YUC6lA3vEpQfBXeIuU9JFeibsonQVw9Fq5LhK93OEre3yKG568L7dUCAyXoABJmnV2xakns-W7BhJ_9CwyK2q1DiQlmWkro-6uHqs31eZgxasbj4V3X43C4BB31rtrju42zjJWOGPz4RjGZ-3IMW_ATxapBAF-VXxvQ1p-V4-n7hkTXRer0NozPq3_UaHCIVt5jE47EsbjCssTTr1nJpR856JmATvhWPIZV3upSnRYUVFagfgAXjzerIhJQ1fk65f5hYcRyQzH-mAm5jPYs6SxFdGTVaFtkqDF15Glmx95tVStY4ObzHJNNP3e39ksUn2d0q_1V3dB6o0Dr-38uABB4xFO-XyTZOFCiEQv2VoNRnLFPAjI-GK1uEuJ6q3OgxI6fcAcX5w06U741pz5WJzE1qk2IyJmtr6X4nkd01SQlcLeBcesHzdwkF5fXcn3w9tjwyjYMPH-MusUP-ys0e14obrWf63AC6SDDtxFqJiKbEzzrMTg2RvW5d7Q92kguDhfR2ZUxTzxPc-uZHe36Kd9LJDAqgjv4UJll6glTvMracEA5NBGCL0VLx7elFq-6NXlAsVdCyoPfo84pyaR849DcLIblHS69DQPgLY3F84TyzqG3w5FrLBG4TMbOTQVGZH4Pp6kepVWF6jZFoZOMWteJ4X519BQc2oMm96-Yoh1T7kQiZ9Y1k-PKSBgocjbU5GJ4GBkTE0ZLUXsP8GKlmsdFdrfv2-UjnfF9akfEf5ZP3cDR02b0DX1WfUE3eOSATnssJFyVZTT-3BQVR855mroXLxZQNqC9uw0zwNDU5me51x4ze0dzhceE4mZxrqU1V672IcBevPoh6sbsbO_I3xhjF8FFFqffXPolL2me64se73K3Bw7DVKCvirmnMS10RRlE7hddiDjavSipAWPpJ5qkfAFZUXQck_hloGM_cZ3PN0uHRqID4Tazc8RgeEgeg09h3agjL83F8n2j4d7HLJPE5aGJ9i3yuEgyN0IayGIqJiq47NItB-U1fg88OHNnSEFFjz245unpe3cNfWQBOYGZpTIlx2vjrcb3SM6V2kVxlidh8NhqjwEWBm72VkxaNlG2UnkzbpHRv-WS--5rrZOaqcqgOgdhtQ6jGUmQcJMB6n-3kBP_FaYDHOGIWkzMZkpVnYQHnYzvi08XJP1OEJCO3k6nZRMbTmNJaMLW8sf-AEEt3pY92jDliTEedo2htUaTS-R81ws5KpQI87R4cqERezICg9dAEi1gr4v1QtIFYeFDm5hzYWrESmSenSCPm6LTN8NJwllEGf502ckgYVYycw4c3wHXhux3KncAy_Dw4DMVHu0cuiajhpIzuykY_Z8mDcgeuWZoXUcKt6wA_3_6S0LEfZE5MM4CU9qNOzUMZJOpqc_bwjmhHhqcRIeTH5TH320JEL_RhB1RdZMFR_Ci_3fqb86JULpDNQTwQSdzcMf38kZqhoT3pWwbSKLOah_Kb6YDbRZVAYFi_oEnU4FYGBqYYllFL-59_A3ZzJp5Zg_Y8lln14ZJllqsYviIycHzkrwAsRBzNVuBlrmHOa1DdlEeGT5nl0G_mqBVRbbGfOdZYjmTaL98eGx0odM3ruBxrbSJ3v2-vL0buDJw8oIQwNHpzDChAzwa2-xaAdd8goWyTqEegX828zhDjPND3IMWl_KixEjP_dGcT7J6uaK4dQVN6ssKLQptBDKs6e4MniIHWygKpcKTM6rFIBN1fQPQ0ob5W6LDH_EAVpMXvBe0ea3L3Z6SYsAclDD-CdvuNdyk58Nvhe5oOm0HO8-woLPQL3Df44l_tB2fJVRi3UdiXjhNE305abFf9HQCL79R68sRXb-7xpK-eJYwCz7FHu2qwYRjfdy4kOT8_r044R8OJ4xl4Apcv7syDcdYTUEYYdfdF88Ox-1n_N8l0vsC5Ibm2-4Xw6glm-boTEhQP858DIK5AKgIFLXQ9is_sjVgP8Jf2SfO0o_DxxNNNCYm-iRhK_SwYeUWc8GptZH6tYky66nGajXs-qroLkY0rzrPU5ioyH6XyR1i5jjtXejWycVYCMZceB3kxRmkffCl6pYw-0oTi5kJn8hzg1Jc3qwNOqkP7x25w6bqUsqNAjm7oqczqAkIfGeoEAfowF5ZJVGHcRhh16ofqNUnzKsGOKvY8uDViDBwxoMBozHlu3ynMh2lt6WVRe0DeetnHi0jqBfEWrdbpa8IabiGcoV3VkW0xdxRwucyvRIYWEYarlWM0i4zRPh5Me0Jm_rgQV8jWFls3gsMf7QPzziMc5s46MJ2G3GLW-Y2f_i8Fb9hPGPSyzt0adPQ0usYyYZVIVx2Mv5IPRVxRN85E1kQAkEbNjl0sdWmApLv6y2I4aGvW3CaDynEdswzzjfkg7q1yhYdEAyYgYq-s0oxfGv77_bv3TK4VBLLOICBO02KwZ3CZbtoTMZK4rDiO5N7DLVDJehNDh3U4n0ZuO3y5Qp84XexuTlAtRWOdooxAkcr2Ztlsx1LKW2rH1L_vduGNWdkFQuU8rE6fM6Ac3_Gjqpi1VXhDcg6CE7VJvtqFtBuCIKGO4brJKa6_LQerT_luGMOmT1IVhv0Fac3pnIgkFyD_XtxRyGxo; .AspNetCore.Antiforgery.VasT3a6ESD8=CfDJ8NooojJvfs9Jvs5T1ZwLTask-CL5ANYSH4ere0_kVBtUXd2cfZVQg9ouWM20BQjXC4dofM-jXxQAa6PIIrZU0K5r8VXz284qsfuoIO0kYhK_ud7bM1S7--tWFNYIn9K9db7mtGz94UzkBB_-vjj2efQ; csrfToken=CfDJ8NooojJvfs9Jvs5T1ZwLTatdw_5YW4Mze8EUK7EQLJJOSYA2CUrpMu7ECClXhWG3WqXMZh9I2bEEit759CorGO9wMO8q8ZoArcOiCOpULVSMgb1qtX31h29CAjbfCs-c_1qYhHhlAP490fI7GHgZd-HSQr-kPR1XBOtIFHFvTPuVJc0gKYS2Bm1MoCI2axALsw",
+    "Origin": "https://localhost:7168",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "Content-Length": "59",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "{\n  \u0022username\u0022: \u0022\u0022,\n  \u0022registrantName\u0022: \u0022\u0022,\n  \u0022userId\u0022: 0\n}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:29},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest1221\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 11,
+  "Timestamp": "2025-08-05T06:32:05.5519427Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:32:08 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\'
+[09:32:08 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\'
+    ORDER BY (SELECT 1)
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:32:08 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Content-Type": "application/json",
+    "Cookie": "bot.cookie=CfDJ8NooojJvfs9Jvs5T1ZwLTat84uQg8eLa4%2FlRMHBRhyHnR8T7Xm8CABoUi%2Fso6YmZEXoUMgzX6cc0nYReUksgBTTyiTh5LPqIDd5kpU4VPMiOyMWVK4jTSD%2BwUqpUnWYYw99z5guNe98PpgatuvQIc5vFxLsapPp%2FH%2FeNowdGSkqC; username=ilia.chakarov; .AspNetCore.Cookies=CfDJ8NooojJvfs9Jvs5T1ZwLTauQYXuy--gH61xSUPR72Q5K4zoETLArxcxL-9-NcL8cpKMwroZFJJLrOTLOaHQbumNF3frMUqno8RdsPbjR50_vEFuE3vnBQTx9yxYpB_dnU22XXoXwG-udv9vGL7eq7X1OOzueUH0wZTKvYA3BBKBhmzcuhZ7G7VBxBS--vNqZy2BbPUMj_Gv0NzRDngR-3yqI7FThN54DoUtAKeuUyxiVFxP54s5hcgbZSGnPBzynZu9qCux2CkgGuec_bjnUtXvnSevzvhlx9UyoVKxjm-e5aC-j1Iduc5L_irTGj6kg0fWz-BgXe3YSxzP6a1G-pTanr9d2vWU9dUSrph0LitkJZuIKPXS0vLwOGJ1k_zYSNLN4fnk1qZ6hE0pGPtloAopJVpsGVCYzphaXTEGrLpTEaROhaei4I2ax4XPxJBKD0tpZrqHuY529OH-HnZaLZag-nABbj23nnfc0dOaiRXuf5gBzxud-SiXXd94NaUwtZOrdP0D0f6nqDwgeaJgE-ILbxxSa0NJhs44PiA1viNmVXMUiXKBA8LJvuoOxjNA18aqJa0xRqon_ag3tfSWfy1RyBPe1qFdCwUxkLpe-U4jITAZJ2vBdCwcXQgwg9TLLzaZY3dafF_JhDLy8l0KkO0jXCL08kr6W8wA_crILAAHZ3GT2rk0gm59c-HqWZcjJ0qVJJNy2Qe3hd6Xz_vPEZm7SVlZRzcyU6KYJFeSd3I4ljyTe4T29ILCzog7IKHo5YozmEPw_kjbD4pAK2FOa74cqk7QGudoISyzPRogrhFx-LjQ-b-wQBfTigBH6Ow73emQE_fga3EctbZrzhvgUOtrVYqCk7prBxy9KRDhU3v2zNr_PQAr1Kc9GJlmC4fN3afMXmsapr0wCH5OfNc4FS9LAf0DFxGMyqUrniItWaGFia1AeWcLCX0PhM8R47YbEs8cMetfeTO-Yhm80TVN9dfwXdAjrqdGQKRs35RvhITu4LDHi451mloOz1OLBAeqfkgI7j9Tu-W9RSj1MgalvgyuBRU9aSIo4H59SdIkyFcxXkvP4Jb-hVAV_VTS3LdYAE-QODRBpICWbNazTO4LNbqkukIsIRF4Jry0m-JwjwVoiyhWJXhjIhePmPx59rhPUThUtOH1ejn-mIncft1djrJ0o3FPKHeVX5ruyY6Zfz6LWoMNo5_ZqXM6Wu4VvMS5N4Uac1pGPMPe4FCMQwzY1krS2SRn-QM29-Le_ZKybj4rsFMcRKGcADY6RoW0o449V0PRrU3skHtiEoT8jY-Vt89gHKAa_cIUUN3-NfNiHL9umozvFYCqTYIookkCnYIt8FgAhaVwdOyQXeXXP24kS8Md0ACvckdpEFpFNqDrvcgLoorySmy31FxKz7mJJoEkkpj7ZHbnU4oOYRgULZOA10OvrLyFez6j9SE3T99hJntnWvMSv_4vhnoGxdZuoyghJvlAUJ9vC_gdWMYUetANQ-rw75uT6b1rGTANgdHRqbCmlrQkcwMf8mar0zTx-YRcFqxg0Ts7SVNA9Q3KcEnw_x92F9RDlODJh8TyACTcMWHtmUsG4RxvmyqmNucZ0FlsJnX28uColvFYaVM2WAIEYvdiFJ3njrKzZUCrx27LKPFLGskknqn0im6YyOOwC1CVB-sn9dQAuEkQu1sHCpVoCAZLJAmEq0TKCZ9Uf19zaeJlbYTQGbsQjhGFaeBqsjpccUW12ctN1WRTViNNm8AmwpFkHzxz-A2fRIOCekEXymBD_x1xnAoGRrz2l2PewAKZNEZ_d_Km1aNHe3XnFYBXAxTsRSht02DdR9Vl3Oq8YJ-oPG9IAD0o2RZ4L3XvH86TezoHiV4-ZzdGbk7fFJbI8yl2QKS7Wl-k37R8DHlqjPZ3Cnwe7T1akyK2clgXAjkHIslcqHd4_mjXUrlbXsNp64eouMo6vyGLDimfh0NCyMGoy56mXsa-FXjUl1nsIo2r9tG432uU0hqSh5ASGMcX2X8qmcDcdC-mF6A1mI-CSPYHi7DbSVBE93aZ0dFgUNsz0GHpFS-v5qHNi_AzOWN0FTqX5KyAhoa4yk0fLErrAJ2WYqUQ_6yTqGV-H8-0u821Q2IfmDfUYUMlOTZDkeSUKS0dxMUKOHdIYeilWaqBytKpfVLmsaf_G81uNY9PNmLc7lKkHsDXBV4iA0xGzIk5rtx980bnbenWcfBydvw9e20n9Ekhpm5Usj9vdDdgWF3L5Hr5mgU2plGYNStmO3-gURdWO2mjlYAwdqvn86JIJU_3C26EWKxhWrl5KtrFXcIChc9WDeaZRzPSKxMGllCsN_j9ZsDbX2ZWVODmGC_-b5pLo-Vbe8Fz7NS6DsAA0u6cE2mutHH74vVVaodGc37ynBIBtg6Vs-INkP0wdzN7oWqxetw7vnPXN0iPVUX6NeYvQf1jl4KI6xc-R5G2CNYSuqDi0MuUz5wXkBS53i5LANC8XGl2aDKOZlMeB2cdKnWeVvMtZq3iCoFboXfg-elhrBb1qgXYqIrPTJEVLoY9SvU0WKsdsiPbTc4CecwViV2A20t4C1xgKrQt5eTBkoy8QU45ZPOkA36PCzPur8WFGQACPXcsKSVi4hKVCuulPH6FMrZLjnwbk9MtilVJVObHyeQiq7pKbUBRt9L3liBsys4Y9kaaxM0wCKfy_ThMXFzqA_VqeoTc6Er_lnG6YcsyUfc3NA-HiHOYyaItMH8coigUP6TzUKfc_WACpgywchZCyHjk6kmevk9K965dAxsYBNpL1PfoXw10eNeeBGnqa9Y0teacF8WXNpvrBYUdXvvDK4lMQEW9dPcZHJ9OEWRdSBDH4ndN1n0p1DAWZ5xqJmjrog-IpmwX_N4ZJ9adW52RuzcU190butvJhXvJqKkfj1S6EuBcWQiHcqnAvFm-V9CjTdOuSLfIds8uz8G2JmV7ka3WA5nuwdEVxfDqE63J-9cza7Btv7x782UK7F-PVs4vepTTLstfUtqIbtSWn5zvN85f01z-QeyI2uyjIX4SSNDzicCrahhGWYLunUPJKX4nfTmdEIdEy3llKpa1ix_47H7NFpEy6cM_hslWcsxXBJd4O9yqK9PdMlXCXQ-EpzNw1zRnZh3uJOBlNLkfKgMHMRJxndpdgclF7GoiGERdGlaD33Wc58wjidMDKmxxPdY0xi3_u12meImB-kzZiWvS4YXEmzF-41jWPwIeHnZchhj4; .AspNetCore.Identity.Application=CfDJ8NooojJvfs9Jvs5T1ZwLTas2EbFXRsGLa3cu25avsROF3m7CvgoKGS8J_pXR6MBMI_WD12lfDuDT7VqeZgBerCHdd_ZLl7asWcA1CW3qhWu2766TzQq1c8pnMaHTl9y8le9zVdgDa4D7mMZH64Hhosnl3fPHbgzHqXRhNwS6MefpzhXl87ZcqiBRpiJYnn-pcoyv6Qz18z9viEZ95Qz3djJkLdllIbfNM7-wl_oZNEQP4QTZ68m3SUkAb5801gJT5tnKN4c8xszPvNfU4HZoBkF2d_3C5xwL4paBAdjcRK0VXyP1lc3e3RZ0i3Vi_v_RN__ZKpaIWbNk42Qm8sj1ZwwfIO5NrBTjyUDnf5pliMD5xCW6k_fZMwwmY5oW1_qRLsU7rTrpE0eJd3r5KXmwEuLkvQpv08IG9qj8EIv8HhN1jld63RR3VcCPycUn1fhxvEvuiK3FPE7XSbnbJNQLqcimCPE4CcpVTDbsitJ9dmrrJ12mm6ywsakcooyIR0pDm02ELFsmpt7WHL4hkKt0EQ_70EKwo73UTZ2um-A9bSoZYReUZ_17ddodH-FRatz1VDaXyTS8Hxo95Dj-N-Rusrh7rERcpLvpRSHZIQz8v6CtLaEdIPsLTqVngNkOg9rMtu4EOorDQjDGOWshjEPkYm0b-UhGFnA6P8guq7bazkzLQSMGknYzDCmhXezlUND-kstnfdo87uTZdZOaatXO0QM7ExIIShRDiAxuprNQV4ztcj5p8PFVjzWbfPGrv8j6EhE_3QVLUhiDwtz7L5Ovt9PwWVL98YhYuwwipjHM74dDPU6vgY66TMjHB2RcfoFc3UXoeT6P8bjj_dkvFZ2zuzQc3_NMIdNQPNb-lQznW_ZbbW2JVtwoe7grL_vj_NRf7ZjPfXp812N-DTAbYV-0AYgsE9h2BQyKyHBMdSoapzubaqu_DH_0ItanZgGpTe0N-8J2saGb16mDgVUtQNpwkhwDqCWuiyJbVuVBWF6MCH4YUC6lA3vEpQfBXeIuU9JFeibsonQVw9Fq5LhK93OEre3yKG568L7dUCAyXoABJmnV2xakns-W7BhJ_9CwyK2q1DiQlmWkro-6uHqs31eZgxasbj4V3X43C4BB31rtrju42zjJWOGPz4RjGZ-3IMW_ATxapBAF-VXxvQ1p-V4-n7hkTXRer0NozPq3_UaHCIVt5jE47EsbjCssTTr1nJpR856JmATvhWPIZV3upSnRYUVFagfgAXjzerIhJQ1fk65f5hYcRyQzH-mAm5jPYs6SxFdGTVaFtkqDF15Glmx95tVStY4ObzHJNNP3e39ksUn2d0q_1V3dB6o0Dr-38uABB4xFO-XyTZOFCiEQv2VoNRnLFPAjI-GK1uEuJ6q3OgxI6fcAcX5w06U741pz5WJzE1qk2IyJmtr6X4nkd01SQlcLeBcesHzdwkF5fXcn3w9tjwyjYMPH-MusUP-ys0e14obrWf63AC6SDDtxFqJiKbEzzrMTg2RvW5d7Q92kguDhfR2ZUxTzxPc-uZHe36Kd9LJDAqgjv4UJll6glTvMracEA5NBGCL0VLx7elFq-6NXlAsVdCyoPfo84pyaR849DcLIblHS69DQPgLY3F84TyzqG3w5FrLBG4TMbOTQVGZH4Pp6kepVWF6jZFoZOMWteJ4X519BQc2oMm96-Yoh1T7kQiZ9Y1k-PKSBgocjbU5GJ4GBkTE0ZLUXsP8GKlmsdFdrfv2-UjnfF9akfEf5ZP3cDR02b0DX1WfUE3eOSATnssJFyVZTT-3BQVR855mroXLxZQNqC9uw0zwNDU5me51x4ze0dzhceE4mZxrqU1V672IcBevPoh6sbsbO_I3xhjF8FFFqffXPolL2me64se73K3Bw7DVKCvirmnMS10RRlE7hddiDjavSipAWPpJ5qkfAFZUXQck_hloGM_cZ3PN0uHRqID4Tazc8RgeEgeg09h3agjL83F8n2j4d7HLJPE5aGJ9i3yuEgyN0IayGIqJiq47NItB-U1fg88OHNnSEFFjz245unpe3cNfWQBOYGZpTIlx2vjrcb3SM6V2kVxlidh8NhqjwEWBm72VkxaNlG2UnkzbpHRv-WS--5rrZOaqcqgOgdhtQ6jGUmQcJMB6n-3kBP_FaYDHOGIWkzMZkpVnYQHnYzvi08XJP1OEJCO3k6nZRMbTmNJaMLW8sf-AEEt3pY92jDliTEedo2htUaTS-R81ws5KpQI87R4cqERezICg9dAEi1gr4v1QtIFYeFDm5hzYWrESmSenSCPm6LTN8NJwllEGf502ckgYVYycw4c3wHXhux3KncAy_Dw4DMVHu0cuiajhpIzuykY_Z8mDcgeuWZoXUcKt6wA_3_6S0LEfZE5MM4CU9qNOzUMZJOpqc_bwjmhHhqcRIeTH5TH320JEL_RhB1RdZMFR_Ci_3fqb86JULpDNQTwQSdzcMf38kZqhoT3pWwbSKLOah_Kb6YDbRZVAYFi_oEnU4FYGBqYYllFL-59_A3ZzJp5Zg_Y8lln14ZJllqsYviIycHzkrwAsRBzNVuBlrmHOa1DdlEeGT5nl0G_mqBVRbbGfOdZYjmTaL98eGx0odM3ruBxrbSJ3v2-vL0buDJw8oIQwNHpzDChAzwa2-xaAdd8goWyTqEegX828zhDjPND3IMWl_KixEjP_dGcT7J6uaK4dQVN6ssKLQptBDKs6e4MniIHWygKpcKTM6rFIBN1fQPQ0ob5W6LDH_EAVpMXvBe0ea3L3Z6SYsAclDD-CdvuNdyk58Nvhe5oOm0HO8-woLPQL3Df44l_tB2fJVRi3UdiXjhNE305abFf9HQCL79R68sRXb-7xpK-eJYwCz7FHu2qwYRjfdy4kOT8_r044R8OJ4xl4Apcv7syDcdYTUEYYdfdF88Ox-1n_N8l0vsC5Ibm2-4Xw6glm-boTEhQP858DIK5AKgIFLXQ9is_sjVgP8Jf2SfO0o_DxxNNNCYm-iRhK_SwYeUWc8GptZH6tYky66nGajXs-qroLkY0rzrPU5ioyH6XyR1i5jjtXejWycVYCMZceB3kxRmkffCl6pYw-0oTi5kJn8hzg1Jc3qwNOqkP7x25w6bqUsqNAjm7oqczqAkIfGeoEAfowF5ZJVGHcRhh16ofqNUnzKsGOKvY8uDViDBwxoMBozHlu3ynMh2lt6WVRe0DeetnHi0jqBfEWrdbpa8IabiGcoV3VkW0xdxRwucyvRIYWEYarlWM0i4zRPh5Me0Jm_rgQV8jWFls3gsMf7QPzziMc5s46MJ2G3GLW-Y2f_i8Fb9hPGPSyzt0adPQ0usYyYZVIVx2Mv5IPRVxRN85E1kQAkEbNjl0sdWmApLv6y2I4aGvW3CaDynEdswzzjfkg7q1yhYdEAyYgYq-s0oxfGv77_bv3TK4VBLLOICBO02KwZ3CZbtoTMZK4rDiO5N7DLVDJehNDh3U4n0ZuO3y5Qp84XexuTlAtRWOdooxAkcr2Ztlsx1LKW2rH1L_vduGNWdkFQuU8rE6fM6Ac3_Gjqpi1VXhDcg6CE7VJvtqFtBuCIKGO4brJKa6_LQerT_luGMOmT1IVhv0Fac3pnIgkFyD_XtxRyGxo; .AspNetCore.Antiforgery.VasT3a6ESD8=CfDJ8NooojJvfs9Jvs5T1ZwLTask-CL5ANYSH4ere0_kVBtUXd2cfZVQg9ouWM20BQjXC4dofM-jXxQAa6PIIrZU0K5r8VXz284qsfuoIO0kYhK_ud7bM1S7--tWFNYIn9K9db7mtGz94UzkBB_-vjj2efQ; csrfToken=CfDJ8NooojJvfs9Jvs5T1ZwLTatdw_5YW4Mze8EUK7EQLJJOSYA2CUrpMu7ECClXhWG3WqXMZh9I2bEEit759CorGO9wMO8q8ZoArcOiCOpULVSMgb1qtX31h29CAjbfCs-c_1qYhHhlAP490fI7GHgZd-HSQr-kPR1XBOtIFHFvTPuVJc0gKYS2Bm1MoCI2axALsw",
+    "Origin": "https://localhost:7168",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "Content-Length": "60",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "{\n  \u0022username\u0022: \u0022v\u0022,\n  \u0022registrantName\u0022: \u0022\u0022,\n  \u0022userId\u0022: 0\n}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:7},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:42,\u0022username\u0022:\u0022ilia.chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:44,\u0022username\u0022:\u0022ivo.G\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:45,\u0022username\u0022:\u0022ivo-ot-drugata-kuhnq\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 10,
+  "Timestamp": "2025-08-05T06:32:08.5565989Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:32:15 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\'
+[09:32:15 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\'
+    ORDER BY (SELECT 1)
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:32:15 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Content-Type": "application/json",
+    "Cookie": "bot.cookie=CfDJ8NooojJvfs9Jvs5T1ZwLTat84uQg8eLa4%2FlRMHBRhyHnR8T7Xm8CABoUi%2Fso6YmZEXoUMgzX6cc0nYReUksgBTTyiTh5LPqIDd5kpU4VPMiOyMWVK4jTSD%2BwUqpUnWYYw99z5guNe98PpgatuvQIc5vFxLsapPp%2FH%2FeNowdGSkqC; username=ilia.chakarov; .AspNetCore.Cookies=CfDJ8NooojJvfs9Jvs5T1ZwLTauQYXuy--gH61xSUPR72Q5K4zoETLArxcxL-9-NcL8cpKMwroZFJJLrOTLOaHQbumNF3frMUqno8RdsPbjR50_vEFuE3vnBQTx9yxYpB_dnU22XXoXwG-udv9vGL7eq7X1OOzueUH0wZTKvYA3BBKBhmzcuhZ7G7VBxBS--vNqZy2BbPUMj_Gv0NzRDngR-3yqI7FThN54DoUtAKeuUyxiVFxP54s5hcgbZSGnPBzynZu9qCux2CkgGuec_bjnUtXvnSevzvhlx9UyoVKxjm-e5aC-j1Iduc5L_irTGj6kg0fWz-BgXe3YSxzP6a1G-pTanr9d2vWU9dUSrph0LitkJZuIKPXS0vLwOGJ1k_zYSNLN4fnk1qZ6hE0pGPtloAopJVpsGVCYzphaXTEGrLpTEaROhaei4I2ax4XPxJBKD0tpZrqHuY529OH-HnZaLZag-nABbj23nnfc0dOaiRXuf5gBzxud-SiXXd94NaUwtZOrdP0D0f6nqDwgeaJgE-ILbxxSa0NJhs44PiA1viNmVXMUiXKBA8LJvuoOxjNA18aqJa0xRqon_ag3tfSWfy1RyBPe1qFdCwUxkLpe-U4jITAZJ2vBdCwcXQgwg9TLLzaZY3dafF_JhDLy8l0KkO0jXCL08kr6W8wA_crILAAHZ3GT2rk0gm59c-HqWZcjJ0qVJJNy2Qe3hd6Xz_vPEZm7SVlZRzcyU6KYJFeSd3I4ljyTe4T29ILCzog7IKHo5YozmEPw_kjbD4pAK2FOa74cqk7QGudoISyzPRogrhFx-LjQ-b-wQBfTigBH6Ow73emQE_fga3EctbZrzhvgUOtrVYqCk7prBxy9KRDhU3v2zNr_PQAr1Kc9GJlmC4fN3afMXmsapr0wCH5OfNc4FS9LAf0DFxGMyqUrniItWaGFia1AeWcLCX0PhM8R47YbEs8cMetfeTO-Yhm80TVN9dfwXdAjrqdGQKRs35RvhITu4LDHi451mloOz1OLBAeqfkgI7j9Tu-W9RSj1MgalvgyuBRU9aSIo4H59SdIkyFcxXkvP4Jb-hVAV_VTS3LdYAE-QODRBpICWbNazTO4LNbqkukIsIRF4Jry0m-JwjwVoiyhWJXhjIhePmPx59rhPUThUtOH1ejn-mIncft1djrJ0o3FPKHeVX5ruyY6Zfz6LWoMNo5_ZqXM6Wu4VvMS5N4Uac1pGPMPe4FCMQwzY1krS2SRn-QM29-Le_ZKybj4rsFMcRKGcADY6RoW0o449V0PRrU3skHtiEoT8jY-Vt89gHKAa_cIUUN3-NfNiHL9umozvFYCqTYIookkCnYIt8FgAhaVwdOyQXeXXP24kS8Md0ACvckdpEFpFNqDrvcgLoorySmy31FxKz7mJJoEkkpj7ZHbnU4oOYRgULZOA10OvrLyFez6j9SE3T99hJntnWvMSv_4vhnoGxdZuoyghJvlAUJ9vC_gdWMYUetANQ-rw75uT6b1rGTANgdHRqbCmlrQkcwMf8mar0zTx-YRcFqxg0Ts7SVNA9Q3KcEnw_x92F9RDlODJh8TyACTcMWHtmUsG4RxvmyqmNucZ0FlsJnX28uColvFYaVM2WAIEYvdiFJ3njrKzZUCrx27LKPFLGskknqn0im6YyOOwC1CVB-sn9dQAuEkQu1sHCpVoCAZLJAmEq0TKCZ9Uf19zaeJlbYTQGbsQjhGFaeBqsjpccUW12ctN1WRTViNNm8AmwpFkHzxz-A2fRIOCekEXymBD_x1xnAoGRrz2l2PewAKZNEZ_d_Km1aNHe3XnFYBXAxTsRSht02DdR9Vl3Oq8YJ-oPG9IAD0o2RZ4L3XvH86TezoHiV4-ZzdGbk7fFJbI8yl2QKS7Wl-k37R8DHlqjPZ3Cnwe7T1akyK2clgXAjkHIslcqHd4_mjXUrlbXsNp64eouMo6vyGLDimfh0NCyMGoy56mXsa-FXjUl1nsIo2r9tG432uU0hqSh5ASGMcX2X8qmcDcdC-mF6A1mI-CSPYHi7DbSVBE93aZ0dFgUNsz0GHpFS-v5qHNi_AzOWN0FTqX5KyAhoa4yk0fLErrAJ2WYqUQ_6yTqGV-H8-0u821Q2IfmDfUYUMlOTZDkeSUKS0dxMUKOHdIYeilWaqBytKpfVLmsaf_G81uNY9PNmLc7lKkHsDXBV4iA0xGzIk5rtx980bnbenWcfBydvw9e20n9Ekhpm5Usj9vdDdgWF3L5Hr5mgU2plGYNStmO3-gURdWO2mjlYAwdqvn86JIJU_3C26EWKxhWrl5KtrFXcIChc9WDeaZRzPSKxMGllCsN_j9ZsDbX2ZWVODmGC_-b5pLo-Vbe8Fz7NS6DsAA0u6cE2mutHH74vVVaodGc37ynBIBtg6Vs-INkP0wdzN7oWqxetw7vnPXN0iPVUX6NeYvQf1jl4KI6xc-R5G2CNYSuqDi0MuUz5wXkBS53i5LANC8XGl2aDKOZlMeB2cdKnWeVvMtZq3iCoFboXfg-elhrBb1qgXYqIrPTJEVLoY9SvU0WKsdsiPbTc4CecwViV2A20t4C1xgKrQt5eTBkoy8QU45ZPOkA36PCzPur8WFGQACPXcsKSVi4hKVCuulPH6FMrZLjnwbk9MtilVJVObHyeQiq7pKbUBRt9L3liBsys4Y9kaaxM0wCKfy_ThMXFzqA_VqeoTc6Er_lnG6YcsyUfc3NA-HiHOYyaItMH8coigUP6TzUKfc_WACpgywchZCyHjk6kmevk9K965dAxsYBNpL1PfoXw10eNeeBGnqa9Y0teacF8WXNpvrBYUdXvvDK4lMQEW9dPcZHJ9OEWRdSBDH4ndN1n0p1DAWZ5xqJmjrog-IpmwX_N4ZJ9adW52RuzcU190butvJhXvJqKkfj1S6EuBcWQiHcqnAvFm-V9CjTdOuSLfIds8uz8G2JmV7ka3WA5nuwdEVxfDqE63J-9cza7Btv7x782UK7F-PVs4vepTTLstfUtqIbtSWn5zvN85f01z-QeyI2uyjIX4SSNDzicCrahhGWYLunUPJKX4nfTmdEIdEy3llKpa1ix_47H7NFpEy6cM_hslWcsxXBJd4O9yqK9PdMlXCXQ-EpzNw1zRnZh3uJOBlNLkfKgMHMRJxndpdgclF7GoiGERdGlaD33Wc58wjidMDKmxxPdY0xi3_u12meImB-kzZiWvS4YXEmzF-41jWPwIeHnZchhj4; .AspNetCore.Identity.Application=CfDJ8NooojJvfs9Jvs5T1ZwLTas2EbFXRsGLa3cu25avsROF3m7CvgoKGS8J_pXR6MBMI_WD12lfDuDT7VqeZgBerCHdd_ZLl7asWcA1CW3qhWu2766TzQq1c8pnMaHTl9y8le9zVdgDa4D7mMZH64Hhosnl3fPHbgzHqXRhNwS6MefpzhXl87ZcqiBRpiJYnn-pcoyv6Qz18z9viEZ95Qz3djJkLdllIbfNM7-wl_oZNEQP4QTZ68m3SUkAb5801gJT5tnKN4c8xszPvNfU4HZoBkF2d_3C5xwL4paBAdjcRK0VXyP1lc3e3RZ0i3Vi_v_RN__ZKpaIWbNk42Qm8sj1ZwwfIO5NrBTjyUDnf5pliMD5xCW6k_fZMwwmY5oW1_qRLsU7rTrpE0eJd3r5KXmwEuLkvQpv08IG9qj8EIv8HhN1jld63RR3VcCPycUn1fhxvEvuiK3FPE7XSbnbJNQLqcimCPE4CcpVTDbsitJ9dmrrJ12mm6ywsakcooyIR0pDm02ELFsmpt7WHL4hkKt0EQ_70EKwo73UTZ2um-A9bSoZYReUZ_17ddodH-FRatz1VDaXyTS8Hxo95Dj-N-Rusrh7rERcpLvpRSHZIQz8v6CtLaEdIPsLTqVngNkOg9rMtu4EOorDQjDGOWshjEPkYm0b-UhGFnA6P8guq7bazkzLQSMGknYzDCmhXezlUND-kstnfdo87uTZdZOaatXO0QM7ExIIShRDiAxuprNQV4ztcj5p8PFVjzWbfPGrv8j6EhE_3QVLUhiDwtz7L5Ovt9PwWVL98YhYuwwipjHM74dDPU6vgY66TMjHB2RcfoFc3UXoeT6P8bjj_dkvFZ2zuzQc3_NMIdNQPNb-lQznW_ZbbW2JVtwoe7grL_vj_NRf7ZjPfXp812N-DTAbYV-0AYgsE9h2BQyKyHBMdSoapzubaqu_DH_0ItanZgGpTe0N-8J2saGb16mDgVUtQNpwkhwDqCWuiyJbVuVBWF6MCH4YUC6lA3vEpQfBXeIuU9JFeibsonQVw9Fq5LhK93OEre3yKG568L7dUCAyXoABJmnV2xakns-W7BhJ_9CwyK2q1DiQlmWkro-6uHqs31eZgxasbj4V3X43C4BB31rtrju42zjJWOGPz4RjGZ-3IMW_ATxapBAF-VXxvQ1p-V4-n7hkTXRer0NozPq3_UaHCIVt5jE47EsbjCssTTr1nJpR856JmATvhWPIZV3upSnRYUVFagfgAXjzerIhJQ1fk65f5hYcRyQzH-mAm5jPYs6SxFdGTVaFtkqDF15Glmx95tVStY4ObzHJNNP3e39ksUn2d0q_1V3dB6o0Dr-38uABB4xFO-XyTZOFCiEQv2VoNRnLFPAjI-GK1uEuJ6q3OgxI6fcAcX5w06U741pz5WJzE1qk2IyJmtr6X4nkd01SQlcLeBcesHzdwkF5fXcn3w9tjwyjYMPH-MusUP-ys0e14obrWf63AC6SDDtxFqJiKbEzzrMTg2RvW5d7Q92kguDhfR2ZUxTzxPc-uZHe36Kd9LJDAqgjv4UJll6glTvMracEA5NBGCL0VLx7elFq-6NXlAsVdCyoPfo84pyaR849DcLIblHS69DQPgLY3F84TyzqG3w5FrLBG4TMbOTQVGZH4Pp6kepVWF6jZFoZOMWteJ4X519BQc2oMm96-Yoh1T7kQiZ9Y1k-PKSBgocjbU5GJ4GBkTE0ZLUXsP8GKlmsdFdrfv2-UjnfF9akfEf5ZP3cDR02b0DX1WfUE3eOSATnssJFyVZTT-3BQVR855mroXLxZQNqC9uw0zwNDU5me51x4ze0dzhceE4mZxrqU1V672IcBevPoh6sbsbO_I3xhjF8FFFqffXPolL2me64se73K3Bw7DVKCvirmnMS10RRlE7hddiDjavSipAWPpJ5qkfAFZUXQck_hloGM_cZ3PN0uHRqID4Tazc8RgeEgeg09h3agjL83F8n2j4d7HLJPE5aGJ9i3yuEgyN0IayGIqJiq47NItB-U1fg88OHNnSEFFjz245unpe3cNfWQBOYGZpTIlx2vjrcb3SM6V2kVxlidh8NhqjwEWBm72VkxaNlG2UnkzbpHRv-WS--5rrZOaqcqgOgdhtQ6jGUmQcJMB6n-3kBP_FaYDHOGIWkzMZkpVnYQHnYzvi08XJP1OEJCO3k6nZRMbTmNJaMLW8sf-AEEt3pY92jDliTEedo2htUaTS-R81ws5KpQI87R4cqERezICg9dAEi1gr4v1QtIFYeFDm5hzYWrESmSenSCPm6LTN8NJwllEGf502ckgYVYycw4c3wHXhux3KncAy_Dw4DMVHu0cuiajhpIzuykY_Z8mDcgeuWZoXUcKt6wA_3_6S0LEfZE5MM4CU9qNOzUMZJOpqc_bwjmhHhqcRIeTH5TH320JEL_RhB1RdZMFR_Ci_3fqb86JULpDNQTwQSdzcMf38kZqhoT3pWwbSKLOah_Kb6YDbRZVAYFi_oEnU4FYGBqYYllFL-59_A3ZzJp5Zg_Y8lln14ZJllqsYviIycHzkrwAsRBzNVuBlrmHOa1DdlEeGT5nl0G_mqBVRbbGfOdZYjmTaL98eGx0odM3ruBxrbSJ3v2-vL0buDJw8oIQwNHpzDChAzwa2-xaAdd8goWyTqEegX828zhDjPND3IMWl_KixEjP_dGcT7J6uaK4dQVN6ssKLQptBDKs6e4MniIHWygKpcKTM6rFIBN1fQPQ0ob5W6LDH_EAVpMXvBe0ea3L3Z6SYsAclDD-CdvuNdyk58Nvhe5oOm0HO8-woLPQL3Df44l_tB2fJVRi3UdiXjhNE305abFf9HQCL79R68sRXb-7xpK-eJYwCz7FHu2qwYRjfdy4kOT8_r044R8OJ4xl4Apcv7syDcdYTUEYYdfdF88Ox-1n_N8l0vsC5Ibm2-4Xw6glm-boTEhQP858DIK5AKgIFLXQ9is_sjVgP8Jf2SfO0o_DxxNNNCYm-iRhK_SwYeUWc8GptZH6tYky66nGajXs-qroLkY0rzrPU5ioyH6XyR1i5jjtXejWycVYCMZceB3kxRmkffCl6pYw-0oTi5kJn8hzg1Jc3qwNOqkP7x25w6bqUsqNAjm7oqczqAkIfGeoEAfowF5ZJVGHcRhh16ofqNUnzKsGOKvY8uDViDBwxoMBozHlu3ynMh2lt6WVRe0DeetnHi0jqBfEWrdbpa8IabiGcoV3VkW0xdxRwucyvRIYWEYarlWM0i4zRPh5Me0Jm_rgQV8jWFls3gsMf7QPzziMc5s46MJ2G3GLW-Y2f_i8Fb9hPGPSyzt0adPQ0usYyYZVIVx2Mv5IPRVxRN85E1kQAkEbNjl0sdWmApLv6y2I4aGvW3CaDynEdswzzjfkg7q1yhYdEAyYgYq-s0oxfGv77_bv3TK4VBLLOICBO02KwZ3CZbtoTMZK4rDiO5N7DLVDJehNDh3U4n0ZuO3y5Qp84XexuTlAtRWOdooxAkcr2Ztlsx1LKW2rH1L_vduGNWdkFQuU8rE6fM6Ac3_Gjqpi1VXhDcg6CE7VJvtqFtBuCIKGO4brJKa6_LQerT_luGMOmT1IVhv0Fac3pnIgkFyD_XtxRyGxo; .AspNetCore.Antiforgery.VasT3a6ESD8=CfDJ8NooojJvfs9Jvs5T1ZwLTask-CL5ANYSH4ere0_kVBtUXd2cfZVQg9ouWM20BQjXC4dofM-jXxQAa6PIIrZU0K5r8VXz284qsfuoIO0kYhK_ud7bM1S7--tWFNYIn9K9db7mtGz94UzkBB_-vjj2efQ; csrfToken=CfDJ8NooojJvfs9Jvs5T1ZwLTatdw_5YW4Mze8EUK7EQLJJOSYA2CUrpMu7ECClXhWG3WqXMZh9I2bEEit759CorGO9wMO8q8ZoArcOiCOpULVSMgb1qtX31h29CAjbfCs-c_1qYhHhlAP490fI7GHgZd-HSQr-kPR1XBOtIFHFvTPuVJc0gKYS2Bm1MoCI2axALsw",
+    "Origin": "https://localhost:7168",
+    "Referer": "https://localhost:7168/swagger/index.html",
+    "Content-Length": "62",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not)A;Brand\u0022;v=\u00228\u0022, \u0022Chromium\u0022;v=\u0022138\u0022, \u0022Microsoft Edge\u0022;v=\u0022138\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "RequestBody": "{\n  \u0022username\u0022: \u0022vic\u0022,\n  \u0022registrantName\u0022: \u0022\u0022,\n  \u0022userId\u0022: 0\n}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:1},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 15,
+  "Timestamp": "2025-08-05T06:32:15.1406762Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:33:17 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:33:17 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:33:17 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany] AS [IsCompany]
+FROM [Registrants] AS [r]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[09:33:17 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "GET",
+  "Path": "/api/Registrants",
+  "QueryString": "?pageNumber=1\u0026pageSize=100",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "traceparent": "00-1288bc265d83793f4804a26e8d170b70-5ae38e36f8b0c18f-00"
+  },
+  "RequestBody": "",
+  "StatusCode": 200,
+  "ResponseBody": "[{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:7,\u0022dateCreated\u0022:\u00222025-07-08T16:24:38.7776089\u0022,\u0022displayName\u0022:\u0022lil yachty\u0022,\u0022gsm\u0022:\u00220897777777\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022Washington DC\u0022,\u0022isCompany\u0022:false},{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true},{\u0022id\u0022:9,\u0022dateCreated\u0022:\u00222025-07-15T09:28:01.2499504\u0022,\u0022displayName\u0022:\u0022Honestly Healthy\u0022,\u0022gsm\u0022:\u00220895558749\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Vazrazhdane 6\u0022,\u0022isCompany\u0022:true}]",
+  "ElapsedMilliseconds": 23,
+  "Timestamp": "2025-08-05T06:33:17.3974714Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:33:18 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:33:18 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:33:18 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:33:18 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:33:18 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-9dc6f3fe631aeca8f8ba5e3f7b2cfb30-14ffa821ebe37e01-00",
+    "Content-Length": "2"
+  },
+  "RequestBody": "{}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:29},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest1221\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 23,
+  "Timestamp": "2025-08-05T06:33:18.4467252Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:33:22 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\'
+[09:33:22 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (5ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\'
+    ORDER BY (SELECT 1)
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:33:22 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-abec2d9c4c1a32750a5a44f33a31b557-eeda8b6c355b67a0-00",
+    "Content-Length": "16"
+  },
+  "RequestBody": "{\u0022username\u0022:\u0022v\u0022}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:7},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:42,\u0022username\u0022:\u0022ilia.chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:44,\u0022username\u0022:\u0022ivo.G\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:45,\u0022username\u0022:\u0022ivo-ot-drugata-kuhnq\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 11,
+  "Timestamp": "2025-08-05T06:33:22.0727832Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:36:25 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[09:36:25 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[09:36:25 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[09:36:25 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[09:36:25 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[09:36:39 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (31ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\'
+[09:36:39 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:36:39 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:36:39 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (27ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\'
+    ORDER BY (SELECT 1)
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:36:39 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-c124e1965965aa2c141dd7724a57e140-86a2e14c9c9370d6-00",
+    "Content-Length": "16"
+  },
+  "RequestBody": "{\u0022username\u0022:\u0022v\u0022}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:7},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:42,\u0022username\u0022:\u0022ilia.chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:44,\u0022username\u0022:\u0022ivo.G\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:45,\u0022username\u0022:\u0022ivo-ot-drugata-kuhnq\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 1704,
+  "Timestamp": "2025-08-05T06:36:39.900212Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:36:42 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:36:42 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:36:42 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:36:42 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (29ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:36:42 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-0d40a4f2b9bd6f6a18cecb4399488cd2-5349e04e15c92e0f-00",
+    "Content-Length": "2"
+  },
+  "RequestBody": "{}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:29},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest1221\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 80,
+  "Timestamp": "2025-08-05T06:36:42.6678575Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:36:43 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:36:43 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:36:43 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:36:43 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:36:43 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=2\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-e2a2b5540385042c6b1a9504fff7c3a3-fef4607331899acb-00",
+    "Content-Length": "2"
+  },
+  "RequestBody": "{}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:2,\u0022pageSize\u0022:10,\u0022totalCount\u0022:29},\u0022items\u0022:[{\u0022id\u0022:26,\u0022username\u0022:\u0022pants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:27,\u0022username\u0022:\u0022pants2\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:28,\u0022username\u0022:\u0022pants5\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:29,\u0022username\u0022:\u0022pants7\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:30,\u0022username\u0022:\u0022pants9\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:31,\u0022username\u0022:\u0022pants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:32,\u0022username\u0022:\u0022bigpants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:33,\u0022username\u0022:\u0022bigpants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:34,\u0022username\u0022:\u0022string12\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:35,\u0022username\u0022:\u0022string1234\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 31,
+  "Timestamp": "2025-08-05T06:36:43.954389Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:36:44 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:36:44 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:36:44 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=3\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-afa049269bf0cb66823e13c7fd132019-899f0c425007d716-00",
+    "Content-Length": "2"
+  },
+  "RequestBody": "{}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:3,\u0022pageSize\u0022:10,\u0022totalCount\u0022:29},\u0022items\u0022:[{\u0022id\u0022:36,\u0022username\u0022:\u0022w\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:37,\u0022username\u0022:\u0022bot-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:38,\u0022username\u0022:\u0022bot-usr2\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:39,\u0022username\u0022:\u0022bot-usr3\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:40,\u0022username\u0022:\u0022baaaa\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:41,\u0022username\u0022:\u0022newest-bot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:42,\u0022username\u0022:\u0022ilia.chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:44,\u0022username\u0022:\u0022ivo.G\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:45,\u0022username\u0022:\u0022ivo-ot-drugata-kuhnq\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 8,
+  "Timestamp": "2025-08-05T06:36:44.317102Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:36:44 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:36:44 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:36:44 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-95f71b0e9c4291acdf30a3fca37082f5-f3ae75fd056521d6-00",
+    "Content-Length": "2"
+  },
+  "RequestBody": "{}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:29},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest1221\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 13,
+  "Timestamp": "2025-08-05T06:36:44.9619988Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:42:16 INF] [Machine: MP-DT0KYVBJ] Now listening on: https://0.0.0.0:7168
+[09:42:16 INF] [Machine: MP-DT0KYVBJ] Now listening on: http://0.0.0.0:5229
+[09:42:16 INF] [Machine: MP-DT0KYVBJ] Application started. Press Ctrl+C to shut down.
+[09:42:16 INF] [Machine: MP-DT0KYVBJ] Hosting environment: Development
+[09:42:16 INF] [Machine: MP-DT0KYVBJ] Content root path: C:\Users\ilia.chakarov\Documents\Repos\ilia-chakarov\MyPos.Onboarding\WebAPI
+[09:42:35 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:42:35 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:42:35 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:42:35 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (36ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:42:35 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-a2fb303ec475b9d01a751be7f3be1eb1-f0dc9f21623678c3-00",
+    "Content-Length": "2"
+  },
+  "RequestBody": "{}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:29},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest1221\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 1679,
+  "Timestamp": "2025-08-05T06:42:35.5571094Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:42:38 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\'
+[09:42:38 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:42:38 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:42:38 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\'
+    ORDER BY (SELECT 1)
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:42:38 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-b6d8e94337c096ccce5f8d7e180f9681-12ed5b354db2776a-00",
+    "Content-Length": "16"
+  },
+  "RequestBody": "{\u0022username\u0022:\u0022v\u0022}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:7},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:42,\u0022username\u0022:\u0022ilia.chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:44,\u0022username\u0022:\u0022ivo.G\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:45,\u0022username\u0022:\u0022ivo-ot-drugata-kuhnq\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 77,
+  "Timestamp": "2025-08-05T06:42:38.8493826Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:42:43 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (9ms) [Parameters=[@__filter_RegistrantName_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [r].[DisplayName] LIKE @__filter_RegistrantName_0_contains ESCAPE N'\'
+[09:42:43 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:42:43 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:42:43 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__filter_RegistrantName_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [r].[DisplayName] LIKE @__filter_RegistrantName_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+[09:42:43 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-3d34f09ff6a7035399abde8aedbd8aef-3c0d3a22aabecd65-00",
+    "Content-Length": "33"
+  },
+  "RequestBody": "{\u0022registrantName\u0022:\u0022jacksonville\u0022}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:1},\u0022items\u0022:[{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 36,
+  "Timestamp": "2025-08-05T06:42:43.043508Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:42:46 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__filter_RegistrantName_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [r].[DisplayName] LIKE @__filter_RegistrantName_0_contains ESCAPE N'\'
+[09:42:46 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (9ms) [Parameters=[@__filter_RegistrantName_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [r].[DisplayName] LIKE @__filter_RegistrantName_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+[09:42:46 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-8f7356a7f67891aa6dfc41b05ea4a823-03819b6050c44dfc-00",
+    "Content-Length": "26"
+  },
+  "RequestBody": "{\u0022registrantName\u0022:\u0022MyPos\u0022}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:24},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest1221\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:26,\u0022username\u0022:\u0022pants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:27,\u0022username\u0022:\u0022pants2\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:28,\u0022username\u0022:\u0022pants5\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:29,\u0022username\u0022:\u0022pants7\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 20,
+  "Timestamp": "2025-08-05T06:42:46.4371501Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:42:47 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__filter_RegistrantName_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [r].[DisplayName] LIKE @__filter_RegistrantName_0_contains ESCAPE N'\'
+[09:42:47 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:42:47 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:42:47 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__filter_RegistrantName_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [r].[DisplayName] LIKE @__filter_RegistrantName_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_1 ROWS ONLY
+[09:42:47 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=2\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-64a9324c35b6b512fb4f640a6f80d137-38980264d1d319be-00",
+    "Content-Length": "26"
+  },
+  "RequestBody": "{\u0022registrantName\u0022:\u0022MyPos\u0022}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:2,\u0022pageSize\u0022:10,\u0022totalCount\u0022:24},\u0022items\u0022:[{\u0022id\u0022:30,\u0022username\u0022:\u0022pants9\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:31,\u0022username\u0022:\u0022pants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:32,\u0022username\u0022:\u0022bigpants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:33,\u0022username\u0022:\u0022bigpants11\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:34,\u0022username\u0022:\u0022string12\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:35,\u0022username\u0022:\u0022string1234\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:36,\u0022username\u0022:\u0022w\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:37,\u0022username\u0022:\u0022bot-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:38,\u0022username\u0022:\u0022bot-usr2\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:39,\u0022username\u0022:\u0022bot-usr3\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 12,
+  "Timestamp": "2025-08-05T06:42:47.7856998Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:42:48 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[@__filter_RegistrantName_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [r].[DisplayName] LIKE @__filter_RegistrantName_0_contains ESCAPE N'\'
+[09:42:48 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__filter_RegistrantName_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [r].[DisplayName] LIKE @__filter_RegistrantName_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+[09:42:48 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=3\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-46d813e7c058dcaa7d6754d45be1dc73-45af5bdd68ac010d-00",
+    "Content-Length": "26"
+  },
+  "RequestBody": "{\u0022registrantName\u0022:\u0022MyPos\u0022}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:3,\u0022pageSize\u0022:10,\u0022totalCount\u0022:24},\u0022items\u0022:[{\u0022id\u0022:40,\u0022username\u0022:\u0022baaaa\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:41,\u0022username\u0022:\u0022newest-bot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:44,\u0022username\u0022:\u0022ivo.G\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:45,\u0022username\u0022:\u0022ivo-ot-drugata-kuhnq\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 7,
+  "Timestamp": "2025-08-05T06:42:48.215622Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:42:49 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__filter_RegistrantName_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [r].[DisplayName] LIKE @__filter_RegistrantName_0_contains ESCAPE N'\'
+[09:42:49 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__filter_RegistrantName_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [r].[DisplayName] LIKE @__filter_RegistrantName_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+[09:42:49 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-2347f26caa16deab9c473c786fc26401-67129166e54bb52a-00",
+    "Content-Length": "26"
+  },
+  "RequestBody": "{\u0022registrantName\u0022:\u0022MyPos\u0022}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:24},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest1221\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:26,\u0022username\u0022:\u0022pants\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:27,\u0022username\u0022:\u0022pants2\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:28,\u0022username\u0022:\u0022pants5\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:29,\u0022username\u0022:\u0022pants7\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}}]}",
+  "ElapsedMilliseconds": 10,
+  "Timestamp": "2025-08-05T06:42:49.3950741Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:42:51 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__filter_RegistrantName_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [r].[DisplayName] LIKE @__filter_RegistrantName_0_contains ESCAPE N'\'
+[09:42:51 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__filter_RegistrantName_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [r].[DisplayName] LIKE @__filter_RegistrantName_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+[09:42:51 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-e3e0f8ec390233c3fb5541686e27cc1b-e84a138069092d8d-00",
+    "Content-Length": "32"
+  },
+  "RequestBody": "{\u0022registrantName\u0022:\u0022papasmurfie\u0022}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:4},\u0022items\u0022:[{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:42,\u0022username\u0022:\u0022ilia.chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 7,
+  "Timestamp": "2025-08-05T06:42:51.3663394Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:42:54 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000), @__filter_RegistrantName_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\' AND [r].[DisplayName] LIKE @__filter_RegistrantName_1_contains ESCAPE N'\'
+[09:42:54 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:42:54 WRN] [Machine: MP-DT0KYVBJ] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+[09:42:54 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000), @__filter_RegistrantName_1_contains='?' (Size = 4000), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\' AND [r].[DisplayName] LIKE @__filter_RegistrantName_1_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+[09:42:54 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-eb9bbc2e590a5aefc15c8f7fa012c212-cbabc860f37e0d08-00",
+    "Content-Length": "47"
+  },
+  "RequestBody": "{\u0022username\u0022:\u0022a\u0022,\u0022registrantName\u0022:\u0022papasmurfie\u0022}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:4},\u0022items\u0022:[{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:42,\u0022username\u0022:\u0022ilia.chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 17,
+  "Timestamp": "2025-08-05T06:42:54.3073806Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:43:01 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000), @__filter_RegistrantName_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\' AND [r].[DisplayName] LIKE @__filter_RegistrantName_1_contains ESCAPE N'\'
+[09:43:01 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000), @__filter_RegistrantName_1_contains='?' (Size = 4000), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\' AND [r].[DisplayName] LIKE @__filter_RegistrantName_1_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+[09:43:01 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-e350a5da65b855f492e7564b694952e1-cdb56c4a52379810-00",
+    "Content-Length": "50"
+  },
+  "RequestBody": "{\u0022username\u0022:\u0022ilia\u0022,\u0022registrantName\u0022:\u0022papasmurfie\u0022}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:1},\u0022items\u0022:[{\u0022id\u0022:42,\u0022username\u0022:\u0022ilia.chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 9,
+  "Timestamp": "2025-08-05T06:43:01.1205168Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:43:11 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:43:11 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:43:11 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-0cae922e0bddc32e69a7d66168119e0f-d44ea67ff3478a81-00",
+    "Content-Length": "2"
+  },
+  "RequestBody": "{}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:29},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest1221\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 4,
+  "Timestamp": "2025-08-05T06:43:11.894084Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:43:14 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__filter_RegistrantName_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [r].[DisplayName] LIKE @__filter_RegistrantName_0_contains ESCAPE N'\'
+[09:43:14 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__filter_RegistrantName_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [r].[DisplayName] LIKE @__filter_RegistrantName_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+[09:43:14 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-ff32036aa4bacef990217e18568b1a9d-ca5acfe85f698630-00",
+    "Content-Length": "31"
+  },
+  "RequestBody": "{\u0022registrantName\u0022:\u0022lil yachty\u0022}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:0},\u0022items\u0022:[]}",
+  "ElapsedMilliseconds": 9,
+  "Timestamp": "2025-08-05T06:43:14.9593151Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:43:18 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (2ms) [Parameters=[@__filter_RegistrantName_0_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [r].[DisplayName] LIKE @__filter_RegistrantName_0_contains ESCAPE N'\'
+[09:43:18 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__filter_RegistrantName_0_contains='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [r].[DisplayName] LIKE @__filter_RegistrantName_0_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+[09:43:18 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-c4b90c9fe930b46ed5be83b2954018aa-d6ad05e76bb5625b-00",
+    "Content-Length": "32"
+  },
+  "RequestBody": "{\u0022registrantName\u0022:\u0022papasmurfie\u0022}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:4},\u0022items\u0022:[{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:42,\u0022username\u0022:\u0022ilia.chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 9,
+  "Timestamp": "2025-08-05T06:43:18.4075905Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:43:24 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000), @__filter_RegistrantName_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\' AND [r].[DisplayName] LIKE @__filter_RegistrantName_1_contains ESCAPE N'\'
+[09:43:24 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (4ms) [Parameters=[@__filter_Username_0_contains='?' (Size = 4000), @__filter_RegistrantName_1_contains='?' (Size = 4000), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM [Users] AS [u]
+INNER JOIN [Registrants] AS [r] ON [u].[RegistrantId] = [r].[Id]
+WHERE [u].[Username] LIKE @__filter_Username_0_contains ESCAPE N'\' AND [r].[DisplayName] LIKE @__filter_RegistrantName_1_contains ESCAPE N'\'
+ORDER BY (SELECT 1)
+OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+[09:43:24 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-63fab960866dc327227557d09606f0db-16847b97cf02f691-00",
+    "Content-Length": "50"
+  },
+  "RequestBody": "{\u0022username\u0022:\u0022ilia\u0022,\u0022registrantName\u0022:\u0022papasmurfie\u0022}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:1},\u0022items\u0022:[{\u0022id\u0022:42,\u0022username\u0022:\u0022ilia.chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 10,
+  "Timestamp": "2025-08-05T06:43:24.6674565Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+
+[09:43:30 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+[09:43:30 INF] [Machine: MP-DT0KYVBJ] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Username], CAST(0 AS bit), [r].[Id], [r].[DateCreated], [r].[DisplayName], [r].[GSM], [r].[Country], [r].[Address], [r].[isCompany]
+FROM (
+    SELECT [u].[Id], [u].[RegistrantId], [u].[Username]
+    FROM [Users] AS [u]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Registrants] AS [r] ON [t].[RegistrantId] = [r].[Id]
+[09:43:30 INF] [Machine: MP-DT0KYVBJ] Http Log entry: 
+{
+  "Method": "POST",
+  "Path": "/api/Users/getall/counted",
+  "QueryString": "?pageNumber=1\u0026pageSize=10",
+  "Headers": {
+    "Accept": "text/plain",
+    "Host": "localhost:7168",
+    "Content-Type": "application/json",
+    "traceparent": "00-ee1db3a5f4098f4e1cac8ec068ded769-456da363b790578f-00",
+    "Content-Length": "2"
+  },
+  "RequestBody": "{}",
+  "StatusCode": 200,
+  "ResponseBody": "{\u0022countDto\u0022:{\u0022pageNumber\u0022:1,\u0022pageSize\u0022:10,\u0022totalCount\u0022:29},\u0022items\u0022:[{\u0022id\u0022:10,\u0022username\u0022:\u0022victor-martinov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:12,\u0022username\u0022:\u0022guest1221\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:13,\u0022username\u0022:\u0022aaabbb\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:14,\u0022username\u0022:\u0022ilia-chakarov\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:15,\u0022username\u0022:\u0022ivo\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:16,\u0022username\u0022:\u0022external-usr1\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:18,\u0022username\u0022:\u0022external313\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:19,\u0022username\u0022:\u0022vakisddot\u0022,\u0022registrant\u0022:{\u0022id\u0022:8,\u0022dateCreated\u0022:\u00222025-07-08T16:25:28.3671217\u0022,\u0022displayName\u0022:\u0022MyPos\u0022,\u0022gsm\u0022:\u00220895789654\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022Varna, Idk\u0022,\u0022isCompany\u0022:true}},{\u0022id\u0022:20,\u0022username\u0022:\u0022newest-real-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:5,\u0022dateCreated\u0022:\u00222025-07-08T16:23:35.9821979\u0022,\u0022displayName\u0022:\u0022papasmurfie\u0022,\u0022gsm\u0022:\u00220897614957\u0022,\u0022country\u0022:\u0022Bulgaria\u0022,\u0022address\u0022:\u0022ul. Tsar Asen 74\u0022,\u0022isCompany\u0022:false}},{\u0022id\u0022:21,\u0022username\u0022:\u0022crash-usr\u0022,\u0022registrant\u0022:{\u0022id\u0022:6,\u0022dateCreated\u0022:\u00222025-07-08T16:24:08.82214\u0022,\u0022displayName\u0022:\u0022jacksonville\u0022,\u0022gsm\u0022:\u00220898555444\u0022,\u0022country\u0022:\u0022USA\u0022,\u0022address\u0022:\u0022I dont know Avenue 123\u0022,\u0022isCompany\u0022:false}}]}",
+  "ElapsedMilliseconds": 6,
+  "Timestamp": "2025-08-05T06:43:30.6366932Z",
+  "ExceptionMessage": null,
+  "ExceptionStackTrace": null
+}
+
+

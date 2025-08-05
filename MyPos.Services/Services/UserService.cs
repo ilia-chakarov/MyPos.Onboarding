@@ -1,13 +1,14 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using MyPos.Services.DTOs;
+using MyPos.Services.DTOs.FilterDTOs;
 using WebAPI.DTOs;
 using WebAPI.Entities;
 using WebAPI.Exceptions;
 using WebAPI.Services.Interfaces;
 using WebAPI.UnitOfWork;
-using Microsoft.AspNetCore.Http;
-using MyPos.Services.DTOs;
 
 namespace WebAPI.Services
 {
@@ -57,10 +58,23 @@ namespace WebAPI.Services
 
         }
 
-        public async Task<CountedDto<UserDetailedDto>> GetAllCounted(int pageNumber, int pageSize, Func<IQueryable<UserEntity>, IQueryable<UserEntity>>? filter = null, CancellationToken cancellationToken = default)
+        public async Task<CountedDto<UserDetailedDto>> GetAllCounted(int pageNumber, int pageSize, UserFilterDto? filter = null, CancellationToken cancellationToken = default)
         {
+            Func<IQueryable<UserEntity>, IQueryable<UserEntity>>? filterExpression = null;
+
+            if (filter != null)
+            {
+                filterExpression = u =>
+                    u.Where(us =>
+                        (string.IsNullOrEmpty(filter.Username) || us.Username.Contains(filter.Username)) &&
+                        (string.IsNullOrEmpty(filter.RegistrantName) || us.Registrant.DisplayName.Contains(filter.RegistrantName)) &&
+                        (!filter.UserId.HasValue || us.Id == filter.UserId));
+            }
+
             var detailedUsers = await _unitOfWork.GetRepository<UserEntity>().GetAllCountedAsync<UserDetailedDto>(
-                mapper: _mapper, filter: filter, pageNumber: pageNumber, pageSize: pageSize, disableTracking: false,
+                mapper: _mapper, 
+                filter: filterExpression,
+                pageNumber: pageNumber, pageSize: pageSize, disableTracking: false,
                 cancellationToken: cancellationToken, include: i => i.Include(r => r.Registrant));
 
             var result = new CountedDto<UserDetailedDto>

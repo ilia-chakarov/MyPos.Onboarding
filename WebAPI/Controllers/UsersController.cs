@@ -28,12 +28,12 @@ namespace WebAPI.Controllers
             return Ok(usrDtos); 
         }
 
-        [HttpGet("/api/Users/getall/counted")]
+        [HttpPost("/api/Users/getall/counted")]
         public async Task<ActionResult<CountedDto<UserDetailedDto>>> GetAllCounted(UserFilterDto? filter = null, int pageNumber = 1, int pageSize = 10,
             CancellationToken cancellationToken = default)
         {
             var usrDtos = await _usersService.GetAllCounted(pageNumber, pageSize,
-                filter: filter?.Username == null ? null : u => u.Where(us => us.Username.Contains(filter.Username)),
+                filter: filter,
                 cancellationToken: cancellationToken);
 
             return Ok(usrDtos);
