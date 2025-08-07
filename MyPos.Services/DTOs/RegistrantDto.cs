@@ -11,6 +11,7 @@ namespace WebAPI.DTOs
         public string Country { get; set; } = null!;
         public string Address { get; set; } = null!;
         public bool IsCompany { get; set; }
+        public int UserId { get; set; }
 
     }
 }

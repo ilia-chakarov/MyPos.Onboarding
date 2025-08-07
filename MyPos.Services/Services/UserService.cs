@@ -82,8 +82,14 @@ namespace WebAPI.Services
                     PageNumber = pageNumber,
                     PageSize = pageSize,
                     TotalCount = detailedUsers.totalCount,
-                    Items =detailedUsers.items
+                    Items =detailedUsers.items.Select(i =>
+                    {
+                        i.Registrant!.UserId = i.Id;
+                        return i;
+                    })
             };
+
+            
 
             return result;
         }
