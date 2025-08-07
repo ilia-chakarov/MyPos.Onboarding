@@ -9,7 +9,9 @@ namespace MyPos.Services.DTOs
 {
     public class CountedDto<T>
     {
-        public CountDto CountDto { get; set; } = null!;
+        public int? PageNumber { get; set; } = null;
+        public int? PageSize { get; set; } = null;
+        public int? TotalCount { get; set; } = null;
         public IEnumerable<T> Items { get; set; } = [];
     }
 }

@@ -29,7 +29,8 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("/api/Users/getall/counted")]
-        public async Task<ActionResult<CountedDto<UserDetailedDto>>> GetAllCounted(UserFilterDto? filter = null, int pageNumber = 1, int pageSize = 10,
+        public async Task<ActionResult<CountedDto<UserDetailedDto>>> GetAllCounted(UserFilterDto? filter = null, int? pageNumber = null,
+            int? pageSize = null,
             CancellationToken cancellationToken = default)
         {
             var usrDtos = await _usersService.GetAllCounted(pageNumber, pageSize,

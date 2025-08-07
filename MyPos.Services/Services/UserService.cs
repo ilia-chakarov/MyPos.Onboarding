@@ -58,7 +58,7 @@ namespace WebAPI.Services
 
         }
 
-        public async Task<CountedDto<UserDetailedDto>> GetAllCounted(int pageNumber, int pageSize, UserFilterDto? filter = null, CancellationToken cancellationToken = default)
+        public async Task<CountedDto<UserDetailedDto>> GetAllCounted(int? pageNumber = null, int? pageSize = null, UserFilterDto? filter = null, CancellationToken cancellationToken = default)
         {
             Func<IQueryable<UserEntity>, IQueryable<UserEntity>>? filterExpression = null;
 
@@ -79,13 +79,10 @@ namespace WebAPI.Services
 
             var result = new CountedDto<UserDetailedDto>
             {
-                CountDto = new CountDto
-                {
                     PageNumber = pageNumber,
                     PageSize = pageSize,
-                    TotalCount = detailedUsers.totalCount
-                },
-                Items = detailedUsers.items
+                    TotalCount = detailedUsers.totalCount,
+                    Items =detailedUsers.items
             };
 
             return result;

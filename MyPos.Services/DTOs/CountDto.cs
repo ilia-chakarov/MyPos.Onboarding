@@ -8,8 +8,8 @@ namespace MyPos.Services.DTOs
 {
     public class CountDto
     {
-        public int PageNumber { get; set; }
-        public int PageSize { get; set; }
-        public int TotalCount { get; set; }
+        public int? PageNumber { get; set; } = null;
+        public int? PageSize { get; set; } = null;
+        public int? TotalCount { get; set; } = null;
     }
 }

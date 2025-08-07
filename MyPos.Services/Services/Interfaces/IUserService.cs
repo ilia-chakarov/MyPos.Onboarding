@@ -11,7 +11,7 @@ namespace WebAPI.Services.Interfaces
         Task<IEnumerable<UserDto>> GetAll(int pageNumber, int pageSize, 
             Func<IQueryable<UserEntity>, IQueryable<UserEntity>>? filter = null,
             CancellationToken cancellationToken = default);
-        Task<CountedDto<UserDetailedDto>> GetAllCounted(int pageNumber, int pageSize,
+        Task<CountedDto<UserDetailedDto>> GetAllCounted(int? pageNumber = null, int? pageSize = null,
             UserFilterDto? filter = null,
             CancellationToken cancellationToken = default);
 
